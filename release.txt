@@ -1,0 +1,2 @@
+release_tag=enceladus_trial_v3-r12
+release_url=https://github.com/atcelik/cosmic-storyline-studio/releases/tag/enceladus_trial_v3-r12

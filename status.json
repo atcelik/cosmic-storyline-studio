@@ -1,0 +1,357 @@
+{
+  "episode": "enceladus_trial_v3",
+  "request": {
+    "episode": "enceladus_trial_v3",
+    "steps": [
+      "assets",
+      "space3d",
+      "validate",
+      "tts",
+      "render",
+      "audio",
+      "meta"
+    ],
+    "quality": "final",
+    "search": false,
+    "note": "v3.1: fading chapter cards, no corner labels, Earth credit fixed"
+  },
+  "phases": [
+    {
+      "phase": "prepare",
+      "result": "OK",
+      "plan": {
+        "cgi_tasks": 19,
+        "render_tasks": 3
+      }
+    },
+    {
+      "phase": "cgi_s10_pullback-00000",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_s10_pullback-00090",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_s10_pullback-00180",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_s10_pullback-00270",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_s1_saturn_approach-00000",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_s1_saturn_approach-00090",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_s1_saturn_approach-00180",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_s1_saturn_approach-00270",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_s2_enceladus_approach-00000",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_s2_enceladus_approach-00090",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_s2_enceladus_approach-00180",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_s2_enceladus_approach-00270",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_s3_plumes_close-00000",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_s3_plumes_close-00090",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_s3_plumes_close-00180",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_s7_earth_atlantic-00000",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_s7_earth_atlantic-00090",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_s7_earth_atlantic-00180",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_s7_earth_atlantic-00270",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "render_000000",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "render_000900",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "render_001800",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "finish",
+      "result": "OK",
+      "plan": null
+    }
+  ],
+  "steps": [
+    {
+      "step": "assets",
+      "ok": true,
+      "seconds": 4,
+      "phase": "prepare"
+    },
+    {
+      "step": "validate",
+      "ok": true,
+      "seconds": 0,
+      "phase": "prepare"
+    },
+    {
+      "step": "tts",
+      "ok": true,
+      "seconds": 33,
+      "phase": "prepare"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 70,
+      "phase": "cgi_s10_pullback-00000"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 64,
+      "phase": "cgi_s10_pullback-00090"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 76,
+      "phase": "cgi_s10_pullback-00180"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 48,
+      "phase": "cgi_s10_pullback-00270"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 32,
+      "phase": "cgi_s1_saturn_approach-00000"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 50,
+      "phase": "cgi_s1_saturn_approach-00090"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 60,
+      "phase": "cgi_s1_saturn_approach-00180"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 48,
+      "phase": "cgi_s1_saturn_approach-00270"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 87,
+      "phase": "cgi_s2_enceladus_approach-00000"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 84,
+      "phase": "cgi_s2_enceladus_approach-00090"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 97,
+      "phase": "cgi_s2_enceladus_approach-00180"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 23,
+      "phase": "cgi_s2_enceladus_approach-00270"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 55,
+      "phase": "cgi_s3_plumes_close-00000"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 119,
+      "phase": "cgi_s3_plumes_close-00090"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 78,
+      "phase": "cgi_s3_plumes_close-00180"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 19,
+      "phase": "cgi_s7_earth_atlantic-00000"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 23,
+      "phase": "cgi_s7_earth_atlantic-00090"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 34,
+      "phase": "cgi_s7_earth_atlantic-00180"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 9,
+      "phase": "cgi_s7_earth_atlantic-00270"
+    },
+    {
+      "step": "render",
+      "ok": true,
+      "seconds": 53,
+      "phase": "render_000000"
+    },
+    {
+      "step": "render",
+      "ok": true,
+      "seconds": 59,
+      "phase": "render_000900"
+    },
+    {
+      "step": "render",
+      "ok": true,
+      "seconds": 43,
+      "phase": "render_001800"
+    },
+    {
+      "step": "validate+assets",
+      "ok": true,
+      "seconds": 0,
+      "phase": "finish"
+    },
+    {
+      "step": "audio",
+      "ok": true,
+      "seconds": 3,
+      "phase": "finish"
+    },
+    {
+      "step": "meta",
+      "ok": true,
+      "seconds": 0,
+      "phase": "finish"
+    }
+  ],
+  "result": "OK",
+  "seconds_by_step": {
+    "assets": {
+      "jobs": 1,
+      "longest": 4,
+      "sum": 4
+    },
+    "validate": {
+      "jobs": 1,
+      "longest": 0,
+      "sum": 0
+    },
+    "tts": {
+      "jobs": 1,
+      "longest": 33,
+      "sum": 33
+    },
+    "space3d": {
+      "jobs": 19,
+      "longest": 119,
+      "sum": 1076
+    },
+    "render": {
+      "jobs": 3,
+      "longest": 59,
+      "sum": 155
+    },
+    "validate+assets": {
+      "jobs": 1,
+      "longest": 0,
+      "sum": 0
+    },
+    "audio": {
+      "jobs": 1,
+      "longest": 3,
+      "sum": 3
+    },
+    "meta": {
+      "jobs": 1,
+      "longest": 0,
+      "sum": 0
+    }
+  },
+  "final_video": "episodes/enceladus_trial_v3/build/final.mp4"
+}

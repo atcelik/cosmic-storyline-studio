@@ -1,0 +1,237 @@
+
+===== STEP assets (prepare) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/get_assets.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3 --no-zip
+11 items -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/originals
+[1/11] A007  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA11688.jpg
+   cached: 1580x977  [SMALL: smaller than 1920x1080, will look soft full-frame]
+[2/11] A009  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA19656.jpg
+   cached: 8534x4800
+[3/11] C005  https://images-assets.nasa.gov/image/GSFC_20220520_M14162_SaturnMoons/GSFC_20220520_M14162_SaturnMoons~orig.png
+   cached: 4800x2160
+[4/11] T003  https://images-assets.nasa.gov/image/PIA18435/PIA18435~orig.jpg
+   cached: 15960x7980
+[5/11] SAT8  https://www.solarsystemscope.com/textures/download/8k_saturn.jpg
+   cached: 4096x2048
+[6/11] SAT2  https://www.solarsystemscope.com/textures/download/2k_saturn.jpg
+   cached: 2048x1024  [SMALL: smaller than 1920x1080, will look soft full-frame]
+[7/11] RING8  https://www.solarsystemscope.com/textures/download/8k_saturn_ring_alpha.png
+   cached: 8192x500  [SMALL: smaller than 1920x1080, will look soft full-frame]
+[8/11] RING2  https://www.solarsystemscope.com/textures/download/2k_saturn_ring_alpha.png
+   cached: 2048x125  [SMALL: smaller than 1920x1080, will look soft full-frame]
+[9/11] N008  https://oceanexplorer.noaa.gov/wp-content/uploads/2025/08/1605vent-hires.jpg
+   cached: 1920x1080  [OK_NO_ZOOM: fine full-frame, little room to zoom]
+[10/11] N009  https://s3.amazonaws.com/s3-east-testmedia-noaa.woc.noaa.gov/dam/Photos/legacy/pl23_expl1169.jpg
+   cached: 2048x1536  [OK_NO_ZOOM: fine full-frame, little room to zoom]
+[11/11] EARTHSS  https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg
+   cached: 8192x4096
+
+============================================================
+OK 11   FAILED 0   contact sheets: 1
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/apply_bundle.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3 /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/bundle
+11 assets unpacked, 5 shots wired.
+Next: make validate EP=enceladus_trial_v3
+
+===== STEP validate (prepare) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/validate.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/episode.json
+Estimated runtime: 1.4 min (10 shots, avg 8.2s/shot)
+WARN  S001: claim not verified: Cassini detected water-ice jets at Enceladus in 20
+WARN  S005: claim not verified: Cassini gravity and libration data indicate a glob
+WARN  S006: credit/licence not marked credit_verified=true
+WARN  S006: claim not verified: Cassini detected molecular hydrogen in the plume (
+WARN  S009: credit/licence not marked credit_verified=true
+WARN  S009: claim not verified: Vent microbes such as methanogens gain energy from
+WARN  S008: 10.3s shot (retention rule: <= 10.0s)
+WARN  S010: 10.6s shot (retention rule: <= 10.0s)
+WARN  runtime 82s outside target 540-780s
+Result: PASS (0 errors, 9 warnings)
+
+===== STEP tts (prepare) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/tts.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/episode.json
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/nn/modules/rnn.py:1012: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  super().__init__("LSTM", *args, **kwargs)
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+Collecting en-core-web-sm==3.8.0
+  Downloading en_core_web_sm-3.8.0-py3-none-any.whl (12.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 52.4 MB/s  0:00:00
+Installing collected packages: en-core-web-sm
+Successfully installed en-core-web-sm-3.8.0
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+WARNING: Defaulting repo_id to hexgrad/Kokoro-82M. Pass repo_id='hexgrad/Kokoro-82M' to suppress this warning.
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+  S001: 6.15s
+  S002: 6.25s
+  S003: 5.28s
+  S004: 5.10s
+  S005: 5.55s
+  S006: 5.15s
+  S007: 3.77s
+  S008: 11.18s
+  S009: 7.53s
+  S010: 6.00s
+Timeline: 1.42 min, 10 shots -> build/timeline.json
+
+===== STEP space3d (cgi_s10_pullback-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s10_pullback.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s10_pullback/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  s10_pullback.json: frame 60/90  1.2 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s10_pullback/0.mp4: frames 0..89 in 69s
+
+===== STEP space3d (cgi_s10_pullback-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s10_pullback.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s10_pullback/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  s10_pullback.json: frame 150/180  1.4 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s10_pullback/90.mp4: frames 90..179 in 64s
+
+===== STEP space3d (cgi_s10_pullback-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s10_pullback.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s10_pullback/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  s10_pullback.json: frame 240/270  1.2 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s10_pullback/180.mp4: frames 180..269 in 75s
+
+===== STEP space3d (cgi_s10_pullback-00270) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s10_pullback.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s10_pullback/270.mp4 --frames 270:360
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  s10_pullback.json: frame 330/360  1.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s10_pullback/270.mp4: frames 270..359 in 47s
+
+===== STEP space3d (cgi_s1_saturn_approach-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s1_saturn_approach.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s1_saturn_approach/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  s1_saturn_approach.json: frame 60/90  2.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s1_saturn_approach/0.mp4: frames 0..89 in 31s
+
+===== STEP space3d (cgi_s1_saturn_approach-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s1_saturn_approach.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s1_saturn_approach/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  s1_saturn_approach.json: frame 150/180  1.8 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s1_saturn_approach/90.mp4: frames 90..179 in 50s
+
+===== STEP space3d (cgi_s1_saturn_approach-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s1_saturn_approach.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s1_saturn_approach/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  s1_saturn_approach.json: frame 240/270  1.5 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s1_saturn_approach/180.mp4: frames 180..269 in 60s
+
+===== STEP space3d (cgi_s1_saturn_approach-00270) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s1_saturn_approach.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s1_saturn_approach/270.mp4 --frames 270:330
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s1_saturn_approach/270.mp4: frames 270..329 in 47s
+
+===== STEP space3d (cgi_s2_enceladus_approach-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s2_enceladus_approach.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s2_enceladus_approach/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  s2_enceladus_approach.json: frame 60/90  1.0 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s2_enceladus_approach/0.mp4: frames 0..89 in 87s
+
+===== STEP space3d (cgi_s2_enceladus_approach-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s2_enceladus_approach.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s2_enceladus_approach/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  s2_enceladus_approach.json: frame 150/180  1.1 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s2_enceladus_approach/90.mp4: frames 90..179 in 84s
+
+===== STEP space3d (cgi_s2_enceladus_approach-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s2_enceladus_approach.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s2_enceladus_approach/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  s2_enceladus_approach.json: frame 240/270  0.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s2_enceladus_approach/180.mp4: frames 180..269 in 96s
+
+===== STEP space3d (cgi_s2_enceladus_approach-00270) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s2_enceladus_approach.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s2_enceladus_approach/270.mp4 --frames 270:300
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s2_enceladus_approach/270.mp4: frames 270..299 in 23s
+
+===== STEP space3d (cgi_s3_plumes_close-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s3_plumes_close.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s3_plumes_close/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  s3_plumes_close.json: frame 60/90  1.7 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s3_plumes_close/0.mp4: frames 0..89 in 54s
+
+===== STEP space3d (cgi_s3_plumes_close-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s3_plumes_close.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s3_plumes_close/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  s3_plumes_close.json: frame 150/180  0.8 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s3_plumes_close/90.mp4: frames 90..179 in 119s
+
+===== STEP space3d (cgi_s3_plumes_close-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s3_plumes_close.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s3_plumes_close/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  s3_plumes_close.json: frame 240/270  1.2 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s3_plumes_close/180.mp4: frames 180..269 in 78s
+
+===== STEP space3d (cgi_s7_earth_atlantic-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s7_earth_atlantic.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s7_earth_atlantic/0.mp4 --frames 0:90
+  s7_earth_atlantic.json: frame 60/90  4.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s7_earth_atlantic/0.mp4: frames 0..89 in 19s
+
+===== STEP space3d (cgi_s7_earth_atlantic-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s7_earth_atlantic.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s7_earth_atlantic/90.mp4 --frames 90:180
+  s7_earth_atlantic.json: frame 150/180  4.1 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s7_earth_atlantic/90.mp4: frames 90..179 in 23s
+
+===== STEP space3d (cgi_s7_earth_atlantic-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s7_earth_atlantic.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s7_earth_atlantic/180.mp4 --frames 180:270
+  s7_earth_atlantic.json: frame 240/270  2.7 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s7_earth_atlantic/180.mp4: frames 180..269 in 34s
+
+===== STEP space3d (cgi_s7_earth_atlantic-00270) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/assets/space3d/s7_earth_atlantic.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s7_earth_atlantic/270.mp4 --frames 270:300
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s7_earth_atlantic/270.mp4: frames 270..299 in 9s
+
+===== STEP render (render_000000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/episode.json --frames 0:900 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/0.mp4
+  frame 150/900  16.0 fps  ETA 0.8 min
+  frame 300/900  16.0 fps  ETA 0.6 min
+  frame 450/900  16.2 fps  ETA 0.5 min
+  frame 600/900  16.4 fps  ETA 0.3 min
+  frame 750/900  16.4 fps  ETA 0.2 min
+Rendered frames 0..899 in 0.9 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/0.mp4
+
+===== STEP render (render_000900) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/episode.json --frames 900:1800 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/900.mp4
+  frame 1050/1800  13.6 fps  ETA 0.9 min
+  frame 1200/1800  13.3 fps  ETA 0.8 min
+  frame 1350/1800  15.2 fps  ETA 0.5 min
+  frame 1500/1800  15.1 fps  ETA 0.3 min
+  frame 1650/1800  15.1 fps  ETA 0.2 min
+Rendered frames 900..1799 in 1.0 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/900.mp4
+
+===== STEP render (render_001800) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/episode.json --frames 1800:2560 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/1800.mp4
+  frame 1950/2560  22.1 fps  ETA 0.5 min
+  frame 2100/2560  21.2 fps  ETA 0.4 min
+  frame 2250/2560  20.4 fps  ETA 0.3 min
+  frame 2400/2560  19.1 fps  ETA 0.1 min
+  frame 2550/2560  18.2 fps  ETA 0.0 min
+Rendered frames 1800..2559 in 0.7 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/1800.mp4
+
+===== STEP validate+assets (finish) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/validate.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/episode.json --assets
+Estimated runtime: 1.4 min (10 shots, avg 8.2s/shot)
+WARN  S001: claim not verified: Cassini detected water-ice jets at Enceladus in 20
+WARN  S005: claim not verified: Cassini gravity and libration data indicate a glob
+WARN  S006: credit/licence not marked credit_verified=true
+WARN  S006: claim not verified: Cassini detected molecular hydrogen in the plume (
+WARN  S009: credit/licence not marked credit_verified=true
+WARN  S009: claim not verified: Vent microbes such as methanogens gain energy from
+WARN  S008: 10.3s shot (retention rule: <= 10.0s)
+WARN  S010: 10.6s shot (retention rule: <= 10.0s)
+WARN  runtime 82s outside target 540-780s
+WARN  S004: source is upscaled 1.29x at the closest zoom: will look soft
+WARN  S004: image 1580px wide; will look soft with camera motion (want >= 2560)
+WARN  S008: source is upscaled 1.06x at the closest zoom: will look soft
+WARN  S008: image 1920px wide; will look soft with camera motion (want >= 2560)
+WARN  S009: source is upscaled 1.01x at the closest zoom: will look soft
+WARN  S009: image 2048px wide; will look soft with camera motion (want >= 2560)
+Result: PASS (0 errors, 15 warnings)
+
+===== STEP audio (finish) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/audio.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/episode.json
+Wrote /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/build/final.mp4
+
+===== STEP meta (finish) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/meta.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/enceladus_trial_v3/episode.json
+Wrote build/captions.srt and build/description.txt
