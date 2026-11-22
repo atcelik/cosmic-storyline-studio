@@ -76,6 +76,8 @@ ASSETS = {
                 "PROCESSED_DATA", "Solar System Scope (CC BY 4.0), based on NASA data", "https://www.solarsystemscope.com/textures/"),
 }
 
+SMALL = {"P01394", "A003", "A002", "P08321", "NUR", "WEBB"}
+
 CGI_CREDIT = "Our visualization: Enceladus map PIA18435 (NASA/JPL/SSI/LPI), Saturn and ring textures Solar System Scope (CC BY 4.0)"
 EARTH_CREDIT = "Our visualization: Solar System Scope Earth map (CC BY 4.0, based on NASA data)"
 
@@ -129,18 +131,18 @@ SHOTS = [
     ("B2", "Voyager only had a glimpse. The answer had to wait more than twenty years.", "3d:f_south_low", None, None),
     ("B3", "Cassini reached Saturn in 2004.", "3d:g_saturn_wide", None, "ocean"),
     ("B3", "In February 2005, its magnetometer felt Saturn's magnetic field bending around Enceladus, as if something like an atmosphere was in the way.", "3d:h_enc_approach2", None, "nasa"),
-    ("B3", "In July, Cassini found a cloud of water vapour hanging over the south pole.", "A003", (0.5, 0.6), "nasa"),
+    ("B3", "In July, Cassini found a cloud of water vapour hanging over the south pole.", "A003", (0.5, 0.5), "nasa"),
     ("B3", "Below it were four long, warm fractures in the ice. Scientists called them tiger stripes.", "A006", (0.55, 0.45), "nasa"),
     ("B3", "Each one is about a hundred and thirty-five kilometres long.", "3d:i_stripes_flight", None, "nasa"),
     ("B3", "Over the years, Cassini counted a hundred and one separate geysers along them.", "A002", (0.5, 0.55), "nasa"),
     ("B3", "And the south pole was not just warm for an ice moon. It was hot.", "3d:j_jets_close", None, None),
-    ("B3", "It gives off about sixteen gigawatts of heat, around two and a half times the power of all the hot springs in Yellowstone.", "P10360", (0.6, 0.5), "nasa"),
-    ("B3", "The spray was not a thin mist. It was feeding an entire ring of Saturn.", "A004", (0.5, 0.5), "nasa"),
+    ("B3", "It gives off about sixteen gigawatts of heat, around two and a half times the power of all the hot springs in Yellowstone.", "P10360", (0.75, 0.5), "nasa"),
+    ("B3", "The spray was not a thin mist. It was feeding an entire ring of Saturn.", "A001", (0.5, 0.5), "nasa"),
     ("B3", "Saturn's faint outer E ring is made mostly of ice from these jets.", "P08321", (0.5, 0.5), "nasa"),
     ("B3", "So where was all that water coming from?", "3d:d_saturn_eclipse", None, None),
     ("B4", "Ice can turn straight into vapour without ever melting. Scientists needed proof of liquid water.", "3d:f_south_low2", None, None),
     ("B4", "The proof was salt.", "3d:j_jets_close2", None, None),
-    ("B4", "In 2009, Cassini found sodium salts in ice grains from Saturn's outer ring, the ring Enceladus feeds.", "A003", (0.4, 0.55), "nasa"),
+    ("B4", "In 2009, Cassini found sodium salts in ice grains from Saturn's outer ring, the ring Enceladus feeds.", "P08321", (0.5, 0.5), "nasa"),
     ("B4", "Salt like that dissolves out of rock, in liquid water. Somewhere below, water was touching stone.", "3d:j_jets_close3", None, None),
     ("B4", "By 2014, gravity measurements pointed to a sea under the south pole, about ten kilometres deep, under thirty to forty kilometres of ice.", "P18071", (0.5, 0.65), "nasa"),
     ("B4", "Then came a stranger clue. Enceladus wobbles as it orbits Saturn.", "3d:e_enc_turn2", None, None),
@@ -150,14 +152,14 @@ SHOTS = [
     ("B4", "A hidden ocean, on a moon with roughly the surface area of Turkey.", "A010", (0.5, 0.5), None),
     ("B5", "Life as we know it needs three things: liquid water, a source of energy, and the right chemistry.", "3d:b_enc_approach2", None, None),
     ("B5", "Water, Enceladus clearly has.", "3d:j_jets_close4", None, None),
-    ("B5", "In 2008, Cassini flew straight through the plume and tasted it.", "A005", (0.5, 0.55), "nasa"),
+    ("B5", "In 2008, Cassini flew straight through the plume and tasted it.", "A007", (0.35, 0.6), "nasa"),
     ("B5", "It was full of organic molecules, about twenty times denser than expected.", "3d:k_plume_flythrough", None, "nasa"),
     ("B5", "Scientists compared it to carbonated water with an essence of natural gas.", "3d+:k_plume_flythrough", None, "nasa"),
     ("B5", "In 2015, tiny grains of silica pointed to something more: hot water reacting with rock, on the ocean floor.", "A011", (0.5, 0.6), "nasa"),
     ("B5", "Then, on the 28th of October 2015, Cassini made its deepest dive through the plume.", "3d:k_plume_dive2", None, "h2"),
     ("B5", "It found hydrogen, about one percent of the gas.", "3d+:k_plume_dive2", None, "h2"),
     ("B5", "Hydrogen like that forms when hot water reacts with rock. And for microbes, it is food: chemical energy.", "A011", (0.4, 0.7), "h2"),
-    ("B5", "In 2023, one more ingredient: phosphates, at least a hundred times more concentrated than in Earth's oceans.", "A001", (0.5, 0.5), "phos"),
+    ("B5", "In 2023, one more ingredient: phosphates, at least a hundred times more concentrated than in Earth's oceans.", "A010", (0.5, 0.75), "phos"),
     ("B5", "Phosphorus forms the backbone of every DNA molecule on Earth.", "3d:e_enc_turn3", None, "phos"),
     ("B5", "Water. Energy. Chemistry. Every box we know how to tick.", "3d:d_saturn_eclipse2", None, None),
     ("B6", "To see what that chemistry can do, we only have to look at home.", "STS66", (0.5, 0.45), None),
@@ -201,6 +203,9 @@ def main():
             s["visual"] = {"type": "still", "source_class": cls, "credit": credit, "source_url": page,
                            "search_query": "manifest", "credit_short": credit.split(";")[0][:60]}
             s["camera"] = {"move": "push_in", "strength": 0.07, "focus": list(focus)}
+            if vis in SMALL:                     # archive photo smaller than the frame: whole picture on black
+                s["visual"]["fit"] = "contain"
+                s["camera"] = {"move": "push_in", "strength": 0.05, "focus": [0.5, 0.5]}
             used.setdefault(vis, []).append(sid)
         s["transition_out"] = {"type": "cut"}
         # documentary breathing room: a 3D flight holds at least 8 s, a photo 6.5 s

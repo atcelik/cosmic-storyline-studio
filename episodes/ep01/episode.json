@@ -318,11 +318,12 @@
         "credit": "NASA/JPL",
         "source_url": "https://www.jpl.nasa.gov/images/pia01394-saturn-enceladus-from-a-distance-of-119000-kilometers-74000-miles/",
         "search_query": "manifest",
-        "credit_short": "NASA/JPL"
+        "credit_short": "NASA/JPL",
+        "fit": "contain"
       },
       "camera": {
         "move": "push_in",
-        "strength": 0.07,
+        "strength": 0.05,
         "focus": [
           0.5,
           0.5
@@ -481,14 +482,15 @@
         "credit": "NASA/JPL/Space Science Institute",
         "source_url": "https://www.jpl.nasa.gov/images/pia07798-spray-above-enceladus-iii/",
         "search_query": "manifest",
-        "credit_short": "NASA/JPL/Space Science Institute"
+        "credit_short": "NASA/JPL/Space Science Institute",
+        "fit": "contain"
       },
       "camera": {
         "move": "push_in",
-        "strength": 0.07,
+        "strength": 0.05,
         "focus": [
           0.5,
-          0.6
+          0.5
         ]
       },
       "transition_out": {
@@ -572,14 +574,15 @@
         "credit": "NASA/JPL/Space Science Institute",
         "source_url": "https://www.jpl.nasa.gov/images/pia12713-high-phase-plumes/",
         "search_query": "manifest",
-        "credit_short": "NASA/JPL/Space Science Institute"
+        "credit_short": "NASA/JPL/Space Science Institute",
+        "fit": "contain"
       },
       "camera": {
         "move": "push_in",
-        "strength": 0.07,
+        "strength": 0.05,
         "focus": [
           0.5,
-          0.55
+          0.5
         ]
       },
       "transition_out": {
@@ -630,7 +633,7 @@
         "move": "push_in",
         "strength": 0.07,
         "focus": [
-          0.6,
+          0.75,
           0.5
         ]
       },
@@ -653,10 +656,10 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "credit": "NASA/JPL-Caltech/Space Science Institute",
-        "source_url": "https://www.jpl.nasa.gov/images/pia21887-last-enceladus-plume-observation/",
+        "credit": "NASA/JPL-Caltech/SSI",
+        "source_url": "https://www.jpl.nasa.gov/images/pia17172-the-day-the-earth-smiled",
         "search_query": "manifest",
-        "credit_short": "NASA/JPL-Caltech/Space Science Institute"
+        "credit_short": "NASA/JPL-Caltech/SSI"
       },
       "camera": {
         "move": "push_in",
@@ -688,11 +691,12 @@
         "credit": "NASA/JPL/Space Science Institute",
         "source_url": "https://www.jpl.nasa.gov/images/pia08321-ghostly-fingers-of-enceladus/",
         "search_query": "manifest",
-        "credit_short": "NASA/JPL/Space Science Institute"
+        "credit_short": "NASA/JPL/Space Science Institute",
+        "fit": "contain"
       },
       "camera": {
         "move": "push_in",
-        "strength": 0.07,
+        "strength": 0.05,
         "focus": [
           0.5,
           0.5
@@ -778,16 +782,17 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "credit": "NASA/JPL/Space Science Institute",
-        "source_url": "https://www.jpl.nasa.gov/images/pia07798-spray-above-enceladus-iii/",
+        "source_url": "https://www.jpl.nasa.gov/images/pia08321-ghostly-fingers-of-enceladus/",
         "search_query": "manifest",
-        "credit_short": "NASA/JPL/Space Science Institute"
+        "credit_short": "NASA/JPL/Space Science Institute",
+        "fit": "contain"
       },
       "camera": {
         "move": "push_in",
-        "strength": 0.07,
+        "strength": 0.05,
         "focus": [
-          0.4,
-          0.55
+          0.5,
+          0.5
         ]
       },
       "transition_out": {
@@ -1038,7 +1043,7 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "credit": "NASA/JPL/Space Science Institute",
-        "source_url": "https://www.jpl.nasa.gov/images/pia07762-enceladus-plume-movie/",
+        "source_url": "https://www.jpl.nasa.gov/images/bursting-at-the-seams-the-geyser-basin-of-enceladus",
         "search_query": "manifest",
         "credit_short": "NASA/JPL/Space Science Institute"
       },
@@ -1046,8 +1051,8 @@
         "move": "push_in",
         "strength": 0.07,
         "focus": [
-          0.5,
-          0.55
+          0.35,
+          0.6
         ]
       },
       "transition_out": {
@@ -1242,18 +1247,18 @@
       "voiceover": "In 2023, one more ingredient: phosphates, at least a hundred times more concentrated than in Earth's oceans.",
       "visual": {
         "type": "still",
-        "source_class": "REAL_PHOTO",
-        "credit": "NASA/JPL-Caltech/SSI",
-        "source_url": "https://www.jpl.nasa.gov/images/pia17172-the-day-the-earth-smiled",
+        "source_class": "ARTIST_CONCEPT",
+        "credit": "NASA/JPL-Caltech",
+        "source_url": "https://www.jpl.nasa.gov/images/pia23175-enceladus-global-view-with-plume-artists-rendering/",
         "search_query": "manifest",
-        "credit_short": "NASA/JPL-Caltech/SSI"
+        "credit_short": "NASA/JPL-Caltech"
       },
       "camera": {
         "move": "push_in",
         "strength": 0.07,
         "focus": [
           0.5,
-          0.5
+          0.75
         ]
       },
       "transition_out": {
@@ -1410,11 +1415,12 @@
         "credit": "OAR/National Undersea Research Program (NURP)",
         "source_url": "https://noaa.gov/media/digital-library-photo/pl23nur04512jpg",
         "search_query": "manifest",
-        "credit_short": "OAR/National Undersea Research Program (NURP)"
+        "credit_short": "OAR/National Undersea Research Program (NURP)",
+        "fit": "contain"
       },
       "camera": {
         "move": "push_in",
-        "strength": 0.07,
+        "strength": 0.05,
         "focus": [
           0.5,
           0.5
@@ -1617,11 +1623,12 @@
         "credit": "NASA, ESA, CSA, STScI, G. Villanueva (NASA's Goddard Space Flight Center), A. Pagan (STScI)",
         "source_url": "https://esawebb.org/images/weic2314a",
         "search_query": "manifest",
-        "credit_short": "NASA, ESA, CSA, STScI, G. Villanueva (NASA's Goddard Space F"
+        "credit_short": "NASA, ESA, CSA, STScI, G. Villanueva (NASA's Goddard Space F",
+        "fit": "contain"
       },
       "camera": {
         "move": "push_in",
-        "strength": 0.07,
+        "strength": 0.05,
         "focus": [
           0.5,
           0.5

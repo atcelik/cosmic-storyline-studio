@@ -3,5 +3,5 @@
   "steps": ["assets", "space3d", "validate", "tts", "render", "audio", "meta"],
   "quality": "final",
   "search": false,
-  "note": "EP01 render 2: decode-to-trim fix for continuing 3D flights"
+  "note": "EP01 render 3: small archive photos framed on black (fit contain), tiny images replaced"
 }

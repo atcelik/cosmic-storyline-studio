@@ -12,7 +12,8 @@
    "credit_checked": true,
    "note": "credit line read from the source page on 2026-11-22",
    "shots": [
-    "S005"
+    "S005",
+    "S038"
    ]
   },
   {
@@ -84,8 +85,7 @@
    "credit_checked": true,
    "note": "credit line read from the source page on 2026-11-22",
    "shots": [
-    "S017",
-    "S028"
+    "S017"
    ]
   },
   {
@@ -112,9 +112,7 @@
    "source_url": "https://www.jpl.nasa.gov/images/pia07762-enceladus-plume-movie/",
    "credit_checked": true,
    "note": "credit line read from the source page on 2026-11-22",
-   "shots": [
-    "S038"
-   ]
+   "shots": []
   },
   {
    "id": "P10360",
@@ -140,9 +138,7 @@
    "source_url": "https://www.jpl.nasa.gov/images/pia21887-last-enceladus-plume-observation/",
    "credit_checked": true,
    "note": "credit line read from the source page on 2026-11-22",
-   "shots": [
-    "S023"
-   ]
+   "shots": []
   },
   {
    "id": "P08321",
@@ -155,7 +151,8 @@
    "credit_checked": true,
    "note": "credit line read from the source page on 2026-11-22",
    "shots": [
-    "S024"
+    "S024",
+    "S028"
    ]
   },
   {
@@ -197,7 +194,8 @@
    "credit_checked": true,
    "note": "credit line read from the source page on 2026-11-22",
    "shots": [
-    "S035"
+    "S035",
+    "S045"
    ]
   },
   {
@@ -226,7 +224,7 @@
    "credit_checked": true,
    "note": "credit line read from the source page on 2026-11-22",
    "shots": [
-    "S045"
+    "S023"
    ]
   },
   {

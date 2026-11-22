@@ -62,6 +62,24 @@ def parallax_mask(img, layer):
     return mask, bg
 
 
+def contain_canvas(img, W, H, margin=0.12):
+    """Small archive photo: put the whole picture on black, on a canvas with the frame's aspect ratio,
+    so it is shown near its native size instead of being blown up to fill the frame."""
+    h, w = img.shape[:2]
+    cw = max(w / (1 - 2 * margin), h / (1 - 2 * margin) * W / H)
+    ch = cw * H / W
+    cw, ch = int(round(cw)), int(round(ch))
+    # never smaller than half the output frame, so the photo is not a postage stamp
+    k = max(1.0, (W * 0.5) / cw)
+    if k > 1.0:
+        img = cv2.resize(img, (int(w * k), int(h * k)), interpolation=cv2.INTER_LANCZOS4)
+        h, w = img.shape[:2]; cw, ch = int(cw * k), int(ch * k)
+    can = np.zeros((ch, cw, 3), np.uint8)
+    y0, x0 = (ch - h) // 2, (cw - w) // 2
+    can[y0:y0 + h, x0:x0 + w] = img
+    return can
+
+
 class Source:
     """Holds a 'working' image already scaled to cover the frame at the largest zoom (K)."""
     def __init__(self, shot, base_dir, W, H, look=None):
@@ -89,6 +107,8 @@ class Source:
             img = cv2.imread(str(path), cv2.IMREAD_COLOR)
             if img is None:
                 raise RuntimeError(f"cannot read image {path}")
+            if v.get("fit") == "contain":
+                img = contain_canvas(img, W, H, float(v.get("contain_margin", 0.12)))
             self.work = self._fit(img)
             if self.par > 0:
                 self.mask, self.bg = parallax_mask(self.work, self.layer)

@@ -147,6 +147,9 @@ def check_assets(ep, base, cfg, T):
             continue
         if v["type"] == "still":
             w, h = Image.open(p).size
+            if v.get("fit") == "contain":
+                if w < 400: E_(f"{s['id']}: image only {w}px wide, too small even framed on black")
+                continue
             mv = (s.get("camera") or {}).get("move", "push_in")
             eff = max(cfg["width"] / w, cfg["height"] / h) * (1 + (s.get("camera") or {}).get("strength", 0.06) if mv != "hold" else 1)
             if eff > 1.0: W_(f"{s['id']}: source is upscaled {eff:.2f}x at the closest zoom: will look soft")
