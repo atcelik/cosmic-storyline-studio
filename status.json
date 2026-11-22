@@ -1,0 +1,17 @@
+{
+  "episode": "earth_scout",
+  "request": {
+    "episode": "earth_scout",
+    "steps": [
+      "assets"
+    ],
+    "quality": "draft",
+    "search": true,
+    "top": 2,
+    "note": "Scout: ISS Earth footage (URL quoting fixed, 1080p preferred)"
+  },
+  "phases": [],
+  "steps": [],
+  "result": "FAILED: a parallel job failed before it could report (see the Actions log)",
+  "seconds_by_step": {}
+}
