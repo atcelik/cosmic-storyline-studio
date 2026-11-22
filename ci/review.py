@@ -37,6 +37,34 @@ if b.exists():
         sh(["ffmpeg", "-v", "error", "-y", "-i", v, "-vf", f"fps={8 / max(d, 0.5):.4f},scale=360:-2,tile=4x2",
             "-frames:v", "1", OUT / "video_strips" / f"{v.stem}.jpg"])
 
+# 3D scene textures, downscaled, for the live preview page
+specs = sorted((ep_dir / "assets" / "space3d").glob("*.json"))
+if specs:
+    import cv2
+    (OUT / "textures").mkdir(exist_ok=True)
+    done = set()
+    for sp in specs:
+        spec = json.loads(sp.read_text())
+        for bd in spec.get("bodies", []):
+            for t in [bd.get("texture"), (bd.get("rings") or {}).get("texture")]:
+                cands = t if isinstance(t, list) else [t]
+                for c in cands:
+                    if not c:
+                        continue
+                    p = (sp.parent / c).resolve()
+                    if p.exists():
+                        if p.name not in done:
+                            im = cv2.imread(str(p), cv2.IMREAD_UNCHANGED)
+                            h, w = im.shape[:2]
+                            lim = 4096 if h < w / 8 else 2048          # ring strips keep more radial detail
+                            if w > lim:
+                                im = cv2.resize(im, (lim, max(1, round(h * lim / w))), interpolation=cv2.INTER_AREA)
+                            out = OUT / "textures" / (p.stem + (".png" if im.ndim == 3 and im.shape[2] == 4 else ".jpg"))
+                            cv2.imwrite(str(out), im, [cv2.IMWRITE_JPEG_QUALITY, 90])
+                            done.add(p.name)
+                        break
+    print("textures:", sorted(done))
+
 # voice samples -> small m4a
 vt = ROOT / "voice_test"
 if vt.exists():

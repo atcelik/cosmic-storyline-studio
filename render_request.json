@@ -1,15 +1,9 @@
 {
   "episode": "enceladus_trial_v2",
   "steps": [
-    "assets",
-    "space3d",
-    "validate",
-    "tts",
-    "render",
-    "audio",
-    "meta"
+    "assets"
   ],
-  "quality": "final",
+  "quality": "draft",
   "search": false,
-  "note": "v2: documentary pacing + mixed 3D fly-through format (parallel run)"
+  "note": "export downscaled 3D textures for the live preview page"
 }
