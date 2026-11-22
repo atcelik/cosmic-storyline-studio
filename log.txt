@@ -1,0 +1,34 @@
+
+===== STEP assets =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/get_assets.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/video_scout --no-zip --search --top 2
+search S001: 'Enceladus' (video)
+   9 raw results
+search S002: 'Cassini Enceladus flyby' (video)
+   0 raw results
+   no results: change the search_query or ask Claude for a manual URL
+search S003: 'Enceladus ocean plumes' (video)
+   0 raw results
+   no results: change the search_query or ask Claude for a manual URL
+search S004: 'Cassini Saturn rings' (video)
+   6 raw results
+search S005: 'Cassini Grand Finale' (video)
+   0 raw results
+   no results: change the search_query or ask Claude for a manual URL
+4 items -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/video_scout/assets/originals
+[1/4] S001_c1  https://images-assets.nasa.gov/video/ksc_082404_newmoons/ksc_082404_newmoons~orig.mp4
+   cached: 320x212 15.0fps 65.18s  [LOW_RES_VIDEO: 212p; FPS_15.0: may judder at 30 fps]
+[2/4] S001_c2  https://images-assets.nasa.gov/video/The Axiom Space Mission 2 Crew Return to Earth on This Week @NASA – June 2, 2023/The Axiom Space Mission 2 Crew Return to Earth on This Week @NASA – June 2, 2023~orig.mp4
+   FAILED: URL can't contain control characters. '/video/The Axiom Space Mission 2 Crew Return to Earth on This Week @NASA – June 2, 2023/The Axiom Space Mission 2 Crew Return to Earth on This Week @NASA – June 2, 2023~orig.mp4' (found at least ' ')
+[3/4] S004_c1  https://images-assets.nasa.gov/video/GSFC_20170912_Cassini_m12709_CIRS_Long/GSFC_20170912_Cassini_m12709_CIRS_Long~orig.mp4
+   cached: 1920x1080 30.0fps 565.57s
+[4/4] S004_c2  https://images-assets.nasa.gov/video/GSFC_20170912_Cassini_m12709_CIRS_Short/GSFC_20170912_Cassini_m12709_CIRS_Short~orig.mp4
+   cached: 1920x1080 30.0fps 392.33s
+
+============================================================
+OK 3   FAILED 1   contact sheets: 1
+  FAILED S001_c2: URL can't contain control characters. '/video/The Axiom Space Mission 2 Crew Return to Earth on This Week @NASA – June 2, 2023/The Axiom Space Mission 2 Crew Return to Earth on This Week @NASA – June 2, 2023~orig.mp4' (found at least ' ')
+Re-run the same command to retry failed items (finished ones are skipped).
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/apply_bundle.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/video_scout /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/video_scout/bundle
+3 assets unpacked, 2 shots wired.
+3 shots still without a file: S002, S003, S005
+Next: make validate EP=video_scout

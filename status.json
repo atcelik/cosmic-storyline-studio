@@ -1,0 +1,22 @@
+{
+  "episode": "video_scout",
+  "request": {
+    "episode": "video_scout",
+    "steps": [
+      "assets"
+    ],
+    "quality": "draft",
+    "search": true,
+    "top": 2,
+    "note": "Re-run scout: real NASA video candidates (results go to review-video_scout)"
+  },
+  "steps": [
+    {
+      "step": "assets",
+      "ok": true,
+      "seconds": 1045
+    }
+  ],
+  "started": "2026-11-22 09:41:21 UTC",
+  "result": "OK"
+}

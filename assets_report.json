@@ -1,0 +1,108 @@
+{
+  "episode": "video_scout",
+  "created": "2026-11-22 09:58",
+  "max_width": 3840,
+  "ok": 3,
+  "failed": 1,
+  "items": [
+    {
+      "url": "https://images-assets.nasa.gov/video/ksc_082404_newmoons/ksc_082404_newmoons~orig.mp4",
+      "title": "KSC-04-S-00310",
+      "credit": "NASA (KSC) / NASA or National Aeronautics and Space Administration",
+      "source_url": "https://images.nasa.gov/details/ksc_082404_newmoons",
+      "date": "2004-08-30",
+      "description": "Saturn's orbiting family has grown by two with the identification of a pair of small moons circling the planet.  Measuring three and four kilometers across, the newfound moons are likely to be only two of many more lurking about Saturn and its rings.    Orbiting approximately 200,000 kilometers from",
+      "id": "S001_c1",
+      "kind": "video",
+      "shots": [
+        "S001"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_VIDEO",
+      "from_search": true,
+      "orig_width": 320,
+      "orig_height": 212,
+      "fps": 15.0,
+      "duration": 65.18,
+      "width": 320,
+      "height": 212,
+      "bundle_file": "S001_c1.mp4",
+      "bytes": 1938922,
+      "flags": [
+        "LOW_RES_VIDEO: 212p",
+        "FPS_15.0: may judder at 30 fps"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/video/The Axiom Space Mission 2 Crew Return to Earth on This Week @NASA – June 2, 2023/The Axiom Space Mission 2 Crew Return to Earth on This Week @NASA – June 2, 2023~orig.mp4",
+      "title": "The Axiom Space Mission 2 Crew Return to Earth on This Week @NASA – June 2, 2023",
+      "credit": "NASA (HQ)",
+      "source_url": "https://images.nasa.gov/details/The%20Axiom%20Space%20Mission%202%20Crew%20Return%20to%20Earth%20on%20This%20Week%20%40NASA%20%E2%80%93%20June%202%2C%202023",
+      "date": "2023-06-02",
+      "description": "Axiom Mission 2 crew members return to Earth, discussing unidentified anomalous phenomena, and a water plume off of Saturn’s moon, Enceladus … a few of the stories to tell you about – This Week at NASA!",
+      "id": "S001_c2",
+      "kind": "video",
+      "shots": [
+        "S001"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_VIDEO",
+      "from_search": true,
+      "status": "failed",
+      "error": "URL can't contain control characters. '/video/The Axiom Space Mission 2 Crew Return to Earth on This Week @NASA – June 2, 2023/The Axiom Space Mission 2 Crew Return to Earth on This Week @NASA – June 2, 2023~orig.mp4' (found at least ' ')"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/video/GSFC_20170912_Cassini_m12709_CIRS_Long/GSFC_20170912_Cassini_m12709_CIRS_Long~orig.mp4",
+      "title": "Cassini's Infrared Saturn (Directors Cut)",
+      "credit": "NASA (GSFC) / Robert Andreoli, John Caldwell, Katrina Jackson, Michael Lentz, Chris Smith, Chris Meaney, Tom Bridgman",
+      "source_url": "https://images.nasa.gov/details/GSFC_20170912_Cassini_m12709_CIRS_Long",
+      "date": "2017-09-12",
+      "description": "The Cassini-Huygens mission arrived at Saturn in 2004, beginning an epic thirteen-year tour of the ringed planet and its many moons. Cassini and its companion probe, Huygens, were an international collaboration between NASA and the European Space Agency (ESA). Cassini carried an impressive array of ",
+      "id": "S004_c1",
+      "kind": "video",
+      "shots": [
+        "S004"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_VIDEO",
+      "from_search": true,
+      "orig_width": 1920,
+      "orig_height": 1080,
+      "fps": 30.0,
+      "duration": 565.57,
+      "width": 1920,
+      "height": 1080,
+      "bundle_file": "S004_c1.mp4",
+      "bytes": 631773447,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/video/GSFC_20170912_Cassini_m12709_CIRS_Short/GSFC_20170912_Cassini_m12709_CIRS_Short~orig.mp4",
+      "title": "Cassini's Infrared Saturn (Short Version)",
+      "credit": "NASA (GSFC) / Robert Andreoli, John Caldwell, Adriana Manrique Gutierrez, Lisa Poje, Katrina Jackson, Michael Lentz, Chris Smith, Chris Meaney, Tom Bridgman",
+      "source_url": "https://images.nasa.gov/details/GSFC_20170912_Cassini_m12709_CIRS_Short",
+      "date": "2017-09-12",
+      "description": "The Cassini-Huygens mission arrived at Saturn in 2004, beginning an epic thirteen-year tour of the ringed planet and its many moons. Cassini and its companion probe, Huygens, were an international collaboration between NASA and the European Space Agency (ESA). Cassini carried an impressive array of ",
+      "id": "S004_c2",
+      "kind": "video",
+      "shots": [
+        "S004"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_VIDEO",
+      "from_search": true,
+      "orig_width": 1920,
+      "orig_height": 1080,
+      "fps": 30.0,
+      "duration": 392.33,
+      "width": 1920,
+      "height": 1080,
+      "bundle_file": "S004_c2.mp4",
+      "bytes": 415326380,
+      "flags": [],
+      "status": "ok"
+    }
+  ]
+}
