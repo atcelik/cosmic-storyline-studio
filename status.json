@@ -1,0 +1,269 @@
+{
+  "episode": "ep01_short1",
+  "request": {
+    "episode": "ep01_short1",
+    "steps": [
+      "assets",
+      "space3d",
+      "validate",
+      "tts",
+      "render",
+      "audio",
+      "meta"
+    ],
+    "quality": "final",
+    "search": false,
+    "note": "First Short from EP01: native 1080x1920, vertical 3D renders, burned-in captions"
+  },
+  "phases": [
+    {
+      "phase": "prepare",
+      "result": "OK",
+      "plan": {
+        "cgi_tasks": 12,
+        "render_tasks": 2
+      }
+    },
+    {
+      "phase": "cgi_c_jets_backlit-00000",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_c_jets_backlit-00090",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_c_jets_backlit-00180",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_e_enc_turn-00000",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_e_enc_turn-00090",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_e_enc_turn-00180",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_k_plume_flythrough-00000",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_k_plume_flythrough-00090",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_m_pullback-00000",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_m_pullback-00090",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_m_pullback-00180",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "cgi_m_pullback-00270",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "render_000000",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "render_000900",
+      "result": "OK",
+      "plan": null
+    },
+    {
+      "phase": "finish",
+      "result": "OK",
+      "plan": null
+    }
+  ],
+  "steps": [
+    {
+      "step": "assets",
+      "ok": true,
+      "seconds": 7,
+      "phase": "prepare"
+    },
+    {
+      "step": "validate",
+      "ok": true,
+      "seconds": 0,
+      "phase": "prepare"
+    },
+    {
+      "step": "tts",
+      "ok": true,
+      "seconds": 23,
+      "phase": "prepare"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 117,
+      "phase": "cgi_c_jets_backlit-00000"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 123,
+      "phase": "cgi_c_jets_backlit-00090"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 11,
+      "phase": "cgi_c_jets_backlit-00180"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 83,
+      "phase": "cgi_e_enc_turn-00000"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 53,
+      "phase": "cgi_e_enc_turn-00090"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 37,
+      "phase": "cgi_e_enc_turn-00180"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 75,
+      "phase": "cgi_k_plume_flythrough-00000"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 69,
+      "phase": "cgi_k_plume_flythrough-00090"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 63,
+      "phase": "cgi_m_pullback-00000"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 47,
+      "phase": "cgi_m_pullback-00090"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 63,
+      "phase": "cgi_m_pullback-00180"
+    },
+    {
+      "step": "space3d",
+      "ok": true,
+      "seconds": 44,
+      "phase": "cgi_m_pullback-00270"
+    },
+    {
+      "step": "render",
+      "ok": true,
+      "seconds": 51,
+      "phase": "render_000000"
+    },
+    {
+      "step": "render",
+      "ok": true,
+      "seconds": 48,
+      "phase": "render_000900"
+    },
+    {
+      "step": "validate+assets",
+      "ok": true,
+      "seconds": 0,
+      "phase": "finish"
+    },
+    {
+      "step": "audio",
+      "ok": true,
+      "seconds": 2,
+      "phase": "finish"
+    },
+    {
+      "step": "meta",
+      "ok": true,
+      "seconds": 0,
+      "phase": "finish"
+    }
+  ],
+  "result": "OK",
+  "seconds_by_step": {
+    "assets": {
+      "jobs": 1,
+      "longest": 7,
+      "sum": 7
+    },
+    "validate": {
+      "jobs": 1,
+      "longest": 0,
+      "sum": 0
+    },
+    "tts": {
+      "jobs": 1,
+      "longest": 23,
+      "sum": 23
+    },
+    "space3d": {
+      "jobs": 12,
+      "longest": 123,
+      "sum": 785
+    },
+    "render": {
+      "jobs": 2,
+      "longest": 51,
+      "sum": 99
+    },
+    "validate+assets": {
+      "jobs": 1,
+      "longest": 0,
+      "sum": 0
+    },
+    "audio": {
+      "jobs": 1,
+      "longest": 2,
+      "sum": 2
+    },
+    "meta": {
+      "jobs": 1,
+      "longest": 0,
+      "sum": 0
+    }
+  },
+  "final_video": "episodes/ep01_short1/build/final.mp4"
+}

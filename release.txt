@@ -1,0 +1,2 @@
+release_tag=ep01_short1-r17
+release_url=https://github.com/atcelik/cosmic-storyline-studio/releases/tag/ep01_short1-r17

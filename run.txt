@@ -1,0 +1,4 @@
+run_url=https://github.com/atcelik/cosmic-storyline-studio/actions/runs/45053363560
+run_number=17
+commit=70469f96c43e952b5f0b8967aa0d108edcd076ef
+jobs=prepare:success cgi:success render:success

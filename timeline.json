@@ -1,0 +1,86 @@
+{
+  "shots": [
+    {
+      "id": "S001",
+      "start": 0.0,
+      "dur": 5.25,
+      "vo_start": 0.3,
+      "vo_dur": 3.95,
+      "trans": "cut",
+      "trans_d": 0.0
+    },
+    {
+      "id": "S002",
+      "start": 5.25,
+      "dur": 3.9,
+      "vo_start": 5.7,
+      "vo_dur": 2.45,
+      "trans": "cut",
+      "trans_d": 0.0
+    },
+    {
+      "id": "S003",
+      "start": 9.15,
+      "dur": 6.475,
+      "vo_start": 9.6,
+      "vo_dur": 5.025,
+      "trans": "cut",
+      "trans_d": 0.0
+    },
+    {
+      "id": "S004",
+      "start": 15.625,
+      "dur": 7.85,
+      "vo_start": 16.075,
+      "vo_dur": 6.4,
+      "trans": "cut",
+      "trans_d": 0.0
+    },
+    {
+      "id": "S005",
+      "start": 23.475,
+      "dur": 5.0,
+      "vo_start": 23.925,
+      "vo_dur": 3.55,
+      "trans": "cut",
+      "trans_d": 0.0
+    },
+    {
+      "id": "S006",
+      "start": 28.475,
+      "dur": 6.725,
+      "vo_start": 28.925,
+      "vo_dur": 5.275,
+      "trans": "cut",
+      "trans_d": 0.0
+    },
+    {
+      "id": "S007",
+      "start": 35.2,
+      "dur": 6.075,
+      "vo_start": 35.65,
+      "vo_dur": 4.625,
+      "trans": "cut",
+      "trans_d": 0.0
+    },
+    {
+      "id": "S008",
+      "start": 41.275,
+      "dur": 5.2,
+      "vo_start": 41.725,
+      "vo_dur": 3.75,
+      "trans": "cut",
+      "trans_d": 0.0
+    },
+    {
+      "id": "S009",
+      "start": 46.475,
+      "dur": 5.6,
+      "vo_start": 46.925,
+      "vo_dur": 2.5,
+      "trans": "cut",
+      "trans_d": 0.0
+    }
+  ],
+  "total": 52.075
+}
