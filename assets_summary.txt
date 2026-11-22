@@ -1,0 +1,32 @@
+ep01 asset bundle - 2026-11-22 12:57
+OK 29  FAILED 0
+
+A007         ok      1580x977 SMALL: smaller than 1920x1080, will look soft full-frame 
+P11684       ok      1900x1900 SMALL: smaller than 1920x1080, will look soft full-frame ASPECT_1.00: tall/square, full-frame crop loses 44% of the height 
+P01394       ok      1000x1000 SMALL: smaller than 1920x1080, will look soft full-frame ASPECT_1.00: tall/square, full-frame crop loses 44% of the height 
+A008         ok      3237x3812 ASPECT_0.85: tall/square, full-frame crop loses 52% of the height 
+A006         ok      5500x7700 ASPECT_0.71: tall/square, full-frame crop loses 60% of the height 
+A003         ok      1028x505 SMALL: smaller than 1920x1080, will look soft full-frame 
+A002         ok      826x826 SMALL: smaller than 1920x1080, will look soft full-frame ASPECT_1.00: tall/square, full-frame crop loses 44% of the height 
+A005         ok      501x303 SMALL: smaller than 1920x1080, will look soft full-frame 
+P10360       ok      2908x1440  
+A004         ok      441x372 SMALL: smaller than 1920x1080, will look soft full-frame ASPECT_1.19: tall/square, full-frame crop loses 33% of the height 
+P08321       ok      1020x675 SMALL: smaller than 1920x1080, will look soft full-frame 
+P18071       ok      4992x5001 ASPECT_1.00: tall/square, full-frame crop loses 44% of the height 
+A009         ok      8534x4800  
+A010         ok      4650x5850 ASPECT_0.79: tall/square, full-frame crop loses 55% of the height 
+A011         ok      4000x2500  
+A001         ok      9000x3500  
+STS66        ok      4638x4512 ASPECT_1.03: tall/square, full-frame crop loses 42% of the height 
+N008         ok      1920x1080 OK_NO_ZOOM: fine full-frame, little room to zoom 
+NUR          ok      1184x1824 SMALL: smaller than 1920x1080, will look soft full-frame ASPECT_0.65: tall/square, full-frame crop loses 63% of the height 
+LOST         ok      1920x1080 OK_NO_ZOOM: fine full-frame, little room to zoom 
+P21439       ok      3000x1266  
+P21440       ok      3000x1266  
+WEBB         ok      1500x1500 SMALL: smaller than 1920x1080, will look soft full-frame ASPECT_1.00: tall/square, full-frame crop loses 44% of the height 
+T003         ok      15960x7980  
+SAT8         ok      4096x2048  
+SAT2         ok      2048x1024 SMALL: smaller than 1920x1080, will look soft full-frame 
+RING8        ok      8192x500 SMALL: smaller than 1920x1080, will look soft full-frame 
+RING2        ok      2048x125 SMALL: smaller than 1920x1080, will look soft full-frame 
+EARTHSS      ok      8192x4096  

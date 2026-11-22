@@ -1,0 +1,1066 @@
+
+===== STEP assets (prepare) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/get_assets.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01 --no-zip
+29 items -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/originals
+[1/29] A007  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA11688.jpg
+   cached: 1580x977  [SMALL: smaller than 1920x1080, will look soft full-frame]
+[2/29] P11684  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA11684.jpg
+   cached: 1900x1900  [SMALL: smaller than 1920x1080, will look soft full-frame; ASPECT_1.00: tall/square, full-frame crop loses 44% of the height]
+[3/29] P01394  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA01394.jpg
+   cached: 1000x1000  [SMALL: smaller than 1920x1080, will look soft full-frame; ASPECT_1.00: tall/square, full-frame crop loses 44% of the height]
+[4/29] A008  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA06254.jpg
+   cached: 3237x3812  [ASPECT_0.85: tall/square, full-frame crop loses 52% of the height]
+[5/29] A006  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA11135.jpg
+   cached: 5500x7700  [ASPECT_0.71: tall/square, full-frame crop loses 60% of the height]
+[6/29] A003  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA07798.jpg
+   cached: 1028x505  [SMALL: smaller than 1920x1080, will look soft full-frame]
+[7/29] A002  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA12713.jpg
+   cached: 826x826  [SMALL: smaller than 1920x1080, will look soft full-frame; ASPECT_1.00: tall/square, full-frame crop loses 44% of the height]
+[8/29] A005  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA07762.jpg
+   cached: 501x303  [SMALL: smaller than 1920x1080, will look soft full-frame]
+[9/29] P10360  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA10360.jpg
+   cached: 2908x1440
+[10/29] A004  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA21887.jpg
+   cached: 441x372  [SMALL: smaller than 1920x1080, will look soft full-frame; ASPECT_1.19: tall/square, full-frame crop loses 33% of the height]
+[11/29] P08321  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA08321.jpg
+   cached: 1020x675  [SMALL: smaller than 1920x1080, will look soft full-frame]
+[12/29] P18071  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA18071.jpg
+   cached: 4992x5001  [ASPECT_1.00: tall/square, full-frame crop loses 44% of the height]
+[13/29] A009  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA19656.jpg
+   cached: 8534x4800
+[14/29] A010  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA23175.jpg
+   cached: 4650x5850  [ASPECT_0.79: tall/square, full-frame crop loses 55% of the height]
+[15/29] A011  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA19058.jpg
+   cached: 4000x2500
+[16/29] A001  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA17172.jpg
+   cached: 9000x3500
+[17/29] STS66  https://images-assets.nasa.gov/image/sts066-127-006/sts066-127-006~orig.jpg
+   cached: 4638x4512  [ASPECT_1.03: tall/square, full-frame crop loses 42% of the height]
+[18/29] N008  https://oceanexplorer.noaa.gov/wp-content/uploads/2025/08/1605vent-hires.jpg
+   cached: 1920x1080  [OK_NO_ZOOM: fine full-frame, little room to zoom]
+[19/29] NUR  https://s3.amazonaws.com/s3-east-testmedia-noaa.woc.noaa.gov/dam/Photos/legacy/pl23_nur04512.jpg
+   cached: 1184x1824  [SMALL: smaller than 1920x1080, will look soft full-frame; ASPECT_0.65: tall/square, full-frame crop loses 63% of the height]
+[20/29] LOST  https://s3.amazonaws.com/s3-east-testmedia-noaa.woc.noaa.gov/dam/Photos/legacy/pl23_expl2224.jpg
+   cached: 1920x1080  [OK_NO_ZOOM: fine full-frame, little room to zoom]
+[21/29] P21439  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA21439.jpg
+   cached: 3000x1266
+[22/29] P21440  https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA21440.jpg
+   cached: 3000x1266
+[23/29] WEBB  https://cdn.esawebb.org/archives/images/large/weic2314a.jpg
+   cached: 1500x1500  [SMALL: smaller than 1920x1080, will look soft full-frame; ASPECT_1.00: tall/square, full-frame crop loses 44% of the height]
+[24/29] T003  https://images-assets.nasa.gov/image/PIA18435/PIA18435~orig.jpg
+   cached: 15960x7980
+[25/29] SAT8  https://www.solarsystemscope.com/textures/download/8k_saturn.jpg
+   cached: 4096x2048
+[26/29] SAT2  https://www.solarsystemscope.com/textures/download/2k_saturn.jpg
+   cached: 2048x1024  [SMALL: smaller than 1920x1080, will look soft full-frame]
+[27/29] RING8  https://www.solarsystemscope.com/textures/download/8k_saturn_ring_alpha.png
+   cached: 8192x500  [SMALL: smaller than 1920x1080, will look soft full-frame]
+[28/29] RING2  https://www.solarsystemscope.com/textures/download/2k_saturn_ring_alpha.png
+   cached: 2048x125  [SMALL: smaller than 1920x1080, will look soft full-frame]
+[29/29] EARTHSS  https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg
+   cached: 8192x4096
+
+============================================================
+OK 29   FAILED 0   contact sheets: 2
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/apply_bundle.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01 /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/bundle
+29 assets unpacked, 28 shots wired.
+Next: make validate EP=ep01
+
+===== STEP validate (prepare) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/validate.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json
+Estimated runtime: 8.6 min (65 shots, avg 7.9s/shot)
+WARN  S022: 10.3s shot (retention rule: <= 10.0s)
+WARN  S030: 10.3s shot (retention rule: <= 10.0s)
+WARN  S057: 10.3s shot (retention rule: <= 10.0s)
+WARN  S058: 10.3s shot (retention rule: <= 10.0s)
+WARN  runtime 514s outside target 540-780s
+Result: PASS (0 errors, 5 warnings)
+
+===== STEP tts (prepare) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/tts.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/nn/modules/rnn.py:1012: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  super().__init__("LSTM", *args, **kwargs)
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+Collecting en-core-web-sm==3.8.0
+  Downloading en_core_web_sm-3.8.0-py3-none-any.whl (12.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 48.1 MB/s  0:00:00
+Installing collected packages: en-core-web-sm
+Successfully installed en-core-web-sm-3.8.0
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+WARNING: Defaulting repo_id to hexgrad/Kokoro-82M. Pass repo_id='hexgrad/Kokoro-82M' to suppress this warning.
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+  S001: 7.38s
+  S002: 4.42s
+  S003: 3.88s
+  S004: 5.05s
+  S005: 2.45s
+  S006: 5.03s
+  S007: 4.55s
+  S008: 6.28s
+  S009: 3.62s
+  S010: 5.65s
+  S011: 6.00s
+  S012: 6.70s
+  S013: 4.28s
+  S014: 5.42s
+  S015: 3.38s
+  S016: 11.35s
+  S017: 5.65s
+  S018: 6.47s
+  S019: 4.55s
+  S020: 5.83s
+  S021: 4.83s
+  S022: 8.25s
+  S023: 5.55s
+  S024: 5.08s
+  S025: 2.95s
+  S026: 7.08s
+  S027: 2.02s
+  S028: 8.90s
+  S029: 7.08s
+  S030: 10.70s
+  S031: 5.15s
+  S032: 6.90s
+  S033: 6.03s
+  S034: 6.40s
+  S035: 5.00s
+  S036: 6.90s
+  S037: 2.85s
+  S038: 5.08s
+  S039: 5.80s
+  S040: 5.80s
+  S041: 8.90s
+  S042: 6.97s
+  S043: 3.98s
+  S044: 8.07s
+  S045: 8.95s
+  S046: 5.12s
+  S047: 4.62s
+  S048: 4.62s
+  S049: 5.15s
+  S050: 9.45s
+  S051: 4.12s
+  S052: 5.78s
+  S053: 6.78s
+  S054: 8.28s
+  S055: 5.83s
+  S056: 6.60s
+  S057: 10.12s
+  S058: 10.32s
+  S059: 4.17s
+  S060: 8.60s
+  S061: 8.85s
+  S062: 3.75s
+  S063: 2.50s
+  S064: 6.22s
+  S065: 5.25s
+Timeline: 9.08 min, 65 shots -> build/timeline.json
+
+===== STEP space3d (cgi_a_saturn_approach-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/a_saturn_approach.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/a_saturn_approach/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  a_saturn_approach.json: frame 60/90  1.8 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/a_saturn_approach/0.mp4: frames 0..89 in 52s
+
+===== STEP space3d (cgi_a_saturn_approach-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/a_saturn_approach.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/a_saturn_approach/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  a_saturn_approach.json: frame 150/180  1.7 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/a_saturn_approach/90.mp4: frames 90..179 in 52s
+
+===== STEP space3d (cgi_a_saturn_approach-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/a_saturn_approach.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/a_saturn_approach/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  a_saturn_approach.json: frame 240/270  1.6 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/a_saturn_approach/180.mp4: frames 180..269 in 55s
+
+===== STEP space3d (cgi_a_saturn_approach-00270) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/a_saturn_approach.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/a_saturn_approach/270.mp4 --frames 270:360
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  a_saturn_approach.json: frame 330/360  2.0 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/a_saturn_approach/270.mp4: frames 270..359 in 46s
+
+===== STEP space3d (cgi_a_saturn_approach-00360) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/a_saturn_approach.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/a_saturn_approach/360.mp4 --frames 360:450
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  a_saturn_approach.json: frame 420/450  1.2 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/a_saturn_approach/360.mp4: frames 360..449 in 72s
+
+===== STEP space3d (cgi_a_saturn_approach-00450) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/a_saturn_approach.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/a_saturn_approach/450.mp4 --frames 450:540
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  a_saturn_approach.json: frame 510/540  1.5 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/a_saturn_approach/450.mp4: frames 450..539 in 61s
+
+===== STEP space3d (cgi_a_saturn_approach-00540) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/a_saturn_approach.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/a_saturn_approach/540.mp4 --frames 540:587
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/a_saturn_approach/540.mp4: frames 540..586 in 34s
+
+===== STEP space3d (cgi_b_enc_approach-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/b_enc_approach.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/b_enc_approach/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  b_enc_approach.json: frame 60/90  1.3 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/b_enc_approach/0.mp4: frames 0..89 in 69s
+
+===== STEP space3d (cgi_b_enc_approach-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/b_enc_approach.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/b_enc_approach/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  b_enc_approach.json: frame 150/180  1.2 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/b_enc_approach/90.mp4: frames 90..179 in 76s
+
+===== STEP space3d (cgi_b_enc_approach-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/b_enc_approach.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/b_enc_approach/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  b_enc_approach.json: frame 240/270  0.8 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/b_enc_approach/180.mp4: frames 180..269 in 115s
+
+===== STEP space3d (cgi_b_enc_approach2-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/b_enc_approach2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/b_enc_approach2/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  b_enc_approach2.json: frame 60/90  2.6 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/b_enc_approach2/0.mp4: frames 0..89 in 35s
+
+===== STEP space3d (cgi_b_enc_approach2-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/b_enc_approach2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/b_enc_approach2/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  b_enc_approach2.json: frame 150/180  1.3 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/b_enc_approach2/90.mp4: frames 90..179 in 68s
+
+===== STEP space3d (cgi_b_enc_approach2-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/b_enc_approach2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/b_enc_approach2/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  b_enc_approach2.json: frame 240/270  1.5 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/b_enc_approach2/180.mp4: frames 180..269 in 60s
+
+===== STEP space3d (cgi_b_enc_approach2-00270) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/b_enc_approach2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/b_enc_approach2/270.mp4 --frames 270:280
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/b_enc_approach2/270.mp4: frames 270..279 in 7s
+
+===== STEP space3d (cgi_c_jets_backlit-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/c_jets_backlit.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/c_jets_backlit/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  c_jets_backlit.json: frame 60/90  1.1 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/c_jets_backlit/0.mp4: frames 0..89 in 83s
+
+===== STEP space3d (cgi_c_jets_backlit-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/c_jets_backlit.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/c_jets_backlit/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  c_jets_backlit.json: frame 150/180  1.1 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/c_jets_backlit/90.mp4: frames 90..179 in 84s
+
+===== STEP space3d (cgi_c_jets_backlit-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/c_jets_backlit.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/c_jets_backlit/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  c_jets_backlit.json: frame 240/270  1.0 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/c_jets_backlit/180.mp4: frames 180..269 in 89s
+
+===== STEP space3d (cgi_d_saturn_eclipse-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/d_saturn_eclipse.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  d_saturn_eclipse.json: frame 60/90  1.5 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse/0.mp4: frames 0..89 in 59s
+
+===== STEP space3d (cgi_d_saturn_eclipse-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/d_saturn_eclipse.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  d_saturn_eclipse.json: frame 150/180  2.0 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse/90.mp4: frames 90..179 in 46s
+
+===== STEP space3d (cgi_d_saturn_eclipse-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/d_saturn_eclipse.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  d_saturn_eclipse.json: frame 240/270  1.6 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse/180.mp4: frames 180..269 in 58s
+
+===== STEP space3d (cgi_d_saturn_eclipse2-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/d_saturn_eclipse2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse2/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  d_saturn_eclipse2.json: frame 60/90  1.5 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse2/0.mp4: frames 0..89 in 60s
+
+===== STEP space3d (cgi_d_saturn_eclipse2-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/d_saturn_eclipse2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse2/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  d_saturn_eclipse2.json: frame 150/180  1.6 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse2/90.mp4: frames 90..179 in 57s
+
+===== STEP space3d (cgi_d_saturn_eclipse2-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/d_saturn_eclipse2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse2/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  d_saturn_eclipse2.json: frame 240/270  1.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse2/180.mp4: frames 180..269 in 47s
+
+===== STEP space3d (cgi_d_saturn_eclipse3-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/d_saturn_eclipse3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse3/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  d_saturn_eclipse3.json: frame 60/90  1.4 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse3/0.mp4: frames 0..89 in 66s
+
+===== STEP space3d (cgi_d_saturn_eclipse3-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/d_saturn_eclipse3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse3/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  d_saturn_eclipse3.json: frame 150/180  2.2 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse3/90.mp4: frames 90..179 in 42s
+
+===== STEP space3d (cgi_d_saturn_eclipse3-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/d_saturn_eclipse3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse3/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  d_saturn_eclipse3.json: frame 240/270  1.4 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse3/180.mp4: frames 180..269 in 62s
+
+===== STEP space3d (cgi_d_saturn_eclipse3-00270) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/d_saturn_eclipse3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse3/270.mp4 --frames 270:360
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  d_saturn_eclipse3.json: frame 330/360  1.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse3/270.mp4: frames 270..359 in 48s
+
+===== STEP space3d (cgi_d_saturn_eclipse3-00360) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/d_saturn_eclipse3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse3/360.mp4 --frames 360:450
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  d_saturn_eclipse3.json: frame 420/450  2.2 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse3/360.mp4: frames 360..449 in 42s
+
+===== STEP space3d (cgi_d_saturn_eclipse3-00450) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/d_saturn_eclipse3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse3/450.mp4 --frames 450:510
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/d_saturn_eclipse3/450.mp4: frames 450..509 in 39s
+
+===== STEP space3d (cgi_e_enc_turn-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/e_enc_turn.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  e_enc_turn.json: frame 60/90  1.8 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn/0.mp4: frames 0..89 in 50s
+
+===== STEP space3d (cgi_e_enc_turn-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/e_enc_turn.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  e_enc_turn.json: frame 150/180  2.3 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn/90.mp4: frames 90..179 in 39s
+
+===== STEP space3d (cgi_e_enc_turn-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/e_enc_turn.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  e_enc_turn.json: frame 240/270  1.2 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn/180.mp4: frames 180..269 in 74s
+
+===== STEP space3d (cgi_e_enc_turn-00270) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/e_enc_turn.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn/270.mp4 --frames 270:360
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  e_enc_turn.json: frame 330/360  2.2 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn/270.mp4: frames 270..359 in 41s
+
+===== STEP space3d (cgi_e_enc_turn-00360) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/e_enc_turn.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn/360.mp4 --frames 360:450
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  e_enc_turn.json: frame 420/450  1.0 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn/360.mp4: frames 360..449 in 92s
+
+===== STEP space3d (cgi_e_enc_turn-00450) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/e_enc_turn.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn/450.mp4 --frames 450:510
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn/450.mp4: frames 450..509 in 57s
+
+===== STEP space3d (cgi_e_enc_turn2-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/e_enc_turn2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn2/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  e_enc_turn2.json: frame 60/90  1.2 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn2/0.mp4: frames 0..89 in 75s
+
+===== STEP space3d (cgi_e_enc_turn2-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/e_enc_turn2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn2/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  e_enc_turn2.json: frame 150/180  2.2 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn2/90.mp4: frames 90..179 in 41s
+
+===== STEP space3d (cgi_e_enc_turn2-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/e_enc_turn2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn2/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  e_enc_turn2.json: frame 240/270  1.0 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn2/180.mp4: frames 180..269 in 90s
+
+===== STEP space3d (cgi_e_enc_turn3-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/e_enc_turn3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn3/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  e_enc_turn3.json: frame 60/90  1.3 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn3/0.mp4: frames 0..89 in 68s
+
+===== STEP space3d (cgi_e_enc_turn3-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/e_enc_turn3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn3/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  e_enc_turn3.json: frame 150/180  1.8 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn3/90.mp4: frames 90..179 in 49s
+
+===== STEP space3d (cgi_e_enc_turn3-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/e_enc_turn3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn3/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  e_enc_turn3.json: frame 240/270  2.3 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn3/180.mp4: frames 180..269 in 39s
+
+===== STEP space3d (cgi_e_enc_turn4-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/e_enc_turn4.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn4/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  e_enc_turn4.json: frame 60/90  1.1 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn4/0.mp4: frames 0..89 in 84s
+
+===== STEP space3d (cgi_e_enc_turn4-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/e_enc_turn4.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn4/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  e_enc_turn4.json: frame 150/180  1.1 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn4/90.mp4: frames 90..179 in 81s
+
+===== STEP space3d (cgi_e_enc_turn4-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/e_enc_turn4.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn4/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  e_enc_turn4.json: frame 240/270  1.6 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/e_enc_turn4/180.mp4: frames 180..269 in 58s
+
+===== STEP space3d (cgi_f_south_low-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/f_south_low.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  f_south_low.json: frame 60/90  0.6 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low/0.mp4: frames 0..89 in 155s
+
+===== STEP space3d (cgi_f_south_low-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/f_south_low.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  f_south_low.json: frame 150/180  0.6 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low/90.mp4: frames 90..179 in 147s
+
+===== STEP space3d (cgi_f_south_low-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/f_south_low.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  f_south_low.json: frame 240/270  0.6 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low/180.mp4: frames 180..269 in 140s
+
+===== STEP space3d (cgi_f_south_low2-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/f_south_low2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low2/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  f_south_low2.json: frame 60/90  0.4 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low2/0.mp4: frames 0..89 in 204s
+
+===== STEP space3d (cgi_f_south_low2-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/f_south_low2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low2/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  f_south_low2.json: frame 150/180  0.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low2/90.mp4: frames 90..179 in 104s
+
+===== STEP space3d (cgi_f_south_low2-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/f_south_low2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low2/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  f_south_low2.json: frame 240/270  0.4 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low2/180.mp4: frames 180..269 in 204s
+
+===== STEP space3d (cgi_f_south_low2-00270) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/f_south_low2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low2/270.mp4 --frames 270:286
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low2/270.mp4: frames 270..285 in 18s
+
+===== STEP space3d (cgi_f_south_low3-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/f_south_low3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low3/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  f_south_low3.json: frame 60/90  0.5 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low3/0.mp4: frames 0..89 in 171s
+
+===== STEP space3d (cgi_f_south_low3-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/f_south_low3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low3/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  f_south_low3.json: frame 150/180  0.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low3/90.mp4: frames 90..179 in 94s
+
+===== STEP space3d (cgi_f_south_low3-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/f_south_low3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low3/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  f_south_low3.json: frame 240/270  1.0 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low3/180.mp4: frames 180..269 in 94s
+
+===== STEP space3d (cgi_f_south_low3-00270) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/f_south_low3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low3/270.mp4 --frames 270:360
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  f_south_low3.json: frame 330/360  0.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low3/270.mp4: frames 270..359 in 96s
+
+===== STEP space3d (cgi_f_south_low3-00360) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/f_south_low3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low3/360.mp4 --frames 360:450
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  f_south_low3.json: frame 420/450  0.8 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low3/360.mp4: frames 360..449 in 118s
+
+===== STEP space3d (cgi_f_south_low3-00450) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/f_south_low3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low3/450.mp4 --frames 450:540
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  f_south_low3.json: frame 510/540  1.1 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low3/450.mp4: frames 450..539 in 84s
+
+===== STEP space3d (cgi_f_south_low3-00540) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/f_south_low3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low3/540.mp4 --frames 540:630
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  f_south_low3.json: frame 600/630  1.1 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low3/540.mp4: frames 540..629 in 78s
+
+===== STEP space3d (cgi_f_south_low3-00630) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/f_south_low3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low3/630.mp4 --frames 630:640
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/f_south_low3/630.mp4: frames 630..639 in 20s
+
+===== STEP space3d (cgi_g_saturn_wide-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/g_saturn_wide.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/g_saturn_wide/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  g_saturn_wide.json: frame 60/90  3.3 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/g_saturn_wide/0.mp4: frames 0..89 in 27s
+
+===== STEP space3d (cgi_g_saturn_wide-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/g_saturn_wide.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/g_saturn_wide/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  g_saturn_wide.json: frame 150/180  1.5 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/g_saturn_wide/90.mp4: frames 90..179 in 61s
+
+===== STEP space3d (cgi_g_saturn_wide-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/g_saturn_wide.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/g_saturn_wide/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  g_saturn_wide.json: frame 240/270  1.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/g_saturn_wide/180.mp4: frames 180..269 in 46s
+
+===== STEP space3d (cgi_h_enc_approach2-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/h_enc_approach2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/h_enc_approach2/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  h_enc_approach2.json: frame 60/90  3.4 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/h_enc_approach2/0.mp4: frames 0..89 in 27s
+
+===== STEP space3d (cgi_h_enc_approach2-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/h_enc_approach2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/h_enc_approach2/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  h_enc_approach2.json: frame 150/180  1.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/h_enc_approach2/90.mp4: frames 90..179 in 48s
+
+===== STEP space3d (cgi_h_enc_approach2-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/h_enc_approach2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/h_enc_approach2/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  h_enc_approach2.json: frame 240/270  1.5 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/h_enc_approach2/180.mp4: frames 180..269 in 64s
+
+===== STEP space3d (cgi_h_enc_approach2-00270) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/h_enc_approach2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/h_enc_approach2/270.mp4 --frames 270:360
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  h_enc_approach2.json: frame 330/360  2.0 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/h_enc_approach2/270.mp4: frames 270..359 in 46s
+
+===== STEP space3d (cgi_h_enc_approach2-00360) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/h_enc_approach2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/h_enc_approach2/360.mp4 --frames 360:414
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/h_enc_approach2/360.mp4: frames 360..413 in 25s
+
+===== STEP space3d (cgi_h_enc_approach3-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/h_enc_approach3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/h_enc_approach3/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  h_enc_approach3.json: frame 60/90  1.6 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/h_enc_approach3/0.mp4: frames 0..89 in 57s
+
+===== STEP space3d (cgi_h_enc_approach3-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/h_enc_approach3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/h_enc_approach3/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  h_enc_approach3.json: frame 150/180  1.7 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/h_enc_approach3/90.mp4: frames 90..179 in 54s
+
+===== STEP space3d (cgi_h_enc_approach3-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/h_enc_approach3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/h_enc_approach3/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  h_enc_approach3.json: frame 240/270  1.5 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/h_enc_approach3/180.mp4: frames 180..269 in 60s
+
+===== STEP space3d (cgi_i_stripes_flight-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/i_stripes_flight.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/i_stripes_flight/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  i_stripes_flight.json: frame 60/90  1.2 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/i_stripes_flight/0.mp4: frames 0..89 in 75s
+
+===== STEP space3d (cgi_i_stripes_flight-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/i_stripes_flight.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/i_stripes_flight/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  i_stripes_flight.json: frame 150/180  0.7 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/i_stripes_flight/90.mp4: frames 90..179 in 131s
+
+===== STEP space3d (cgi_i_stripes_flight-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/i_stripes_flight.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/i_stripes_flight/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  i_stripes_flight.json: frame 240/270  0.5 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/i_stripes_flight/180.mp4: frames 180..269 in 163s
+
+===== STEP space3d (cgi_j_jets_close-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/j_jets_close.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  j_jets_close.json: frame 60/90  0.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close/0.mp4: frames 0..89 in 102s
+
+===== STEP space3d (cgi_j_jets_close-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/j_jets_close.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  j_jets_close.json: frame 150/180  0.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close/90.mp4: frames 90..179 in 102s
+
+===== STEP space3d (cgi_j_jets_close-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/j_jets_close.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  j_jets_close.json: frame 240/270  0.7 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close/180.mp4: frames 180..269 in 138s
+
+===== STEP space3d (cgi_j_jets_close2-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/j_jets_close2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close2/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  j_jets_close2.json: frame 60/90  1.8 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close2/0.mp4: frames 0..89 in 51s
+
+===== STEP space3d (cgi_j_jets_close2-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/j_jets_close2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close2/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  j_jets_close2.json: frame 150/180  0.8 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close2/90.mp4: frames 90..179 in 109s
+
+===== STEP space3d (cgi_j_jets_close2-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/j_jets_close2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close2/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  j_jets_close2.json: frame 240/270  0.7 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close2/180.mp4: frames 180..269 in 121s
+
+===== STEP space3d (cgi_j_jets_close3-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/j_jets_close3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close3/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  j_jets_close3.json: frame 60/90  0.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close3/0.mp4: frames 0..89 in 104s
+
+===== STEP space3d (cgi_j_jets_close3-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/j_jets_close3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close3/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  j_jets_close3.json: frame 150/180  1.5 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close3/90.mp4: frames 90..179 in 61s
+
+===== STEP space3d (cgi_j_jets_close3-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/j_jets_close3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close3/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  j_jets_close3.json: frame 240/270  0.7 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close3/180.mp4: frames 180..269 in 130s
+
+===== STEP space3d (cgi_j_jets_close3-00270) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/j_jets_close3.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close3/270.mp4 --frames 270:286
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close3/270.mp4: frames 270..285 in 26s
+
+===== STEP space3d (cgi_j_jets_close4-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/j_jets_close4.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close4/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  j_jets_close4.json: frame 60/90  0.8 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close4/0.mp4: frames 0..89 in 111s
+
+===== STEP space3d (cgi_j_jets_close4-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/j_jets_close4.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close4/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  j_jets_close4.json: frame 150/180  0.8 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close4/90.mp4: frames 90..179 in 115s
+
+===== STEP space3d (cgi_j_jets_close4-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/j_jets_close4.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close4/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  j_jets_close4.json: frame 240/270  1.0 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close4/180.mp4: frames 180..269 in 86s
+
+===== STEP space3d (cgi_j_jets_close5-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/j_jets_close5.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close5/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  j_jets_close5.json: frame 60/90  0.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close5/0.mp4: frames 0..89 in 98s
+
+===== STEP space3d (cgi_j_jets_close5-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/j_jets_close5.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close5/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  j_jets_close5.json: frame 150/180  0.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close5/90.mp4: frames 90..179 in 106s
+
+===== STEP space3d (cgi_j_jets_close5-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/j_jets_close5.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close5/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  j_jets_close5.json: frame 240/270  0.8 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close5/180.mp4: frames 180..269 in 108s
+
+===== STEP space3d (cgi_j_jets_close5-00270) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/j_jets_close5.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close5/270.mp4 --frames 270:322
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/j_jets_close5/270.mp4: frames 270..321 in 46s
+
+===== STEP space3d (cgi_k_plume_dive2-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/k_plume_dive2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_dive2/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  k_plume_dive2.json: frame 60/90  1.0 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_dive2/0.mp4: frames 0..89 in 95s
+
+===== STEP space3d (cgi_k_plume_dive2-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/k_plume_dive2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_dive2/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  k_plume_dive2.json: frame 150/180  1.0 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_dive2/90.mp4: frames 90..179 in 88s
+
+===== STEP space3d (cgi_k_plume_dive2-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/k_plume_dive2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_dive2/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  k_plume_dive2.json: frame 240/270  0.8 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_dive2/180.mp4: frames 180..269 in 117s
+
+===== STEP space3d (cgi_k_plume_dive2-00270) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/k_plume_dive2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_dive2/270.mp4 --frames 270:360
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  k_plume_dive2.json: frame 330/360  1.6 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_dive2/270.mp4: frames 270..359 in 55s
+
+===== STEP space3d (cgi_k_plume_dive2-00360) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/k_plume_dive2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_dive2/360.mp4 --frames 360:450
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  k_plume_dive2.json: frame 420/450  1.8 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_dive2/360.mp4: frames 360..449 in 48s
+
+===== STEP space3d (cgi_k_plume_dive2-00450) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/k_plume_dive2.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_dive2/450.mp4 --frames 450:523
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  k_plume_dive2.json: frame 510/523  1.8 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_dive2/450.mp4: frames 450..522 in 42s
+
+===== STEP space3d (cgi_k_plume_flythrough-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/k_plume_flythrough.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_flythrough/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  k_plume_flythrough.json: frame 60/90  2.2 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_flythrough/0.mp4: frames 0..89 in 42s
+
+===== STEP space3d (cgi_k_plume_flythrough-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/k_plume_flythrough.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_flythrough/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  k_plume_flythrough.json: frame 150/180  1.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_flythrough/90.mp4: frames 90..179 in 49s
+
+===== STEP space3d (cgi_k_plume_flythrough-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/k_plume_flythrough.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_flythrough/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  k_plume_flythrough.json: frame 240/270  1.3 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_flythrough/180.mp4: frames 180..269 in 70s
+
+===== STEP space3d (cgi_k_plume_flythrough-00270) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/k_plume_flythrough.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_flythrough/270.mp4 --frames 270:360
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  k_plume_flythrough.json: frame 330/360  1.0 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_flythrough/270.mp4: frames 270..359 in 91s
+
+===== STEP space3d (cgi_k_plume_flythrough-00360) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/k_plume_flythrough.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_flythrough/360.mp4 --frames 360:450
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  k_plume_flythrough.json: frame 420/450  0.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_flythrough/360.mp4: frames 360..449 in 92s
+
+===== STEP space3d (cgi_k_plume_flythrough-00450) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/k_plume_flythrough.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_flythrough/450.mp4 --frames 450:510
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/k_plume_flythrough/450.mp4: frames 450..509 in 36s
+
+===== STEP space3d (cgi_l_wide_enc_saturn-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/l_wide_enc_saturn.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/l_wide_enc_saturn/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  l_wide_enc_saturn.json: frame 60/90  1.8 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/l_wide_enc_saturn/0.mp4: frames 0..89 in 49s
+
+===== STEP space3d (cgi_l_wide_enc_saturn-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/l_wide_enc_saturn.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/l_wide_enc_saturn/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  l_wide_enc_saturn.json: frame 150/180  1.6 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/l_wide_enc_saturn/90.mp4: frames 90..179 in 56s
+
+===== STEP space3d (cgi_l_wide_enc_saturn-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/l_wide_enc_saturn.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/l_wide_enc_saturn/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  l_wide_enc_saturn.json: frame 240/270  1.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/l_wide_enc_saturn/180.mp4: frames 180..269 in 47s
+
+===== STEP space3d (cgi_m_pullback-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/m_pullback.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/0.mp4 --frames 0:90
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  m_pullback.json: frame 60/90  1.0 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/0.mp4: frames 0..89 in 83s
+
+===== STEP space3d (cgi_m_pullback-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/m_pullback.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/90.mp4 --frames 90:180
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  m_pullback.json: frame 150/180  1.7 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/90.mp4: frames 90..179 in 50s
+
+===== STEP space3d (cgi_m_pullback-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/m_pullback.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/180.mp4 --frames 180:270
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  m_pullback.json: frame 240/270  1.4 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/180.mp4: frames 180..269 in 62s
+
+===== STEP space3d (cgi_m_pullback-00270) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/m_pullback.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/270.mp4 --frames 270:360
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  m_pullback.json: frame 330/360  1.5 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/270.mp4: frames 270..359 in 61s
+
+===== STEP space3d (cgi_m_pullback-00360) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/m_pullback.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/360.mp4 --frames 360:450
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  m_pullback.json: frame 420/450  1.4 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/360.mp4: frames 360..449 in 62s
+
+===== STEP space3d (cgi_m_pullback-00450) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/m_pullback.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/450.mp4 --frames 450:540
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  m_pullback.json: frame 510/540  1.6 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/450.mp4: frames 450..539 in 57s
+
+===== STEP space3d (cgi_m_pullback-00540) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/m_pullback.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/540.mp4 --frames 540:630
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  m_pullback.json: frame 600/630  1.5 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/540.mp4: frames 540..629 in 58s
+
+===== STEP space3d (cgi_m_pullback-00630) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/m_pullback.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/630.mp4 --frames 630:720
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  m_pullback.json: frame 690/720  1.9 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/630.mp4: frames 630..719 in 49s
+
+===== STEP space3d (cgi_m_pullback-00720) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/m_pullback.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/720.mp4 --frames 720:810
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  m_pullback.json: frame 780/810  1.4 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/720.mp4: frames 720..809 in 64s
+
+===== STEP space3d (cgi_m_pullback-00810) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/m_pullback.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/810.mp4 --frames 810:900
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  m_pullback.json: frame 870/900  1.2 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/810.mp4: frames 810..899 in 74s
+
+===== STEP space3d (cgi_m_pullback-00900) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/m_pullback.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/900.mp4 --frames 900:990
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+  m_pullback.json: frame 960/990  1.5 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/900.mp4: frames 900..989 in 58s
+
+===== STEP space3d (cgi_m_pullback-00990) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/m_pullback.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/990.mp4 --frames 990:1008
+  ring texture 8192x500, alpha profile (10 bins): 0.06 0.35 0.45 0.79 0.92 0.93 0.75 0.67 0.67 0.35
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/m_pullback/990.mp4: frames 990..1007 in 9s
+
+===== STEP space3d (cgi_s7_earth_ocean-00000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/s7_earth_ocean.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s7_earth_ocean/0.mp4 --frames 0:90
+  s7_earth_ocean.json: frame 60/90  3.6 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s7_earth_ocean/0.mp4: frames 0..89 in 26s
+
+===== STEP space3d (cgi_s7_earth_ocean-00090) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/s7_earth_ocean.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s7_earth_ocean/90.mp4 --frames 90:180
+  s7_earth_ocean.json: frame 150/180  3.4 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s7_earth_ocean/90.mp4: frames 90..179 in 27s
+
+===== STEP space3d (cgi_s7_earth_ocean-00180) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/space3d.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/assets/space3d/s7_earth_ocean.json /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s7_earth_ocean/180.mp4 --frames 180:246
+  s7_earth_ocean.json: frame 240/246  2.6 fps
+/home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/cgi_parts/s7_earth_ocean/180.mp4: frames 180..245 in 26s
+
+===== STEP render (render_000000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 0:900 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/0.mp4
+  frame 150/900  11.7 fps  ETA 1.1 min
+  frame 300/900  11.7 fps  ETA 0.9 min
+  frame 450/900  11.6 fps  ETA 0.6 min
+  frame 600/900  11.6 fps  ETA 0.4 min
+  frame 750/900  11.7 fps  ETA 0.2 min
+Rendered frames 0..899 in 1.3 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/0.mp4
+
+===== STEP render (render_000900) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 900:1800 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/900.mp4
+  frame 1050/1800  13.7 fps  ETA 0.9 min
+  frame 1200/1800  16.6 fps  ETA 0.6 min
+  frame 1350/1800  17.6 fps  ETA 0.4 min
+  frame 1500/1800  16.6 fps  ETA 0.3 min
+  frame 1650/1800  15.4 fps  ETA 0.2 min
+Rendered frames 900..1799 in 1.0 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/900.mp4
+
+===== STEP render (render_001800) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 1800:2700 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/1800.mp4
+  frame 1950/2700  18.7 fps  ETA 0.7 min
+  frame 2100/2700  19.2 fps  ETA 0.5 min
+  frame 2250/2700  19.4 fps  ETA 0.4 min
+  frame 2400/2700  20.0 fps  ETA 0.3 min
+  frame 2550/2700  22.1 fps  ETA 0.1 min
+Rendered frames 1800..2699 in 0.7 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/1800.mp4
+
+===== STEP render (render_002700) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 2700:3600 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/2700.mp4
+  frame 2850/3600  22.4 fps  ETA 0.6 min
+  frame 3000/3600  21.7 fps  ETA 0.5 min
+  frame 3150/3600  19.6 fps  ETA 0.4 min
+  frame 3300/3600  18.2 fps  ETA 0.3 min
+  frame 3450/3600  17.7 fps  ETA 0.1 min
+Rendered frames 2700..3599 in 0.9 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/2700.mp4
+
+===== STEP render (render_003600) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 3600:4500 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/3600.mp4
+  frame 3750/4500  17.3 fps  ETA 0.7 min
+  frame 3900/4500  17.1 fps  ETA 0.6 min
+  frame 4050/4500  19.1 fps  ETA 0.4 min
+  frame 4200/4500  20.3 fps  ETA 0.2 min
+  frame 4350/4500  20.8 fps  ETA 0.1 min
+Rendered frames 3600..4499 in 0.8 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/3600.mp4
+
+===== STEP render (render_004500) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 4500:5400 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/4500.mp4
+  frame 4650/5400  14.6 fps  ETA 0.9 min
+  frame 4800/5400  19.8 fps  ETA 0.5 min
+  frame 4950/5400  19.1 fps  ETA 0.4 min
+  frame 5100/5400  18.7 fps  ETA 0.3 min
+  frame 5250/5400  19.2 fps  ETA 0.1 min
+Rendered frames 4500..5399 in 0.8 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/4500.mp4
+
+===== STEP render (render_005400) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 5400:6300 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/5400.mp4
+  frame 5550/6300  38.5 fps  ETA 0.3 min
+  frame 5700/6300  38.6 fps  ETA 0.3 min
+  frame 5850/6300  34.4 fps  ETA 0.2 min
+  frame 6000/6300  30.4 fps  ETA 0.2 min
+  frame 6150/6300  27.9 fps  ETA 0.1 min
+Rendered frames 5400..6299 in 0.6 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/5400.mp4
+
+===== STEP render (render_006300) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 6300:7200 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/6300.mp4
+  frame 6450/7200  12.6 fps  ETA 1.0 min
+  frame 6600/7200  14.9 fps  ETA 0.7 min
+  frame 6750/7200  16.8 fps  ETA 0.4 min
+  frame 6900/7200  16.3 fps  ETA 0.3 min
+  frame 7050/7200  15.2 fps  ETA 0.2 min
+Rendered frames 6300..7199 in 1.0 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/6300.mp4
+
+===== STEP render (render_007200) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 7200:8100 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/7200.mp4
+  frame 7350/8100  19.0 fps  ETA 0.7 min
+  frame 7500/8100  16.4 fps  ETA 0.6 min
+  frame 7650/8100  14.4 fps  ETA 0.5 min
+  frame 7800/8100  15.1 fps  ETA 0.3 min
+  frame 7950/8100  15.1 fps  ETA 0.2 min
+Rendered frames 7200..8099 in 1.1 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/7200.mp4
+
+===== STEP render (render_008100) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 8100:9000 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/8100.mp4
+  frame 8250/9000  25.3 fps  ETA 0.5 min
+  frame 8400/9000  29.1 fps  ETA 0.3 min
+  frame 8550/9000  30.1 fps  ETA 0.2 min
+  frame 8700/9000  27.9 fps  ETA 0.2 min
+  frame 8850/9000  26.7 fps  ETA 0.1 min
+Rendered frames 8100..8999 in 0.6 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/8100.mp4
+
+===== STEP render (render_009000) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 9000:9900 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/9000.mp4
+  frame 9150/9900  15.6 fps  ETA 0.8 min
+  frame 9300/9900  16.6 fps  ETA 0.6 min
+  frame 9450/9900  14.6 fps  ETA 0.5 min
+  frame 9600/9900  13.2 fps  ETA 0.4 min
+  frame 9750/9900  13.0 fps  ETA 0.2 min
+Rendered frames 9000..9899 in 1.1 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/9000.mp4
+
+===== STEP render (render_009900) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 9900:10800 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/9900.mp4
+  frame 10050/10800  35.1 fps  ETA 0.4 min
+  frame 10200/10800  27.2 fps  ETA 0.4 min
+  frame 10350/10800  23.8 fps  ETA 0.3 min
+  frame 10500/10800  22.8 fps  ETA 0.2 min
+  frame 10650/10800  23.5 fps  ETA 0.1 min
+Rendered frames 9900..10799 in 0.6 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/9900.mp4
+
+===== STEP render (render_010800) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 10800:11700 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/10800.mp4
+  frame 10950/11700  18.7 fps  ETA 0.7 min
+  frame 11100/11700  18.9 fps  ETA 0.5 min
+  frame 11250/11700  16.5 fps  ETA 0.5 min
+  frame 11400/11700  15.0 fps  ETA 0.3 min
+  frame 11550/11700  14.2 fps  ETA 0.2 min
+Rendered frames 10800..11699 in 1.1 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/10800.mp4
+
+===== STEP render (render_011700) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 11700:12600 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/11700.mp4
+  frame 11850/12600  21.5 fps  ETA 0.6 min
+  frame 12000/12600  17.5 fps  ETA 0.6 min
+  frame 12150/12600  17.0 fps  ETA 0.4 min
+  frame 12300/12600  17.7 fps  ETA 0.3 min
+  frame 12450/12600  18.2 fps  ETA 0.1 min
+Rendered frames 11700..12599 in 0.8 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/11700.mp4
+
+===== STEP render (render_012600) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 12600:13500 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/12600.mp4
+  frame 12750/13500  24.1 fps  ETA 0.5 min
+  frame 12900/13500  22.9 fps  ETA 0.4 min
+  frame 13050/13500  21.6 fps  ETA 0.3 min
+  frame 13200/13500  19.5 fps  ETA 0.3 min
+  frame 13350/13500  18.6 fps  ETA 0.1 min
+Rendered frames 12600..13499 in 0.8 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/12600.mp4
+
+===== STEP render (render_013500) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 13500:14400 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/13500.mp4
+  frame 13650/14400  15.4 fps  ETA 0.8 min
+  frame 13800/14400  16.0 fps  ETA 0.6 min
+  frame 13950/14400  16.4 fps  ETA 0.5 min
+  frame 14100/14400  16.7 fps  ETA 0.3 min
+  frame 14250/14400  17.1 fps  ETA 0.1 min
+Rendered frames 13500..14399 in 0.8 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/13500.mp4
+
+===== STEP render (render_014400) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 14400:15300 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/14400.mp4
+  frame 14550/15300  26.4 fps  ETA 0.5 min
+  frame 14700/15300  21.0 fps  ETA 0.5 min
+  frame 14850/15300  19.3 fps  ETA 0.4 min
+  frame 15000/15300  18.1 fps  ETA 0.3 min
+  frame 15150/15300  17.0 fps  ETA 0.1 min
+Rendered frames 14400..15299 in 0.9 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/14400.mp4
+
+===== STEP render (render_015300) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 15300:16200 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/15300.mp4
+  frame 15450/16200  10.4 fps  ETA 1.2 min
+  frame 15600/16200  11.6 fps  ETA 0.9 min
+  frame 15750/16200  11.9 fps  ETA 0.6 min
+  frame 15900/16200  11.7 fps  ETA 0.4 min
+  frame 16050/16200  11.8 fps  ETA 0.2 min
+Rendered frames 15300..16199 in 1.3 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/15300.mp4
+
+===== STEP render (render_016200) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/render.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --frames 16200:16346 --out /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/16200.mp4
+Rendered frames 16200..16345 in 0.2 min -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/render_parts/16200.mp4
+
+===== STEP validate+assets (finish) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/validate.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json --assets
+Estimated runtime: 8.6 min (65 shots, avg 7.9s/shot)
+WARN  S022: 10.3s shot (retention rule: <= 10.0s)
+WARN  S030: 10.3s shot (retention rule: <= 10.0s)
+WARN  S057: 10.3s shot (retention rule: <= 10.0s)
+WARN  S058: 10.3s shot (retention rule: <= 10.0s)
+WARN  runtime 514s outside target 540-780s
+WARN  S005: source is upscaled 1.30x at the closest zoom: will look soft
+WARN  S005: image 1580px wide; will look soft with camera motion (want >= 2560)
+WARN  S006: source is upscaled 1.08x at the closest zoom: will look soft
+WARN  S006: image 1900px wide; will look soft with camera motion (want >= 2560)
+WARN  S032: source is upscaled 1.08x at the closest zoom: will look soft
+WARN  S032: image 1900px wide; will look soft with camera motion (want >= 2560)
+WARN  S038: source is upscaled 1.30x at the closest zoom: will look soft
+WARN  S038: image 1580px wide; will look soft with camera motion (want >= 2560)
+WARN  S050: source is upscaled 1.07x at the closest zoom: will look soft
+WARN  S050: image 1920px wide; will look soft with camera motion (want >= 2560)
+WARN  S052: source is upscaled 1.07x at the closest zoom: will look soft
+WARN  S052: image 1920px wide; will look soft with camera motion (want >= 2560)
+WARN  S053: source is upscaled 1.07x at the closest zoom: will look soft
+WARN  S053: image 1920px wide; will look soft with camera motion (want >= 2560)
+Result: PASS (0 errors, 19 warnings)
+
+===== STEP audio (finish) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/audio.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json
+Wrote /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/build/final.mp4
+
+===== STEP meta (finish) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/meta.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/ep01/episode.json
+Wrote build/captions.srt and build/description.txt

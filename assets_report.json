@@ -1,0 +1,684 @@
+{
+  "episode": "ep01",
+  "created": "2026-11-22 12:57",
+  "max_width": 3840,
+  "ok": 29,
+  "failed": 0,
+  "items": [
+    {
+      "id": "A007",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA11688.jpg",
+      "kind": "image",
+      "title": "Bursting at the Seams: the Geyser Basin of Enceladus",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA/JPL/Space Science Institute",
+      "source_url": "https://www.jpl.nasa.gov/images/bursting-at-the-seams-the-geyser-basin-of-enceladus",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S005",
+        "S038"
+      ],
+      "orig_width": 1580,
+      "orig_height": 977,
+      "width": 1580,
+      "height": 977,
+      "bundle_file": "A007.jpg",
+      "bytes": 45410,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "P11684",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA11684.jpg",
+      "kind": "image",
+      "title": "Enceladus Leading Hemisphere (Cassini mosaic, 2009)",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA/JPL/Space Science Institute",
+      "source_url": "https://www.jpl.nasa.gov/images/pia11684-enceladus-leading-hemisphere/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S006",
+        "S032"
+      ],
+      "orig_width": 1900,
+      "orig_height": 1900,
+      "width": 1900,
+      "height": 1900,
+      "bundle_file": "P11684.jpg",
+      "bytes": 261206,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame",
+        "ASPECT_1.00: tall/square, full-frame crop loses 44% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "P01394",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA01394.jpg",
+      "kind": "image",
+      "title": "Enceladus from Voyager 2, 25 Aug 1981",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA/JPL",
+      "source_url": "https://www.jpl.nasa.gov/images/pia01394-saturn-enceladus-from-a-distance-of-119000-kilometers-74000-miles/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S011"
+      ],
+      "orig_width": 1000,
+      "orig_height": 1000,
+      "width": 1000,
+      "height": 1000,
+      "bundle_file": "P01394.jpg",
+      "bytes": 56116,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame",
+        "ASPECT_1.00: tall/square, full-frame crop loses 44% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "A008",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA06254.jpg",
+      "kind": "image",
+      "title": "Zooming In On Enceladus (false-colour mosaic)",
+      "source_class": "PROCESSED_DATA",
+      "credit": "NASA/JPL/Space Science Institute",
+      "source_url": "https://www.jpl.nasa.gov/images/pia06254-zooming-in-on-enceladus-mosaic/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S012"
+      ],
+      "orig_width": 3237,
+      "orig_height": 3812,
+      "width": 3237,
+      "height": 3812,
+      "bundle_file": "A008.jpg",
+      "bytes": 1273012,
+      "flags": [
+        "ASPECT_0.85: tall/square, full-frame crop loses 52% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "A006",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA11135.jpg",
+      "kind": "image",
+      "title": "Tiger Stripes...Magnified! (mosaic)",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA/JPL/Space Science Institute",
+      "source_url": "https://www.jpl.nasa.gov/images/pia11135-tiger-stripesmagnified/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S013",
+        "S018"
+      ],
+      "orig_width": 5500,
+      "orig_height": 7700,
+      "width": 3840,
+      "height": 5376,
+      "bundle_file": "A006.jpg",
+      "bytes": 4882946,
+      "flags": [
+        "ASPECT_0.71: tall/square, full-frame crop loses 60% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "A003",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA07798.jpg",
+      "kind": "image",
+      "title": "Spray Above Enceladus III",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA/JPL/Space Science Institute",
+      "source_url": "https://www.jpl.nasa.gov/images/pia07798-spray-above-enceladus-iii/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S017"
+      ],
+      "orig_width": 1028,
+      "orig_height": 505,
+      "width": 1028,
+      "height": 505,
+      "bundle_file": "A003.jpg",
+      "bytes": 121229,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "A002",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA12713.jpg",
+      "kind": "image",
+      "title": "High-Phase Plumes (Enceladus jets backlit)",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA/JPL/Space Science Institute",
+      "source_url": "https://www.jpl.nasa.gov/images/pia12713-high-phase-plumes/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S020"
+      ],
+      "orig_width": 826,
+      "orig_height": 826,
+      "width": 826,
+      "height": 826,
+      "bundle_file": "A002.jpg",
+      "bytes": 12136,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame",
+        "ASPECT_1.00: tall/square, full-frame crop loses 44% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "A005",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA07762.jpg",
+      "kind": "image",
+      "title": "Enceladus Plume (still)",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA/JPL/Space Science Institute",
+      "source_url": "https://www.jpl.nasa.gov/images/pia07762-enceladus-plume-movie/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [],
+      "orig_width": 501,
+      "orig_height": 303,
+      "width": 501,
+      "height": 303,
+      "bundle_file": "A005.jpg",
+      "bytes": 8438,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "P10360",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA10360.jpg",
+      "kind": "image",
+      "title": "Stripes and Heat Map Side by Side (Cassini, 2008)",
+      "source_class": "PROCESSED_DATA",
+      "credit": "NASA/JPL/GSFC/SwRI/SSI",
+      "source_url": "https://www.jpl.nasa.gov/images/pia10360-stripes-and-heat-map-side-by-side",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S022"
+      ],
+      "orig_width": 2908,
+      "orig_height": 1440,
+      "width": 2908,
+      "height": 1440,
+      "bundle_file": "P10360.jpg",
+      "bytes": 521895,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "id": "A004",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA21887.jpg",
+      "kind": "image",
+      "title": "Last Enceladus Plume Observation",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA/JPL-Caltech/Space Science Institute",
+      "source_url": "https://www.jpl.nasa.gov/images/pia21887-last-enceladus-plume-observation/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [],
+      "orig_width": 441,
+      "orig_height": 372,
+      "width": 441,
+      "height": 372,
+      "bundle_file": "A004.jpg",
+      "bytes": 2996,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame",
+        "ASPECT_1.19: tall/square, full-frame crop loses 33% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "P08321",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA08321.jpg",
+      "kind": "image",
+      "title": "Ghostly Fingers of Enceladus (E ring)",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA/JPL/Space Science Institute",
+      "source_url": "https://www.jpl.nasa.gov/images/pia08321-ghostly-fingers-of-enceladus/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S024",
+        "S028"
+      ],
+      "orig_width": 1020,
+      "orig_height": 675,
+      "width": 1020,
+      "height": 675,
+      "bundle_file": "P08321.jpg",
+      "bytes": 22414,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "P18071",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA18071.jpg",
+      "kind": "image",
+      "title": "Ocean Inside Saturn's Moon Enceladus (diagram)",
+      "source_class": "SCIENTIFIC_CGI",
+      "credit": "NASA/JPL-Caltech",
+      "source_url": "https://www.jpl.nasa.gov/images/pia18071-ocean-inside-saturns-moon-enceladus/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S030"
+      ],
+      "orig_width": 4992,
+      "orig_height": 5001,
+      "width": 3840,
+      "height": 3847,
+      "bundle_file": "P18071.jpg",
+      "bytes": 2091689,
+      "flags": [
+        "ASPECT_1.00: tall/square, full-frame crop loses 44% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "A009",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA19656.jpg",
+      "kind": "image",
+      "title": "Global Ocean on Enceladus (artist's rendering)",
+      "source_class": "ARTIST_CONCEPT",
+      "credit": "NASA/JPL-Caltech",
+      "source_url": "https://www.jpl.nasa.gov/images/pia19656-global-ocean-on-enceladus-artists-rendering/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S034"
+      ],
+      "orig_width": 8534,
+      "orig_height": 4800,
+      "width": 3840,
+      "height": 2160,
+      "bundle_file": "A009.jpg",
+      "bytes": 1205321,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "id": "A010",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA23175.jpg",
+      "kind": "image",
+      "title": "Enceladus Global View with Plume (artist's rendering)",
+      "source_class": "ARTIST_CONCEPT",
+      "credit": "NASA/JPL-Caltech",
+      "source_url": "https://www.jpl.nasa.gov/images/pia23175-enceladus-global-view-with-plume-artists-rendering/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S035",
+        "S045"
+      ],
+      "orig_width": 4650,
+      "orig_height": 5850,
+      "width": 3840,
+      "height": 4831,
+      "bundle_file": "A010.jpg",
+      "bytes": 3639400,
+      "flags": [
+        "ASPECT_0.79: tall/square, full-frame crop loses 55% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "A011",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA19058.jpg",
+      "kind": "image",
+      "title": "Enceladus: Possible Hydrothermal Activity (artist's concept)",
+      "source_class": "ARTIST_CONCEPT",
+      "credit": "NASA/JPL-Caltech",
+      "source_url": "https://www.jpl.nasa.gov/images/enceladus-possible-hydrothermal-activity-artists-concept",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S041",
+        "S044"
+      ],
+      "orig_width": 4000,
+      "orig_height": 2500,
+      "width": 3840,
+      "height": 2400,
+      "bundle_file": "A011.jpg",
+      "bytes": 1866900,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "id": "A001",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA17172.jpg",
+      "kind": "image",
+      "title": "The Day the Earth Smiled (Saturn backlit mosaic)",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA/JPL-Caltech/SSI",
+      "source_url": "https://www.jpl.nasa.gov/images/pia17172-the-day-the-earth-smiled",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S023"
+      ],
+      "orig_width": 9000,
+      "orig_height": 3500,
+      "width": 3840,
+      "height": 1493,
+      "bundle_file": "A001.jpg",
+      "bytes": 451921,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "id": "STS66",
+      "url": "https://images-assets.nasa.gov/image/sts066-127-006/sts066-127-006~orig.jpg",
+      "kind": "image",
+      "title": "Hurricane Florence seen from Space Shuttle Atlantis (STS-66, 1994)",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/sts066-127-006",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S048"
+      ],
+      "orig_width": 4638,
+      "orig_height": 4512,
+      "width": 3840,
+      "height": 3736,
+      "bundle_file": "STS66.jpg",
+      "bytes": 3005618,
+      "flags": [
+        "ASPECT_1.03: tall/square, full-frame crop loses 42% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "N008",
+      "url": "https://oceanexplorer.noaa.gov/wp-content/uploads/2025/08/1605vent-hires.jpg",
+      "kind": "image",
+      "title": "Black smoker, Mariana back-arc",
+      "source_class": "REAL_PHOTO",
+      "credit": "NOAA Office of Ocean Exploration and Research",
+      "source_url": "https://oceanexplorer.noaa.gov/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S050"
+      ],
+      "orig_width": 1920,
+      "orig_height": 1080,
+      "width": 1920,
+      "height": 1080,
+      "bundle_file": "N008.jpg",
+      "bytes": 919963,
+      "flags": [
+        "OK_NO_ZOOM: fine full-frame, little room to zoom"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "NUR",
+      "url": "https://s3.amazonaws.com/s3-east-testmedia-noaa.woc.noaa.gov/dam/Photos/legacy/pl23_nur04512.jpg",
+      "kind": "image",
+      "title": "Tube worms at the base of a black smoker",
+      "source_class": "REAL_PHOTO",
+      "credit": "OAR/National Undersea Research Program (NURP)",
+      "source_url": "https://noaa.gov/media/digital-library-photo/pl23nur04512jpg",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S051"
+      ],
+      "orig_width": 1184,
+      "orig_height": 1824,
+      "width": 1184,
+      "height": 1824,
+      "bundle_file": "NUR.jpg",
+      "bytes": 1466294,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame",
+        "ASPECT_0.65: tall/square, full-frame crop loses 63% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "LOST",
+      "url": "https://s3.amazonaws.com/s3-east-testmedia-noaa.woc.noaa.gov/dam/Photos/legacy/pl23_expl2224.jpg",
+      "kind": "image",
+      "title": "A white carbonate spire in the Lost City vent field",
+      "source_class": "REAL_PHOTO",
+      "credit": "IFE, URI-IAO, UW, Lost City Science Party; NOAA/OAR/OER; The Lost City 2005 Expedition",
+      "source_url": "https://noaa.gov/media/digital-library-photo/pl23expl2224jpg",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S052",
+        "S053"
+      ],
+      "orig_width": 1920,
+      "orig_height": 1080,
+      "width": 1920,
+      "height": 1080,
+      "bundle_file": "LOST.jpg",
+      "bytes": 761598,
+      "flags": [
+        "OK_NO_ZOOM: fine full-frame, little room to zoom"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "P21439",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA21439.jpg",
+      "kind": "image",
+      "title": "Cassini Grand Finale Dive (illustration)",
+      "source_class": "ARTIST_CONCEPT",
+      "credit": "NASA/JPL-Caltech",
+      "source_url": "https://www.jpl.nasa.gov/images/pia21439-cassini-grand-finale-dive-illustration/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S056"
+      ],
+      "orig_width": 3000,
+      "orig_height": 1266,
+      "width": 3000,
+      "height": 1266,
+      "bundle_file": "P21439.jpg",
+      "bytes": 250713,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "id": "P21440",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA21440.jpg",
+      "kind": "image",
+      "title": "Cassini Versus Saturn (illustration)",
+      "source_class": "ARTIST_CONCEPT",
+      "credit": "NASA/JPL-Caltech",
+      "source_url": "https://www.jpl.nasa.gov/images/pia21440-cassini-versus-saturn-illustration/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S057"
+      ],
+      "orig_width": 3000,
+      "orig_height": 1266,
+      "width": 3000,
+      "height": 1266,
+      "bundle_file": "P21440.jpg",
+      "bytes": 221630,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "id": "WEBB",
+      "url": "https://cdn.esawebb.org/archives/images/large/weic2314a.jpg",
+      "kind": "image",
+      "title": "Webb: water plume of Enceladus (2023)",
+      "source_class": "PROCESSED_DATA",
+      "credit": "NASA, ESA, CSA, STScI, G. Villanueva (NASA's Goddard Space Flight Center), A. Pagan (STScI)",
+      "source_url": "https://esawebb.org/images/weic2314a",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [
+        "S058"
+      ],
+      "orig_width": 1500,
+      "orig_height": 1500,
+      "width": 1500,
+      "height": 1500,
+      "bundle_file": "WEBB.jpg",
+      "bytes": 160955,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame",
+        "ASPECT_1.00: tall/square, full-frame crop loses 44% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "T003",
+      "url": "https://images-assets.nasa.gov/image/PIA18435/PIA18435~orig.jpg",
+      "kind": "image",
+      "title": "Color Maps of Enceladus - 2014 (globe texture)",
+      "source_class": "PROCESSED_DATA",
+      "credit": "NASA/JPL-Caltech/Space Science Institute/Lunar and Planetary Institute",
+      "source_url": "https://images.nasa.gov/details/PIA18435",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [],
+      "orig_width": 15960,
+      "orig_height": 7980,
+      "width": 3840,
+      "height": 1920,
+      "bundle_file": "T003.jpg",
+      "bytes": 4354179,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "id": "SAT8",
+      "url": "https://www.solarsystemscope.com/textures/download/8k_saturn.jpg",
+      "kind": "image",
+      "title": "Solar System Scope texture 8k_saturn.jpg",
+      "source_class": "PROCESSED_DATA",
+      "credit": "Solar System Scope (CC BY 4.0), based on NASA data",
+      "source_url": "https://www.solarsystemscope.com/textures/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [],
+      "orig_width": 4096,
+      "orig_height": 2048,
+      "width": 3840,
+      "height": 1920,
+      "bundle_file": "SAT8.jpg",
+      "bytes": 734203,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "id": "SAT2",
+      "url": "https://www.solarsystemscope.com/textures/download/2k_saturn.jpg",
+      "kind": "image",
+      "title": "Solar System Scope texture 2k_saturn.jpg",
+      "source_class": "PROCESSED_DATA",
+      "credit": "Solar System Scope (CC BY 4.0), based on NASA data",
+      "source_url": "https://www.solarsystemscope.com/textures/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [],
+      "orig_width": 2048,
+      "orig_height": 1024,
+      "width": 2048,
+      "height": 1024,
+      "bundle_file": "SAT2.jpg",
+      "bytes": 199916,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "RING8",
+      "url": "https://www.solarsystemscope.com/textures/download/8k_saturn_ring_alpha.png",
+      "kind": "image",
+      "title": "Solar System Scope 8k_saturn_ring_alpha.png",
+      "source_class": "PROCESSED_DATA",
+      "credit": "Solar System Scope (CC BY 4.0), based on NASA data",
+      "source_url": "https://www.solarsystemscope.com/textures/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [],
+      "orig_width": 8192,
+      "orig_height": 500,
+      "width": 3840,
+      "height": 234,
+      "bundle_file": "RING8.jpg",
+      "bytes": 133742,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "RING2",
+      "url": "https://www.solarsystemscope.com/textures/download/2k_saturn_ring_alpha.png",
+      "kind": "image",
+      "title": "Solar System Scope 2k_saturn_ring_alpha.png",
+      "source_class": "PROCESSED_DATA",
+      "credit": "Solar System Scope (CC BY 4.0), based on NASA data",
+      "source_url": "https://www.solarsystemscope.com/textures/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [],
+      "orig_width": 2048,
+      "orig_height": 125,
+      "width": 2048,
+      "height": 125,
+      "bundle_file": "RING2.jpg",
+      "bytes": 44132,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "EARTHSS",
+      "url": "https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg",
+      "kind": "image",
+      "title": "Solar System Scope Earth day map",
+      "source_class": "PROCESSED_DATA",
+      "credit": "Solar System Scope (CC BY 4.0), based on NASA data",
+      "source_url": "https://www.solarsystemscope.com/textures/",
+      "credit_checked": true,
+      "note": "credit line read from the source page on 2026-11-22",
+      "shots": [],
+      "orig_width": 8192,
+      "orig_height": 4096,
+      "width": 3840,
+      "height": 1920,
+      "bundle_file": "EARTHSS.jpg",
+      "bytes": 1444010,
+      "flags": [],
+      "status": "ok"
+    }
+  ]
+}

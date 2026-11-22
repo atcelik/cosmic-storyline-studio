@@ -1,0 +1,683 @@
+1
+00:00:02,200 --> 00:00:05,888
+In 2005, a spacecraft circling Saturn noticed
+
+2
+00:00:05,888 --> 00:00:09,083
+something odd about one of its smallest
+
+3
+00:00:09,083 --> 00:00:09,575
+moons.
+
+4
+00:00:11,025 --> 00:00:14,413
+Something there was pushing back against Saturn's
+
+5
+00:00:14,413 --> 00:00:15,450
+magnetic field.
+
+6
+00:00:19,025 --> 00:00:21,911
+Months later, Cassini flew in for a
+
+7
+00:00:21,911 --> 00:00:22,900
+closer look.
+
+8
+00:00:27,025 --> 00:00:28,287
+And it saw this:
+
+9
+00:00:28,287 --> 00:00:31,207
+water, spraying out of a frozen moon,
+
+10
+00:00:31,207 --> 00:00:32,075
+into space.
+
+11
+00:00:35,025 --> 00:00:37,475
+This is the real image.
+
+12
+00:00:41,525 --> 00:00:45,172
+A moon barely five hundred kilometres across,
+
+13
+00:00:45,172 --> 00:00:46,550
+leaking an ocean.
+
+14
+00:00:48,025 --> 00:00:50,535
+Today we follow that water down,
+
+15
+00:00:50,535 --> 00:00:52,575
+to the ocean it came from.
+
+16
+00:00:56,025 --> 00:00:58,766
+And we ask the question scientists now
+
+17
+00:00:58,766 --> 00:00:59,703
+ask out loud:
+
+18
+00:00:59,703 --> 00:01:02,300
+could something be alive down there?
+
+19
+00:01:04,025 --> 00:01:07,650
+Enceladus is one of Saturn's smaller moons.
+
+20
+00:01:12,025 --> 00:01:14,586
+Small worlds lose their heat fast.
+
+21
+00:01:14,586 --> 00:01:15,942
+They freeze solid,
+
+22
+00:01:15,942 --> 00:01:17,675
+and they stay that way.
+
+23
+00:01:20,025 --> 00:01:23,025
+When Voyager 2 flew past in 1981,
+
+24
+00:01:23,025 --> 00:01:26,025
+it saw something that didn't fit.
+
+25
+00:01:27,475 --> 00:01:29,477
+Whole regions were smooth,
+
+26
+00:01:29,477 --> 00:01:31,249
+with no craters at all.
+
+27
+00:01:31,249 --> 00:01:34,175
+Something had been repaving this moon.
+
+28
+00:01:35,625 --> 00:01:37,683
+Fresh ice. Long fractures.
+
+29
+00:01:37,683 --> 00:01:39,900
+A surface that looked young.
+
+30
+00:01:42,125 --> 00:01:44,159
+Voyager only had a glimpse.
+
+31
+00:01:44,159 --> 00:01:46,570
+The answer had to wait more than
+
+32
+00:01:46,570 --> 00:01:47,550
+twenty years.
+
+33
+00:01:50,125 --> 00:01:53,500
+Cassini reached Saturn in 2004.
+
+34
+00:01:58,125 --> 00:01:59,544
+In February 2005,
+
+35
+00:01:59,544 --> 00:02:03,299
+its magnetometer felt Saturn's magnetic field
+
+36
+00:02:03,299 --> 00:02:05,386
+bending around Enceladus,
+
+37
+00:02:05,386 --> 00:02:08,557
+as if something like an atmosphere was
+
+38
+00:02:08,557 --> 00:02:09,475
+in the way.
+
+39
+00:02:10,925 --> 00:02:13,445
+In July, Cassini found a cloud of
+
+40
+00:02:13,445 --> 00:02:16,575
+water vapour hanging over the south pole.
+
+41
+00:02:18,025 --> 00:02:19,811
+Below it were four long,
+
+42
+00:02:19,811 --> 00:02:21,746
+warm fractures in the ice.
+
+43
+00:02:21,746 --> 00:02:24,500
+Scientists called them tiger stripes.
+
+44
+00:02:25,950 --> 00:02:28,341
+Each one is about a hundred and
+
+45
+00:02:28,341 --> 00:02:30,500
+thirty-five kilometres long.
+
+46
+00:02:33,950 --> 00:02:35,100
+Over the years,
+
+47
+00:02:35,100 --> 00:02:38,319
+Cassini counted a hundred and one separate
+
+48
+00:02:38,319 --> 00:02:39,775
+geysers along them.
+
+49
+00:02:41,225 --> 00:02:43,599
+And the south pole was not just
+
+50
+00:02:43,599 --> 00:02:45,208
+warm for an ice moon.
+
+51
+00:02:45,208 --> 00:02:46,050
+It was hot.
+
+52
+00:02:49,225 --> 00:02:51,929
+It gives off about sixteen gigawatts of
+
+53
+00:02:51,929 --> 00:02:54,217
+heat, around two and a half times
+
+54
+00:02:54,217 --> 00:02:56,435
+the power of all the hot springs
+
+55
+00:02:56,435 --> 00:02:57,475
+in Yellowstone.
+
+56
+00:02:58,925 --> 00:03:01,338
+The spray was not a thin mist.
+
+57
+00:03:01,338 --> 00:03:03,912
+It was feeding an entire ring of
+
+58
+00:03:03,912 --> 00:03:04,475
+Saturn.
+
+59
+00:03:05,925 --> 00:03:08,658
+Saturn's faint outer E ring is made
+
+60
+00:03:08,658 --> 00:03:11,000
+mostly of ice from these jets.
+
+61
+00:03:12,450 --> 00:03:15,022
+So where was all that water coming
+
+62
+00:03:15,022 --> 00:03:15,400
+from?
+
+63
+00:03:20,450 --> 00:03:23,536
+Ice can turn straight into vapour without
+
+64
+00:03:23,536 --> 00:03:27,073
+ever melting. Scientists needed proof of liquid
+
+65
+00:03:27,073 --> 00:03:27,525
+water.
+
+66
+00:03:28,975 --> 00:03:31,000
+The proof was salt.
+
+67
+00:03:36,975 --> 00:03:40,391
+In 2009, Cassini found sodium salts in
+
+68
+00:03:40,391 --> 00:03:43,628
+ice grains from Saturn's outer ring,
+
+69
+00:03:43,628 --> 00:03:45,875
+the ring Enceladus feeds.
+
+70
+00:03:47,325 --> 00:03:50,081
+Salt like that dissolves out of rock,
+
+71
+00:03:50,081 --> 00:03:51,272
+in liquid water.
+
+72
+00:03:51,272 --> 00:03:54,400
+Somewhere below, water was touching stone.
+
+73
+00:03:55,850 --> 00:03:59,229
+By 2014, gravity measurements pointed to a
+
+74
+00:03:59,229 --> 00:04:01,240
+sea under the south pole,
+
+75
+00:04:01,240 --> 00:04:03,332
+about ten kilometres deep,
+
+76
+00:04:03,332 --> 00:04:06,550
+under thirty to forty kilometres of ice.
+
+77
+00:04:08,000 --> 00:04:10,092
+Then came a stranger clue.
+
+78
+00:04:10,092 --> 00:04:13,150
+Enceladus wobbles as it orbits Saturn.
+
+79
+00:04:16,000 --> 00:04:19,116
+Scientists tracked craters across hundreds
+
+80
+00:04:19,116 --> 00:04:20,452
+of Cassini images,
+
+81
+00:04:20,452 --> 00:04:22,900
+taken over more than seven years.
+
+82
+00:04:24,350 --> 00:04:26,581
+The wobble was too large for a
+
+83
+00:04:26,581 --> 00:04:27,920
+moon frozen solid.
+
+84
+00:04:27,920 --> 00:04:30,375
+The ice shell had to be floating.
+
+85
+00:04:32,350 --> 00:04:34,604
+In 2015 came the verdict:
+
+86
+00:04:34,604 --> 00:04:35,956
+a global ocean,
+
+87
+00:04:35,956 --> 00:04:38,750
+wrapped around the entire moon.
+
+88
+00:04:40,200 --> 00:04:41,372
+A hidden ocean,
+
+89
+00:04:41,372 --> 00:04:44,028
+on a moon with roughly the surface
+
+90
+00:04:44,028 --> 00:04:45,200
+area of Turkey.
+
+91
+00:04:46,700 --> 00:04:48,902
+Life as we know it needs three
+
+92
+00:04:48,902 --> 00:04:50,444
+things: liquid water,
+
+93
+00:04:50,444 --> 00:04:51,838
+a source of energy,
+
+94
+00:04:51,838 --> 00:04:53,600
+and the right chemistry.
+
+95
+00:04:55,050 --> 00:04:57,900
+Water, Enceladus clearly has.
+
+96
+00:05:03,050 --> 00:05:06,488
+In 2008, Cassini flew straight through the
+
+97
+00:05:06,488 --> 00:05:08,125
+plume and tasted it.
+
+98
+00:05:09,575 --> 00:05:12,197
+It was full of organic molecules,
+
+99
+00:05:12,197 --> 00:05:15,375
+about twenty times denser than expected.
+
+100
+00:05:17,575 --> 00:05:20,912
+Scientists compared it to carbonated water
+
+101
+00:05:20,912 --> 00:05:23,375
+with an essence of natural gas.
+
+102
+00:05:25,575 --> 00:05:28,827
+In 2015, tiny grains of silica pointed
+
+103
+00:05:28,827 --> 00:05:30,367
+to something more:
+
+104
+00:05:30,367 --> 00:05:32,849
+hot water reacting with rock,
+
+105
+00:05:32,849 --> 00:05:34,475
+on the ocean floor.
+
+106
+00:05:35,925 --> 00:05:38,853
+Then, on the 28th of October 2015,
+
+107
+00:05:38,853 --> 00:05:42,383
+Cassini made its deepest dive through the
+
+108
+00:05:42,383 --> 00:05:42,900
+plume.
+
+109
+00:05:44,350 --> 00:05:45,872
+It found hydrogen,
+
+110
+00:05:45,872 --> 00:05:48,325
+about one percent of the gas.
+
+111
+00:05:52,350 --> 00:05:55,499
+Hydrogen like that forms when hot water
+
+112
+00:05:55,499 --> 00:05:56,872
+reacts with rock.
+
+113
+00:05:56,872 --> 00:05:58,245
+And for microbes,
+
+114
+00:05:58,245 --> 00:05:59,133
+it is food:
+
+115
+00:05:59,133 --> 00:06:00,425
+chemical energy.
+
+116
+00:06:01,875 --> 00:06:04,324
+In 2023, one more ingredient:
+
+117
+00:06:04,324 --> 00:06:07,785
+phosphates, at least a hundred times more
+
+118
+00:06:07,785 --> 00:06:10,825
+concentrated than in Earth's oceans.
+
+119
+00:06:12,275 --> 00:06:15,862
+Phosphorus forms the backbone of every DNA
+
+120
+00:06:15,862 --> 00:06:17,400
+molecule on Earth.
+
+121
+00:06:20,275 --> 00:06:22,377
+Water. Energy. Chemistry.
+
+122
+00:06:22,377 --> 00:06:24,900
+Every box we know how to tick.
+
+123
+00:06:28,275 --> 00:06:30,771
+To see what that chemistry can do,
+
+124
+00:06:30,771 --> 00:06:32,900
+we only have to look at home.
+
+125
+00:06:34,775 --> 00:06:37,278
+Two and a half kilometres below the
+
+126
+00:06:37,278 --> 00:06:39,925
+Pacific, there is no sunlight at all.
+
+127
+00:06:42,375 --> 00:06:46,036
+In 1977, scientists exploring the Galápagos
+
+128
+00:06:46,036 --> 00:06:49,356
+Rift found hot springs on the seafloor,
+
+129
+00:06:49,356 --> 00:06:51,825
+and life crowded around them.
+
+130
+00:06:53,275 --> 00:06:55,295
+Clams, crabs, tubeworms,
+
+131
+00:06:55,295 --> 00:06:57,400
+living in total darkness.
+
+132
+00:06:59,775 --> 00:07:01,875
+At the base of that food web
+
+133
+00:07:01,875 --> 00:07:04,575
+are microbes that live on chemistry,
+
+134
+00:07:04,575 --> 00:07:05,550
+not sunlight.
+
+135
+00:07:07,000 --> 00:07:09,484
+At places like the Lost City vent
+
+136
+00:07:09,484 --> 00:07:11,140
+field in the Atlantic,
+
+137
+00:07:11,140 --> 00:07:13,775
+hydrogen from the rocks feeds them.
+
+138
+00:07:15,225 --> 00:07:17,474
+Hydrogen. Carbon dioxide.
+
+139
+00:07:17,474 --> 00:07:19,632
+Warm rock. Liquid water.
+
+140
+00:07:19,632 --> 00:07:23,500
+The same recipe Cassini found at Enceladus.
+
+141
+00:07:24,950 --> 00:07:28,047
+Some scientists think life on Earth itself
+
+142
+00:07:28,047 --> 00:07:30,775
+may have started at vents like these.
+
+143
+00:07:32,950 --> 00:07:36,564
+Cassini was built before anyone knew Enceladus
+
+144
+00:07:36,564 --> 00:07:37,586
+had an ocean.
+
+145
+00:07:37,586 --> 00:07:39,550
+It could not detect life.
+
+146
+00:07:41,000 --> 00:07:43,430
+On the 15th of September 2017,
+
+147
+00:07:43,430 --> 00:07:46,508
+it was steered into Saturn on purpose,
+
+148
+00:07:46,508 --> 00:07:49,586
+so it could never crash into Enceladus
+
+149
+00:07:49,586 --> 00:07:51,125
+and contaminate it.
+
+150
+00:07:52,575 --> 00:07:54,793
+But the jets are still going.
+
+151
+00:07:54,793 --> 00:07:57,776
+In 2023, the James Webb Space Telescope
+
+152
+00:07:57,776 --> 00:08:01,217
+showed the plume reaching nearly ten thousand
+
+153
+00:08:01,217 --> 00:08:02,900
+kilometres into space.
+
+154
+00:08:04,350 --> 00:08:07,133
+That is about nineteen times the width
+
+155
+00:08:07,133 --> 00:08:08,525
+of the moon itself.
+
+156
+00:08:12,350 --> 00:08:15,825
+In 2024, the European Space Agency named
+
+157
+00:08:15,825 --> 00:08:19,039
+Enceladus the top target for its next
+
+158
+00:08:19,039 --> 00:08:20,950
+large science mission.
+
+159
+00:08:22,400 --> 00:08:25,404
+The idea: land near the tiger stripes
+
+160
+00:08:25,404 --> 00:08:27,921
+and catch the ocean as it falls
+
+161
+00:08:27,921 --> 00:08:30,438
+back down. The earliest launch:
+
+162
+00:08:30,438 --> 00:08:31,250
+the 2040s.
+
+163
+00:08:32,700 --> 00:08:35,434
+So, is something alive in the ocean
+
+164
+00:08:35,434 --> 00:08:36,450
+of Enceladus?
+
+165
+00:08:40,700 --> 00:08:43,200
+Nobody knows. Not yet.
+
+166
+00:08:48,700 --> 00:08:50,291
+But for the first time,
+
+167
+00:08:50,291 --> 00:08:52,228
+we know a place in our solar
+
+168
+00:08:52,228 --> 00:08:54,925
+system where every ingredient is there,
+
+169
+00:08:56,700 --> 00:08:59,145
+and the ocean sends us samples for
+
+170
+00:08:59,145 --> 00:09:01,159
+free. We just have to go and
+
+171
+00:09:01,159 --> 00:09:01,950
+catch them.
