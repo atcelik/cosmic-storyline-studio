@@ -56,7 +56,6 @@
  "bodies": [
   {
    "texture": [
-    "../EARTHBM.jpg",
     "../EARTHSS.jpg"
    ],
    "center": [

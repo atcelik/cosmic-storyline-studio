@@ -34,7 +34,8 @@
         "file": "assets/s1_saturn_approach.mp4",
         "source_class": "OUR_CGI",
         "credit": "Our visualization: Cassini map PIA18435 (NASA/JPL), Saturn textures Solar System Scope (CC BY 4.0)",
-        "source_url": "https://images.nasa.gov/details/PIA18435"
+        "source_url": "https://images.nasa.gov/details/PIA18435",
+        "credit_short": "NASA/JPL Cassini map"
       },
       "camera": {
         "move": "hold"
@@ -43,7 +44,6 @@
         "type": "cut"
       },
       "min_duration": 9.0,
-      "label_text": "VISUALIZATION",
       "vo_lead": 2.2,
       "claims": [
         {
@@ -51,7 +51,11 @@
           "source_url": "https://science.nasa.gov/saturn/moons/enceladus/",
           "verified": false
         }
-      ]
+      ],
+      "card": {
+        "title": "Enceladus",
+        "sub": "A frozen moon of Saturn"
+      }
     },
     {
       "id": "S002",
@@ -62,7 +66,8 @@
         "file": "assets/s2_enceladus_approach.mp4",
         "source_class": "OUR_CGI",
         "credit": "Our visualization: Cassini map PIA18435 (NASA/JPL), Saturn textures Solar System Scope (CC BY 4.0)",
-        "source_url": "https://images.nasa.gov/details/PIA18435"
+        "source_url": "https://images.nasa.gov/details/PIA18435",
+        "credit_short": "NASA/JPL Cassini map"
       },
       "camera": {
         "move": "hold"
@@ -70,8 +75,7 @@
       "transition_out": {
         "type": "cut"
       },
-      "min_duration": 8.0,
-      "label_text": "VISUALIZATION"
+      "min_duration": 8.0
     },
     {
       "id": "S003",
@@ -82,7 +86,8 @@
         "file": "assets/s3_plumes_close.mp4",
         "source_class": "OUR_CGI",
         "credit": "Our visualization: Cassini map PIA18435 (NASA/JPL), Saturn textures Solar System Scope (CC BY 4.0)",
-        "source_url": "https://images.nasa.gov/details/PIA18435"
+        "source_url": "https://images.nasa.gov/details/PIA18435",
+        "credit_short": "NASA/JPL Cassini map"
       },
       "camera": {
         "move": "hold"
@@ -90,8 +95,7 @@
       "transition_out": {
         "type": "cut"
       },
-      "min_duration": 7.0,
-      "label_text": "VISUALIZATION"
+      "min_duration": 7.0
     },
     {
       "id": "S004",
@@ -102,7 +106,8 @@
         "source_class": "REAL_PHOTO",
         "credit": "NASA",
         "source_url": "https://images.nasa.gov/",
-        "search_query": "manifest"
+        "search_query": "manifest",
+        "credit_short": "NASA/JPL/Space Science Institute"
       },
       "camera": {
         "move": "push_in",
@@ -116,8 +121,10 @@
         "type": "cut"
       },
       "min_duration": 7.0,
-      "label": true,
-      "label_text": "REAL CASSINI IMAGE"
+      "card": {
+        "title": "The jets",
+        "sub": "Water spraying into space"
+      }
     },
     {
       "id": "S005",
@@ -193,8 +200,9 @@
         "type": "video",
         "file": "assets/s7_earth_atlantic.mp4",
         "source_class": "OUR_CGI",
-        "credit": "Our visualization: NASA Blue Marble map",
-        "source_url": "https://visibleearth.nasa.gov/images/73909"
+        "credit": "Our visualization: Solar System Scope Earth map (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_short": "Solar System Scope map, NASA data"
       },
       "camera": {
         "move": "hold"
@@ -204,8 +212,11 @@
         "duration": 0.8
       },
       "min_duration": 8.0,
-      "label_text": "VISUALIZATION",
-      "vo_lead": 1.2
+      "vo_lead": 1.2,
+      "card": {
+        "title": "Life without sunlight",
+        "sub": "Earth's deep-sea vents"
+      }
     },
     {
       "id": "S008",
@@ -216,7 +227,8 @@
         "source_class": "REAL_PHOTO",
         "credit": "NOAA",
         "source_url": "https://oceanexplorer.noaa.gov/",
-        "search_query": "manifest"
+        "search_query": "manifest",
+        "credit_short": "NOAA Ocean Exploration"
       },
       "camera": {
         "move": "push_in",
@@ -230,8 +242,6 @@
         "type": "cut"
       },
       "min_duration": 7.0,
-      "label": true,
-      "label_text": "REAL PHOTO · DEEP-SEA VENT",
       "claims": [
         {
           "text": "In February 1977, at the Galapagos Rift (about 2,500 m deep), scientists found the first hydrothermal vent and its animal communities.",
@@ -249,7 +259,8 @@
         "source_class": "REAL_PHOTO",
         "credit": "NOAA",
         "source_url": "https://oceanexplorer.noaa.gov/",
-        "search_query": "manifest"
+        "search_query": "manifest",
+        "credit_short": "NOAA"
       },
       "camera": {
         "move": "push_in",
@@ -280,7 +291,8 @@
         "file": "assets/s10_pullback.mp4",
         "source_class": "OUR_CGI",
         "credit": "Our visualization: Cassini map PIA18435 (NASA/JPL), Saturn textures Solar System Scope (CC BY 4.0)",
-        "source_url": "https://images.nasa.gov/details/PIA18435"
+        "source_url": "https://images.nasa.gov/details/PIA18435",
+        "credit_short": "NASA/JPL Cassini map"
       },
       "camera": {
         "move": "hold"
@@ -289,7 +301,6 @@
         "type": "cut"
       },
       "min_duration": 10.0,
-      "label_text": "VISUALIZATION",
       "vo_lead": 1.0
     }
   ]

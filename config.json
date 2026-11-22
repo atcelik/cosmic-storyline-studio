@@ -68,5 +68,8 @@
     "SCIENTIFIC_CGI": "SCIENTIFIC VISUALIZATION",
     "ARTIST_CONCEPT": "ARTIST'S CONCEPT",
     "OUR_CGI": "ILLUSTRATION / SIMULATION"
-  }
+  },
+  "corner_labels": false,
+  "brand": "COSMIC STORYLINE",
+  "card_seconds": 4.5
 }

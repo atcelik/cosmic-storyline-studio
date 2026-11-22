@@ -11,7 +11,7 @@ Read these before any task: `docs/PIPELINE.md`, `docs/RETENTION_STANDARD.md`, `d
 1. **Free only.** No paid APIs, no paid licences, no paid assets. If something needs payment, stop and say so.
 2. **No generative-AI imagery or video.** Visuals are real NASA/ESA/ESO/JAXA archive material, labelled
    scientific visualizations, or our own programmatic graphics. AI is used for scripting only. (Narration is a synthetic voice and is disclosed in the description.)
-3. **Every shot is labelled by `source_class`** (REAL_PHOTO, REAL_VIDEO, PROCESSED_DATA, SCIENTIFIC_CGI, ARTIST_CONCEPT, OUR_CGI). Never present a visualization, concept art or simulation as a real photograph.
+3. **Every shot has a `source_class`** (on screen it appears only in the small source line of the fading top-left chapter card; corner labels are never used — owner rule 2026-11-22) (REAL_PHOTO, REAL_VIDEO, PROCESSED_DATA, SCIENTIFIC_CGI, ARTIST_CONCEPT, OUR_CGI). Never present a visualization, concept art or simulation as a real photograph.
 4. **Every factual claim and number needs a source** in `claims[]`. Do not invent facts, figures, quotes or asset IDs. If unsure, mark `verified:false` and tell the owner.
 5. **Licences are checked per asset.** `credit_verified` is only set to true after reading the item's own page. Never claim NASA/ESA endorsement.
 6. **Camera: documentary, never a slideshow.** Constant-speed motion so the camera is still moving at every cut (`look.motion: linear`), a barely visible float (`look.float`, ≤ 0.004), hard cuts by default, dissolves only for a change of time or place. No shake, no `zoompan`. `strength` ≤ 0.12. Parallax (`camera.parallax`) only on a single body on black space (`layer: body`); never on limb/plume photos or ringed planets (it tears them).

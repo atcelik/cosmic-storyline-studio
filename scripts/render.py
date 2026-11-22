@@ -272,6 +272,37 @@ def text_overlay(text, W, H, fpath):
     return to_overlay(c)
 
 
+SOURCE_WORD = {"REAL_PHOTO": "Photo", "REAL_VIDEO": "Footage", "PROCESSED_DATA": "Processed data",
+               "SCIENTIFIC_CGI": "Scientific visualization", "ARTIST_CONCEPT": "Artist's concept", "OUR_CGI": "Illustration"}
+
+
+def card_overlay(card, shot, W, H, cfg):
+    """Top-left chapter card: brand, title, accent rule, subtitle, one small source line."""
+    k = H / 1080
+    fonts = cfg.get("card_fonts", {})
+    def F(role, default, size):
+        return font(fonts.get(role, default), round(size * k))
+    c = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(c)
+    gh, gw = round(300 * k), round(1000 * k)
+    for i in range(gh):
+        a = int(120 * (1 - i / gh) ** 2)
+        d.rectangle([0, i, gw, i + 1], fill=(0, 0, 0, a))
+    x, y = round(64 * k), round(54 * k)
+    accent = tuple(cfg.get("card_accent", [159, 212, 255]))
+    d.text((x, y), cfg.get("brand", "COSMIC STORYLINE"), font=F("brand", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 19), fill=accent + (235,))
+    d.text((x, y + round(30 * k)), card["title"], font=F("title", cfg["font_path"], 46), fill=(255, 255, 255, 250))
+    d.line([x, y + round(94 * k), x + round(56 * k), y + round(94 * k)], fill=accent + (230,), width=max(2, round(3 * k)))
+    yy = y + round(106 * k)
+    if card.get("sub"):
+        d.text((x, yy), card["sub"], font=F("sub", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 24), fill=(225, 232, 242, 235))
+        yy += round(34 * k)
+    v = shot["visual"]
+    src = card.get("source") or f"{SOURCE_WORD.get(v['source_class'], '')} · {v.get('credit_short') or v.get('credit', '')}"
+    d.text((x, yy), src[:90], font=F("source", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 17), fill=(175, 185, 200, 210))
+    return to_overlay(c)
+
+
 def blend_overlay(frame, ov, g):
     if ov is None or g <= 0:
         return
@@ -314,6 +345,8 @@ def main():
     labels = {}
     prev_key = None
     for s in shots:
+        if not cfg.get("corner_labels", False):
+            break                                  # owner rule 2026-11-22: never a corner label
         v = s["visual"]
         key = (v["source_class"], v.get("credit", ""))
         default = v["source_class"] in cfg.get("label_classes", list(cfg["labels"]))
@@ -326,6 +359,28 @@ def main():
             txt = s.get("label_text", txt)
             labels[s["id"]] = label_overlay(txt, W, H, cfg["font_path"])
     texts = {s["id"]: text_overlay(s["on_screen_text"], W, H, cfg["font_path"]) for s in shots if s.get("on_screen_text")}
+    # chapter cards: a shot with "card", or the first shot of a beat that has a "chapter" title
+    beats = {b["id"]: b for b in ep.get("beats", [])}
+    cards, seen = [], set()
+    for i, s in enumerate(shots):
+        cd = s.get("card")
+        if cd is None and s.get("beat") not in seen and beats.get(s.get("beat"), {}).get("chapter"):
+            b = beats[s["beat"]]
+            cd = {"title": b["chapter"], "sub": b.get("chapter_sub", "")}
+        seen.add(s.get("beat"))
+        if cd:
+            cards.append((T[i]["start"] + 0.35, card_overlay(cd, s, W, H, cfg)))
+    CARD_IN, CARD_HOLD, CARD_OUT = 0.6, cfg.get("card_seconds", 4.5), 0.9
+
+    def card_alpha(t):
+        for t0, ov in reversed(cards):
+            if t >= t0:
+                u = t - t0
+                if u < CARD_IN: return ov, u / CARD_IN
+                if u < CARD_IN + CARD_HOLD: return ov, 1.0
+                if u < CARD_IN + CARD_HOLD + CARD_OUT: return ov, 1 - (u - CARD_IN - CARD_HOLD) / CARD_OUT
+                return None, 0.0
+        return None, 0.0
 
     out = Path(a.out) if a.out else build / ("video_draft.mp4" if a.draft else "video_silent.mp4")
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -393,6 +448,9 @@ def main():
             if i > 0 and T[i - 1]["trans"] != "cut" and t < starts[i] + T[i - 1]["trans_d"]:
                 p = (t - starts[i]) / T[i - 1]["trans_d"]
                 fr = transition(shot_frame(i - 1, t), fr, p, T[i - 1]["trans"], W, H)
+            cov, ca = card_alpha(t)
+            if cov is not None and ca > 0:
+                blend_overlay(fr, cov, ease(ca))
             if vig is not None or noise is not None:
                 ff = fr.astype(np.float32)
                 if vig is not None:

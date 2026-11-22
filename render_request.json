@@ -1,10 +1,15 @@
 {
-  "episode": "earth_scout",
+  "episode": "enceladus_trial_v3",
   "steps": [
-    "assets"
+    "assets",
+    "space3d",
+    "validate",
+    "tts",
+    "render",
+    "audio",
+    "meta"
   ],
-  "quality": "draft",
-  "search": true,
-  "top": 3,
-  "note": "Scout: real NASA photos/video of Earth for the Earth-connection beat"
+  "quality": "final",
+  "search": false,
+  "note": "v3.1: fading chapter cards, no corner labels, Earth credit fixed"
 }
