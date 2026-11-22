@@ -21,24 +21,80 @@ def cover_scale(w, h, W, H):
     return max(W / w, H / h)
 
 
+def parallax_mask(img, layer):
+    """Soft foreground mask for 2.5D parallax.
+    layer 'ground': bright regions touching the bottom edge (a limb or surface in front of sky/plumes/planets).
+    layer 'body': the largest bright object (a moon or planet in front of space).
+    Returns (mask float32 0..1 at img size, inpainted background) or (None, None) when no clear layer exists."""
+    h, w = img.shape[:2]
+    sw = 960
+    sh_ = max(2, round(h * sw / w))
+    small = cv2.resize(img, (sw, sh_), interpolation=cv2.INTER_AREA)
+    g = cv2.GaussianBlur(cv2.cvtColor(small, cv2.COLOR_BGR2GRAY), (0, 0), 3)
+    thr = max(22, int(np.percentile(g, 99.5) * 0.22))
+    m = (g > thr).astype(np.uint8)
+    m = cv2.morphologyEx(m, cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (21, 21)))
+    n, lab, stats, _ = cv2.connectedComponentsWithStats(m, 8)
+    keep = np.zeros_like(m)
+    if layer == "ground":
+        for i in range(1, n):
+            x, y, ww, hh, area = stats[i]
+            if y + hh >= sh_ - 2 and area > 0.01 * m.size:
+                keep[lab == i] = 1
+    elif n > 1:
+        i = 1 + int(np.argmax(stats[1:, cv2.CC_STAT_AREA]))
+        if stats[i, cv2.CC_STAT_AREA] > 0.01 * m.size:
+            keep[lab == i] = 1
+    frac = keep.mean()
+    if frac < 0.02 or frac > 0.8:
+        return None, None
+    # fill holes inside the layer
+    ff = keep.copy(); pad = np.zeros((sh_ + 2, sw + 2), np.uint8)
+    cv2.floodFill(ff, pad, (0, 0), 1)
+    keep = keep | (1 - ff)
+    hard = cv2.dilate(keep, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (9, 9)))
+    bg_small = cv2.inpaint(small, hard, 9, cv2.INPAINT_TELEA)
+    soft = cv2.GaussianBlur(keep.astype(np.float32), (0, 0), 2.5)
+    mask = cv2.resize(soft, (w, h), interpolation=cv2.INTER_LINEAR)
+    hole = cv2.resize(cv2.GaussianBlur(hard.astype(np.float32), (0, 0), 4), (w, h), interpolation=cv2.INTER_LINEAR)[..., None]
+    bg_up = cv2.resize(bg_small, (w, h), interpolation=cv2.INTER_CUBIC)
+    bg = (img.astype(np.float32) * (1 - hole) + bg_up.astype(np.float32) * hole).astype(np.uint8)
+    return mask, bg
+
+
 class Source:
     """Holds a 'working' image already scaled to cover the frame at the largest zoom (K)."""
-    def __init__(self, shot, base_dir, W, H):
+    def __init__(self, shot, base_dir, W, H, look=None):
         v = shot["visual"]
         cam = shot.get("camera") or {}
+        look = look or {}
         self.move = cam.get("move", "push_in")
         self.strength = float(cam.get("strength", 0.06))
         self.focus = cam.get("focus", [0.5, 0.5])
         self.focus_from = cam.get("focus_from")
+        # documentary motion: constant speed, so the camera is still moving at every cut (ease=true restores in/out easing)
+        self.linear = not cam.get("ease", look.get("motion", "linear") != "linear")
+        self.drift = float(cam.get("drift", 0.0))           # lateral slide, fraction of frame width over the shot
+        self.par = float(cam.get("parallax", 0.0))          # 0..1, foreground moves more than background
+        self.layer = cam.get("layer", "ground")
+        fl = float(look.get("float", 0.0))
+        self.margin = 1.0 + (3.5 * fl + 0.004 if fl else 0.0) + abs(self.drift) * (1 + self.par)
         self.W, self.H = W, H
-        self.K = 1.0 if self.move == "hold" else 1.0 + (max(self.strength, 0.06) if self.move.startswith("pan") else self.strength)
+        base = 1.0 if self.move == "hold" else 1.0 + (max(self.strength, 0.06) if self.move.startswith("pan") else self.strength)
+        self.K = (base + self.strength * 0.4 * self.par) * self.margin
         self.kind = v["type"]
         path = base_dir / v["file"]
+        self.mask = self.bg = None
         if self.kind == "still":
             img = cv2.imread(str(path), cv2.IMREAD_COLOR)
             if img is None:
                 raise RuntimeError(f"cannot read image {path}")
             self.work = self._fit(img)
+            if self.par > 0:
+                self.mask, self.bg = parallax_mask(self.work, self.layer)
+                if self.mask is None:
+                    print(f"  {shot['id']}: no clear {self.layer} layer, parallax off", flush=True)
+                    self.par = 0.0
             self.vid = None
         else:
             self.vid = cv2.VideoCapture(str(path))
@@ -78,16 +134,21 @@ class Source:
             raise RuntimeError("video has no frames")
         return self._fit(self.last)
 
-    def frame(self, lt, dur):
+    def frame(self, lt, dur, fl=(0.0, 0.0, 0.0)):
+        """fl = camera float (dx, dy in output px, rotation in degrees), shared by the whole film."""
         u = min(max(lt / dur, 0.0), 1.0)
-        e = ease(u)
+        e = u if self.linear else ease(u)
         work = self.work_at(lt)
         hh, ww = work.shape[:2]
         mv = self.move
-        if mv == "push_in": z = 1 + self.strength * e
-        elif mv == "pull_out": z = 1 + self.strength * (1 - e)
-        elif mv.startswith("pan"): z = self.K
-        else: z = 1.0
+        if mv == "push_in": zp = e
+        elif mv == "pull_out": zp = 1 - e
+        else: zp = 0.0
+        if mv.startswith("pan"):
+            z = self.K / self.margin
+        else:
+            z = 1 + self.strength * zp
+        z *= self.margin
         a = z / self.K
         hw, hh_ = self.W / (2 * a), self.H / (2 * a)
         fx, fy = self.focus
@@ -102,8 +163,24 @@ class Source:
             cx = lo + (hi - lo) * f if hi > lo else ww / 2
         cx = min(max(cx, hw), ww - hw) if ww > 2 * hw else ww / 2
         cy = min(max(cy, hh_), hh - hh_) if hh > 2 * hh_ else hh / 2
-        M = np.float32([[a, 0, self.W / 2 - a * cx], [0, a, self.H / 2 - a * cy]])
-        return cv2.warpAffine(work, M, (self.W, self.H), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
+        slide = self.drift * self.W * (e - 0.5)
+        if self.par <= 0 or self.mask is None:
+            return self._warp(work, a, cx, cy, fl[0] + slide, fl[1], fl[2])
+        # 2.5D: background zooms/slides less, foreground more
+        p = self.par
+        zb = (1 + self.strength * zp * (1 - 0.7 * p)) * self.margin / self.K
+        zf = (1 + self.strength * zp * (1 + 0.4 * p)) * self.margin / self.K
+        bgf = self._warp(self.bg, zb, cx, cy, fl[0] * (1 - 0.5 * p) + slide * (1 - 0.6 * p), fl[1] * (1 - 0.5 * p), fl[2])
+        fgf = self._warp(work, zf, cx, cy, fl[0] + slide * (1 + 0.6 * p), fl[1], fl[2])
+        m = self._warp(self.mask, zf, cx, cy, fl[0] + slide * (1 + 0.6 * p), fl[1], fl[2], interp=cv2.INTER_LINEAR)[..., None]
+        return (bgf.astype(np.float32) * (1 - m) + fgf.astype(np.float32) * m).astype(np.uint8)
+
+    def _warp(self, img, a, cx, cy, dx, dy, rot, interp=cv2.INTER_CUBIC):
+        c, s_ = np.cos(np.radians(rot)), np.sin(np.radians(rot))
+        A = np.float32([[a * c, -a * s_], [a * s_, a * c]])
+        t = np.float32([self.W / 2 + dx, self.H / 2 + dy]) - A @ np.float32([cx, cy])
+        M = np.hstack([A, t[:, None]]).astype(np.float32)
+        return cv2.warpAffine(img, M, (self.W, self.H), flags=interp, borderMode=cv2.BORDER_REPLICATE)
 
     def close(self):
         if self.vid is not None:
@@ -263,18 +340,36 @@ def main():
         r2 = ((xx - W / 2) / (W / 2)) ** 2 + ((yy - H / 2) / (H / 2)) ** 2
         vig = (1 - vs * np.clip(r2 / 2, 0, 1) ** 1.2)[..., None].astype(np.float32)
 
+    look = cfg.get("look", {})
+    fl_amp = float(look.get("float", 0.0))
+    rng = np.random.default_rng(11)
+    ph = rng.uniform(0, 2 * np.pi, 6)
+
+    def cam_float(t):
+        if not fl_amp:
+            return (0.0, 0.0, 0.0)
+        dx = fl_amp * W * (0.6 * np.sin(2 * np.pi * 0.061 * t + ph[0]) + 0.4 * np.sin(2 * np.pi * 0.137 * t + ph[1]))
+        dy = fl_amp * W * 0.6 * (0.6 * np.sin(2 * np.pi * 0.053 * t + ph[2]) + 0.4 * np.sin(2 * np.pi * 0.119 * t + ph[3]))
+        r = fl_amp * 25 * (0.6 * np.sin(2 * np.pi * 0.041 * t + ph[4]) + 0.4 * np.sin(2 * np.pi * 0.097 * t + ph[5]))
+        return (dx, dy, r)
+
+    grain = float(look.get("grain", 0.0))
+    noise = None
+    if grain:
+        noise = (rng.standard_normal((H, W)).astype(np.float32) * grain * 255)
+
     cache = {}
 
     def get(i):
         if i not in cache:
             for k in [k for k in cache if k < i - 1]:
                 cache.pop(k).close()
-            cache[i] = Source(shots[i], base, W, H)
+            cache[i] = Source(shots[i], base, W, H, look)
         return cache[i]
 
     def shot_frame(i, t):
         lt = t - T[i]["start"]
-        f = get(i).frame(lt, T[i]["dur"])
+        f = get(i).frame(lt, T[i]["dur"], cam_float(t))
         sid = shots[i]["id"]
         if sid in labels:
             blend_overlay(f, labels[sid], env(lt, 0.4, 3.6))
@@ -291,8 +386,14 @@ def main():
             if i > 0 and T[i - 1]["trans"] != "cut" and t < starts[i] + T[i - 1]["trans_d"]:
                 p = (t - starts[i]) / T[i - 1]["trans_d"]
                 fr = transition(shot_frame(i - 1, t), fr, p, T[i - 1]["trans"], W, H)
-            if vig is not None:
-                fr = (fr.astype(np.float32) * vig).astype(np.uint8)
+            if vig is not None or noise is not None:
+                ff = fr.astype(np.float32)
+                if vig is not None:
+                    ff *= vig
+                if noise is not None:
+                    nz = np.roll(noise, (int(rng.integers(0, H)), int(rng.integers(0, W))), axis=(0, 1))
+                    ff += nz[..., None]
+                fr = np.clip(ff, 0, 255).astype(np.uint8)
             if tl["total"] - t < fade_out:
                 k = ease((t - (tl["total"] - fade_out)) / fade_out)
                 fr = (fr.astype(np.float32) * (1 - k)).astype(np.uint8)

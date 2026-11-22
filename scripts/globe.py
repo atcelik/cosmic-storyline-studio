@@ -151,7 +151,8 @@ def main():
     t0 = time.time()
     drift = spec.get("star_drift", [0, 0])
     for i in range(n):
-        e = ease(i / max(1, n - 1))
+        u = i / max(1, n - 1)
+        e = u if spec.get("motion") == "linear" else ease(u)
         dx, dy = drift[0] * W * e, drift[1] * H * e
         f = cv2.warpAffine(bg, np.float32([[1, 0, dx], [0, 1, dy]]), (W, H), flags=cv2.INTER_LINEAR,
                            borderMode=cv2.BORDER_WRAP) if (dx or dy) else bg.copy()

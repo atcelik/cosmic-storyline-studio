@@ -53,7 +53,7 @@ def build_timeline(ep, cfg, vo=None):
         if text:
             vo_d = (vo or {}).get(s["id"]) or est_vo_seconds(text, t["words_per_sec"])
         prev_d = req[i - 1][1] if i > 0 else 0.0
-        lead = t["vo_lead"] + 0.5 * prev_d
+        lead = float(s.get("vo_lead", t["vo_lead"])) + 0.5 * prev_d
         tail = t["vo_tail"] + 0.5 * req[i][1]
         need = lead + vo_d + tail if text else 0.0
         dur = max(float(s.get("min_duration", 0)), need, t["min_shot"])

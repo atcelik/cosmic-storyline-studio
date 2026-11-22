@@ -12,22 +12,23 @@
     "preset": "ultrafast"
   },
   "timing": {
-    "min_shot": 2.0,
-    "vo_lead": 0.1,
-    "vo_tail": 0.25,
+    "min_shot": 3.5,
+    "vo_lead": 0.45,
+    "vo_tail": 1.0,
     "end_hold": 0.6,
     "end_fade": 0.8,
     "words_per_sec": 2.6
   },
   "retention": {
-    "max_shot_warn": 8.0,
-    "max_shot_error": 12.0,
+    "max_shot_warn": 10.0,
+    "max_shot_error": 14.0,
     "hook_window": 15.0,
-    "hook_min_shots": 3,
+    "hook_min_shots": 2,
     "target_min": 540,
     "target_max": 780,
     "max_same_transition_run": 3,
-    "max_hold_run": 1
+    "max_hold_run": 1,
+    "max_cgi_share": 0.6
   },
   "assets": {
     "still_min_width_error": 1280,
@@ -37,7 +38,7 @@
     "engine": "kokoro",
     "voice": "am_michael",
     "lang_code": "a",
-    "speed": 1.05
+    "speed": 1.0
   },
   "audio": {
     "sample_rate": 48000,
@@ -55,7 +56,10 @@
   ],
   "label_credit": false,
   "look": {
-    "vignette": 0.28
+    "vignette": 0.28,
+    "motion": "linear",
+    "float": 0.0035,
+    "grain": 0.0
   },
   "labels": {
     "REAL_PHOTO": "REAL PHOTO",

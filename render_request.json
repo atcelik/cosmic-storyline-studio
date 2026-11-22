@@ -1,10 +1,15 @@
 {
-  "episode": "video_scout",
+  "episode": "enceladus_trial_v2",
   "steps": [
-    "assets"
+    "assets",
+    "space3d",
+    "validate",
+    "tts",
+    "render",
+    "audio",
+    "meta"
   ],
-  "quality": "draft",
-  "search": true,
-  "top": 2,
-  "note": "Scout: real NASA video candidates for Enceladus"
+  "quality": "final",
+  "search": false,
+  "note": "v2: documentary pacing + mixed 3D fly-through format"
 }

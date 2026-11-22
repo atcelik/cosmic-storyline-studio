@@ -26,3 +26,11 @@
 - Added scripts/globe.py: rotating Earth/Moon (any planet texture) rendered from NASA maps, with targeted zoom to a lon/lat. Label such shots honestly as a visualization.
 - Added a subtle vignette (config look.vignette) and per-shot text_start / label_text.
 - 30 s trial (episodes/trial30): 1920x1080, 30 fps, h264+aac, 32.2 s, -13.9 LUFS. Picture-only test: no narration (Kokoro not available in the build sandbox), procedural ambient music. Owner review pending.
+
+## 2026-11-22 (afternoon) — documentary pacing and the mixed 3D format
+- Owner on the first 30 s GitHub render: "tempo too fast; feels like sliding slides, not a documentary". Then sent a reference (NatGeo "Journey to the Edge of the Universe": continuous 3D camera flight).
+- Diagnosis: every shot eased from rest to rest (= slideshow), crossfades everywhere, no pauses in narration, only stills.
+- Decisions: linear camera motion (still moving at cuts), subtle float, hard cuts; vo_lead 0.45 s, vo_tail 1.0 s, min_shot 3.5 s, voice speed 1.0; shot warn 10 s / error 14 s; per-shot `vo_lead` for cold opens; film grain off (19 s test grew to 97 MB and YouTube removes it).
+- Owner chose the **mixed format**: our 3D fly-through scenes + real NASA imagery, about half and half. New `scripts/space3d.py` (perspective camera on a spline, textured spheres, rings with shadows both ways, 3D star field with true parallax, backlit plume particles, sun glare, limb glow). CGI share warning moved from 15 % to 60 %.
+- Textures: Enceladus = Cassini map PIA18435 (NASA/JPL); Saturn + rings = Solar System Scope (CC BY 4.0, credit in the description).
+- Parallax tested: clean on a single body on black (ocean cutaway); tears plume/limb photos and Saturn's rings, so it is limited to `layer: body`.

@@ -5,7 +5,7 @@ Stops at the first failing step (exit 1) so the review pack shows exactly where 
 
 render_request.json:
 {"episode": "enceladus_test",
- "steps": ["smoke", "assets", "voice_test", "globes", "validate", "tts", "render", "audio", "meta"],
+ "steps": ["smoke", "assets", "voice_test", "globes", "space3d", "validate", "tts", "render", "audio", "meta"],
  "quality": "draft" | "final",
  "search": false,                 # assets: also search NASA for shots with only search_query
  "voice_test_text": "...",        # optional
@@ -67,6 +67,9 @@ for step in req["steps"]:
     elif step == "globes":
         specs = sorted((ep_dir / "assets" / "globes").glob("*.json"))
         run(step, [[PY, "scripts/globe.py", s, ep_dir / "assets" / f"{s.stem}.mp4"] for s in specs])
+    elif step == "space3d":
+        specs = sorted((ep_dir / "assets" / "space3d").glob("*.json"))
+        run(step, [[PY, "scripts/space3d.py", s, ep_dir / "assets" / f"{s.stem}.mp4"] for s in specs])
     elif step == "validate":
         run(step, [[PY, "scripts/validate.py", ep_json, "--assets"]])
     elif step == "tts":

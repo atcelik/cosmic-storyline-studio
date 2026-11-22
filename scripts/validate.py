@@ -77,6 +77,10 @@ def main():
         cam = s.get("camera") or {}
         if cam.get("move", "push_in") not in CAMERA_MOVES: E_(f"{sid}: bad camera.move")
         if not (0 <= cam.get("strength", 0.06) <= 3.0): E_(f"{sid}: camera.strength must be 0..3.0")
+        if not (0 <= cam.get("parallax", 0) <= 1): E_(f"{sid}: camera.parallax must be 0..1")
+        if cam.get("layer", "ground") not in ("ground", "body"): E_(f"{sid}: camera.layer must be ground or body")
+        if abs(cam.get("drift", 0)) > 0.06: E_(f"{sid}: camera.drift must be within -0.06..0.06")
+        if cam.get("parallax") and (s.get("visual") or {}).get("type") != "still": W_(f"{sid}: parallax only works on stills")
         if cam.get("move", "push_in") != "hold" and not cam.get("focus"):
             W_(f"{sid}: no camera.focus: zoom will go to the frame centre, not to the point of interest")
         tr = s.get("transition_out") or {}
@@ -108,12 +112,13 @@ def main():
         t = (s.get("transition_out") or {}).get("type", "cut")
         run_t = run_t + 1 if t == last_t else 1
         last_t = t
-        if run_t > R["max_same_transition_run"]: W_(f"{s['id']}: same transition '{t}' used {run_t}x in a row")
-        hold = (s.get("camera") or {}).get("move", "push_in") == "hold"
+        if t != "cut" and run_t > R["max_same_transition_run"]: W_(f"{s['id']}: same transition '{t}' used {run_t}x in a row")
+        hold = (s.get("camera") or {}).get("move", "push_in") == "hold" and (s.get("visual") or {}).get("type") != "video"
         run_h = run_h + 1 if hold else 0
         if run_h > R["max_hold_run"]: W_(f"{s['id']}: {run_h} static 'hold' shots in a row")
     ours = sum(1 for s in shots if s["visual"].get("source_class") == "OUR_CGI")
-    if ours > 0.15 * len(shots): W_(f"{ours}/{len(shots)} shots are OUR_CGI (diagrams); keep it <= 15 %")
+    share = cfg["retention"].get("max_cgi_share", 0.6)
+    if ours > share * len(shots): W_(f"{ours}/{len(shots)} shots are OUR_CGI; keep it <= {share:.0%} (mix with real NASA imagery)")
     ev = sum(1 for s in shots if (s.get("transition_out") or {}).get("type") in EVENT_TRANSITIONS)
     if ev > max(4, len(beats) * 1.5): W_(f"{ev} 'event' transitions: reserve them for beat changes")
     if ep.get("music") is None: W_("no music bed defined")
