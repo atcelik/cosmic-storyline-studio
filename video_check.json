@@ -1,0 +1,36 @@
+{
+  "ffprobe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1"
+      },
+      {
+        "codec_name": "aac",
+        "r_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "56.150000",
+      "size": "15903552"
+    }
+  },
+  "loudness_summary": [
+    "Integrated loudness:",
+    "I:         -15.0 LUFS",
+    "Threshold: -25.3 LUFS",
+    "Loudness range:",
+    "LRA:         4.6 LU",
+    "Threshold: -35.1 LUFS",
+    "LRA low:   -17.9 LUFS",
+    "LRA high:  -13.3 LUFS",
+    "True peak:",
+    "Peak:       -1.4 dBFS",
+    "[out#0/null @ 0x5d38bae71bc0] video:684KiB audio:21040KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown",
+    "frame= 1684 fps=766 q=-0.0 Lsize=N/A time=00:00:56.13 bitrate=N/A speed=25.5x elapsed=0:00:02.19"
+  ]
+}

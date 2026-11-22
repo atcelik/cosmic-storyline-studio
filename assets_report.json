@@ -1,0 +1,181 @@
+{
+  "episode": "enceladus_trial_v2",
+  "created": "2026-11-22 09:49",
+  "max_width": 3840,
+  "ok": 8,
+  "failed": 0,
+  "items": [
+    {
+      "id": "A007",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA11688.jpg",
+      "kind": "image",
+      "title": "Bursting at the Seams: the Geyser Basin of Enceladus",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA/JPL/Space Science Institute",
+      "source_url": "https://www.jpl.nasa.gov/images/bursting-at-the-seams-the-geyser-basin-of-enceladus",
+      "credit_checked": true,
+      "note": "credit line read from the JPL page on 2026-11-22",
+      "shots": [
+        "S004"
+      ],
+      "orig_width": 1580,
+      "orig_height": 977,
+      "width": 1580,
+      "height": 977,
+      "bundle_file": "A007.jpg",
+      "bytes": 45410,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "A009",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA19656.jpg",
+      "kind": "image",
+      "title": "Global Ocean on Enceladus (artist's rendering)",
+      "source_class": "ARTIST_CONCEPT",
+      "credit": "NASA/JPL-Caltech",
+      "source_url": "https://www.jpl.nasa.gov/images/pia19656-global-ocean-on-enceladus-artists-rendering/",
+      "credit_checked": true,
+      "note": "credit line read from the JPL page on 2026-11-22",
+      "shots": [
+        "S005"
+      ],
+      "orig_width": 8534,
+      "orig_height": 4800,
+      "width": 3840,
+      "height": 2160,
+      "bundle_file": "A009.jpg",
+      "bytes": 1205321,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "id": "C005",
+      "url": "https://images-assets.nasa.gov/image/GSFC_20220520_M14162_SaturnMoons/GSFC_20220520_M14162_SaturnMoons~orig.png",
+      "kind": "image",
+      "title": "Saturn Moons Concept Art",
+      "source_class": "ARTIST_CONCEPT",
+      "credit": "NASA (GSFC)",
+      "source_url": "https://images.nasa.gov/details/GSFC_20220520_M14162_SaturnMoons",
+      "credit_checked": false,
+      "shots": [
+        "S006"
+      ],
+      "orig_width": 4800,
+      "orig_height": 2160,
+      "width": 3840,
+      "height": 1728,
+      "bundle_file": "C005.jpg",
+      "bytes": 929633,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "id": "T003",
+      "url": "https://images-assets.nasa.gov/image/PIA18435/PIA18435~orig.jpg",
+      "kind": "image",
+      "title": "Color Maps of Enceladus - 2014 (globe texture)",
+      "source_class": "PROCESSED_DATA",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA18435",
+      "credit_checked": false,
+      "shots": [],
+      "orig_width": 15960,
+      "orig_height": 7980,
+      "width": 3840,
+      "height": 1920,
+      "bundle_file": "T003.jpg",
+      "bytes": 4354179,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "id": "SAT8",
+      "url": "https://www.solarsystemscope.com/textures/download/8k_saturn.jpg",
+      "kind": "image",
+      "title": "Solar System Scope texture 8k_saturn.jpg",
+      "source_class": "PROCESSED_DATA",
+      "credit": "Solar System Scope (CC BY 4.0), based on NASA data",
+      "source_url": "https://www.solarsystemscope.com/textures/",
+      "credit_checked": true,
+      "note": "licence CC BY 4.0 per the Solar System Scope texture attribution (doc.qt.io)",
+      "shots": [],
+      "orig_width": 4096,
+      "orig_height": 2048,
+      "width": 3840,
+      "height": 1920,
+      "bundle_file": "SAT8.jpg",
+      "bytes": 734203,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "id": "SAT2",
+      "url": "https://www.solarsystemscope.com/textures/download/2k_saturn.jpg",
+      "kind": "image",
+      "title": "Solar System Scope texture 2k_saturn.jpg",
+      "source_class": "PROCESSED_DATA",
+      "credit": "Solar System Scope (CC BY 4.0), based on NASA data",
+      "source_url": "https://www.solarsystemscope.com/textures/",
+      "credit_checked": true,
+      "note": "licence CC BY 4.0 per the Solar System Scope texture attribution (doc.qt.io)",
+      "shots": [],
+      "orig_width": 2048,
+      "orig_height": 1024,
+      "width": 2048,
+      "height": 1024,
+      "bundle_file": "SAT2.jpg",
+      "bytes": 199916,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "RING8",
+      "url": "https://www.solarsystemscope.com/textures/download/8k_saturn_ring_alpha.png",
+      "kind": "image",
+      "title": "Solar System Scope texture 8k_saturn_ring_alpha.png",
+      "source_class": "PROCESSED_DATA",
+      "credit": "Solar System Scope (CC BY 4.0), based on NASA data",
+      "source_url": "https://www.solarsystemscope.com/textures/",
+      "credit_checked": true,
+      "note": "licence CC BY 4.0 per the Solar System Scope texture attribution (doc.qt.io)",
+      "shots": [],
+      "orig_width": 8192,
+      "orig_height": 500,
+      "width": 3840,
+      "height": 234,
+      "bundle_file": "RING8.jpg",
+      "bytes": 133742,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "RING2",
+      "url": "https://www.solarsystemscope.com/textures/download/2k_saturn_ring_alpha.png",
+      "kind": "image",
+      "title": "Solar System Scope texture 2k_saturn_ring_alpha.png",
+      "source_class": "PROCESSED_DATA",
+      "credit": "Solar System Scope (CC BY 4.0), based on NASA data",
+      "source_url": "https://www.solarsystemscope.com/textures/",
+      "credit_checked": true,
+      "note": "licence CC BY 4.0 per the Solar System Scope texture attribution (doc.qt.io)",
+      "shots": [],
+      "orig_width": 2048,
+      "orig_height": 125,
+      "width": 2048,
+      "height": 125,
+      "bundle_file": "RING2.jpg",
+      "bytes": 44132,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame"
+      ],
+      "status": "ok"
+    }
+  ]
+}

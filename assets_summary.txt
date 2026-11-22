@@ -1,0 +1,11 @@
+enceladus_trial_v2 asset bundle - 2026-11-22 09:49
+OK 8  FAILED 0
+
+A007         ok      1580x977 SMALL: smaller than 1920x1080, will look soft full-frame 
+A009         ok      8534x4800  
+C005         ok      4800x2160  
+T003         ok      15960x7980  
+SAT8         ok      4096x2048  
+SAT2         ok      2048x1024 SMALL: smaller than 1920x1080, will look soft full-frame 
+RING8        ok      8192x500 SMALL: smaller than 1920x1080, will look soft full-frame 
+RING2        ok      2048x125 SMALL: smaller than 1920x1080, will look soft full-frame 

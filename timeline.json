@@ -1,0 +1,68 @@
+{
+  "shots": [
+    {
+      "id": "S001",
+      "start": 0.0,
+      "dur": 9.35,
+      "vo_start": 2.2,
+      "vo_dur": 6.15,
+      "trans": "cut",
+      "trans_d": 0.0
+    },
+    {
+      "id": "S002",
+      "start": 9.35,
+      "dur": 8.0,
+      "vo_start": 9.8,
+      "vo_dur": 6.25,
+      "trans": "cut",
+      "trans_d": 0.0
+    },
+    {
+      "id": "S003",
+      "start": 17.35,
+      "dur": 7.0,
+      "vo_start": 17.8,
+      "vo_dur": 5.275,
+      "trans": "cut",
+      "trans_d": 0.0
+    },
+    {
+      "id": "S004",
+      "start": 24.35,
+      "dur": 7.0,
+      "vo_start": 24.8,
+      "vo_dur": 5.1,
+      "trans": "cut",
+      "trans_d": 0.0
+    },
+    {
+      "id": "S005",
+      "start": 31.35,
+      "dur": 8.0,
+      "vo_start": 31.8,
+      "vo_dur": 5.55,
+      "trans": "dip_black",
+      "trans_d": 0.8
+    },
+    {
+      "id": "S006",
+      "start": 38.55,
+      "dur": 7.0,
+      "vo_start": 39.4,
+      "vo_dur": 5.15,
+      "trans": "cut",
+      "trans_d": 0.0
+    },
+    {
+      "id": "S007",
+      "start": 45.55,
+      "dur": 10.6,
+      "vo_start": 46.55,
+      "vo_dur": 6.325,
+      "trans": "cut",
+      "trans_d": 0.0
+    }
+  ],
+  "total": 56.15
+}

@@ -1,0 +1,75 @@
+1
+00:00:02,200 --> 00:00:06,393
+In 2005, the Cassini spacecraft was exploring
+
+2
+00:00:06,393 --> 00:00:08,350
+Saturn and its moons.
+
+3
+00:00:09,800 --> 00:00:11,598
+One of them was tiny.
+
+4
+00:00:11,598 --> 00:00:12,797
+A ball of ice,
+
+5
+00:00:12,797 --> 00:00:16,050
+barely five hundred kilometres across.
+
+6
+00:00:17,800 --> 00:00:20,584
+Then Cassini looked at its south pole,
+
+7
+00:00:20,584 --> 00:00:23,075
+and saw something no one expected.
+
+8
+00:00:24,800 --> 00:00:25,970
+Jets of water,
+
+9
+00:00:25,970 --> 00:00:27,977
+spraying out into space.
+
+10
+00:00:27,977 --> 00:00:29,900
+This is the real image.
+
+11
+00:00:31,800 --> 00:00:33,069
+Beneath the ice,
+
+12
+00:00:33,069 --> 00:00:36,081
+Cassini's data point to a global ocean
+
+13
+00:00:36,081 --> 00:00:37,350
+of liquid water.
+
+14
+00:00:39,400 --> 00:00:40,805
+And in that spray,
+
+15
+00:00:40,805 --> 00:00:41,975
+there was salt.
+
+16
+00:00:41,975 --> 00:00:44,550
+Organic molecules. Even hydrogen.
+
+17
+00:00:46,550 --> 00:00:48,756
+Chemistry that, here on Earth,
+
+18
+00:00:48,756 --> 00:00:50,522
+microbes use for energy.
+
+19
+00:00:50,522 --> 00:00:52,875
+So what is hiding under the ice?
