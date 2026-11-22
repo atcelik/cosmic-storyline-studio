@@ -1,0 +1,17 @@
+{
+  "schema_version": 2,
+  "episode": {"id": "ep01", "title": "TEMPLATE - replace with ChatGPT output", "language": "en", "central_question": "TEMPLATE question?"},
+  "voice": {"engine": "kokoro", "voice": "af_heart", "speed": 1.0},
+  "beats": [
+    {"id": "B1", "name": "Hook", "chapter": "The question"},
+    {"id": "B2", "name": "Evidence", "because": "But the data did not fit.", "chapter": "The evidence"}
+  ],
+  "shots": [
+    {"id": "S001", "beat": "B1", "voiceover": "Something up there does not add up.",
+     "visual": {"type": "still", "search_query": "Saturn Cassini rings", "source_class": "REAL_PHOTO", "credit": "NASA/JPL-Caltech", "source_url": "https://images.nasa.gov/"},
+     "camera": {"move": "push_in", "strength": 0.06}, "transition_out": {"type": "crossfade", "duration": 0.5}},
+    {"id": "S002", "beat": "B2", "voiceover": "But the measurements said otherwise.",
+     "visual": {"type": "still", "search_query": "Enceladus plume Cassini", "source_class": "REAL_PHOTO", "credit": "NASA/JPL-Caltech", "source_url": "https://images.nasa.gov/"},
+     "camera": {"move": "pull_out", "strength": 0.06}, "transition_out": {"type": "cut"}}
+  ]
+}

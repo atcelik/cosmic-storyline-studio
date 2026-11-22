@@ -1,0 +1,137 @@
+{
+  "episode": "enceladus_test",
+  "items": [
+    {
+      "id": "A001",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA17172.jpg",
+      "kind": "image",
+      "title": "The Day the Earth Smiled (Saturn backlit mosaic, Earth visible)",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA/JPL-Caltech/SSI",
+      "source_url": "https://www.jpl.nasa.gov/images/pia17172-the-day-the-earth-smiled",
+      "credit_checked": true,
+      "note": "credit line read from the JPL page on 2026-11-22",
+      "shots": []
+    },
+    {
+      "id": "A002",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA12713.jpg",
+      "kind": "image",
+      "title": "High-Phase Plumes (Enceladus jets backlit)",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA/JPL/Space Science Institute",
+      "source_url": "https://www.jpl.nasa.gov/images/pia12713-high-phase-plumes/",
+      "credit_checked": true,
+      "note": "credit line read from the JPL page on 2026-11-22",
+      "shots": []
+    },
+    {
+      "id": "A003",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA07798.jpg",
+      "kind": "image",
+      "title": "Spray Above Enceladus III",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA/JPL/Space Science Institute",
+      "source_url": "https://www.jpl.nasa.gov/images/pia07798-spray-above-enceladus-iii/",
+      "credit_checked": true,
+      "note": "credit line read from the JPL page on 2026-11-22",
+      "shots": []
+    },
+    {
+      "id": "A004",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA21887.jpg",
+      "kind": "image",
+      "title": "Last Enceladus Plume Observation",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA/JPL-Caltech/Space Science Institute",
+      "source_url": "https://www.jpl.nasa.gov/images/pia21887-last-enceladus-plume-observation/",
+      "credit_checked": true,
+      "note": "credit line read from the JPL page on 2026-11-22",
+      "shots": []
+    },
+    {
+      "id": "A005",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA07762.jpg",
+      "kind": "image",
+      "title": "Enceladus Plume Movie (still)",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA/JPL/Space Science Institute",
+      "source_url": "https://www.jpl.nasa.gov/images/pia07762-enceladus-plume-movie/",
+      "credit_checked": true,
+      "note": "credit line read from the JPL page on 2026-11-22",
+      "shots": []
+    },
+    {
+      "id": "A006",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA11135.jpg",
+      "kind": "image",
+      "title": "Tiger Stripes...Magnified! (mosaic)",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA/JPL/Space Science Institute",
+      "source_url": "https://www.jpl.nasa.gov/images/pia11135-tiger-stripesmagnified/",
+      "credit_checked": true,
+      "note": "credit line read from the JPL page on 2026-11-22",
+      "shots": []
+    },
+    {
+      "id": "A007",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA11688.jpg",
+      "kind": "image",
+      "title": "Bursting at the Seams: the Geyser Basin of Enceladus",
+      "source_class": "REAL_PHOTO",
+      "credit": "NASA/JPL/Space Science Institute",
+      "source_url": "https://www.jpl.nasa.gov/images/bursting-at-the-seams-the-geyser-basin-of-enceladus",
+      "credit_checked": true,
+      "note": "credit line read from the JPL page on 2026-11-22",
+      "shots": []
+    },
+    {
+      "id": "A008",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA06254.jpg",
+      "kind": "image",
+      "title": "Zooming In On Enceladus (false-colour mosaic)",
+      "source_class": "PROCESSED_DATA",
+      "credit": "NASA/JPL/Space Science Institute",
+      "source_url": "https://www.jpl.nasa.gov/images/pia06254-zooming-in-on-enceladus-mosaic/",
+      "credit_checked": true,
+      "note": "credit line read from the JPL page on 2026-11-22",
+      "shots": []
+    },
+    {
+      "id": "A009",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA19656.jpg",
+      "kind": "image",
+      "title": "Global Ocean on Enceladus (artist's rendering)",
+      "source_class": "ARTIST_CONCEPT",
+      "credit": "NASA/JPL-Caltech",
+      "source_url": "https://www.jpl.nasa.gov/images/pia19656-global-ocean-on-enceladus-artists-rendering/",
+      "credit_checked": true,
+      "note": "credit line read from the JPL page on 2026-11-22",
+      "shots": []
+    },
+    {
+      "id": "A010",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA23175.jpg",
+      "kind": "image",
+      "title": "Enceladus Global View with Plume (artist's rendering)",
+      "source_class": "ARTIST_CONCEPT",
+      "credit": "NASA/JPL-Caltech",
+      "source_url": "https://www.jpl.nasa.gov/images/pia23175-enceladus-global-view-with-plume-artists-rendering/",
+      "credit_checked": true,
+      "note": "credit line read from the JPL page on 2026-11-22",
+      "shots": []
+    },
+    {
+      "id": "A011",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA19058.jpg",
+      "kind": "image",
+      "title": "Enceladus: Possible Hydrothermal Activity (artist's concept)",
+      "source_class": "ARTIST_CONCEPT",
+      "credit": "NASA/JPL-Caltech",
+      "source_url": "https://www.jpl.nasa.gov/images/enceladus-possible-hydrothermal-activity-artists-concept",
+      "credit_checked": true,
+      "note": "credit line read from the JPL page on 2026-11-22",
+      "shots": []
+    }
+  ]
+}

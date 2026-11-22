@@ -1,0 +1,68 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "video": {
+    "crf": 18,
+    "preset": "medium"
+  },
+  "draft": {
+    "scale": 0.5,
+    "crf": 28,
+    "preset": "ultrafast"
+  },
+  "timing": {
+    "min_shot": 2.0,
+    "vo_lead": 0.1,
+    "vo_tail": 0.25,
+    "end_hold": 0.6,
+    "end_fade": 0.8,
+    "words_per_sec": 2.6
+  },
+  "retention": {
+    "max_shot_warn": 8.0,
+    "max_shot_error": 12.0,
+    "hook_window": 15.0,
+    "hook_min_shots": 3,
+    "target_min": 540,
+    "target_max": 780,
+    "max_same_transition_run": 3,
+    "max_hold_run": 1
+  },
+  "assets": {
+    "still_min_width_error": 1280,
+    "still_min_width_warn": 2560
+  },
+  "tts": {
+    "engine": "kokoro",
+    "voice": "am_michael",
+    "lang_code": "a",
+    "speed": 1.05
+  },
+  "audio": {
+    "sample_rate": 48000,
+    "music_gain_db": -20,
+    "duck_threshold": 0.02,
+    "duck_ratio": 10,
+    "loudness_i": -14,
+    "true_peak": -1.5
+  },
+  "font_path": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+  "label_classes": [
+    "SCIENTIFIC_CGI",
+    "ARTIST_CONCEPT",
+    "OUR_CGI"
+  ],
+  "label_credit": false,
+  "look": {
+    "vignette": 0.28
+  },
+  "labels": {
+    "REAL_PHOTO": "REAL PHOTO",
+    "REAL_VIDEO": "REAL FOOTAGE",
+    "PROCESSED_DATA": "PROCESSED DATA",
+    "SCIENTIFIC_CGI": "SCIENTIFIC VISUALIZATION",
+    "ARTIST_CONCEPT": "ARTIST'S CONCEPT",
+    "OUR_CGI": "ILLUSTRATION / SIMULATION"
+  }
+}
