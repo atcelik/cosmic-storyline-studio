@@ -1,0 +1,33 @@
+{
+ "episode": "enceladus_trial30",
+ "items": [
+  {
+   "id": "A001",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA17172.jpg",
+   "kind": "image",
+   "title": "The Day the Earth Smiled (Saturn backlit mosaic, Earth visible)",
+   "source_class": "REAL_PHOTO",
+   "credit": "NASA/JPL-Caltech/SSI",
+   "source_url": "https://www.jpl.nasa.gov/images/pia17172-the-day-the-earth-smiled",
+   "credit_checked": true,
+   "note": "credit line read from the JPL page on 2026-11-22",
+   "shots": [
+    "S001"
+   ]
+  },
+  {
+   "id": "A009",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA19656.jpg",
+   "kind": "image",
+   "title": "Global Ocean on Enceladus (artist's rendering)",
+   "source_class": "ARTIST_CONCEPT",
+   "credit": "NASA/JPL-Caltech",
+   "source_url": "https://www.jpl.nasa.gov/images/pia19656-global-ocean-on-enceladus-artists-rendering/",
+   "credit_checked": true,
+   "note": "credit line read from the JPL page on 2026-11-22",
+   "shots": [
+    "S004"
+   ]
+  }
+ ]
+}

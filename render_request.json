@@ -1,11 +1,10 @@
 {
-  "episode": "enceladus_test",
+  "episode": "enceladus_trial30",
   "steps": [
-    "smoke",
-    "assets",
-    "voice_test"
+    "assets"
   ],
   "quality": "draft",
-  "search": false,
-  "note": "Phase 1: download the 11 NASA/JPL images, check Kokoro voices, run the smoke test on the GitHub runner. (run started from main push)"
+  "search": true,
+  "top": 4,
+  "note": "Phase 2a: find hi-res candidates for the 30 s Enceladus trial"
 }

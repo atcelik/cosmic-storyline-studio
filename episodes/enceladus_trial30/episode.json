@@ -1,0 +1,173 @@
+{
+  "schema_version": 2,
+  "episode": {
+    "id": "enceladus_trial30",
+    "title": "Trial: The Moon That Leaks an Ocean (30 s)",
+    "language": "en",
+    "central_question": "Is there an ocean under the ice of Enceladus?"
+  },
+  "voice": {
+    "engine": "kokoro",
+    "voice": "am_michael",
+    "speed": 1.05
+  },
+  "beats": [
+    {
+      "id": "B1",
+      "name": "Hook",
+      "chapter": "The question"
+    }
+  ],
+  "shots": [
+    {
+      "id": "S001",
+      "beat": "B1",
+      "voiceover": "In 2005, a spacecraft flew past a small, frozen moon of Saturn.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "credit": "NASA/JPL-Caltech/SSI",
+        "source_url": "https://www.jpl.nasa.gov/images/pia17172-the-day-the-earth-smiled",
+        "search_query": "Saturn backlit Cassini mosaic Earth"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.12,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "crossfade",
+        "duration": 0.5
+      },
+      "claims": [
+        {
+          "text": "Cassini detected water-ice jets at Enceladus in 2005.",
+          "source_url": "https://science.nasa.gov/saturn/moons/enceladus/",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "S002",
+      "beat": "B1",
+      "voiceover": "And it found something that should not exist: jets of water, spraying into space.",
+      "visual": {
+        "type": "video",
+        "search_query": "Enceladus plume Cassini",
+        "source_class": "REAL_VIDEO",
+        "credit": "NASA/JPL-Caltech/Space Science Institute",
+        "source_url": "https://images.nasa.gov/"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.1,
+        "focus": [
+          0.5,
+          0.6
+        ]
+      },
+      "transition_out": {
+        "type": "crossfade",
+        "duration": 0.5
+      }
+    },
+    {
+      "id": "S003",
+      "beat": "B1",
+      "voiceover": "Enceladus is only five hundred kilometres wide. We expected solid ice.",
+      "visual": {
+        "type": "still",
+        "search_query": "Enceladus Cassini global mosaic",
+        "source_class": "REAL_PHOTO",
+        "credit": "NASA/JPL-Caltech/Space Science Institute",
+        "source_url": "https://images.nasa.gov/"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.1,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "crossfade",
+        "duration": 0.5
+      }
+    },
+    {
+      "id": "S004",
+      "beat": "B1",
+      "voiceover": "But beneath that crust, Cassini's data point to a hidden, global ocean.",
+      "visual": {
+        "type": "still",
+        "source_class": "ARTIST_CONCEPT",
+        "credit": "NASA/JPL-Caltech",
+        "source_url": "https://www.jpl.nasa.gov/",
+        "search_query": "Enceladus global ocean artist's rendering"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.1,
+        "focus": [
+          0.45,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "crossfade",
+        "duration": 0.5
+      }
+    },
+    {
+      "id": "S005",
+      "beat": "B1",
+      "voiceover": "Salt. Organic molecules. Even hydrogen, a possible source of energy.",
+      "visual": {
+        "type": "still",
+        "search_query": "Enceladus geysers south pole Cassini",
+        "source_class": "REAL_PHOTO",
+        "credit": "NASA/JPL-Caltech/Space Science Institute",
+        "source_url": "https://images.nasa.gov/"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.1,
+        "focus": [
+          0.5,
+          0.65
+        ]
+      },
+      "transition_out": {
+        "type": "crossfade",
+        "duration": 0.5
+      }
+    },
+    {
+      "id": "S006",
+      "beat": "B1",
+      "voiceover": "So is there life under the ice? Today, we follow the evidence.",
+      "visual": {
+        "type": "still",
+        "search_query": "Enceladus Saturn rings Cassini crescent",
+        "source_class": "REAL_PHOTO",
+        "credit": "NASA/JPL-Caltech/Space Science Institute",
+        "source_url": "https://images.nasa.gov/"
+      },
+      "camera": {
+        "move": "pull_out",
+        "strength": 0.1,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      }
+    }
+  ]
+}

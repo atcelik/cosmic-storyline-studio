@@ -56,7 +56,7 @@ for step in req["steps"]:
     if step == "smoke":
         run(step, [[PY, "tests/smoke.py"]])
     elif step == "assets":
-        cmds = [[PY, "scripts/get_assets.py", ep_dir, "--no-zip"] + (["--search"] if req.get("search") else [])]
+        cmds = [[PY, "scripts/get_assets.py", ep_dir, "--no-zip"] + (["--search"] if req.get("search") else []) + (["--top", str(req["top"])] if req.get("top") else [])]
         if ep_json.exists():
             cmds.append([PY, "scripts/apply_bundle.py", ep_dir, ep_dir / "bundle"])
         run(step, cmds)
