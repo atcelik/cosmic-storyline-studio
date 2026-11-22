@@ -11,8 +11,9 @@ on:
 permissions:
   contents: write
 
+# each run is independent, so a long asset scout never blocks a render
 concurrency:
-  group: produce
+  group: produce-${{ github.run_id }}
   cancel-in-progress: false
 
 jobs:
@@ -111,3 +112,4 @@ jobs:
           git add -A
           git commit -qm "review: ${{ steps.req.outputs.episode }} run ${{ github.run_number }}"
           git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" review
+          git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" "review:review-${{ steps.req.outputs.episode }}"
