@@ -21,9 +21,9 @@
       "beat": "B1",
       "voiceover": "",
       "visual": {
-        "type": "still",
-        "search_query": "Apollo 17 Blue Marble Earth",
-        "source_class": "REAL_PHOTO",
+        "type": "video",
+        "search_query": "Earth Views from the International Space Station",
+        "source_class": "REAL_VIDEO",
         "credit": "NASA",
         "source_url": "https://images.nasa.gov/"
       },
@@ -39,9 +39,9 @@
       "beat": "B1",
       "voiceover": "",
       "visual": {
-        "type": "still",
-        "search_query": "DSCOVR EPIC Earth Atlantic Africa",
-        "source_class": "REAL_PHOTO",
+        "type": "video",
+        "search_query": "Earth Views from the ISS",
+        "source_class": "REAL_VIDEO",
         "credit": "NASA",
         "source_url": "https://images.nasa.gov/"
       },
@@ -57,44 +57,8 @@
       "beat": "B1",
       "voiceover": "",
       "visual": {
-        "type": "still",
-        "search_query": "Earth from space Atlantic Ocean",
-        "source_class": "REAL_PHOTO",
-        "credit": "NASA",
-        "source_url": "https://images.nasa.gov/"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      }
-    },
-    {
-      "id": "S004",
-      "beat": "B1",
-      "voiceover": "",
-      "visual": {
         "type": "video",
-        "search_query": "ISS Earth time lapse ocean",
-        "source_class": "REAL_VIDEO",
-        "credit": "NASA",
-        "source_url": "https://images.nasa.gov/"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      }
-    },
-    {
-      "id": "S005",
-      "beat": "B1",
-      "voiceover": "",
-      "visual": {
-        "type": "video",
-        "search_query": "Earth from space International Space Station",
+        "search_query": "ISS ocean flyover Earth",
         "source_class": "REAL_VIDEO",
         "credit": "NASA",
         "source_url": "https://images.nasa.gov/"

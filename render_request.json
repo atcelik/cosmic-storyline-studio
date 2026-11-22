@@ -1,15 +1,10 @@
 {
-  "episode": "enceladus_trial_v3",
+  "episode": "earth_scout",
   "steps": [
-    "assets",
-    "space3d",
-    "validate",
-    "tts",
-    "render",
-    "audio",
-    "meta"
+    "assets"
   ],
-  "quality": "final",
-  "search": false,
-  "note": "v3.1: fading chapter cards, no corner labels, Earth credit fixed"
+  "quality": "draft",
+  "search": true,
+  "top": 2,
+  "note": "Scout: ISS Earth footage (URL quoting fixed, 1080p preferred)"
 }

@@ -108,7 +108,7 @@ def nasa_search(q, media, top):
     items = json.loads(http_get(url))["collection"]["items"]
     log(f"   {len(items)} raw results")
     out = []
-    pref = ("~orig.mp4", "~orig.mov", "~large.mp4", "~medium.mp4", "~mobile.mp4") if media == "video" else ("~orig.jpg", "~orig.png", "~orig.tif", "~large.jpg")
+    pref = ("~large.mp4", "~orig.mp4", "~orig.mov", "~medium.mp4", "~mobile.mp4") if media == "video" else ("~orig.jpg", "~orig.png", "~orig.tif", "~large.jpg")
     for it in items:
         if len(out) >= top:
             break
@@ -123,6 +123,7 @@ def nasa_search(q, media, top):
         host = urllib.parse.urlparse(href).hostname or ""
         if href.startswith("http://") and host.endswith("nasa.gov"):
             href = "https://" + href[len("http://"):]
+        href = urllib.parse.quote(href, safe=":/~%?=&#+,")      # NASA ids may contain spaces
         out.append({"url": href, "title": d.get("title"),
                     "credit": f"NASA ({d.get('center') or 'see page'})" + (f" / {d['photographer']}" if d.get("photographer") else ""),
                     "source_url": f"https://images.nasa.gov/details/{urllib.parse.quote(d['nasa_id'])}",
