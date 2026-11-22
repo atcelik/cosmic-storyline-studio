@@ -1,0 +1,110 @@
+{
+  "schema_version": 2,
+  "episode": {
+    "id": "video_scout",
+    "title": "Scout: NASA video candidates",
+    "language": "en",
+    "central_question": "Which real NASA videos can we use?"
+  },
+  "voice": {
+    "engine": "dummy"
+  },
+  "beats": [
+    {
+      "id": "B1",
+      "name": "Scout"
+    }
+  ],
+  "shots": [
+    {
+      "id": "S001",
+      "beat": "B1",
+      "voiceover": "",
+      "visual": {
+        "type": "video",
+        "search_query": "Enceladus",
+        "source_class": "REAL_VIDEO",
+        "credit": "NASA",
+        "source_url": "https://images.nasa.gov/"
+      },
+      "camera": {
+        "move": "hold"
+      },
+      "transition_out": {
+        "type": "cut"
+      }
+    },
+    {
+      "id": "S002",
+      "beat": "B1",
+      "voiceover": "",
+      "visual": {
+        "type": "video",
+        "search_query": "Cassini Enceladus flyby",
+        "source_class": "REAL_VIDEO",
+        "credit": "NASA",
+        "source_url": "https://images.nasa.gov/"
+      },
+      "camera": {
+        "move": "hold"
+      },
+      "transition_out": {
+        "type": "cut"
+      }
+    },
+    {
+      "id": "S003",
+      "beat": "B1",
+      "voiceover": "",
+      "visual": {
+        "type": "video",
+        "search_query": "Enceladus ocean plumes",
+        "source_class": "REAL_VIDEO",
+        "credit": "NASA",
+        "source_url": "https://images.nasa.gov/"
+      },
+      "camera": {
+        "move": "hold"
+      },
+      "transition_out": {
+        "type": "cut"
+      }
+    },
+    {
+      "id": "S004",
+      "beat": "B1",
+      "voiceover": "",
+      "visual": {
+        "type": "video",
+        "search_query": "Cassini Saturn rings",
+        "source_class": "REAL_VIDEO",
+        "credit": "NASA",
+        "source_url": "https://images.nasa.gov/"
+      },
+      "camera": {
+        "move": "hold"
+      },
+      "transition_out": {
+        "type": "cut"
+      }
+    },
+    {
+      "id": "S005",
+      "beat": "B1",
+      "voiceover": "",
+      "visual": {
+        "type": "video",
+        "search_query": "Cassini Grand Finale",
+        "source_class": "REAL_VIDEO",
+        "credit": "NASA",
+        "source_url": "https://images.nasa.gov/"
+      },
+      "camera": {
+        "move": "hold"
+      },
+      "transition_out": {
+        "type": "cut"
+      }
+    }
+  ]
+}

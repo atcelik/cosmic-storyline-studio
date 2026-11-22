@@ -23,6 +23,20 @@ if b.exists():
         if f.exists():
             shutil.copy(f, OUT / f"assets_{f.name}")
 
+# video candidates: 8 frames each, so they can be judged without downloading
+if b.exists():
+    vids = sorted(b.glob("*.mp4"))
+    if vids:
+        (OUT / "video_strips").mkdir(exist_ok=True)
+    for v in vids:
+        p = sh(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", v])
+        try:
+            d = float(p.stdout.strip())
+        except ValueError:
+            continue
+        sh(["ffmpeg", "-v", "error", "-y", "-i", v, "-vf", f"fps={8 / max(d, 0.5):.4f},scale=360:-2,tile=4x2",
+            "-frames:v", "1", OUT / "video_strips" / f"{v.stem}.jpg"])
+
 # voice samples -> small m4a
 vt = ROOT / "voice_test"
 if vt.exists():

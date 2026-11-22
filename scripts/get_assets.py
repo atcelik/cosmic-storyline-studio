@@ -104,10 +104,11 @@ def ext_of(url, kind):
 
 # ---------- NASA search (for shots without a manifest entry) ----------
 def nasa_search(q, media, top):
-    url = f"{NASA_API}/search?" + urllib.parse.urlencode({"q": q, "media_type": media, "page_size": 12})
+    url = f"{NASA_API}/search?" + urllib.parse.urlencode({"q": q, "media_type": media, "page_size": 30})
     items = json.loads(http_get(url))["collection"]["items"]
+    log(f"   {len(items)} raw results")
     out = []
-    pref = ("~orig.mp4", "~large.mp4", "~medium.mp4") if media == "video" else ("~orig.jpg", "~orig.png", "~orig.tif", "~large.jpg")
+    pref = ("~orig.mp4", "~orig.mov", "~large.mp4", "~medium.mp4", "~mobile.mp4") if media == "video" else ("~orig.jpg", "~orig.png", "~orig.tif", "~large.jpg")
     for it in items:
         if len(out) >= top:
             break

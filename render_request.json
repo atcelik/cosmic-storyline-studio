@@ -1,15 +1,10 @@
 {
-  "episode": "enceladus_trial30",
+  "episode": "video_scout",
   "steps": [
-    "assets",
-    "globes",
-    "validate",
-    "tts",
-    "render",
-    "audio",
-    "meta"
+    "assets"
   ],
-  "quality": "final",
-  "search": false,
-  "note": "Phase 2b: 30 s Enceladus trial, 1080p, am_michael"
+  "quality": "draft",
+  "search": true,
+  "top": 2,
+  "note": "Scout: real NASA video candidates for Enceladus"
 }
