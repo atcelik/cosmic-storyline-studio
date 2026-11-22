@@ -10,6 +10,10 @@ Goal: the viewer always knows what question is open and always has something new
 - **Payoff:** answer the central question by ~90 %. Use the last 30–40 s for the answer, its meaning, and one new question.
 - Keep the ending short (≤ 10 s). No long outro.
 
+- **Earth connection (owner rule, 2026-11-22).** Every episode has one beat that ties the mystery to life on Earth
+  ("why this matters to us"), shown with real imagery of the Earth side (e.g. Enceladus -> deep-sea vents where life
+  runs on hydrogen chemistry). Place it after the main evidence and let the final question grow out of it.
+
 ## Pacing
 - Average 4–6 s per shot, hard limit 8 s (validator warns). ~110–140 shots for 11 minutes.
 - Change something visually at least every 6 s (new shot, or a clear camera move plus a text card).

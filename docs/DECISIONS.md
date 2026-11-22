@@ -34,3 +34,8 @@
 - Owner chose the **mixed format**: our 3D fly-through scenes + real NASA imagery, about half and half. New `scripts/space3d.py` (perspective camera on a spline, textured spheres, rings with shadows both ways, 3D star field with true parallax, backlit plume particles, sun glare, limb glow). CGI share warning moved from 15 % to 60 %.
 - Textures: Enceladus = Cassini map PIA18435 (NASA/JPL); Saturn + rings = Solar System Scope (CC BY 4.0, credit in the description).
 - Parallax tested: clean on a single body on black (ocean cutaway); tears plume/limb photos and Saturn's rings, so it is limited to `layer: body`.
+
+## 2026-11-22 (evening) — parallel rendering and the Earth connection
+- Owner asked for several Actions running at once. produce.yml is now prepare -> cgi matrix (3D chunks, ~90 frames) -> render matrix (30 s chunks) -> finish (ffmpeg concat without re-encode, audio, meta, release). First run: 15 3D jobs + 2 picture jobs, 7.5 min end to end (single machine: ~16 min). Local simulation joined 13 chunks to exactly the timeline's 438 frames.
+- Owner liked v2 and asked to also cover what affects life on Earth. Rule added to RETENTION_STANDARD: every episode gets an Earth-connection beat. v3 adds an Earth fly-in (NASA Blue Marble) and two NOAA deep-sea vent photos (1977 Galapagos Rift discovery, Lost City hydrogen chemistry) before the closing question.
+- Saturn ring radii calibrated from the texture's Cassini division: 1.22-2.41 Saturn radii.

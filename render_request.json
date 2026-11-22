@@ -1,5 +1,5 @@
 {
-  "episode": "enceladus_trial_v2",
+  "episode": "enceladus_trial_v3",
   "steps": [
     "assets",
     "space3d",
@@ -11,5 +11,5 @@
   ],
   "quality": "final",
   "search": false,
-  "note": "v2.1: parallel pipeline test, calibrated ring radii"
+  "note": "v3: Earth connection (deep-sea vents) added"
 }
