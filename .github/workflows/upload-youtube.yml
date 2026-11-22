@@ -1,0 +1,43 @@
+name: upload-youtube
+
+# Manual only. Takes a finished render from a GitHub Release and uploads it to YouTube as PRIVATE.
+# The owner then publishes it from YouTube Studio (one tap). Nothing here runs automatically.
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Release tag of the finished video (e.g. enceladus_trial_v2-r12)"
+        required: true
+      title:
+        description: "YouTube title (max 100 characters)"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Download release files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p dl
+          gh release download "${{ inputs.release_tag }}" --dir dl
+          ls -la dl
+      - name: Upload to YouTube (private)
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          TITLE: ${{ inputs.title }}
+        run: |
+          pip install -q google-api-python-client google-auth
+          VIDEO=$(ls dl/*.mp4 | head -n1)
+          python scripts/upload_youtube.py "$VIDEO" dl/description.txt "$TITLE"

@@ -34,3 +34,9 @@
 - Owner chose the **mixed format**: our 3D fly-through scenes + real NASA imagery, about half and half. New `scripts/space3d.py` (perspective camera on a spline, textured spheres, rings with shadows both ways, 3D star field with true parallax, backlit plume particles, sun glare, limb glow). CGI share warning moved from 15 % to 60 %.
 - Textures: Enceladus = Cassini map PIA18435 (NASA/JPL); Saturn + rings = Solar System Scope (CC BY 4.0, credit in the description).
 - Parallax tested: clean on a single body on black (ocean cutaway); tears plume/limb photos and Saturn's rings, so it is limited to `layer: body`.
+
+## 2026-11-22 (evening) — channel rename and optional YouTube upload workflow
+- Owner is renaming the existing YouTube channel to **Cosmic Storyline** (old videos and subscribers stay).
+- Owner asked for automatic upload. Added `scripts/upload_youtube.py` and `.github/workflows/upload-youtube.yml`: manual trigger only, takes a finished Release, uploads as **private** with the synthetic-media flag set. The owner publishes from YouTube Studio (G5 stays an owner decision; the production agent still never uploads on its own, rule 8 unchanged).
+- Reason: Google keeps videos from unaudited API projects private anyway; private upload + one-tap publish is the free, working path.
+- Needs owner: one-time setup in `docs/YOUTUBE_UPLOAD_TR.md` (3 GitHub secrets). NOT TESTED: no real upload has been run.
