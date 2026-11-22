@@ -1,7 +1,11 @@
 {
   "episode": "enceladus_test",
-  "steps": ["smoke", "assets", "voice_test"],
+  "steps": [
+    "smoke",
+    "assets",
+    "voice_test"
+  ],
   "quality": "draft",
   "search": false,
-  "note": "Phase 1: download the 11 NASA/JPL images, check Kokoro voices, run the smoke test on the GitHub runner."
+  "note": "Phase 1: download the 11 NASA/JPL images, check Kokoro voices, run the smoke test on the GitHub runner. (run started from main push)"
 }
