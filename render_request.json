@@ -1,7 +1,7 @@
 {
-  "episode": "ep01",
+  "episode": "ep01_short1",
   "steps": ["assets", "space3d", "validate", "tts", "render", "audio", "meta"],
   "quality": "final",
   "search": false,
-  "note": "EP01 render 3: small archive photos framed on black (fit contain), tiny images replaced"
+  "note": "First Short from EP01: native 1080x1920, vertical 3D renders, burned-in captions"
 }

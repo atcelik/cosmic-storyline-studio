@@ -277,7 +277,7 @@ def label_overlay(text, W, H, fpath):
 
 
 def text_overlay(text, W, H, fpath):
-    f = font(fpath, max(16, round(H * 0.06)))
+    f = font(fpath, max(16, round(min(W, H) * (0.06 if W >= H else 0.075))))
     c = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(c)
     words, lines, cur = text.split(), [], ""
@@ -289,10 +289,33 @@ def text_overlay(text, W, H, fpath):
             cur = t
     lines.append(cur)
     lh = round(f.size * 1.25)
-    y = round(H * 0.70)
+    y = round(H * (0.70 if W >= H else 0.40))
     for ln in lines:
         tw = d.textlength(ln, font=f)
         d.text(((W - tw) / 2, y), ln, font=f, fill=(255, 255, 255, 255), stroke_width=max(2, round(H * 0.004)),
+               stroke_fill=(0, 0, 0, 255))
+        y += lh
+    return to_overlay(c)
+
+
+def caption_overlay(text, W, H, fpath):
+    """Shorts caption: a few words, big, centred in the lower-middle (above the Shorts UI)."""
+    f = font(fpath, round(min(W, H) * 0.072))
+    c = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(c)
+    words, lines, cur = text.split(), [], ""
+    for w_ in words:
+        t = (cur + " " + w_).strip()
+        if d.textlength(t, font=f) > W * 0.86 and cur:
+            lines.append(cur); cur = w_
+        else:
+            cur = t
+    lines.append(cur)
+    lh = round(f.size * 1.2)
+    y = round(H * (0.66 if H > W else 0.80))
+    for ln in lines:
+        tw = d.textlength(ln, font=f)
+        d.text(((W - tw) / 2, y), ln, font=f, fill=(255, 255, 255, 255), stroke_width=max(3, round(f.size * 0.09)),
                stroke_fill=(0, 0, 0, 255))
         y += lh
     return to_overlay(c)
@@ -304,17 +327,18 @@ SOURCE_WORD = {"REAL_PHOTO": "Photo", "REAL_VIDEO": "Footage", "PROCESSED_DATA":
 
 def card_overlay(card, shot, W, H, cfg):
     """Top-left chapter card: brand, title, accent rule, subtitle, one small source line."""
-    k = H / 1080
+    k = min(W, H) / 1080 * (1.0 if W >= H else 1.3)
     fonts = cfg.get("card_fonts", {})
     def F(role, default, size):
         return font(fonts.get(role, default), round(size * k))
     c = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(c)
-    gh, gw = round(300 * k), round(1000 * k)
+    gh, gw = round(300 * k), (round(1000 * k) if W >= H else W)
+    y_top = 0 if W >= H else round(H * 0.11) - round(54 * k)
     for i in range(gh):
         a = int(120 * (1 - i / gh) ** 2)
-        d.rectangle([0, i, gw, i + 1], fill=(0, 0, 0, a))
-    x, y = round(64 * k), round(54 * k)
+        d.rectangle([0, y_top + i, gw, y_top + i + 1], fill=(0, 0, 0, a))
+    x, y = round(64 * k), round(54 * k) if W >= H else round(H * 0.11)
     accent = tuple(cfg.get("card_accent", [159, 212, 255]))
     d.text((x, y), cfg.get("brand", "COSMIC STORYLINE"), font=F("brand", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 19), fill=accent + (235,))
     d.text((x, y + round(30 * k)), card["title"], font=F("title", cfg["font_path"], 46), fill=(255, 255, 255, 250))
@@ -357,6 +381,8 @@ def main():
     cfg = load_config()
     base, build = ep_dirs(a.episode)
     ep = load_json(a.episode)
+    fmt = ep.get("format") or {}
+    cfg["width"], cfg["height"] = int(fmt.get("width", cfg["width"])), int(fmt.get("height", cfg["height"]))
     tl = load_json(build / "timeline.json")
     sc = cfg["draft"]["scale"] if a.draft else 1.0
     W, H, fps = int(cfg["width"] * sc) // 2 * 2, int(cfg["height"] * sc) // 2 * 2, cfg["fps"]
@@ -384,6 +410,21 @@ def main():
             txt = f"{lab} · {cr}"[:70] if (cr and cfg.get("label_credit", True)) else lab
             txt = s.get("label_text", txt)
             labels[s["id"]] = label_overlay(txt, W, H, cfg["font_path"])
+    caps = []                                    # (t0, t1, overlay)
+    if ep.get("burn_captions"):
+        for s, t in zip(shots, T):
+            words = (s.get("voiceover") or "").split()
+            if not words or not t.get("vo_dur"):
+                continue
+            n = int(ep.get("caption_words", 4))
+            chunks = [" ".join(words[k:k + n]) for k in range(0, len(words), n)]
+            wts = [len(c) + 2 for c in chunks]
+            tt = t["vo_start"]
+            for c, wgt in zip(chunks, wts):
+                dt = t["vo_dur"] * wgt / sum(wts)
+                caps.append((tt, tt + dt, caption_overlay(c, W, H, cfg["font_path"])))
+                tt += dt
+    cap_starts = [c[0] for c in caps]
     texts = {s["id"]: text_overlay(s["on_screen_text"], W, H, cfg["font_path"]) for s in shots if s.get("on_screen_text")}
     # chapter cards: a shot with "card", or the first shot of a beat that has a "chapter" title
     beats = {b["id"]: b for b in ep.get("beats", [])}
@@ -487,6 +528,11 @@ def main():
             cov, ca = card_alpha(t)
             if cov is not None and ca > 0:
                 blend_overlay(fr, cov, ease(ca))
+            if caps:
+                ci = bisect.bisect_right(cap_starts, t) - 1
+                if ci >= 0 and t < caps[ci][1] + 0.05:
+                    fr = np.ascontiguousarray(fr)
+                    blend_overlay(fr, caps[ci][2], 1.0)
             if vig is not None or noise is not None:
                 ff = fr.astype(np.float32)
                 if vig is not None:

@@ -453,6 +453,8 @@ def main():
     spec = json.loads(spec_p.read_text())
     base = spec_p.resolve().parent
     W, H, fps = cfg["width"], cfg["height"], cfg["fps"]
+    if spec.get("size"):
+        W, H = (int(x) for x in spec["size"])
     if draft:
         W, H = W // 2, H // 2
     seed = spec.get("seed", 1)

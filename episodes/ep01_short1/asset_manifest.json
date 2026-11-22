@@ -1,0 +1,121 @@
+{
+ "episode": "ep01_short1",
+ "items": [
+  {
+   "id": "A007",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA11688.jpg",
+   "kind": "image",
+   "title": "Bursting at the Seams: the Geyser Basin of Enceladus",
+   "source_class": "REAL_PHOTO",
+   "credit": "NASA/JPL/Space Science Institute",
+   "source_url": "https://www.jpl.nasa.gov/images/bursting-at-the-seams-the-geyser-basin-of-enceladus",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S002"
+   ]
+  },
+  {
+   "id": "A009",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA19656.jpg",
+   "kind": "image",
+   "title": "Global Ocean on Enceladus (artist's rendering)",
+   "source_class": "ARTIST_CONCEPT",
+   "credit": "NASA/JPL-Caltech",
+   "source_url": "https://www.jpl.nasa.gov/images/pia19656-global-ocean-on-enceladus-artists-rendering/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S004"
+   ]
+  },
+  {
+   "id": "A011",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA19058.jpg",
+   "kind": "image",
+   "title": "Enceladus: Possible Hydrothermal Activity (artist's concept)",
+   "source_class": "ARTIST_CONCEPT",
+   "credit": "NASA/JPL-Caltech",
+   "source_url": "https://www.jpl.nasa.gov/images/enceladus-possible-hydrothermal-activity-artists-concept",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S006"
+   ]
+  },
+  {
+   "id": "A001",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA17172.jpg",
+   "kind": "image",
+   "title": "The Day the Earth Smiled (Saturn backlit mosaic)",
+   "source_class": "REAL_PHOTO",
+   "credit": "NASA/JPL-Caltech/SSI",
+   "source_url": "https://www.jpl.nasa.gov/images/pia17172-the-day-the-earth-smiled",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S007"
+   ]
+  },
+  {
+   "id": "T003",
+   "url": "https://images-assets.nasa.gov/image/PIA18435/PIA18435~orig.jpg",
+   "kind": "image",
+   "title": "Color Maps of Enceladus - 2014 (globe texture)",
+   "source_class": "PROCESSED_DATA",
+   "credit": "NASA/JPL-Caltech/Space Science Institute/Lunar and Planetary Institute",
+   "source_url": "https://images.nasa.gov/details/PIA18435",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": []
+  },
+  {
+   "id": "SAT8",
+   "url": "https://www.solarsystemscope.com/textures/download/8k_saturn.jpg",
+   "kind": "image",
+   "title": "Solar System Scope texture 8k_saturn.jpg",
+   "source_class": "PROCESSED_DATA",
+   "credit": "Solar System Scope (CC BY 4.0), based on NASA data",
+   "source_url": "https://www.solarsystemscope.com/textures/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": []
+  },
+  {
+   "id": "SAT2",
+   "url": "https://www.solarsystemscope.com/textures/download/2k_saturn.jpg",
+   "kind": "image",
+   "title": "Solar System Scope texture 2k_saturn.jpg",
+   "source_class": "PROCESSED_DATA",
+   "credit": "Solar System Scope (CC BY 4.0), based on NASA data",
+   "source_url": "https://www.solarsystemscope.com/textures/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": []
+  },
+  {
+   "id": "RING8",
+   "url": "https://www.solarsystemscope.com/textures/download/8k_saturn_ring_alpha.png",
+   "kind": "image",
+   "title": "Solar System Scope 8k_saturn_ring_alpha.png",
+   "source_class": "PROCESSED_DATA",
+   "credit": "Solar System Scope (CC BY 4.0), based on NASA data",
+   "source_url": "https://www.solarsystemscope.com/textures/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": []
+  },
+  {
+   "id": "RING2",
+   "url": "https://www.solarsystemscope.com/textures/download/2k_saturn_ring_alpha.png",
+   "kind": "image",
+   "title": "Solar System Scope 2k_saturn_ring_alpha.png",
+   "source_class": "PROCESSED_DATA",
+   "credit": "Solar System Scope (CC BY 4.0), based on NASA data",
+   "source_url": "https://www.solarsystemscope.com/textures/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": []
+  }
+ ]
+}
