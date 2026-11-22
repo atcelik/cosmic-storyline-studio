@@ -16,6 +16,20 @@
    ]
   },
   {
+   "id": "A007",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA11688.jpg",
+   "kind": "image",
+   "title": "Bursting at the Seams: the Geyser Basin of Enceladus",
+   "source_class": "REAL_PHOTO",
+   "credit": "NASA/JPL/Space Science Institute",
+   "source_url": "https://www.jpl.nasa.gov/images/bursting-at-the-seams-the-geyser-basin-of-enceladus",
+   "credit_checked": true,
+   "note": "credit line read from the JPL page on 2026-11-22",
+   "shots": [
+    "S002"
+   ]
+  },
+  {
    "id": "A009",
    "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA19656.jpg",
    "kind": "image",
@@ -28,6 +42,43 @@
    "shots": [
     "S004"
    ]
+  },
+  {
+   "id": "C005",
+   "url": "https://images-assets.nasa.gov/image/GSFC_20220520_M14162_SaturnMoons/GSFC_20220520_M14162_SaturnMoons~orig.png",
+   "kind": "image",
+   "title": "Saturn Moons Concept Art",
+   "source_class": "ARTIST_CONCEPT",
+   "credit": "NASA (GSFC)",
+   "source_url": "https://images.nasa.gov/details/GSFC_20220520_M14162_SaturnMoons",
+   "credit_checked": false,
+   "shots": [
+    "S005"
+   ]
+  },
+  {
+   "id": "C006",
+   "url": "https://images-assets.nasa.gov/image/PIA17218/PIA17218~orig.jpg",
+   "kind": "image",
+   "title": "A Farewell to Saturn",
+   "source_class": "REAL_PHOTO",
+   "credit": "NASA (JPL)",
+   "source_url": "https://images.nasa.gov/details/PIA17218",
+   "credit_checked": false,
+   "shots": [
+    "S006"
+   ]
+  },
+  {
+   "id": "T003",
+   "url": "https://images-assets.nasa.gov/image/PIA18435/PIA18435~orig.jpg",
+   "kind": "image",
+   "title": "Color Maps of Enceladus - 2014 (globe texture)",
+   "source_class": "PROCESSED_DATA",
+   "credit": "NASA (JPL)",
+   "source_url": "https://images.nasa.gov/details/PIA18435",
+   "credit_checked": false,
+   "shots": []
   }
  ]
 }

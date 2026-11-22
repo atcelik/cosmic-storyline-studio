@@ -1,10 +1,15 @@
 {
   "episode": "enceladus_trial30",
   "steps": [
-    "assets"
+    "assets",
+    "globes",
+    "validate",
+    "tts",
+    "render",
+    "audio",
+    "meta"
   ],
-  "quality": "draft",
-  "search": true,
-  "top": 4,
-  "note": "Phase 2a: find hi-res candidates for the 30 s Enceladus trial"
+  "quality": "final",
+  "search": false,
+  "note": "Phase 2b: 30 s Enceladus trial, 1080p, am_michael"
 }
