@@ -3,5 +3,5 @@
   "steps": ["assets", "space3d", "validate", "tts", "render", "audio", "meta"],
   "quality": "final",
   "search": false,
-  "note": "EP01 first full render: approved script (Claude Doc rev 9), 65 shots, 28 3D flights auto-fitted to the voice-over"
+  "note": "EP01 render 2: decode-to-trim fix for continuing 3D flights"
 }

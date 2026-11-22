@@ -105,10 +105,12 @@ class Source:
             self.trim = float(v.get("trim_start", 0.0))
             self.speed = float(v.get("speed", 1.0))
             self.pos, self.last = -1, None
+            # skip to the trim point by decoding (seeking with CAP_PROP_POS_FRAMES is unreliable on H.264)
             i0 = int(round(self.trim * self.fps))
-            if i0 > 0:
-                self.vid.set(cv2.CAP_PROP_POS_FRAMES, i0)
-                self.pos = i0 - 1
+            if self.n > 0:
+                i0 = min(i0, self.n - 1)
+            while self.pos < i0 - 1 and self.vid.grab():
+                self.pos += 1
             self.work = None
 
     def _fit(self, img):
@@ -130,8 +132,12 @@ class Source:
                 break
             self.pos += 1
             self.last = f
+        if self.last is None and self.pos >= 0:
+            ok, f = self.vid.retrieve()          # the frame at the trim point was grabbed but not decoded
+            if ok:
+                self.last = f
         if self.last is None:
-            raise RuntimeError("video has no frames")
+            raise RuntimeError(f"video has no frames at {target} (has {self.n})")
         return self._fit(self.last)
 
     def frame(self, lt, dur, fl=(0.0, 0.0, 0.0)):
