@@ -420,6 +420,16 @@ def main():
     if grain:
         noise = (rng.standard_normal((H, W)).astype(np.float32) * grain * 255)
 
+    # "continue": true on a video shot = same flight as the shot before, picking up where it stopped
+    acc = {}
+    for i, s in enumerate(shots):
+        v = s["visual"]
+        if v.get("type") == "video" and v.get("continue") and i > 0:
+            pv = shots[i - 1]["visual"]
+            if pv.get("file") == v.get("file"):
+                v["trim_start"] = acc.get(i - 1, float(pv.get("trim_start", 0.0))) + T[i - 1]["dur"] - T[i - 1]["trans_d"]
+        acc[i] = float(v.get("trim_start", 0.0))
+
     cache = {}
 
     def get(i):

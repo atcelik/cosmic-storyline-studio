@@ -1,0 +1,404 @@
+{
+ "episode": "ep01",
+ "items": [
+  {
+   "id": "A007",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA11688.jpg",
+   "kind": "image",
+   "title": "Bursting at the Seams: the Geyser Basin of Enceladus",
+   "source_class": "REAL_PHOTO",
+   "credit": "NASA/JPL/Space Science Institute",
+   "source_url": "https://www.jpl.nasa.gov/images/bursting-at-the-seams-the-geyser-basin-of-enceladus",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S005"
+   ]
+  },
+  {
+   "id": "P11684",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA11684.jpg",
+   "kind": "image",
+   "title": "Enceladus Leading Hemisphere (Cassini mosaic, 2009)",
+   "source_class": "REAL_PHOTO",
+   "credit": "NASA/JPL/Space Science Institute",
+   "source_url": "https://www.jpl.nasa.gov/images/pia11684-enceladus-leading-hemisphere/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S006",
+    "S032"
+   ]
+  },
+  {
+   "id": "P01394",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA01394.jpg",
+   "kind": "image",
+   "title": "Enceladus from Voyager 2, 25 Aug 1981",
+   "source_class": "REAL_PHOTO",
+   "credit": "NASA/JPL",
+   "source_url": "https://www.jpl.nasa.gov/images/pia01394-saturn-enceladus-from-a-distance-of-119000-kilometers-74000-miles/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S011"
+   ]
+  },
+  {
+   "id": "A008",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA06254.jpg",
+   "kind": "image",
+   "title": "Zooming In On Enceladus (false-colour mosaic)",
+   "source_class": "PROCESSED_DATA",
+   "credit": "NASA/JPL/Space Science Institute",
+   "source_url": "https://www.jpl.nasa.gov/images/pia06254-zooming-in-on-enceladus-mosaic/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S012"
+   ]
+  },
+  {
+   "id": "A006",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA11135.jpg",
+   "kind": "image",
+   "title": "Tiger Stripes...Magnified! (mosaic)",
+   "source_class": "REAL_PHOTO",
+   "credit": "NASA/JPL/Space Science Institute",
+   "source_url": "https://www.jpl.nasa.gov/images/pia11135-tiger-stripesmagnified/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S013",
+    "S018"
+   ]
+  },
+  {
+   "id": "A003",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA07798.jpg",
+   "kind": "image",
+   "title": "Spray Above Enceladus III",
+   "source_class": "REAL_PHOTO",
+   "credit": "NASA/JPL/Space Science Institute",
+   "source_url": "https://www.jpl.nasa.gov/images/pia07798-spray-above-enceladus-iii/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S017",
+    "S028"
+   ]
+  },
+  {
+   "id": "A002",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA12713.jpg",
+   "kind": "image",
+   "title": "High-Phase Plumes (Enceladus jets backlit)",
+   "source_class": "REAL_PHOTO",
+   "credit": "NASA/JPL/Space Science Institute",
+   "source_url": "https://www.jpl.nasa.gov/images/pia12713-high-phase-plumes/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S020"
+   ]
+  },
+  {
+   "id": "A005",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA07762.jpg",
+   "kind": "image",
+   "title": "Enceladus Plume (still)",
+   "source_class": "REAL_PHOTO",
+   "credit": "NASA/JPL/Space Science Institute",
+   "source_url": "https://www.jpl.nasa.gov/images/pia07762-enceladus-plume-movie/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S038"
+   ]
+  },
+  {
+   "id": "P10360",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA10360.jpg",
+   "kind": "image",
+   "title": "Stripes and Heat Map Side by Side (Cassini, 2008)",
+   "source_class": "PROCESSED_DATA",
+   "credit": "NASA/JPL/GSFC/SwRI/SSI",
+   "source_url": "https://www.jpl.nasa.gov/images/pia10360-stripes-and-heat-map-side-by-side",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S022"
+   ]
+  },
+  {
+   "id": "A004",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA21887.jpg",
+   "kind": "image",
+   "title": "Last Enceladus Plume Observation",
+   "source_class": "REAL_PHOTO",
+   "credit": "NASA/JPL-Caltech/Space Science Institute",
+   "source_url": "https://www.jpl.nasa.gov/images/pia21887-last-enceladus-plume-observation/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S023"
+   ]
+  },
+  {
+   "id": "P08321",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA08321.jpg",
+   "kind": "image",
+   "title": "Ghostly Fingers of Enceladus (E ring)",
+   "source_class": "REAL_PHOTO",
+   "credit": "NASA/JPL/Space Science Institute",
+   "source_url": "https://www.jpl.nasa.gov/images/pia08321-ghostly-fingers-of-enceladus/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S024"
+   ]
+  },
+  {
+   "id": "P18071",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA18071.jpg",
+   "kind": "image",
+   "title": "Ocean Inside Saturn's Moon Enceladus (diagram)",
+   "source_class": "SCIENTIFIC_CGI",
+   "credit": "NASA/JPL-Caltech",
+   "source_url": "https://www.jpl.nasa.gov/images/pia18071-ocean-inside-saturns-moon-enceladus/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S030"
+   ]
+  },
+  {
+   "id": "A009",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA19656.jpg",
+   "kind": "image",
+   "title": "Global Ocean on Enceladus (artist's rendering)",
+   "source_class": "ARTIST_CONCEPT",
+   "credit": "NASA/JPL-Caltech",
+   "source_url": "https://www.jpl.nasa.gov/images/pia19656-global-ocean-on-enceladus-artists-rendering/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S034"
+   ]
+  },
+  {
+   "id": "A010",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA23175.jpg",
+   "kind": "image",
+   "title": "Enceladus Global View with Plume (artist's rendering)",
+   "source_class": "ARTIST_CONCEPT",
+   "credit": "NASA/JPL-Caltech",
+   "source_url": "https://www.jpl.nasa.gov/images/pia23175-enceladus-global-view-with-plume-artists-rendering/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S035"
+   ]
+  },
+  {
+   "id": "A011",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA19058.jpg",
+   "kind": "image",
+   "title": "Enceladus: Possible Hydrothermal Activity (artist's concept)",
+   "source_class": "ARTIST_CONCEPT",
+   "credit": "NASA/JPL-Caltech",
+   "source_url": "https://www.jpl.nasa.gov/images/enceladus-possible-hydrothermal-activity-artists-concept",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S041",
+    "S044"
+   ]
+  },
+  {
+   "id": "A001",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA17172.jpg",
+   "kind": "image",
+   "title": "The Day the Earth Smiled (Saturn backlit mosaic)",
+   "source_class": "REAL_PHOTO",
+   "credit": "NASA/JPL-Caltech/SSI",
+   "source_url": "https://www.jpl.nasa.gov/images/pia17172-the-day-the-earth-smiled",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S045"
+   ]
+  },
+  {
+   "id": "STS66",
+   "url": "https://images-assets.nasa.gov/image/sts066-127-006/sts066-127-006~orig.jpg",
+   "kind": "image",
+   "title": "Hurricane Florence seen from Space Shuttle Atlantis (STS-66, 1994)",
+   "source_class": "REAL_PHOTO",
+   "credit": "NASA (JSC)",
+   "source_url": "https://images.nasa.gov/details/sts066-127-006",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S048"
+   ]
+  },
+  {
+   "id": "N008",
+   "url": "https://oceanexplorer.noaa.gov/wp-content/uploads/2025/08/1605vent-hires.jpg",
+   "kind": "image",
+   "title": "Black smoker, Mariana back-arc",
+   "source_class": "REAL_PHOTO",
+   "credit": "NOAA Office of Ocean Exploration and Research",
+   "source_url": "https://oceanexplorer.noaa.gov/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S050"
+   ]
+  },
+  {
+   "id": "NUR",
+   "url": "https://s3.amazonaws.com/s3-east-testmedia-noaa.woc.noaa.gov/dam/Photos/legacy/pl23_nur04512.jpg",
+   "kind": "image",
+   "title": "Tube worms at the base of a black smoker",
+   "source_class": "REAL_PHOTO",
+   "credit": "OAR/National Undersea Research Program (NURP)",
+   "source_url": "https://noaa.gov/media/digital-library-photo/pl23nur04512jpg",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S051"
+   ]
+  },
+  {
+   "id": "LOST",
+   "url": "https://s3.amazonaws.com/s3-east-testmedia-noaa.woc.noaa.gov/dam/Photos/legacy/pl23_expl2224.jpg",
+   "kind": "image",
+   "title": "A white carbonate spire in the Lost City vent field",
+   "source_class": "REAL_PHOTO",
+   "credit": "IFE, URI-IAO, UW, Lost City Science Party; NOAA/OAR/OER; The Lost City 2005 Expedition",
+   "source_url": "https://noaa.gov/media/digital-library-photo/pl23expl2224jpg",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S052",
+    "S053"
+   ]
+  },
+  {
+   "id": "P21439",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA21439.jpg",
+   "kind": "image",
+   "title": "Cassini Grand Finale Dive (illustration)",
+   "source_class": "ARTIST_CONCEPT",
+   "credit": "NASA/JPL-Caltech",
+   "source_url": "https://www.jpl.nasa.gov/images/pia21439-cassini-grand-finale-dive-illustration/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S056"
+   ]
+  },
+  {
+   "id": "P21440",
+   "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA21440.jpg",
+   "kind": "image",
+   "title": "Cassini Versus Saturn (illustration)",
+   "source_class": "ARTIST_CONCEPT",
+   "credit": "NASA/JPL-Caltech",
+   "source_url": "https://www.jpl.nasa.gov/images/pia21440-cassini-versus-saturn-illustration/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S057"
+   ]
+  },
+  {
+   "id": "WEBB",
+   "url": "https://cdn.esawebb.org/archives/images/large/weic2314a.jpg",
+   "kind": "image",
+   "title": "Webb: water plume of Enceladus (2023)",
+   "source_class": "PROCESSED_DATA",
+   "credit": "NASA, ESA, CSA, STScI, G. Villanueva (NASA's Goddard Space Flight Center), A. Pagan (STScI)",
+   "source_url": "https://esawebb.org/images/weic2314a",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": [
+    "S058"
+   ]
+  },
+  {
+   "id": "T003",
+   "url": "https://images-assets.nasa.gov/image/PIA18435/PIA18435~orig.jpg",
+   "kind": "image",
+   "title": "Color Maps of Enceladus - 2014 (globe texture)",
+   "source_class": "PROCESSED_DATA",
+   "credit": "NASA/JPL-Caltech/Space Science Institute/Lunar and Planetary Institute",
+   "source_url": "https://images.nasa.gov/details/PIA18435",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": []
+  },
+  {
+   "id": "SAT8",
+   "url": "https://www.solarsystemscope.com/textures/download/8k_saturn.jpg",
+   "kind": "image",
+   "title": "Solar System Scope texture 8k_saturn.jpg",
+   "source_class": "PROCESSED_DATA",
+   "credit": "Solar System Scope (CC BY 4.0), based on NASA data",
+   "source_url": "https://www.solarsystemscope.com/textures/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": []
+  },
+  {
+   "id": "SAT2",
+   "url": "https://www.solarsystemscope.com/textures/download/2k_saturn.jpg",
+   "kind": "image",
+   "title": "Solar System Scope texture 2k_saturn.jpg",
+   "source_class": "PROCESSED_DATA",
+   "credit": "Solar System Scope (CC BY 4.0), based on NASA data",
+   "source_url": "https://www.solarsystemscope.com/textures/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": []
+  },
+  {
+   "id": "RING8",
+   "url": "https://www.solarsystemscope.com/textures/download/8k_saturn_ring_alpha.png",
+   "kind": "image",
+   "title": "Solar System Scope 8k_saturn_ring_alpha.png",
+   "source_class": "PROCESSED_DATA",
+   "credit": "Solar System Scope (CC BY 4.0), based on NASA data",
+   "source_url": "https://www.solarsystemscope.com/textures/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": []
+  },
+  {
+   "id": "RING2",
+   "url": "https://www.solarsystemscope.com/textures/download/2k_saturn_ring_alpha.png",
+   "kind": "image",
+   "title": "Solar System Scope 2k_saturn_ring_alpha.png",
+   "source_class": "PROCESSED_DATA",
+   "credit": "Solar System Scope (CC BY 4.0), based on NASA data",
+   "source_url": "https://www.solarsystemscope.com/textures/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": []
+  },
+  {
+   "id": "EARTHSS",
+   "url": "https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg",
+   "kind": "image",
+   "title": "Solar System Scope Earth day map",
+   "source_class": "PROCESSED_DATA",
+   "credit": "Solar System Scope (CC BY 4.0), based on NASA data",
+   "source_url": "https://www.solarsystemscope.com/textures/",
+   "credit_checked": true,
+   "note": "credit line read from the source page on 2026-11-22",
+   "shots": []
+  }
+ ]
+}

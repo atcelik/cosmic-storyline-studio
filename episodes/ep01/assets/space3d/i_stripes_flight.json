@@ -1,0 +1,110 @@
+{
+ "duration": 7,
+ "fit": true,
+ "fallback": 7,
+ "fov": 45,
+ "seed": 3,
+ "motion": "linear",
+ "sun": [
+  -0.8437,
+  -0.2978,
+  0.4467
+ ],
+ "stars": {
+  "count": 12000,
+  "near": 3000,
+  "far": 30000
+ },
+ "camera": {
+  "pos": [
+   [
+    237.68,
+    -0.5,
+    0.05
+   ],
+   [
+    237.85,
+    -0.55,
+    0.2
+   ],
+   [
+    238.0,
+    -0.52,
+    0.32
+   ]
+  ],
+  "target": [
+   [
+    237.94,
+    -0.21,
+    0.04
+   ],
+   [
+    237.97,
+    -0.21,
+    0.07
+   ],
+   [
+    238.0,
+    -0.21,
+    0.1
+   ]
+  ],
+  "roll": [
+   0,
+   0
+  ]
+ },
+ "bodies": [
+  {
+   "texture": [
+    "../SAT8.jpg",
+    "../SAT2.jpg"
+   ],
+   "center": [
+    0,
+    0,
+    0
+   ],
+   "radius": 58.2,
+   "tilt": 0,
+   "spin": [
+    0,
+    2
+   ],
+   "rings": {
+    "texture": [
+     "../originals/RING8.png",
+     "../originals/RING2.png"
+    ],
+    "inner": 1.22,
+    "outer": 2.41
+   },
+   "atmosphere": [
+    1.0,
+    0.85,
+    0.6
+   ]
+  },
+  {
+   "texture": "../T003.jpg",
+   "center": [
+    238.0,
+    0.0,
+    0.0
+   ],
+   "radius": 0.252,
+   "spin": [
+    180,
+    186
+   ],
+   "plumes": {
+    "count": 120000,
+    "height": 1.6,
+    "jets": 60,
+    "seed": 4,
+    "brightness": 0.25
+   }
+  }
+ ]
+}

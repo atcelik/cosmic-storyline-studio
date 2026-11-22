@@ -119,6 +119,28 @@ def join_cgi():
     return joined
 
 
+def fit_specs():
+    """A 3D spec with "duration": "auto" gets exactly as long as the shots that use it
+    (voice-over timing from build/timeline.json, so the flight never stops before the cut)."""
+    tl_path = ep_dir / "build" / "timeline.json"
+    if not ep_json.exists():
+        return
+    ep = json.loads(ep_json.read_text())
+    T = {t["id"]: t for t in json.loads(tl_path.read_text())["shots"]} if tl_path.exists() else {}
+    for s in specs():
+        sp = json.loads(s.read_text())
+        if sp.get("duration") != "auto" and not sp.get("fit"):
+            continue
+        sp["fit"] = True
+        used = [sh for sh in ep["shots"] if (sh["visual"].get("file") or "") == f"assets/{s.stem}.mp4"]
+        secs = sum(T[sh["id"]]["dur"] - T[sh["id"]]["trans_d"] for sh in used if sh["id"] in T)
+        if not secs:
+            secs = sp.get("fallback", 10)
+        sp["duration"] = round(secs + 1.0, 2)
+        s.write_text(json.dumps(sp, indent=1))
+        print(f"fit {s.stem}: {len(used)} shots -> {sp['duration']} s")
+
+
 # ---------------- phases ----------------
 def prepare():
     ph = Phase("prepare")
@@ -151,6 +173,7 @@ def prepare():
     F = fps()
     cgi = []
     if "space3d" in steps:
+        fit_specs()
         total = sum(int(round(json.loads(s.read_text())["duration"] * F)) for s in specs())
         chunk = int(req.get("cgi_chunk") or max(90, math.ceil(total / 200)))
         for s in specs():

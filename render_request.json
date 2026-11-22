@@ -1,10 +1,7 @@
 {
-  "episode": "earth_scout",
-  "steps": [
-    "assets"
-  ],
-  "quality": "draft",
-  "search": true,
-  "top": 2,
-  "note": "Scout: ISS Earth footage (URL quoting fixed, 1080p preferred)"
+  "episode": "ep01",
+  "steps": ["assets", "space3d", "validate", "tts", "render", "audio", "meta"],
+  "quality": "final",
+  "search": false,
+  "note": "EP01 first full render: approved script (Claude Doc rev 9), 65 shots, 28 3D flights auto-fitted to the voice-over"
 }
