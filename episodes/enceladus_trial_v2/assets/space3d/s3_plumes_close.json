@@ -75,8 +75,8 @@
      "../originals/RING8.png",
      "../originals/RING2.png"
     ],
-    "inner": 1.11,
-    "outer": 2.33
+    "inner": 1.22,
+    "outer": 2.41
    },
    "atmosphere": [
     1.0,

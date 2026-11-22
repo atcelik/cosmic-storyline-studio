@@ -1,9 +1,10 @@
 {
-  "episode": "enceladus_trial_v2",
+  "episode": "video_scout",
   "steps": [
     "assets"
   ],
   "quality": "draft",
-  "search": false,
-  "note": "export downscaled 3D textures for the live preview page"
+  "search": true,
+  "top": 2,
+  "note": "Re-run scout: real NASA video candidates (results go to review-video_scout)"
 }
