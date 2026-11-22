@@ -1,15 +1,10 @@
 {
-  "episode": "enceladus_trial_v3",
+  "episode": "earth_scout",
   "steps": [
-    "assets",
-    "space3d",
-    "validate",
-    "tts",
-    "render",
-    "audio",
-    "meta"
+    "assets"
   ],
-  "quality": "final",
-  "search": false,
-  "note": "v3: Earth connection (deep-sea vents) added"
+  "quality": "draft",
+  "search": true,
+  "top": 3,
+  "note": "Scout: real NASA photos/video of Earth for the Earth-connection beat"
 }
