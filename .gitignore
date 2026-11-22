@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+episodes/*/build/
+episodes/*/bundle/
+episodes/*/assets/originals/
+episodes/*/assets/candidates/
+episodes/*/*_assets_part*.zip
+episodes/_smoke/
+review_out/
+voice_test/

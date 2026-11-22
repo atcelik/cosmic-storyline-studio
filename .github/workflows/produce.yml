@@ -1,0 +1,113 @@
+name: produce
+
+# Runs whenever render_request.json changes on main (or by hand from the Actions tab).
+# Result: the video is attached to a GitHub Release; a small review pack is force-pushed to the 'review' branch.
+on:
+  push:
+    branches: [main]
+    paths: [render_request.json]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: produce
+  cancel-in-progress: false
+
+jobs:
+  produce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Read request
+        id: req
+        run: |
+          python - >> "$GITHUB_OUTPUT" <<'EOF'
+          import json
+          r = json.load(open("render_request.json"))
+          s = r["steps"]
+          print("episode=" + r["episode"])
+          print("need_tts=" + ("true" if ("tts" in s or "voice_test" in s) else "false"))
+          print("quality=" + r.get("quality", "draft"))
+          EOF
+
+      - name: System packages
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg espeak-ng fonts-dejavu-core
+
+      - name: Cache pip and voice models
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.cache/huggingface
+          key: py-${{ runner.os }}-tts-${{ steps.req.outputs.need_tts }}-v1
+
+      - name: Cache downloaded originals
+        uses: actions/cache@v4
+        with:
+          path: episodes/${{ steps.req.outputs.episode }}/assets/originals
+          key: originals-${{ steps.req.outputs.episode }}-${{ hashFiles(format('episodes/{0}/asset_manifest.json', steps.req.outputs.episode)) }}
+          restore-keys: originals-${{ steps.req.outputs.episode }}-
+
+      - name: Python packages
+        run: |
+          python -m pip install -q --upgrade pip
+          pip install -q numpy opencv-python-headless pillow soundfile
+          if [ "${{ steps.req.outputs.need_tts }}" = "true" ]; then
+            pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+            pip install -q kokoro
+          fi
+          pip list 2>/dev/null | grep -iE "^(numpy|opencv|pillow|torch|kokoro|misaki|soundfile|spacy) " || true
+
+      - name: Run pipeline
+        id: run
+        run: python ci/run.py
+
+      - name: Build review pack
+        if: always()
+        run: python ci/review.py
+
+      - name: Publish video as a release
+        if: success() && steps.run.outputs.final_video != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          EP="${{ steps.req.outputs.episode }}"
+          TAG="$EP-r${{ github.run_number }}"
+          FILES="${{ steps.run.outputs.final_video }}"
+          for f in "episodes/$EP/build/captions.srt" "episodes/$EP/build/description.txt"; do
+            if [ -f "$f" ]; then FILES="$FILES $f"; fi
+          done
+          gh release create "$TAG" $FILES \
+            --title "$EP (${{ steps.req.outputs.quality }}) run ${{ github.run_number }}" \
+            --notes "Automated render from commit ${{ github.sha }}."
+          echo "release_tag=$TAG" >> review_out/release.txt
+          echo "release_url=${{ github.server_url }}/${{ github.repository }}/releases/tag/$TAG" >> review_out/release.txt
+
+      - name: Push review pack to the review branch
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "run_url=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo "run_number=${{ github.run_number }}"
+            echo "commit=${{ github.sha }}"
+            echo "job_status=${{ job.status }}"
+          } >> review_out/run.txt
+          cd review_out
+          git init -q -b review
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "review: ${{ steps.req.outputs.episode }} run ${{ github.run_number }}"
+          git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" review
