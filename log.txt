@@ -1,0 +1,41 @@
+
+===== STEP assets (prepare) =====
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/get_assets.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/earth_scout --no-zip --search --top 3
+search S001: 'Apollo 17 Blue Marble Earth' (image)
+   1 raw results
+search S002: 'DSCOVR EPIC Earth Atlantic Africa' (image)
+   0 raw results
+   no results: change the search_query or ask Claude for a manual URL
+search S003: 'Earth from space Atlantic Ocean' (image)
+   30 raw results
+search S004: 'ISS Earth time lapse ocean' (video)
+   0 raw results
+   no results: change the search_query or ask Claude for a manual URL
+search S005: 'Earth from space International Space Station' (video)
+   30 raw results
+7 items -> /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/earth_scout/assets/originals
+[1/7] S001_c1  https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000496/GSFC_20171208_Archive_e000496~orig.png
+   downloaded: 952x952  [SMALL: smaller than 1920x1080, will look soft full-frame; ASPECT_1.00: tall/square, full-frame crop loses 44% of the height]
+[2/7] S003_c1  https://images-assets.nasa.gov/image/as4-01-750/as4-01-750~orig.jpg
+   downloaded: 4095x4095  [ASPECT_1.00: tall/square, full-frame crop loses 44% of the height]
+[3/7] S003_c2  https://images-assets.nasa.gov/image/sts066-127-006/sts066-127-006~orig.jpg
+   downloaded: 4638x4512  [ASPECT_1.03: tall/square, full-frame crop loses 42% of the height]
+[4/7] S003_c3  https://images-assets.nasa.gov/image/s40-613-049/s40-613-049~orig.jpg
+   downloaded: 4162x4162  [ASPECT_1.00: tall/square, full-frame crop loses 44% of the height]
+[5/7] S005_c1  https://images-assets.nasa.gov/video/Earth Views from the International Space Station/Earth Views from the International Space Station~orig.mp4
+   FAILED: URL can't contain control characters. '/video/Earth Views from the International Space Station/Earth Views from the International Space Station~orig.mp4' (found at least ' ')
+[6/7] S005_c2  https://images-assets.nasa.gov/video/jsc2024m000163_Soyuz_MS-25_Landing_Highlights/jsc2024m000163_Soyuz_MS-25_Landing_Highlights~orig.mp4
+   FAILED: file is 2305 MB, over --max-file-mb 2048
+[7/7] S005_c3  https://images-assets.nasa.gov/video/NHQ_2019_0626_Earth Views from the ISS/NHQ_2019_0626_Earth Views from the ISS~orig.mp4
+   FAILED: URL can't contain control characters. '/video/NHQ_2019_0626_Earth Views from the ISS/NHQ_2019_0626_Earth Views from the ISS~orig.mp4' (found at least ' ')
+
+============================================================
+OK 4   FAILED 3   contact sheets: 1
+  FAILED S005_c1: URL can't contain control characters. '/video/Earth Views from the International Space Station/Earth Views from the International Space Station~orig.mp4' (found at least ' ')
+  FAILED S005_c2: file is 2305 MB, over --max-file-mb 2048
+  FAILED S005_c3: URL can't contain control characters. '/video/NHQ_2019_0626_Earth Views from the ISS/NHQ_2019_0626_Earth Views from the ISS~orig.mp4' (found at least ' ')
+Re-run the same command to retry failed items (finished ones are skipped).
+$ /opt/hostedtoolcache/Python/3.11.18/x64/bin/python scripts/apply_bundle.py /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/earth_scout /home/runner/work/cosmic-storyline-studio/cosmic-storyline-studio/episodes/earth_scout/bundle
+4 assets unpacked, 2 shots wired.
+3 shots still without a file: S002, S004, S005
+Next: make validate EP=earth_scout

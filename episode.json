@@ -1,0 +1,114 @@
+{
+  "schema_version": 2,
+  "episode": {
+    "id": "earth_scout",
+    "title": "Scout: real Earth imagery",
+    "language": "en",
+    "central_question": "Which real NASA Earth images can we use?"
+  },
+  "voice": {
+    "engine": "dummy"
+  },
+  "beats": [
+    {
+      "id": "B1",
+      "name": "Scout"
+    }
+  ],
+  "shots": [
+    {
+      "id": "S001",
+      "beat": "B1",
+      "voiceover": "",
+      "visual": {
+        "type": "still",
+        "search_query": "Apollo 17 Blue Marble Earth",
+        "source_class": "REAL_PHOTO",
+        "credit": "NASA (GSFC)",
+        "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000496",
+        "file": "assets/S001_c1.jpg",
+        "credit_verified": false
+      },
+      "camera": {
+        "move": "hold"
+      },
+      "transition_out": {
+        "type": "cut"
+      }
+    },
+    {
+      "id": "S002",
+      "beat": "B1",
+      "voiceover": "",
+      "visual": {
+        "type": "still",
+        "search_query": "DSCOVR EPIC Earth Atlantic Africa",
+        "source_class": "REAL_PHOTO",
+        "credit": "NASA",
+        "source_url": "https://images.nasa.gov/"
+      },
+      "camera": {
+        "move": "hold"
+      },
+      "transition_out": {
+        "type": "cut"
+      }
+    },
+    {
+      "id": "S003",
+      "beat": "B1",
+      "voiceover": "",
+      "visual": {
+        "type": "still",
+        "search_query": "Earth from space Atlantic Ocean",
+        "source_class": "REAL_PHOTO",
+        "credit": "NASA (JSC)",
+        "source_url": "https://images.nasa.gov/details/as4-01-750",
+        "file": "assets/S003_c1.jpg",
+        "credit_verified": false
+      },
+      "camera": {
+        "move": "hold"
+      },
+      "transition_out": {
+        "type": "cut"
+      }
+    },
+    {
+      "id": "S004",
+      "beat": "B1",
+      "voiceover": "",
+      "visual": {
+        "type": "video",
+        "search_query": "ISS Earth time lapse ocean",
+        "source_class": "REAL_VIDEO",
+        "credit": "NASA",
+        "source_url": "https://images.nasa.gov/"
+      },
+      "camera": {
+        "move": "hold"
+      },
+      "transition_out": {
+        "type": "cut"
+      }
+    },
+    {
+      "id": "S005",
+      "beat": "B1",
+      "voiceover": "",
+      "visual": {
+        "type": "video",
+        "search_query": "Earth from space International Space Station",
+        "source_class": "REAL_VIDEO",
+        "credit": "NASA",
+        "source_url": "https://images.nasa.gov/"
+      },
+      "camera": {
+        "move": "hold"
+      },
+      "transition_out": {
+        "type": "cut"
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "episode": "earth_scout",
+  "request": {
+    "episode": "earth_scout",
+    "steps": [
+      "assets"
+    ],
+    "quality": "draft",
+    "search": true,
+    "top": 3,
+    "note": "Scout: real NASA photos/video of Earth for the Earth-connection beat"
+  },
+  "phases": [
+    {
+      "phase": "prepare",
+      "result": "OK",
+      "plan": {
+        "cgi_tasks": 0,
+        "render_tasks": 0
+      }
+    },
+    {
+      "phase": "finish",
+      "result": "OK",
+      "plan": null
+    }
+  ],
+  "steps": [
+    {
+      "step": "assets",
+      "ok": true,
+      "seconds": 50,
+      "phase": "prepare"
+    }
+  ],
+  "result": "OK",
+  "seconds_by_step": {
+    "assets": {
+      "jobs": 1,
+      "longest": 50,
+      "sum": 50
+    }
+  }
+}

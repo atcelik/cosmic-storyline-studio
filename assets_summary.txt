@@ -1,0 +1,10 @@
+earth_scout asset bundle - 2026-11-22 10:25
+OK 4  FAILED 3
+
+S001_c1      ok      952x952 SMALL: smaller than 1920x1080, will look soft full-frame ASPECT_1.00: tall/square, full-frame crop loses 44% of the height 
+S003_c1      ok      4095x4095 ASPECT_1.00: tall/square, full-frame crop loses 44% of the height 
+S003_c2      ok      4638x4512 ASPECT_1.03: tall/square, full-frame crop loses 42% of the height 
+S003_c3      ok      4162x4162 ASPECT_1.00: tall/square, full-frame crop loses 44% of the height 
+S005_c1      failed  ?x?  URL can't contain control characters. '/video/Earth Views from the International Space Station/Earth Views from the International Space Station~orig.mp4' (found at least ' ')
+S005_c2      failed  ?x?  file is 2305 MB, over --max-file-mb 2048
+S005_c3      failed  ?x?  URL can't contain control characters. '/video/NHQ_2019_0626_Earth Views from the ISS/NHQ_2019_0626_Earth Views from the ISS~orig.mp4' (found at least ' ')

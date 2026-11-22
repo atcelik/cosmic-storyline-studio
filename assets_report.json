@@ -1,0 +1,168 @@
+{
+  "episode": "earth_scout",
+  "created": "2026-11-22 10:25",
+  "max_width": 3840,
+  "ok": 4,
+  "failed": 3,
+  "items": [
+    {
+      "url": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000496/GSFC_20171208_Archive_e000496~orig.png",
+      "title": "NASA Releases New High-Resolution Earthrise Image",
+      "credit": "NASA (GSFC)",
+      "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000496",
+      "date": "2017-12-08",
+      "description": "NASA's Lunar Reconnaissance Orbiter (LRO) recently captured a unique view of Earth from the spacecraft's vantage point in orbit around the moon.  &quot;The image is simply stunning,&quot; said Noah Petro, Deputy Project Scientist for LRO at NASA's Goddard Space Flight Center in Greenbelt, Maryland. ",
+      "id": "S001_c1",
+      "kind": "image",
+      "shots": [
+        "S001"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 952,
+      "orig_height": 952,
+      "width": 952,
+      "height": 952,
+      "bundle_file": "S001_c1.jpg",
+      "bytes": 182935,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame",
+        "ASPECT_1.00: tall/square, full-frame crop loses 44% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/as4-01-750/as4-01-750~orig.jpg",
+      "title": "Atlantic Ocean, Antarctica as seen from the Apollo 4 unmanned spacecraft",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/as4-01-750",
+      "date": "1967-11-09",
+      "description": "AS04-01-750 (9 Nov. 1967) --- Atlantic Ocean, Antarctica, looking west, as photographed from the Earth-orbital Apollo 4 (Spacecraft 017/Saturn 501) unmanned space mission. This picture was taken when the Spacecraft 017 and the Saturn S-IVB (third) stage was orbiting Earth at an altitude of 8,628 nau",
+      "id": "S003_c1",
+      "kind": "image",
+      "shots": [
+        "S003"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 4095,
+      "orig_height": 4095,
+      "width": 3840,
+      "height": 3840,
+      "bundle_file": "S003_c1.jpg",
+      "bytes": 1057967,
+      "flags": [
+        "ASPECT_1.00: tall/square, full-frame crop loses 44% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/sts066-127-006/sts066-127-006~orig.jpg",
+      "title": "Hurricane Florence as seen from STS-66 shuttle Atlantis",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/sts066-127-006",
+      "date": "1994-11-14",
+      "description": "From 165 nautical miles above the earth, the STS-66 astronauts were able to capture detail in a number of storm systems around the globe during their 11-day stay in space aboard the Space Shuttle Atlantis. A 70mm handheld Hasselblad was used to photograph Hurricane Florence in the Atlantic Ocean, ab",
+      "id": "S003_c2",
+      "kind": "image",
+      "shots": [
+        "S003"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 4638,
+      "orig_height": 4512,
+      "width": 3840,
+      "height": 3736,
+      "bundle_file": "S003_c2.jpg",
+      "bytes": 3005618,
+      "flags": [
+        "ASPECT_1.03: tall/square, full-frame crop loses 42% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/s40-613-049/s40-613-049~orig.jpg",
+      "title": "Florida, USA",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/s40-613-049",
+      "date": "1991-06-14",
+      "description": "STS040-613-049 (5-14 June 1991) --- This oblique scene from the Earth-orbiting Space Shuttle Columbia shows southern Florida, several of the Bahama Islands and parts of the Atlantic Ocean, the Gulf of Mexico and the Caribbean Sea.  The nine-day STS-40/Spacelab Life Sciences (SLS-1) mission started w",
+      "id": "S003_c3",
+      "kind": "image",
+      "shots": [
+        "S003"
+      ],
+      "candidate": 3,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 4162,
+      "orig_height": 4162,
+      "width": 3840,
+      "height": 3840,
+      "bundle_file": "S003_c3.jpg",
+      "bytes": 4293004,
+      "flags": [
+        "ASPECT_1.00: tall/square, full-frame crop loses 44% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/video/Earth Views from the International Space Station/Earth Views from the International Space Station~orig.mp4",
+      "title": "Earth Views from the International Space Station",
+      "credit": "NASA (HQ)",
+      "source_url": "https://images.nasa.gov/details/Earth%20Views%20from%20the%20International%20Space%20Station",
+      "date": "2019-04-30",
+      "description": "The International Space Station’s High Definition Earth Viewing (HDEV) experiment is an external camera platform located on the Columbus module of the space station. In addition to providing beautiful views of Earth, one of the goals of HDEV is to monitor the longevity and quality of its image senso",
+      "id": "S005_c1",
+      "kind": "video",
+      "shots": [
+        "S005"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_VIDEO",
+      "from_search": true,
+      "status": "failed",
+      "error": "URL can't contain control characters. '/video/Earth Views from the International Space Station/Earth Views from the International Space Station~orig.mp4' (found at least ' ')"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/video/jsc2024m000163_Soyuz_MS-25_Landing_Highlights/jsc2024m000163_Soyuz_MS-25_Landing_Highlights~orig.mp4",
+      "title": "U.S. Astronaut, Crewmates Return to Earth from the International Space Station",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/jsc2024m000163_Soyuz_MS-25_Landing_Highlights",
+      "date": "2024-09-23",
+      "description": "NASA astronaut Tracy C. Dyson and Roscosmos cosmonauts Oleg Kononenko and Nikolai Chub returned to Earth aboard the Soyuz MS-25 spacecraft on Sept. 23 completing long-duration missions on the International Space Station. Following hatch closure, the spacecraft undocked from the station’s Prichal mod",
+      "id": "S005_c2",
+      "kind": "video",
+      "shots": [
+        "S005"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_VIDEO",
+      "from_search": true,
+      "status": "failed",
+      "error": "file is 2305 MB, over --max-file-mb 2048"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/video/NHQ_2019_0626_Earth Views from the ISS/NHQ_2019_0626_Earth Views from the ISS~orig.mp4",
+      "title": "Earth Views from the ISS",
+      "credit": "NASA (HQ)",
+      "source_url": "https://images.nasa.gov/details/NHQ_2019_0626_Earth%20Views%20from%20the%20ISS",
+      "date": "2019-06-26",
+      "description": "Earth Views from the ISS",
+      "id": "S005_c3",
+      "kind": "video",
+      "shots": [
+        "S005"
+      ],
+      "candidate": 3,
+      "source_class": "REAL_VIDEO",
+      "from_search": true,
+      "status": "failed",
+      "error": "URL can't contain control characters. '/video/NHQ_2019_0626_Earth Views from the ISS/NHQ_2019_0626_Earth Views from the ISS~orig.mp4' (found at least ' ')"
+    }
+  ]
+}
