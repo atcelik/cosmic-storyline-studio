@@ -9,7 +9,7 @@ A perspective camera moves at constant speed along a smooth path through a scene
   - sun glare when the Sun is in view, bloom on bright areas
 This is OUR visualization: label it OUR_CGI ("Illustration / simulation").
 
-Usage: space3d.py spec.json out.mp4 [--draft]
+Usage: space3d.py spec.json out.mp4 [--draft] [--frames a:b]   (a:b = one chunk, for parallel rendering)
        space3d.py spec.json still.png --still 0.5        (one frame at 50 % of the clip, for previews)
 
 spec = {
@@ -471,17 +471,22 @@ def main():
         return
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}", "-r", str(fps),
            "-i", "-", "-c:v", "libx264", "-preset", "medium", "-crf", "14", "-pix_fmt", "yuv420p", out]
+    f0, f1 = 0, n
+    if "--frames" in sys.argv:
+        f0, f1 = (int(x) for x in sys.argv[sys.argv.index("--frames") + 1].split(":"))
+        f1 = min(f1, n)
+    Path(out).parent.mkdir(parents=True, exist_ok=True)
     enc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     t0 = time.time()
-    for i in range(n):
+    for i in range(f0, f1):
         enc.stdin.write(render_frame(spec, bodies, stars, W, H, uu(i), i / fps).tobytes())
-        if i and i % 60 == 0:
-            sp = i / (time.time() - t0)
-            print(f"  {spec_p.name}: frame {i}/{n}  {sp:.1f} fps", flush=True)
+        if i > f0 and (i - f0) % 60 == 0:
+            sp = (i - f0) / (time.time() - t0)
+            print(f"  {spec_p.name}: frame {i}/{f1}  {sp:.1f} fps", flush=True)
     enc.stdin.close(); enc.wait()
     if enc.returncode:
         sys.exit("ffmpeg failed")
-    print(f"{out}: {n} frames in {time.time() - t0:.0f}s")
+    print(f"{out}: frames {f0}..{f1 - 1} in {time.time() - t0:.0f}s")
 
 
 if __name__ == "__main__":

@@ -1,10 +1,15 @@
 {
-  "episode": "video_scout",
+  "episode": "enceladus_trial_v2",
   "steps": [
-    "assets"
+    "assets",
+    "space3d",
+    "validate",
+    "tts",
+    "render",
+    "audio",
+    "meta"
   ],
-  "quality": "draft",
-  "search": true,
-  "top": 2,
-  "note": "Re-run scout: real NASA video candidates (results go to review-video_scout)"
+  "quality": "final",
+  "search": false,
+  "note": "v2.1: parallel pipeline test, calibrated ring radii"
 }

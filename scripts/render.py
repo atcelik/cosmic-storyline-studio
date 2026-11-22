@@ -294,6 +294,8 @@ def main():
     ap.add_argument("episode")
     ap.add_argument("--draft", action="store_true")
     ap.add_argument("--limit", type=float, default=0, help="render only first N seconds (testing)")
+    ap.add_argument("--frames", default="", help="a:b = render only frames a..b-1 (parallel chunks; join with ffmpeg concat)")
+    ap.add_argument("--out", default="", help="output file (default build/video_silent.mp4 or video_draft.mp4)")
     a = ap.parse_args()
     cfg = load_config()
     base, build = ep_dirs(a.episode)
@@ -325,7 +327,12 @@ def main():
             labels[s["id"]] = label_overlay(txt, W, H, cfg["font_path"])
     texts = {s["id"]: text_overlay(s["on_screen_text"], W, H, cfg["font_path"]) for s in shots if s.get("on_screen_text")}
 
-    out = build / ("video_draft.mp4" if a.draft else "video_silent.mp4")
+    out = Path(a.out) if a.out else build / ("video_draft.mp4" if a.draft else "video_silent.mp4")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    f0, f1 = 0, nframes
+    if a.frames:
+        f0, f1 = (int(x) for x in a.frames.split(":"))
+        f1 = min(f1, nframes)
     vf = "scale=out_color_matrix=bt709:out_range=tv,format=yuv420p"
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}",
            "-r", str(fps), "-i", "-", "-an", "-vf", vf, "-c:v", "libx264", "-preset", q["preset"],
@@ -379,7 +386,7 @@ def main():
 
     t0 = time.time()
     try:
-        for n in range(nframes):
+        for n in range(f0, f1):
             t = n / fps
             i = max(0, bisect.bisect_right(starts, t + 1e-9) - 1)
             fr = shot_frame(i, t)
@@ -398,9 +405,9 @@ def main():
                 k = ease((t - (tl["total"] - fade_out)) / fade_out)
                 fr = (fr.astype(np.float32) * (1 - k)).astype(np.uint8)
             enc.stdin.write(np.ascontiguousarray(fr).tobytes())
-            if n and n % 150 == 0:
-                sp = n / (time.time() - t0)
-                print(f"  frame {n}/{nframes}  {sp:.1f} fps  ETA {(nframes - n) / sp / 60:.1f} min", flush=True)
+            if n > f0 and (n - f0) % 150 == 0:
+                sp = (n - f0) / (time.time() - t0)
+                print(f"  frame {n}/{f1}  {sp:.1f} fps  ETA {(f1 - n) / sp / 60:.1f} min", flush=True)
     finally:
         enc.stdin.close()
         enc.wait()
@@ -408,7 +415,7 @@ def main():
             s.close()
     if enc.returncode != 0:
         sys.exit("ffmpeg failed")
-    print(f"Rendered {nframes} frames in {(time.time() - t0) / 60:.1f} min -> {out}")
+    print(f"Rendered frames {f0}..{f1 - 1} in {(time.time() - t0) / 60:.1f} min -> {out}")
 
 
 if __name__ == "__main__":

@@ -1,7 +1,8 @@
 name: produce
 
 # Runs whenever render_request.json changes on main (or by hand from the Actions tab).
-# Result: the video is attached to a GitHub Release; a small review pack is force-pushed to the 'review' branch.
+# prepare -> cgi (3D scenes, many machines) -> render (final picture, many machines) -> finish (join, audio, release).
+# Result: the video is attached to a GitHub Release; a small review pack is force-pushed to review-<episode> (and review).
 on:
   push:
     branches: [main]
@@ -16,17 +17,25 @@ concurrency:
   group: produce-${{ github.run_id }}
   cancel-in-progress: false
 
+env:
+  PIP_DISABLE_PIP_VERSION_CHECK: "1"
+
 jobs:
-  produce:
+  prepare:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 120
+    outputs:
+      episode: ${{ steps.req.outputs.episode }}
+      quality: ${{ steps.req.outputs.quality }}
+      cgi_tasks: ${{ steps.plan.outputs.cgi_tasks }}
+      render_tasks: ${{ steps.plan.outputs.render_tasks }}
+      has_cgi: ${{ steps.plan.outputs.has_cgi }}
+      has_render: ${{ steps.plan.outputs.has_render }}
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
       - name: Read request
         id: req
         run: |
@@ -38,12 +47,10 @@ jobs:
           print("need_tts=" + ("true" if ("tts" in s or "voice_test" in s) else "false"))
           print("quality=" + r.get("quality", "draft"))
           EOF
-
       - name: System packages
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg espeak-ng fonts-dejavu-core
-
       - name: Cache pip and voice models
         uses: actions/cache@v4
         with:
@@ -51,14 +58,12 @@ jobs:
             ~/.cache/pip
             ~/.cache/huggingface
           key: py-${{ runner.os }}-tts-${{ steps.req.outputs.need_tts }}-v1
-
       - name: Cache downloaded originals
         uses: actions/cache@v4
         with:
           path: episodes/${{ steps.req.outputs.episode }}/assets/originals
           key: originals-${{ steps.req.outputs.episode }}-${{ hashFiles(format('episodes/{0}/asset_manifest.json', steps.req.outputs.episode)) }}
           restore-keys: originals-${{ steps.req.outputs.episode }}-
-
       - name: Python packages
         run: |
           python -m pip install -q --upgrade pip
@@ -67,34 +72,191 @@ jobs:
             pip install -q torch --index-url https://download.pytorch.org/whl/cpu
             pip install -q kokoro
           fi
-          pip list 2>/dev/null | grep -iE "^(numpy|opencv|pillow|torch|kokoro|misaki|soundfile|spacy) " || true
+      - name: Prepare (assets, voice, plan)
+        id: plan
+        run: python ci/run.py --phase prepare
+      - name: Review pack (assets and voice part)
+        if: always()
+        run: python ci/review.py
+      - name: Upload work
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: work
+          retention-days: 3
+          path: |
+            episodes/${{ steps.req.outputs.episode }}
+            review_out
+            !episodes/${{ steps.req.outputs.episode }}/bundle
+            !episodes/${{ steps.req.outputs.episode }}/assets/originals/*.jpg
+            !episodes/${{ steps.req.outputs.episode }}/assets/originals/*.jpeg
+            !episodes/${{ steps.req.outputs.episode }}/assets/originals/*.tif
+            !episodes/${{ steps.req.outputs.episode }}/assets/originals/*.tiff
+            !episodes/${{ steps.req.outputs.episode }}/assets/originals/*.mp4
+            !episodes/${{ steps.req.outputs.episode }}/assets/originals/*.mov
+      - name: Upload 3D scene inputs
+        if: steps.plan.outputs.has_cgi == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: inputs-cgi
+          retention-days: 3
+          path: cgi_inputs/
 
-      - name: Run pipeline
+  cgi:
+    needs: prepare
+    if: needs.prepare.outputs.has_cgi == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: true
+      max-parallel: 20
+      matrix:
+        task: ${{ fromJSON(needs.prepare.outputs.cgi_tasks) }}
+    name: cgi ${{ matrix.task.id }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: ci/requirements-render.txt
+      - name: Packages
+        run: |
+          command -v ffmpeg >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          pip install -q -r ci/requirements-render.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: inputs-cgi
+          path: .
+      - name: Render 3D chunk
+        run: python ci/run.py --phase cgi --task '${{ toJSON(matrix.task) }}'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cgi-${{ matrix.task.id }}
+          retention-days: 3
+          path: cgi_parts/
+      - name: Upload log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: log-cgi-${{ matrix.task.id }}
+          retention-days: 3
+          path: review_out/*_cgi_${{ matrix.task.id }}.*
+
+  render:
+    needs: [prepare, cgi]
+    if: always() && needs.prepare.result == 'success' && needs.prepare.outputs.has_render == 'true' && (needs.cgi.result == 'success' || needs.cgi.result == 'skipped')
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: true
+      max-parallel: 20
+      matrix:
+        task: ${{ fromJSON(needs.prepare.outputs.render_tasks) }}
+    name: render ${{ matrix.task.id }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: ci/requirements-render.txt
+      - name: Packages
+        run: |
+          command -v ffmpeg >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          fc-list | grep -q DejaVuSans-Bold || (sudo apt-get update -qq && sudo apt-get install -y -qq fonts-dejavu-core)
+          pip install -q -r ci/requirements-render.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: work
+          path: .
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: cgi-*
+          path: cgi_parts
+          merge-multiple: true
+      - name: Render picture chunk
+        run: python ci/run.py --phase render --task '${{ toJSON(matrix.task) }}'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: render-${{ matrix.task.id }}
+          retention-days: 3
+          path: render_parts/
+      - name: Upload log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: log-render-${{ matrix.task.id }}
+          retention-days: 3
+          path: review_out/*_render_${{ matrix.task.id }}.*
+
+  finish:
+    needs: [prepare, cgi, render]
+    if: always() && needs.prepare.result != 'skipped'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: ci/requirements-render.txt
+      - name: Packages
+        run: |
+          command -v ffmpeg >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          pip install -q -r ci/requirements-render.txt
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: work
+          path: .
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: cgi-*
+          path: cgi_parts
+          merge-multiple: true
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: render-*
+          path: render_parts
+          merge-multiple: true
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: log-*
+          path: review_out
+          merge-multiple: true
+      - name: Join, audio, meta
+        if: needs.prepare.result == 'success' && needs.cgi.result != 'failure' && needs.render.result != 'failure' && needs.cgi.result != 'cancelled' && needs.render.result != 'cancelled'
+        run: python ci/run.py --phase finish
+      - name: Merge status
         id: run
-        run: python ci/run.py
-
+        if: always()
+        run: python ci/run.py --phase merge --upstream-ok ${{ needs.prepare.result == 'success' && needs.cgi.result != 'failure' && needs.render.result != 'failure' }}
       - name: Build review pack
         if: always()
         run: python ci/review.py
-
       - name: Publish video as a release
         if: success() && steps.run.outputs.final_video != ''
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          EP="${{ steps.req.outputs.episode }}"
+          EP="${{ needs.prepare.outputs.episode }}"
           TAG="$EP-r${{ github.run_number }}"
           FILES="${{ steps.run.outputs.final_video }}"
           for f in "episodes/$EP/build/captions.srt" "episodes/$EP/build/description.txt"; do
             if [ -f "$f" ]; then FILES="$FILES $f"; fi
           done
           gh release create "$TAG" $FILES \
-            --title "$EP (${{ steps.req.outputs.quality }}) run ${{ github.run_number }}" \
+            --title "$EP (${{ needs.prepare.outputs.quality }}) run ${{ github.run_number }}" \
             --notes "Automated render from commit ${{ github.sha }}."
           echo "release_tag=$TAG" >> review_out/release.txt
           echo "release_url=${{ github.server_url }}/${{ github.repository }}/releases/tag/$TAG" >> review_out/release.txt
-
-      - name: Push review pack to the review branch
+      - name: Push review pack
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
@@ -103,13 +265,14 @@ jobs:
             echo "run_url=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             echo "run_number=${{ github.run_number }}"
             echo "commit=${{ github.sha }}"
-            echo "job_status=${{ job.status }}"
+            echo "jobs=prepare:${{ needs.prepare.result }} cgi:${{ needs.cgi.result }} render:${{ needs.render.result }}"
           } >> review_out/run.txt
+          rm -f review_out/log_*.txt review_out/status_*.json
           cd review_out
           git init -q -b review
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -qm "review: ${{ steps.req.outputs.episode }} run ${{ github.run_number }}"
+          git commit -qm "review: ${{ needs.prepare.outputs.episode }} run ${{ github.run_number }}"
+          git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" "review:review-${{ needs.prepare.outputs.episode }}"
           git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" review
-          git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" "review:review-${{ steps.req.outputs.episode }}"
