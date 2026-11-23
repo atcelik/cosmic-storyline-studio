@@ -1,0 +1,128 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 8,
+ "seed": 3,
+ "view": {
+  "center_km": [
+   500,
+   500
+  ],
+  "width_km": [
+   1000,
+   1000
+  ],
+  "y_km": [
+   0,
+   0
+  ]
+ },
+ "light": [
+  -0.9,
+  0.05
+ ],
+ "bodies": [],
+ "race": {
+  "x_km": [
+   90,
+   910
+  ],
+  "lanes": [
+   {
+    "name": "LIGHT",
+    "time": "8 min 20 s",
+    "frac": 1.0,
+    "color": [
+     255,
+     240,
+     180
+    ],
+    "y_frac": 0.2,
+    "t": [
+     0.12,
+     0.42
+    ],
+    "at": 0.0
+   },
+   {
+    "name": "FASTEST SPACECRAFT EVER BUILT",
+    "time": "9 days",
+    "frac": 0.0006430041152263374,
+    "color": [
+     120,
+     200,
+     255
+    ],
+    "y_frac": 0.36,
+    "t": [
+     0.12,
+     0.42
+    ],
+    "at": 0.0
+   },
+   {
+    "name": "PASSENGER JET",
+    "time": "19 years",
+    "frac": 8.355614973262032e-07,
+    "color": [
+     255,
+     170,
+     120
+    ],
+    "y_frac": 0.52,
+    "t": [
+     0.12,
+     0.42
+    ],
+    "at": 0.0
+   },
+   {
+    "name": "CAR, DRIVING NON-STOP",
+    "time": "170 years",
+    "frac": 9.27643784786642e-08,
+    "color": [
+     170,
+     255,
+     170
+    ],
+    "y_frac": 0.6799999999999999,
+    "t": [
+     0.12,
+     0.42
+    ],
+    "at": 0.0
+   },
+   {
+    "name": "WALKING",
+    "time": "3,400 years",
+    "frac": 4.6296296296296295e-09,
+    "color": [
+     255,
+     150,
+     200
+    ],
+    "y_frac": 0.8400000000000001,
+    "t": [
+     0.12,
+     0.42
+    ],
+    "at": 0.0
+   }
+  ]
+ },
+ "texts": [
+  {
+   "x_frac": 0.5,
+   "y_frac": 0.06,
+   "lines": [
+    [
+     "RACE TO THE SUN: 150 MILLION KM",
+     0.04,
+     "white"
+    ]
+   ],
+   "at": 0.0
+  }
+ ]
+}

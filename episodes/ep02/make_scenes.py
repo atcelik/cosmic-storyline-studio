@@ -196,6 +196,57 @@ S["S084"] = spec(view(0, 0, 1000, 1000), [], beams=[beam(-520, 520, t=(0.05, 0.8
                  flares=[{"x_km": 470, "y_km": 0, "strength": 1.6}],
                  texts=[{"x_frac": 0.5, "y_frac": 0.7, "lines": [["...and arrived in time for you to feel it", 0.045, "white"]], "at": 0.5}])
 
+
+# ---- additions (owner ideas 2026-11-23) --------------------------------------------------------------------------
+# hook
+S["S101"] = se(sun_kw={"dim": [[0.4, 0.7]], "glow": 1.2}, labels=True, beams=[beam(SE_A, SE_B, None, t=(0.0, 0.9))],
+               texts=[{"x_frac": 0.5, "y_frac": 0.12, "lines": [["WHAT IF THE SUN VANISHED?", 0.07, "yellow"]], "at": 0.1}])
+S["S102"] = se(sun_kw={"dim": [[0.0, 0.08]]}, beams=[beam(SE_A, SE_B, None, t=(0.05, 0.95))],
+               clock={"x_frac": 0.5, "y_frac": 0.12, "t": [0.05, 0.95], "seconds": [0, 500], "fmt": "ms", "label": "TIME SINCE THE SUN VANISHED"},
+               texts=[{"x_frac": 0.5, "y_frac": 0.82, "lines": [["NOTHING CHANGES ON EARTH", 0.05, "cyan"]], "at": 0.3}])
+S["S103"] = spec(view(0, 0, 130000, 330000), [earth(0, 50000, label=False)], light=(-0.85, 0.15),
+                 beams=[beam(-60000, 24000, None, t=(0.05, 0.9))],
+                 texts=[{"x_frac": 0.5, "y_frac": 0.85, "lines": [["THE LIGHT IS ALREADY ON ITS WAY", 0.05, "yellow"]], "at": 0.3}])
+
+# sun volume
+S["S130"] = spec(view(0, 0, 2600000, 2500000), [sun(0, 1391400, label=False, glow=0.3)],
+                 fill={"x_km": 0, "y_km": 0, "radius_km": 695700, "spacing_px": 34, "t": [0.1, 0.8], "color": [70, 140, 255]},
+                 texts=[{"x_frac": 0.5, "y_frac": 0.06, "lines": [["ABOUT 1,300,000 EARTHS FIT INSIDE THE SUN", 0.048, "white"]], "at": 0.1}])
+
+# a particle of light inside the Sun
+S["S120"] = spec(view(0, 0, 1700000, 1650000), [sun(0, 1391400, label=False, glow=0.0)],
+                 zigzag={"x_km": 0, "y_km": 0, "radius_km": 695700, "t": [0.05, 0.95], "steps": 70, "seed": 5},
+                 clock={"x_frac": 0.5, "y_frac": 0.1, "t": [0.05, 0.95], "seconds": [0, 40000], "fmt": "years", "label": "TIME INSIDE THE SUN (NASA: ABOUT 40,000 YEARS)"})
+S["S121"] = se(beams=[beam(SE_A, SE_B, "...then only 8 min 20 s to reach you", None, t=(0.15, 0.9))],
+               texts=[{"x_frac": 0.5, "y_frac": 0.12, "lines": [["OLDER THAN 8 MINUTES", 0.07, "yellow"]], "at": 0.1}])
+
+# race to the Sun: when light arrives, the others have barely left
+LANES = [("LIGHT", "8 min 20 s", 1.0, [255, 240, 180]),
+         ("FASTEST SPACECRAFT EVER BUILT", "9 days", 500 / 777600, [120, 200, 255]),
+         ("PASSENGER JET", "19 years", 500 / 598400000, [255, 170, 120]),
+         ("CAR, DRIVING NON-STOP", "170 years", 500 / 5.39e9, [170, 255, 170]),
+         ("WALKING", "3,400 years", 500 / 1.08e11, [255, 150, 200])]
+def race(n):
+    lanes = [{"name": nm, "time": tm, "frac": fr, "color": col, "y_frac": 0.2 + 0.16 * i, "t": [0.12, 0.42], "at": 0.0}
+             for i, (nm, tm, fr, col) in enumerate(LANES[:n])]
+    return spec(view(500, 500, 1000, 1000), race={"x_km": [90, 910], "lanes": lanes},
+                texts=[{"x_frac": 0.5, "y_frac": 0.06, "lines": [["RACE TO THE SUN: 150 MILLION KM", 0.04, "white"]], "at": 0.0}])
+for n, k in enumerate(["S110", "S111", "S112", "S113", "S114"], 1):
+    S[k] = race(n)
+
+# Voyager 1: one light-day (25.9 billion km)
+VX = 25.9e9
+def voy(stars_only=False, **extra):
+    v = view(VX / 2, VX / 2, 28e9, 26e9)
+    sts = [{"x_frac": 0.0375, "y_frac": 0.5, "size": 9, "label": "EARTH", "sub": None, "color": [100, 160, 255], "at": 0.0},
+           {"x_frac": 0.9625, "y_frac": 0.5, "size": 6, "label": "VOYAGER 1", "sub": None, "color": [255, 245, 230], "at": 0.0}]
+    return spec(v, stars=sts, **extra)
+S["S140"] = voy(texts=[{"x_frac": 0.5, "y_frac": 0.2, "lines": [["THE MOST DISTANT HUMAN-MADE OBJECT", 0.05, "yellow"]], "at": 0.2}])
+S["S141"] = voy(arrows=[arrow(1e9, VX - 1e9, "25.9 billion km", "= 1 LIGHT-DAY", 0.18, 0.15)])
+S["S142"] = voy(beams=[beam(1e9, VX - 1e9, "A RADIO SIGNAL TAKES", (0, 24), "hours", (0.1, 0.9))])
+S["S143"] = voy(beams=[beam(1e9, VX - 1e9, None, t=(0.05, 0.45), y=-0.13), beam(VX - 1e9, 1e9, None, (0, 48), "hours", (0.5, 0.92), y=-0.06)],
+                texts=[{"x_frac": 0.5, "y_frac": 0.2, "lines": [["ASK A QUESTION... WAIT TWO DAYS", 0.05, "yellow"]], "at": 0.1}])
+
 sys.path.insert(0, str(Path(__file__).parent))
 from build_episode import DROP
 OUT.mkdir(parents=True, exist_ok=True)

@@ -27,6 +27,7 @@ spec = {
 More keys: "beams": [beam, ...] (several), "flares": [{"x_km","y_km","strength"}], "texts": [{"x_frac","y_frac",
 "lines":[[text,size_frac,"yellow|white|cyan"]],"at"}], "clock": {"x_frac","y_frac","t":[a,b],"seconds":[0,500],"fmt":"ms","label"},
 "stars": [{"x_frac","y_frac","size","label","sub","at","color":[r,g,b]}], "bubbles": [{"x_frac","y_frac","text","at"}],
+"race": {"x_km":[a,b],"lanes":[{"name","time","frac","y_frac","t":[a,b],"at","color":[r,g,b]}]},
 "backdrop": {"type":"ocean","depth":[0,0.6]}, "zigzag": {"x_km","y_km","radius_km","t":[a,b],"steps":40,"seed":1},
 body keys: "label": false, "label_xy": [fx, fy], "glow_color": [r,g,b]. Every element fades in at its "at" fraction (0.5 s fade) and stays."""
 import argparse, json, math, subprocess, sys
@@ -212,7 +213,9 @@ def fmt_clock(v, mode):
         m, s = divmod(max(v, 0), 60)
         return f"{int(m)} min {int(s):02d} s"
     if mode == "years":
-        return f"{v:.1f} years"
+        return f"{v:,.0f} years" if v >= 100 else f"{v:.1f} years"
+    if mode == "hours":
+        return f"{v:.0f} hours"
     return f"{v:.2f} s"
 
 
@@ -365,9 +368,45 @@ def render_frame(spec, base, t, dur, W, H, stars):
         arrow(frame, (xa, ya), (xb, ya), WHITE, 3, a)
         arrow_txt.append(((xa + xb) / 2, ya + 16, ar, a))
 
+    fl = spec.get("fill")
+    if fl:                                       # hex grid of small discs filling a circle (e.g. Earths inside the Sun)
+        cx, cy, R, sp = X(fl.get("x_km", 0)), Y(fl.get("y_km", 0)), fl["radius_km"] * sc, fl["spacing_px"]
+        pts = []
+        for j in range(-int(R / (sp * 0.866)) - 1, int(R / (sp * 0.866)) + 2):
+            for i in range(-int(R / sp) - 2, int(R / sp) + 3):
+                px, py = i * sp + (sp / 2 if j % 2 else 0), j * sp * 0.866
+                if px * px + py * py <= (R - sp * 0.4) ** 2:
+                    pts.append((px * px + py * py, px, py))
+        pts.sort()
+        f0, f1 = fl.get("t", [0.1, 0.8]); pf = float(np.clip((u - f0) / max(f1 - f0, 1e-3), 0, 1))
+        col = tuple(float(c) for c in fl.get("color", [90, 160, 255]))
+        for _, px, py in pts[: int(len(pts) * pf)]:
+            cv2.circle(frame, (int(cx + px), int(cy + py)), int(sp * 0.34), col, -1, cv2.LINE_AA)
+
+    race_txt = []
+    rc = spec.get("race")
+    if rc:                                       # lanes: every racer has a track; dot = how far it got when light arrived
+        xa, xb = X(rc["x_km"][0]), X(rc["x_km"][1])
+        for ln in rc["lanes"]:
+            a_ = fade(ln.get("at", 0), t, dur)
+            if a_ <= 0:
+                continue
+            yl = H * ln["y_frac"]
+            col = tuple(float(c) for c in ln.get("color", [255, 240, 180]))
+            cv2.line(frame, (int(xa), int(yl)), (int(xb), int(yl)), tuple(c * 0.25 * a_ for c in col), 2, cv2.LINE_AA)
+            t0, t1 = ln.get("t", [0.0, 0.0]); p = 1.0 if t1 <= t0 else float(np.clip((u - t0) / (t1 - t0), 0, 1))
+            hx = xa + (xb - xa) * ln.get("frac", 1.0) * p
+            draw_glow(frame, hx, yl, 8, 1.1 * a_, tuple(int(c) for c in col))
+            cv2.circle(frame, (int(hx), int(yl)), 8, tuple(c * a_ for c in col), -1, cv2.LINE_AA)
+            race_txt.append((xa, yl, ln, a_, p, xb))
+
     img = Image.fromarray(np.clip(frame, 0, 255).astype(np.uint8))
     d = ImageDraw.Draw(img)
     big = int(H * 0.058)
+    for xa_, yl, ln, a_, p, xb_ in race_txt:
+        text_block(d, xa_, yl - int(H * 0.085), [(ln["name"], int(H * 0.04), COLORS.get(ln.get("tcolor", "white"), WHITE), True)], W, H, align="left", alpha=a_)
+        if p >= 1.0 and ln.get("time"):
+            text_block(d, xb_, yl - int(H * 0.085), [(ln["time"], int(H * 0.056), YELLOW, True)], W, H, align="right", alpha=a_)
     for x, ytop, b, a, r in labels:              # big name, type, size (the reference layout)
         lines = [(b["name"], big, YELLOW, True)]
         if b.get("type"):

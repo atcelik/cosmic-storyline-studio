@@ -26,9 +26,16 @@ BEATS = [
 # Owner feedback 2026-11-23: narration repeated "light shows the past / eight minutes" too often.
 # These lines are cut; ids stay as they were so photo assets, scene specs and credits keep matching.
 DROP = {"S005", "S006", "S008", "S012", "S017", "S018", "S022", "S023", "S027", "S034", "S037", "S050",
-        "S053", "S060", "S073", "S076", "S079", "S082"}
+        "S053", "S060", "S073", "S076", "S079", "S082", "S044", "S045"}
 
 SHOTS = [
+    # 0 · Hook (owner idea 2026-11-23: open with the question, pay it off in chapter 5)
+    ("B1", "3d", "What if the Sun suddenly vanished, right now?",
+     "Sun fades while its light keeps flowing", None, "S101"),
+    ("B1", "3d", "For the next eight minutes, you would not notice a thing.",
+     "Clock since the Sun vanished, light still arriving", "eight minutes", "S102"),
+    ("B1", "3d", "Here is why, and it starts with light.",
+     "Earth lit by light already on its way", None, "S103"),
     # 1 · The light on your face
     ("B1", "3d", "Right now, the sunlight on your face left the Sun about eight minutes ago.",
      "Flight from Earth toward the Sun", "eight minutes"),
@@ -91,6 +98,8 @@ SHOTS = [
      "NASA SDO full-disc Sun image", None),
     ("B4", "3d", "It is about 109 Earth diameters across.",
      "Earth beside the Sun, scale label", "sun diameter"),
+    ("B4", "3d", "More than a million Earths could fit inside the Sun.",
+     "Sun filled with Earth-sized dots", "volume", "S130"),
     ("B4", "3d", "Its distance from us is roughly 150 million kilometres.",
      "Sun-Earth distance arrow", "150 million km"),
     ("B4", "3d", "Astronomers call that distance one astronomical unit, the standard yardstick of the solar system.",
@@ -111,6 +120,10 @@ SHOTS = [
      "NASA solar interior diagram, real image", None),
     ("B4", "3d", "It takes a very long time to escape as light.",
      "Energy path inside the Sun, OUR_CGI", None),
+    ("B4", "3d", "A particle of light zigzags through the Sun for tens of thousands of years.",
+     "Zigzag path with a years counter", "photon", "S120"),
+    ("B4", "3d", "So the sunlight on your skin is far older than eight minutes.",
+     "Light leaves the Sun for the last, short trip", None, "S121"),
     # 5 · The eight-minute gap
     ("B5", "3d", "Follow that light for a moment.",
      "Light path from the Sun surface", None),
@@ -118,13 +131,23 @@ SHOTS = [
      "Light path into Earth's atmosphere", None),
     ("B5", "3d", "It moves at roughly 300,000 kilometres every second.",
      "Speed label on the light beam", "speed of light"),
-    ("B5", "3d", "Now imagine the Sun switched off this very second.",
+    ("B5", "3d", "Let us race to the Sun. Light needs about eight minutes.",
+     "Race lanes: light arrives", None, "S110"),
+    ("B5", "3d", "The fastest spacecraft ever built would still need about nine days.",
+     "Race lanes: spacecraft", "parker", "S111"),
+    ("B5", "3d", "A passenger jet would take about nineteen years.",
+     "Race lanes: jet", None, "S112"),
+    ("B5", "3d", "A car driving non-stop would need about one hundred and seventy years.",
+     "Race lanes: car", None, "S113"),
+    ("B5", "3d", "And walking would take more than three thousand years.",
+     "Race lanes: walking", None, "S114"),
+    ("B5", "3d", "Now return to that vanishing Sun.",
      "Sun dims in the frame, clock overlay", None),
     ("B5", "3d", "You would not notice anything for eight minutes.",
      "Earth in daylight, clock running", None),
     ("B5", "3d", "The sky would look normal, the warmth on your skin would feel the same.",
      "Earth in daylight, calm pan", None),
-    ("B5", "3d", "The light would keep arriving as if nothing had happened.",
+    ("B5", "3d", "The light already on its way would keep arriving.",
      "Light beams still arriving at Earth", None),
     ("B5", "3d", "Only after those minutes would it stop.",
      "Light stream ends, Sun dark", None),
@@ -188,6 +211,14 @@ SHOTS = [
      "Star field with distance marks", None),
     ("B7", "3d", "The farther the star, the older the message.",
      "Star field, depth fade", None),
+    ("B7", "3d", "Here is the farthest messenger we ever sent: Voyager 1.",
+     "Earth and Voyager 1 on a very long line", None, "S140"),
+    ("B7", "3d", "In November 2026, it reached one light-day from Earth.",
+     "Arrow: 25.9 billion km = 1 light-day", "voyager", "S141"),
+    ("B7", "3d", "A radio signal now needs a full day just to get there.",
+     "Signal travelling with a clock in hours", None, "S142"),
+    ("B7", "3d", "Ask it a question, and the answer takes two days to come back.",
+     "Round trip, 48 hours", None, "S143"),
     # 8 · The closing question
     ("B8", "3d", "So here is the question.",
      "Slow pull back to Earth", None),
@@ -274,10 +305,29 @@ SOURCES = {
 }
 
 
+CLAIMS.update({
+    "parker": ("Fastest spacecraft speed about 692,000 km/h (Parker Solar Probe, Dec 2024)", "NASA / APL, Guinness"),
+    "photon": ("Light made in the Sun's core takes about 40,000 years to reach the surface (estimates vary, 10,000 to 170,000)", "NASA SVS"),
+    "volume": ("About 1.3 million Earths fit inside the Sun by volume", "NASA Sun fact sheet"),
+    "voyager": ("Voyager 1 reached one light-day (about 25.9 billion km) from Earth on 18 Nov 2026", "NASA"),
+})
+SOURCES.update({
+    "Fastest spacecraft speed about 692,000 km/h (Parker Solar Probe, Dec 2024)": "https://www.jhuapl.edu/news/news-releases/241227-parker-closest-approach",
+    "Light made in the Sun's core takes about 40,000 years to reach the surface (estimates vary, 10,000 to 170,000)": "https://svs.gsfc.nasa.gov/11537",
+    "About 1.3 million Earths fit inside the Sun by volume": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+    "Voyager 1 reached one light-day (about 25.9 billion km) from Earth on 18 Nov 2026": "https://svs.gsfc.nasa.gov/15120",
+})
+
+
 def build_shots():
     shots = []
-    for i, (beat, kind, vo, note, claim_key) in enumerate(SHOTS, 1):
-        sid = f"S{i:03d}"
+    n = 0
+    for item in SHOTS:
+        beat, kind, vo, note, claim_key = item[:5]
+        if len(item) > 5:
+            sid = item[5]                    # inserted shot with its own stable id
+        else:
+            n += 1; sid = f"S{n:03d}"
         if sid in DROP:
             continue
         if kind == "3d":

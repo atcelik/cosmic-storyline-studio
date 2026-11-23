@@ -1,0 +1,77 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 8,
+ "seed": 3,
+ "view": {
+  "center_km": [
+   0,
+   0
+  ],
+  "width_km": [
+   2600000,
+   2500000
+  ],
+  "y_km": [
+   0,
+   0
+  ]
+ },
+ "light": [
+  -0.9,
+  0.05
+ ],
+ "bodies": [
+  {
+   "name": "THE SUN",
+   "type": "Star",
+   "size": "1,391,400 km",
+   "diameter_km": 1391400,
+   "x_km": 0,
+   "texture": "../SUN2.jpg",
+   "tint": [
+    255,
+    190,
+    60
+   ],
+   "spin": [
+    0,
+    6
+   ],
+   "emissive": true,
+   "glow": 0.3,
+   "at": 0,
+   "label": false
+  }
+ ],
+ "fill": {
+  "x_km": 0,
+  "y_km": 0,
+  "radius_km": 695700,
+  "spacing_px": 34,
+  "t": [
+   0.1,
+   0.8
+  ],
+  "color": [
+   70,
+   140,
+   255
+  ]
+ },
+ "texts": [
+  {
+   "x_frac": 0.5,
+   "y_frac": 0.06,
+   "lines": [
+    [
+     "ABOUT 1,300,000 EARTHS FIT INSIDE THE SUN",
+     0.048,
+     "white"
+    ]
+   ],
+   "at": 0.1
+  }
+ ]
+}
