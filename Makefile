@@ -29,9 +29,11 @@ render:
 	$(PY) scripts/render.py $(E_JSON) $(D)
 audio:
 	$(PY) scripts/audio.py $(E_JSON) $(D)
+cgi:
+	$(PY) scripts/cgi_local.py episodes/$(EP) $(D)
 meta:
 	$(PY) scripts/meta.py $(E_JSON)
 all: validate tts render audio meta
 smoke:
 	$(PY) tests/smoke.py
-.PHONY: assets assets-search check merge sheets pick-auto validate publish-check fetch tts render audio meta all smoke
+.PHONY: cgi assets assets-search check merge sheets pick-auto validate publish-check fetch tts render audio meta all smoke
