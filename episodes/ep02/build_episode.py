@@ -274,11 +274,11 @@ def build_shots():
     for i, (beat, kind, vo, note, claim_key) in enumerate(SHOTS, 1):
         sid = f"S{i:03d}"
         if kind == "3d":
-            visual = {"type": "still", "source_class": "OUR_CGI",
-                      "search_query": f"3D visualization: {note}",
-                      "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-                      "source_url": "", "credit_verified": False, "credit_short": "Visualization"}
-            camera = {"move": "push_in", "strength": 0.05, "focus": [0.5, 0.5]}
+            visual = {"type": "video", "file": f"assets/{sid}.mp4", "source_class": "OUR_CGI",
+                      "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+                      "source_url": "https://www.solarsystemscope.com/textures/", "credit_verified": True,
+                      "credit_short": "Visualization, Solar System Scope maps"}
+            camera = {"move": "hold"}
         else:
             visual = {"type": "still", "source_class": "REAL_PHOTO", "search_query": QUERY.get(sid, note),
                       "credit": "", "source_url": "", "credit_verified": False, "credit_short": ""}

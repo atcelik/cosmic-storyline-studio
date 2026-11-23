@@ -1,0 +1,92 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 8,
+ "seed": 3,
+ "view": {
+  "center_km": [
+   100000,
+   100000
+  ],
+  "width_km": [
+   1500000,
+   1450000
+  ],
+  "y_km": [
+   0,
+   0
+  ]
+ },
+ "light": [
+  -0.9,
+  0.05
+ ],
+ "bodies": [
+  {
+   "name": "EARTH",
+   "type": "Terrestrial planet",
+   "size": "12,742 km",
+   "diameter_km": 500000,
+   "x_km": 900000,
+   "texture": "../EARTH2.jpg",
+   "tint": [
+    70,
+    120,
+    200
+   ],
+   "spin": [
+    0,
+    3
+   ],
+   "at": 0,
+   "label": false
+  }
+ ],
+ "beams": [
+  {
+   "from_km": -700000,
+   "to_km": 640000,
+   "t": [
+    0.0,
+    0.45
+   ],
+   "y_frac": -0.13,
+   "stop_at": 0.5
+  },
+  {
+   "from_km": -700000,
+   "to_km": 640000,
+   "t": [
+    0.0,
+    0.45
+   ],
+   "y_frac": 0.0,
+   "stop_at": 0.5
+  },
+  {
+   "from_km": -700000,
+   "to_km": 640000,
+   "t": [
+    0.0,
+    0.45
+   ],
+   "y_frac": 0.13,
+   "stop_at": 0.5
+  }
+ ],
+ "texts": [
+  {
+   "x_frac": 0.5,
+   "y_frac": 0.16,
+   "lines": [
+    [
+     "THEN IT STOPS",
+     0.07,
+     "yellow"
+    ]
+   ],
+   "at": 0.6
+  }
+ ]
+}

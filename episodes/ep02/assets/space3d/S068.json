@@ -1,0 +1,90 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 8,
+ "seed": 3,
+ "view": {
+  "center_km": [
+   500000.0,
+   500000.0
+  ],
+  "width_km": [
+   1500000,
+   1450000
+  ],
+  "y_km": [
+   0,
+   0
+  ]
+ },
+ "light": [
+  -0.9,
+  0.05
+ ],
+ "bodies": [
+  {
+   "name": "THE SUN",
+   "type": "Star",
+   "size": "1,391,400 km",
+   "diameter_km": 420000,
+   "x_km": 0,
+   "texture": "../SUN2.jpg",
+   "tint": [
+    255,
+    190,
+    60
+   ],
+   "spin": [
+    0,
+    6
+   ],
+   "emissive": true,
+   "glow": 0.7,
+   "at": 0,
+   "label": true
+  },
+  {
+   "name": "PROXIMA CENTAURI",
+   "type": "Red dwarf star",
+   "size": null,
+   "diameter_km": 65000,
+   "x_km": 1000000,
+   "texture": "../SUN2.jpg",
+   "tint": [
+    255,
+    60,
+    30
+   ],
+   "emissive": true,
+   "glow": 1.0,
+   "glow_color": [
+    255,
+    80,
+    40
+   ],
+   "spin": [
+    0,
+    4
+   ],
+   "at": 0.0
+  }
+ ],
+ "beams": [
+  {
+   "from_km": 965550.0,
+   "to_km": 222600.0,
+   "t": [
+    0.15,
+    0.92
+   ],
+   "y_frac": 0.0,
+   "text": "LIGHT takes",
+   "clock": [
+    0,
+    4.24
+   ],
+   "clock_fmt": "years"
+  }
+ ]
+}

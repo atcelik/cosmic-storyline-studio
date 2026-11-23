@@ -1,0 +1,78 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 8,
+ "seed": 3,
+ "view": {
+  "center_km": [
+   0,
+   520000
+  ],
+  "width_km": [
+   700000,
+   700000
+  ],
+  "y_km": [
+   0,
+   0
+  ]
+ },
+ "light": [
+  -0.9,
+  0.05
+ ],
+ "bodies": [
+  {
+   "name": "EARTH",
+   "type": "Terrestrial planet",
+   "size": "12,742 km",
+   "diameter_km": 90000,
+   "x_km": 0,
+   "texture": "../EARTH2.jpg",
+   "tint": [
+    70,
+    120,
+    200
+   ],
+   "spin": [
+    0,
+    10
+   ],
+   "at": 0,
+   "label": false
+  },
+  {
+   "name": "THE SUN",
+   "type": "Star",
+   "size": "1,391,400 km",
+   "diameter_km": 600000,
+   "x_km": 1000000,
+   "texture": "../SUN2.jpg",
+   "tint": [
+    255,
+    190,
+    60
+   ],
+   "spin": [
+    0,
+    6
+   ],
+   "emissive": true,
+   "glow": 0.9,
+   "at": 0,
+   "label": false
+  }
+ ],
+ "beams": [
+  {
+   "from_km": 60000,
+   "to_km": 1000000,
+   "t": [
+    0.05,
+    0.95
+   ],
+   "y_frac": 0.0
+  }
+ ]
+}

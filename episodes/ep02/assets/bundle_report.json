@@ -1,0 +1,1698 @@
+{
+  "items": [
+    {
+      "id": "N008",
+      "url": "https://oceanexplorer.noaa.gov/wp-content/uploads/2025/08/1605vent-hires.jpg",
+      "kind": "image",
+      "title": "Black smoker, Mariana back-arc",
+      "source_class": "REAL_PHOTO",
+      "credit": "NOAA Office of Ocean Exploration and Research",
+      "source_url": "https://oceanexplorer.noaa.gov/",
+      "credit_checked": true,
+      "note": "reused from EP01 (credit read 2026-11-22)",
+      "shots": [
+        "S063"
+      ],
+      "orig_width": 1920,
+      "orig_height": 1080,
+      "width": 1920,
+      "height": 1080,
+      "bundle_file": "N008.jpg",
+      "bytes": 919963,
+      "flags": [
+        "OK_NO_ZOOM: fine full-frame, little room to zoom"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "LOST",
+      "url": "https://s3.amazonaws.com/s3-east-testmedia-noaa.woc.noaa.gov/dam/Photos/legacy/pl23_expl2224.jpg",
+      "kind": "image",
+      "title": "A white carbonate spire in the Lost City vent field",
+      "source_class": "REAL_PHOTO",
+      "credit": "IFE, URI-IAO, UW, Lost City Science Party; NOAA/OAR/OER; The Lost City 2005 Expedition",
+      "source_url": "https://noaa.gov/media/digital-library-photo/pl23expl2224jpg",
+      "credit_checked": true,
+      "note": "reused from EP01",
+      "shots": [
+        "S064"
+      ],
+      "orig_width": 1920,
+      "orig_height": 1080,
+      "width": 1920,
+      "height": 1080,
+      "bundle_file": "LOST.jpg",
+      "bytes": 761598,
+      "flags": [
+        "OK_NO_ZOOM: fine full-frame, little room to zoom"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "NUR",
+      "url": "https://s3.amazonaws.com/s3-east-testmedia-noaa.woc.noaa.gov/dam/Photos/legacy/pl23_nur04512.jpg",
+      "kind": "image",
+      "title": "Tube worms at the base of a black smoker",
+      "source_class": "REAL_PHOTO",
+      "credit": "OAR/National Undersea Research Program (NURP)",
+      "source_url": "https://noaa.gov/media/digital-library-photo/pl23nur04512jpg",
+      "credit_checked": true,
+      "note": "reused from EP01",
+      "shots": [
+        "S065"
+      ],
+      "orig_width": 1184,
+      "orig_height": 1824,
+      "width": 1184,
+      "height": 1824,
+      "bundle_file": "NUR.jpg",
+      "bytes": 1466294,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame",
+        "ASPECT_0.65: tall/square, full-frame crop loses 63% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/iss037e017170/iss037e017170~orig.jpg",
+      "title": "View of Moon over Earth limb taken by the Expedition 37 crew.",
+      "credit": "NASA (JSC) / Karen Nyberg",
+      "source_url": "https://images.nasa.gov/details/iss037e017170",
+      "date": "2013-10-19",
+      "description": "Distant view of the Moon over Earth limb taken by the Expedition 37 crew aboard the International Space Station (ISS).  An ISS solar array is also visible.",
+      "id": "S003_c1",
+      "kind": "image",
+      "shots": [
+        "S003"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 4256,
+      "orig_height": 2832,
+      "width": 3840,
+      "height": 2555,
+      "bundle_file": "S003_c1.jpg",
+      "bytes": 1655487,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/iss039e001010/iss039e001010~orig.jpg",
+      "title": "Lunar Observations taken by the Expedition 39 Crew",
+      "credit": "NASA (JSC) / Rick Mastracchio",
+      "source_url": "https://images.nasa.gov/details/iss039e001010",
+      "date": "2014-03-12",
+      "description": "Lunar observation taken by the Expedition 39 crew aboard the ISS. An Earth limb and airglow are in view. Image was released by astronaut on Twitter.",
+      "id": "S003_c2",
+      "kind": "image",
+      "shots": [
+        "S003"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 2832,
+      "orig_height": 4256,
+      "width": 2832,
+      "height": 4256,
+      "bundle_file": "S003_c2.jpg",
+      "bytes": 573617,
+      "flags": [
+        "ASPECT_0.67: tall/square, full-frame crop loses 63% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/iss071e000922/iss071e000922~orig.jpg",
+      "title": "Orbital Sunrise",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/iss071e000922",
+      "date": "2024-04-06",
+      "description": "iss071e000922 (April 6, 2024) -- The first moments of an orbital sunrise crown Earth's horizon as the International Space Station soared 268 miles above the Pacific Ocean. Astronauts aboard the orbiting laboratory experience 16 sunrises and sunsets per day.",
+      "id": "S005_c1",
+      "kind": "image",
+      "shots": [
+        "S005"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 8256,
+      "orig_height": 5504,
+      "width": 3840,
+      "height": 2560,
+      "bundle_file": "S005_c1.jpg",
+      "bytes": 958159,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/iss072e487315/iss072e487315~orig.jpg",
+      "title": "An orbital sunrise above Namibia in Africa",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/iss072e487315",
+      "date": "2025-01-16",
+      "description": "An orbital sunrise illuminates the cloud tops in this photograph from the International Space Station as it soared 262 miles above Namibia near the Atlantic coast.",
+      "id": "S005_c2",
+      "kind": "image",
+      "shots": [
+        "S005"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 4928,
+      "orig_height": 2768,
+      "width": 3840,
+      "height": 2157,
+      "bundle_file": "S005_c2.jpg",
+      "bytes": 483592,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/from-a-million-miles-away-nasa-camera-shows-moon-crossing-face-of-earth_20129140980_o/from-a-million-miles-away-nasa-camera-shows-moon-crossing-face-of-earth_20129140980_o~orig.png",
+      "title": "From a Million Miles Away, NASA Camera Shows Moon Crossing Face of Earth",
+      "credit": "NASA (GSFC)",
+      "source_url": "https://images.nasa.gov/details/from-a-million-miles-away-nasa-camera-shows-moon-crossing-face-of-earth_20129140980_o",
+      "date": "2015-08-05",
+      "description": "This animation still image shows the far side of the moon, illuminated by the sun, as it crosses between the DISCOVR spacecraft's Earth Polychromatic Imaging Camera (EPIC) camera and telescope, and the Earth - one million miles away.   Credits: NASA/NOAA   A NASA camera aboard the Deep Space Climate",
+      "id": "S009_c1",
+      "kind": "image",
+      "shots": [
+        "S009"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 2048,
+      "orig_height": 2048,
+      "width": 2048,
+      "height": 2048,
+      "bundle_file": "S009_c1.jpg",
+      "bytes": 767758,
+      "flags": [
+        "OK_NO_ZOOM: fine full-frame, little room to zoom",
+        "ASPECT_1.00: tall/square, full-frame crop loses 44% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000670/GSFC_20171208_Archive_e000670~orig.png",
+      "title": "From a Million Miles Away, NASA Camera Shows Moon Crossing Face of Earth",
+      "credit": "NASA (GSFC)",
+      "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000670",
+      "date": "2017-12-08",
+      "description": "This animation still image shows the far side of the moon, illuminated by the sun, as it crosses between the DISCOVR spacecraft's Earth Polychromatic Imaging Camera (EPIC) camera and telescope, and the Earth - one million miles away.  Credits: NASA/NOAA  A NASA camera aboard the Deep Space Climate O",
+      "id": "S009_c2",
+      "kind": "image",
+      "shots": [
+        "S009"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 2048,
+      "orig_height": 2048,
+      "width": 2048,
+      "height": 2048,
+      "bundle_file": "S009_c2.jpg",
+      "bytes": 767758,
+      "flags": [
+        "OK_NO_ZOOM: fine full-frame, little room to zoom",
+        "ASPECT_1.00: tall/square, full-frame crop loses 44% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/GSFC-2014-15815-002/GSFC-2014-15815-002~orig.jpg",
+      "title": "Ray Rubilotta receives the Blue Marble Award",
+      "credit": "NASA (GSFC) / NASA/GSFC/Bill Hrybyk",
+      "source_url": "https://images.nasa.gov/details/GSFC-2014-15815-002",
+      "date": "2014-09-15",
+      "description": "Ray Rubilotta receives the Blue Marble Award",
+      "id": "S010_c1",
+      "kind": "image",
+      "shots": [
+        "S010"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 11500,
+      "orig_height": 11500,
+      "width": 3840,
+      "height": 3840,
+      "bundle_file": "S010_c1.jpg",
+      "bytes": 4245481,
+      "flags": [
+        "ASPECT_1.00: tall/square, full-frame crop loses 44% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001788/GSFC_20171208_Archive_e001788~orig.jpg",
+      "title": "Eastern Hemisphere - Blue Marble 2012",
+      "credit": "NASA (GSFC)",
+      "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001788",
+      "date": "2017-12-08",
+      "description": "February 2, 2012  <b>Go here to view an image that explains how composite images like these are created: <a href=\"http://www.flickr.com/photos/gsfc/6803619953\">www.flickr.com/photos/gsfc/6803619953</a></b>  Responding to public demand, NASA scientists created a companion image to the wildly popular ",
+      "id": "S010_c2",
+      "kind": "image",
+      "shots": [
+        "S010"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 1920,
+      "orig_height": 1080,
+      "width": 1920,
+      "height": 1080,
+      "bundle_file": "S010_c2.jpg",
+      "bytes": 158606,
+      "flags": [
+        "OK_NO_ZOOM: fine full-frame, little room to zoom"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/KSC-20180621-PH_KLS01_0091/KSC-20180621-PH_KLS01_0091~orig.JPG",
+      "title": "Sunrise at NASA's Kennedy Space Center",
+      "credit": "NASA (KSC) / NASA/Kim Shiflett",
+      "source_url": "https://images.nasa.gov/details/KSC-20180621-PH_KLS01_0091",
+      "date": "2018-06-21",
+      "description": "A sunrise at NASA's Kennedy Space Center in Florida, on June 21, from the Saturn V center at nearby Kennedy Space Center Visitor Complex.",
+      "id": "S012_c1",
+      "kind": "image",
+      "shots": [
+        "S012"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 4480,
+      "orig_height": 6720,
+      "width": 3840,
+      "height": 5760,
+      "bundle_file": "S012_c1.jpg",
+      "bytes": 5807445,
+      "flags": [
+        "ASPECT_0.67: tall/square, full-frame crop loses 62% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/KSC-20170219-PH_JBS01_0007/KSC-20170219-PH_JBS01_0007~orig.JPG",
+      "title": "Sunrise at Kennedy Space Center",
+      "credit": "NASA (KSC) / NASA/Ben Smegelsky",
+      "source_url": "https://images.nasa.gov/details/KSC-20170219-PH_JBS01_0007",
+      "date": "2017-02-19",
+      "description": "A sunrise view from the observation deck of the Operations and Support Building II at NASA's Kennedy Space Center in Florida, as a SpaceX Falcon 9 rocket awaits launch from Launch Complex 39A. It is the company's 10th commercial resupply services mission to the International Space Station. The Drago",
+      "id": "S012_c2",
+      "kind": "image",
+      "shots": [
+        "S012"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 5616,
+      "orig_height": 3744,
+      "width": 3840,
+      "height": 2560,
+      "bundle_file": "S012_c2.jpg",
+      "bytes": 1870312,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA10569/PIA10569~orig.jpg",
+      "title": "It Full of Moons!",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA10569",
+      "date": "2009-02-02",
+      "description": "It Full of Moons!",
+      "id": "S013_c1",
+      "kind": "image",
+      "shots": [
+        "S013"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 1019,
+      "orig_height": 695,
+      "width": 1019,
+      "height": 695,
+      "bundle_file": "S013_c1.jpg",
+      "bytes": 34100,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/KSC-20240819-PH-JBS01_0022/KSC-20240819-PH-JBS01_0022~orig.JPG",
+      "title": "Creative Photography - Full Blue Moon",
+      "credit": "NASA (KSC) / NASA/Ben Smegelsky",
+      "source_url": "https://images.nasa.gov/details/KSC-20240819-PH-JBS01_0022",
+      "date": "2024-08-19",
+      "description": "A super blue Moon rises above Kennedy Space Center in Florida on Monday, Aug. 18, 2024. Although not actually appearing blue, as the third full Moon in a season with four full Moons, this is called a “blue” Moon. The Moon at or near its closest point to Earth is a “super” Moon and can appear up to 1",
+      "id": "S013_c2",
+      "kind": "image",
+      "shots": [
+        "S013"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 6720,
+      "orig_height": 4480,
+      "width": 3840,
+      "height": 2560,
+      "bundle_file": "S013_c2.jpg",
+      "bytes": 1152214,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA13227/PIA13227~orig.jpg",
+      "title": "The Earth from the Moon",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA13227",
+      "date": "2010-06-24",
+      "description": "The Earth from the Moon",
+      "id": "S018_c1",
+      "kind": "image",
+      "shots": [
+        "S018"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 1200,
+      "orig_height": 992,
+      "width": 1200,
+      "height": 992,
+      "bundle_file": "S018_c1.jpg",
+      "bytes": 187067,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA21260/PIA21260~orig.jpg",
+      "title": "Earth and Its Moon, as Seen From Mars",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA21260",
+      "date": "2017-01-06",
+      "description": "This composite image of Earth and its moon, as seen from Mars, combines the best Earth image with the best moon image from four sets of images acquired on Nov. 20, 2016, by the High Resolution Imaging Science Experiment (HiRISE) camera on NASA's Mars Reconnaissance Orbiter.  Each was separately proc",
+      "id": "S018_c2",
+      "kind": "image",
+      "shots": [
+        "S018"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 657,
+      "orig_height": 358,
+      "width": 657,
+      "height": 358,
+      "bundle_file": "S018_c2.jpg",
+      "bytes": 12488,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/art002e009280b/art002e009280b~orig.jpg",
+      "title": "Artemis Era Earthrise",
+      "credit": "NASA (JSC) / NASA",
+      "source_url": "https://images.nasa.gov/details/art002e009280b",
+      "date": "2026-04-06",
+      "description": "art002e009280 (April 6, 2026) – Earthrise captured through the Orion spacecraft window at 7:22 p.m. ET during the Artemis II crew’s flyby of the Moon’s far side. Earth appears as a delicate crescent, with only its right edge illuminated. The planet’s soft blue hue and scattered white cloud systems s",
+      "id": "S022_c1",
+      "kind": "image",
+      "shots": [
+        "S022"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 5568,
+      "orig_height": 3712,
+      "width": 3840,
+      "height": 2560,
+      "bundle_file": "S022_c1.jpg",
+      "bytes": 755906,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/art002e016299/art002e016299~orig.jpg",
+      "title": "Earthrise Captured by Orion",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/art002e016299",
+      "date": "2026-04-06",
+      "description": "art002e016299 (April 6, 2026) - Earthrise captured from a camera mounted on one of the Orion spacecraft’s solar array wings at 7:22 p.m. ET during the Artemis II crew’s flyby of the Moon’s far side. Earth appears as a delicate sliver - with the portion on the left darkened by shadow and a portion on",
+      "id": "S022_c2",
+      "kind": "image",
+      "shots": [
+        "S022"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 4000,
+      "orig_height": 3000,
+      "width": 3840,
+      "height": 2880,
+      "bundle_file": "S022_c2.jpg",
+      "bytes": 1056772,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA19808/PIA19808~orig.jpg",
+      "title": "Looking Up at Mars Rover Curiosity in Buckskin Selfie",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA19808",
+      "date": "2015-08-19",
+      "description": "This low-angle self-portrait of NASA's Curiosity Mars rover shows the vehicle at the site from which it reached down to drill into a rock target called \"Buckskin\" on lower Mount Sharp.  The selfie combines several component images taken by Curiosity's Mars Hand Lens Imager (MAHLI) on Aug. 5, 2015, d",
+      "id": "S026_c1",
+      "kind": "image",
+      "shots": [
+        "S026"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 4841,
+      "orig_height": 2949,
+      "width": 3840,
+      "height": 2339,
+      "bundle_file": "S026_c1.jpg",
+      "bytes": 2615400,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA23624/PIA23624~orig.jpg",
+      "title": "Curiosity at the Hutton Drill Site",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA23624",
+      "date": "2020-03-20",
+      "description": "This selfie was taken by NASA's Curiosity Mars rover on Feb. 26, 2020 (the 2,687th Martian day, or sol, of the mission). The crumbling rock layer at the top of the image is the Greenheugh Pediment, which Curiosity climbed soon after taking the image.  Directly to the left of Curiosity's foremost whe",
+      "id": "S026_c2",
+      "kind": "image",
+      "shots": [
+        "S026"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 18030,
+      "orig_height": 11428,
+      "width": 3840,
+      "height": 2434,
+      "bundle_file": "S026_c2.jpg",
+      "bytes": 3079649,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000790/GSFC_20171208_Archive_e000790~orig.jpg",
+      "title": "NASA's SDO Sees Giant Filament on the Sun",
+      "credit": "NASA (GSFC)",
+      "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000790",
+      "date": "2017-12-08",
+      "description": "A dark line snaked across the lower half of the sun on Feb.10, 2015, as seen in this image from NASA's Solar Dynamics Observatory, or SDO. SDO shows colder material as dark and hotter material as light, so the line is, in fact, an enormous swatch of colder material hovering in the sun's atmosphere, ",
+      "id": "S028_c1",
+      "kind": "image",
+      "shots": [
+        "S028"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 4096,
+      "orig_height": 3625,
+      "width": 3840,
+      "height": 3398,
+      "bundle_file": "S028_c1.jpg",
+      "bytes": 4459595,
+      "flags": [
+        "ASPECT_1.13: tall/square, full-frame crop loses 36% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001831/GSFC_20171208_Archive_e001831~orig.jpg",
+      "title": "SDO Spots Extra Energy in the Sun's Corona",
+      "credit": "NASA (GSFC)",
+      "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001831",
+      "date": "2017-12-08",
+      "description": "NASA release July 27, 2011  These jets, known as spicules, were captured in an SDO image on April 25, 2010. Combined with the energy from ripples in the magnetic field, they may contain enough energy to power the solar wind that streams from the sun toward Earth at 1.5 million miles per hour.   Cred",
+      "id": "S028_c2",
+      "kind": "image",
+      "shots": [
+        "S028"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 3772,
+      "orig_height": 3636,
+      "width": 3772,
+      "height": 3636,
+      "bundle_file": "S028_c2.jpg",
+      "bytes": 1863825,
+      "flags": [
+        "ASPECT_1.04: tall/square, full-frame crop loses 42% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA21873/PIA21873~orig.jpg",
+      "title": "Old Sunspot Returns",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA21873",
+      "date": "2017-08-07",
+      "description": "The large sunspot (called AR2665) that rotated out of view about two weeks ago has returned (Aug. 1-2, 2017). Though much reduced in size, it did blast a good-sized coronal mass ejection about a week ago on the far side of the sun. Sunspots can last from days to months, so for it to return again is ",
+      "id": "S032_c1",
+      "kind": "image",
+      "shots": [
+        "S032"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 1500,
+      "orig_height": 1500,
+      "width": 1500,
+      "height": 1500,
+      "bundle_file": "S032_c1.jpg",
+      "bytes": 148529,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame",
+        "ASPECT_1.00: tall/square, full-frame crop loses 44% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000922/GSFC_20171208_Archive_e000922~orig.jpg",
+      "title": "Giant Sunspot Erupts with 4th Substantial Flare",
+      "credit": "NASA (GSFC)",
+      "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000922",
+      "date": "2017-12-08",
+      "description": "The sun emitted a significant solar flare, peaking at 5:40 p.m. EDT on Oct. 24, 2014. The flare erupted from a particularly large active region -- labeled AR 12192 -- on the sun that is the largest in 24 years. This is the fourth substantial flare from this active region since Oct. 19.  Read more: <",
+      "id": "S032_c2",
+      "kind": "image",
+      "shots": [
+        "S032"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 673,
+      "orig_height": 673,
+      "width": 673,
+      "height": 673,
+      "bundle_file": "S032_c2.jpg",
+      "bytes": 143863,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame",
+        "ASPECT_1.00: tall/square, full-frame crop loses 44% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA21598/PIA21598~orig.jpg",
+      "title": "Cascading Post-coronal Loops",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA21598",
+      "date": "2017-04-24",
+      "description": "An active region that had just rotated into view blasted out a coronal mass ejection, which was immediately followed by a bright series of post-coronal loops seeking to reorganize that region's magnetic field (April 19, 2017). We have observed this phenomenon numerous times, but this one was one of ",
+      "id": "S033_c1",
+      "kind": "image",
+      "shots": [
+        "S033"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 720,
+      "orig_height": 755,
+      "width": 720,
+      "height": 755,
+      "bundle_file": "S033_c1.jpg",
+      "bytes": 60731,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame",
+        "ASPECT_0.95: tall/square, full-frame crop loses 46% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000820/GSFC_20171208_Archive_e000820~orig.jpg",
+      "title": "Coronal Loops Reveal Magnetic Dance",
+      "credit": "NASA (GSFC)",
+      "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000820",
+      "date": "2017-12-08",
+      "description": "Magnetic Dance: Solar material traces out giant magnetic fields soaring through the sun to create what's called coronal loops. Here they can be seen as white lines in a sharpened AIA image from Oct. 24, 2014, laid over data from SDO's Helioseismic Magnetic Imager, which shows magnetic fields on the ",
+      "id": "S033_c2",
+      "kind": "image",
+      "shots": [
+        "S033"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 1265,
+      "orig_height": 924,
+      "width": 1265,
+      "height": 924,
+      "bundle_file": "S033_c2.jpg",
+      "bytes": 2151953,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/KSC-20180419-PH_KLS01_0054/KSC-20180419-PH_KLS01_0054~orig.JPG",
+      "title": "Parker Solar Probe Antenna Deployment",
+      "credit": "NASA (KSC) / NASA/Kim Shiflett",
+      "source_url": "https://images.nasa.gov/details/KSC-20180419-PH_KLS01_0054",
+      "date": "2018-04-19",
+      "description": "Antenna's on NASA's Parker Solar Probe are deployed for testing at the Astrotech processing facility in Titusville, Florida, near NASA's Kennedy Space Center on Thursday, April 19, 2018. The Parker Solar Probe will launch on a United Launch Alliance Delta IV Heavy rocket from Space Launch Complex 37",
+      "id": "S034_c1",
+      "kind": "image",
+      "shots": [
+        "S034"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 4480,
+      "orig_height": 6720,
+      "width": 3840,
+      "height": 5760,
+      "bundle_file": "S034_c1.jpg",
+      "bytes": 7052182,
+      "flags": [
+        "ASPECT_0.67: tall/square, full-frame crop loses 62% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/KSC-20180419-PH_KLS01_0047/KSC-20180419-PH_KLS01_0047~orig.JPG",
+      "title": "Parker Solar Probe Antenna Deployment",
+      "credit": "NASA (KSC) / NASA/Kim Shiflett",
+      "source_url": "https://images.nasa.gov/details/KSC-20180419-PH_KLS01_0047",
+      "date": "2018-04-19",
+      "description": "Antenna's on NASA's Parker Solar Probe are deployed for testing at the Astrotech processing facility in Titusville, Florida, near NASA's Kennedy Space Center on Thursday, April 19, 2018. The Parker Solar Probe will launch on a United Launch Alliance Delta IV Heavy rocket from Space Launch Complex 37",
+      "id": "S034_c2",
+      "kind": "image",
+      "shots": [
+        "S034"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 6720,
+      "orig_height": 4480,
+      "width": 3840,
+      "height": 2560,
+      "bundle_file": "S034_c2.jpg",
+      "bytes": 2363265,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA21958/PIA21958~orig.jpg",
+      "title": "Major Solar Flare",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA21958",
+      "date": "2017-09-18",
+      "description": "The Sun erupted with an X8 solar flare, one of the largest of the current solar cycle (Sept. 10, 2017). Its source was the same sunspot region that produced an X9 flare last week. This is shown in two wavelengths of extreme ultraviolet light at the same time and each reveals different features. Both",
+      "id": "S037_c1",
+      "kind": "image",
+      "shots": [
+        "S037"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 1800,
+      "orig_height": 1600,
+      "width": 1800,
+      "height": 1600,
+      "bundle_file": "S037_c1.jpg",
+      "bytes": 1294663,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame",
+        "ASPECT_1.12: tall/square, full-frame crop loses 37% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA21949/PIA21949~orig.jpg",
+      "title": "Major Solar Flare",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA21949",
+      "date": "2017-09-11",
+      "description": "A large sunspot was the source of a powerful solar flare (an X 9.3) and a coronal mass ejection (Sept. 6, 2017). The flare was the largest solar flare of the last decade. For one thing, it created a strong shortwave radio blackout over Europe, Africa and the Atlantic Ocean. Sunspot 2673 has been als",
+      "id": "S037_c2",
+      "kind": "image",
+      "shots": [
+        "S037"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 1800,
+      "orig_height": 1800,
+      "width": 1800,
+      "height": 1800,
+      "bundle_file": "S037_c2.jpg",
+      "bytes": 1353847,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame",
+        "ASPECT_1.00: tall/square, full-frame crop loses 44% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA21105/PIA21105~orig.jpg",
+      "title": "On the Edge of the South Pole Layered Deposit",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA21105",
+      "date": "2016-10-05",
+      "description": "This image shows the edge of the Martian South Polar layered deposit. The stack of fine layering is highlighted by the rays of the polar sun.  These layers show the pervasive red coloring of Mars which have built up over the ages. While this is a polar deposit, no ice or frost is visible on these la",
+      "id": "S038_c1",
+      "kind": "image",
+      "shots": [
+        "S038"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 2880,
+      "orig_height": 1800,
+      "width": 2880,
+      "height": 1800,
+      "bundle_file": "S038_c1.jpg",
+      "bytes": 800256,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA15179/PIA15179~orig.jpg",
+      "title": "The Sun Magnetic Field",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA15179",
+      "date": "2011-12-16",
+      "description": "This frame from an animation shows how the magnetic field lines emanating from our sun spiral out into the solar system as the sun rotates. NASA Voyager 1 is in an area scientists are calling the stagnation region, at the outer layer of the heliosphere.",
+      "id": "S038_c2",
+      "kind": "image",
+      "shots": [
+        "S038"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 1281,
+      "orig_height": 718,
+      "width": 1281,
+      "height": 718,
+      "bundle_file": "S038_c2.jpg",
+      "bytes": 82298,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/hubble-sees-a-legion-of-galaxies_25608651281_o/hubble-sees-a-legion-of-galaxies_25608651281_o~orig.jpg",
+      "title": "Swimming in Sculptor",
+      "credit": "NASA (GSFC)",
+      "source_url": "https://images.nasa.gov/details/hubble-sees-a-legion-of-galaxies_25608651281_o",
+      "date": "2016-03-07",
+      "description": "Peering deep into the early Universe, this picturesque parallel field observation from the NASA/ESA Hubble Space Telescope reveals thousands of colourful galaxies swimming in the inky blackness of space. A few foreground stars from our own galaxy, the Milky Way, are also visible. In October 2013 Hub",
+      "id": "S051_c1",
+      "kind": "image",
+      "shots": [
+        "S051"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 1280,
+      "orig_height": 1225,
+      "width": 1280,
+      "height": 1225,
+      "bundle_file": "S051_c1.jpg",
+      "bytes": 239860,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame",
+        "ASPECT_1.04: tall/square, full-frame crop loses 41% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001651/GSFC_20171208_Archive_e001651~orig.jpg",
+      "title": "Hubble Goes to the eXtreme to Assemble Farthest-Ever View of the Universe",
+      "credit": "NASA (GSFC)",
+      "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001651",
+      "date": "2017-12-08",
+      "description": "NASA image release September 25, 2012  Like photographers assembling a portfolio of best shots, astronomers have assembled a new, improved portrait of mankind's deepest-ever view of the universe.  Called the eXtreme Deep Field, or XDF, the photo was assembled by combining 10 years of NASA Hubble Spa",
+      "id": "S051_c2",
+      "kind": "image",
+      "shots": [
+        "S051"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 2382,
+      "orig_height": 2078,
+      "width": 2382,
+      "height": 2078,
+      "bundle_file": "S051_c2.jpg",
+      "bytes": 806791,
+      "flags": [
+        "OK_NO_ZOOM: fine full-frame, little room to zoom",
+        "ASPECT_1.15: tall/square, full-frame crop loses 36% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000158/GSFC_20171208_Archive_e000158~orig.jpg",
+      "title": "Hubble Spies Spiral Galaxy",
+      "credit": "NASA (GSFC)",
+      "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000158",
+      "date": "2017-12-08",
+      "description": "Spiral galaxy NGC 3274 is a relatively faint galaxy located over 20 million light-years away in the constellation of Leo (The Lion).  This NASA/ESA Hubble Space Telescope image comes courtesy of Hubble's Wide Field Camera 3 (WFC3), whose multi-color vision allows astronomers to study a wide range of",
+      "id": "S052_c1",
+      "kind": "image",
+      "shots": [
+        "S052"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 3995,
+      "orig_height": 3483,
+      "width": 3840,
+      "height": 3348,
+      "bundle_file": "S052_c1.jpg",
+      "bytes": 4958838,
+      "flags": [
+        "ASPECT_1.15: tall/square, full-frame crop loses 35% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000687/GSFC_20171208_Archive_e000687~orig.jpg",
+      "title": "Hubble peeks at a spiral galaxy",
+      "credit": "NASA (GSFC)",
+      "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000687",
+      "date": "2017-12-08",
+      "description": "This little-known galaxy, officially named J04542829-6625280, but most often referred to as LEDA 89996, is a classic example of a spiral galaxy. The galaxy is much like our own galaxy, the Milky Way. The disk-shaped galaxy is seen face on, revealing the winding structure of the spiral arms. Dark pat",
+      "id": "S052_c2",
+      "kind": "image",
+      "shots": [
+        "S052"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 1280,
+      "orig_height": 1238,
+      "width": 1280,
+      "height": 1238,
+      "bundle_file": "S052_c2.jpg",
+      "bytes": 315654,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame",
+        "ASPECT_1.03: tall/square, full-frame crop loses 42% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/sl4-143-4707/sl4-143-4707~orig.jpg",
+      "title": "View of Skylab space station cluster in Earth orbit from CSM",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/sl4-143-4707",
+      "date": "1974-02-08",
+      "description": "SL4-143-4707 (8 Feb. 1974) --- An overhead view of the Skylab space station cluster in Earth orbit as photographed from the Skylab 4 Command and Service Modules (CSM) during the final fly-around by the CSM before returning home. The space station is contrasted against a cloud-covered Earth. Note the",
+      "id": "S054_c1",
+      "kind": "image",
+      "shots": [
+        "S054"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 3890,
+      "orig_height": 3844,
+      "width": 3840,
+      "height": 3795,
+      "bundle_file": "S054_c1.jpg",
+      "bytes": 4783979,
+      "flags": [
+        "ASPECT_1.01: tall/square, full-frame crop loses 43% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/sl4-143-4706/sl4-143-4706~orig.jpg",
+      "title": "View of Skylab space station cluster in Earth orbit from CSM",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/sl4-143-4706",
+      "date": "2008-08-18",
+      "description": "SL4-143-4706 (8 Feb. 1974) --- An overhead view of the Skylab space station cluster in Earth orbit as photographed from the Skylab 4 Command and Service Modules (CSM) during the final fly-around by the CSM before returning home. The space station is contrasted against a cloud-covered Earth. Note the",
+      "id": "S054_c2",
+      "kind": "image",
+      "shots": [
+        "S054"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 3856,
+      "orig_height": 3870,
+      "width": 3840,
+      "height": 3854,
+      "bundle_file": "S054_c2.jpg",
+      "bytes": 4603256,
+      "flags": [
+        "ASPECT_1.00: tall/square, full-frame crop loses 44% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA24539/PIA24539~orig.jpg",
+      "title": "NISAR Testing",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA24539",
+      "date": "2021-10-13",
+      "description": "Part of the NASA-ISRO Synthetic Aperture Radar (NISAR) satellite rests in a thermal vacuum chamber – meant to mimic the conditions found in space – at NASA's Jet Propulsion Laboratory in August 2020. Engineers tested the hardware in conditions similar to the ones NISAR will experience in space to se",
+      "id": "S055_c1",
+      "kind": "image",
+      "shots": [
+        "S055"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 4128,
+      "orig_height": 2752,
+      "width": 3840,
+      "height": 2560,
+      "bundle_file": "S055_c1.jpg",
+      "bytes": 2986992,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/2011-7162/2011-7162~orig.JPG",
+      "title": "KSC-2011-7162",
+      "credit": "NASA (KSC) / Ball Aerospace",
+      "source_url": "https://images.nasa.gov/details/2011-7162",
+      "date": "2010-03-01",
+      "description": "BALL AEROSPACE, Boulder, Colo. – In a cleanroom at Vandenberg Air Force Base in California, Ball Aerospace and Technologies Corp. technicians begin integration of the medium resolution Visible Infrared Imaging Radiometer Suite VIIRS into NASA’s National Polar-orbiting Operational Environmental Satel",
+      "id": "S055_c2",
+      "kind": "image",
+      "shots": [
+        "S055"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 3000,
+      "orig_height": 1993,
+      "width": 3000,
+      "height": 1993,
+      "bundle_file": "S055_c2.jpg",
+      "bytes": 1047762,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001997/GSFC_20171208_Archive_e001997~orig.jpg",
+      "title": "Phytoplankton bloom off Newfoundland",
+      "credit": "NASA (GSFC)",
+      "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001997",
+      "date": "2017-12-08",
+      "description": "NASA image acquired August 9, 2010  Phytoplankton are microscopic organisms that live in watery environments. When conditions are right, phytoplankton undergo explosive population growth, creating blooms visible from space. Such a bloom occurred in the North Atlantic Ocean, off the coast of Newfound",
+      "id": "S056_c1",
+      "kind": "image",
+      "shots": [
+        "S056"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 2400,
+      "orig_height": 1800,
+      "width": 2400,
+      "height": 1800,
+      "bundle_file": "S056_c1.jpg",
+      "bytes": 1085061,
+      "flags": [
+        "OK_NO_ZOOM: fine full-frame, little room to zoom"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001018/GSFC_20171208_Archive_e001018~orig.jpg",
+      "title": "Phytoplankton bloom off Iceland",
+      "credit": "NASA (GSFC)",
+      "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001018",
+      "date": "2017-12-08",
+      "description": "A massive phytoplankton bloom stained the waters of the Atlantic Ocean north of Iceland with brilliant jewel tones in late summer, 2014. The Moderate Resolution Imaging Spectroradiometer (MODIS) aboard NASA’s Aqua satellite captured this true-color image on August 2. Huge colonies of the floating, p",
+      "id": "S056_c2",
+      "kind": "image",
+      "shots": [
+        "S056"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 2800,
+      "orig_height": 2200,
+      "width": 2800,
+      "height": 2200,
+      "bundle_file": "S056_c2.jpg",
+      "bytes": 923479,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/KSC-20190925-PH-GEB01_0017/KSC-20190925-PH-GEB01_0017~orig.jpg",
+      "title": "Creative Photography - Wildlife - Birds",
+      "credit": "NASA (KSC) / NASA/Glenn Benson",
+      "source_url": "https://images.nasa.gov/details/KSC-20190925-PH-GEB01_0017",
+      "date": "2019-09-25",
+      "description": "An alligator lurks in a marshy waterway at NASA's Kennedy Space Center in Florida. The center shares a border with the Merritt Island National Wildlife Refuge. More than 330 native and migratory bird species, 25 mammal, 117 fish and 65 amphibian and reptile species call Kennedy and the wildlife refu",
+      "id": "S057_c1",
+      "kind": "image",
+      "shots": [
+        "S057"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 6720,
+      "orig_height": 3675,
+      "width": 3840,
+      "height": 2100,
+      "bundle_file": "S057_c1.jpg",
+      "bytes": 2185412,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/KSC-20190925-PH-GEB01_0013/KSC-20190925-PH-GEB01_0013~orig.jpg",
+      "title": "Creative Photography - Wildlife - Birds",
+      "credit": "NASA (KSC) / NASA/Glenn Benson",
+      "source_url": "https://images.nasa.gov/details/KSC-20190925-PH-GEB01_0013",
+      "date": "2019-09-25",
+      "description": "A Great Egret catches a small fish in a waterway at NASA's Kennedy Space Center in Florida. The center shares a border with the Merritt Island National Wildlife Refuge. More than 330 native and migratory bird species, 25 mammal, 117 fish and 65 amphibian and reptile species call Kennedy and the wild",
+      "id": "S057_c2",
+      "kind": "image",
+      "shots": [
+        "S057"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 6720,
+      "orig_height": 4480,
+      "width": 3840,
+      "height": 2560,
+      "bundle_file": "S057_c2.jpg",
+      "bytes": 2105149,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/iss058e007722/iss058e007722~orig.jpg",
+      "title": "The Sun's glint radiates off the Atlantic Ocean",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/iss058e007722",
+      "date": "2019-01-29",
+      "description": "iss058e007722 (Jan. 29, 2019) --- The Sun's glint radiates off the Atlantic Ocean as the International Space Station orbited 253 miles above the African nation of Mauritania.",
+      "id": "S059_c1",
+      "kind": "image",
+      "shots": [
+        "S059"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 5568,
+      "orig_height": 3712,
+      "width": 3840,
+      "height": 2560,
+      "bundle_file": "S059_c1.jpg",
+      "bytes": 2605186,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/iss072e695136/iss072e695136~orig.jpg",
+      "title": "The sun's glint beams off a partly cloudy Atlantic Ocean",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/iss072e695136",
+      "date": "2025-03-05",
+      "description": "iss072e695136 (March 5, 2025) --- The sun's glint beams off a partly cloudy Atlantic Ocean just after sunrise as the International Space Station orbited 263 miles above.",
+      "id": "S059_c2",
+      "kind": "image",
+      "shots": [
+        "S059"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 4928,
+      "orig_height": 2768,
+      "width": 3840,
+      "height": 2157,
+      "bundle_file": "S059_c2.jpg",
+      "bytes": 3523280,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/s45-152-011/s45-152-011~orig.jpg",
+      "title": "Northeast Coast, Hokkaido, Japan",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/s45-152-011",
+      "date": "1992-04-02",
+      "description": "The northeast coast of Hokkaido and Kunashir Island, Japan (44.0N, 143.0E) are seen bordered by drifting sea ice. The sea ice has formed a complex pattern of eddies in response to surface water currents and winds. Photos of this kind aid researchers in describing local ocean current patterns and the",
+      "id": "S060_c1",
+      "kind": "image",
+      "shots": [
+        "S060"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 6468,
+      "orig_height": 8236,
+      "width": 3840,
+      "height": 4890,
+      "bundle_file": "S060_c1.jpg",
+      "bytes": 9790372,
+      "flags": [
+        "ASPECT_0.79: tall/square, full-frame crop loses 56% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/sts048-73-000q/sts048-73-000q~orig.jpg",
+      "title": "Large Tabular Iceberg, South Atlantic Ocean",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/sts048-73-000q",
+      "date": "1991-09-18",
+      "description": "This large tabular iceberg, broken off from the Antarctic Ice Sheet, was spotted in the South Atlantic Ocean (57.0S, 57.0W) southeast of the tip of South America as it was slowly being moved north and east by wind, current and tidal influences. This type of iceberg, never to be seen in the northern ",
+      "id": "S060_c2",
+      "kind": "image",
+      "shots": [
+        "S060"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 5731,
+      "orig_height": 5771,
+      "width": 3840,
+      "height": 3867,
+      "bundle_file": "S060_c2.jpg",
+      "bytes": 5742637,
+      "flags": [
+        "ASPECT_0.99: tall/square, full-frame crop loses 44% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA18913/PIA18913~orig.jpg",
+      "title": "Milky Way Untangled",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA18913",
+      "date": "2015-02-05",
+      "description": "A new, dynamic portrait of our Milky Way galaxy shows a frenzy of gas, charged particles and dust as seen by the European Space Agency Planck mission.",
+      "id": "S066_c1",
+      "kind": "image",
+      "shots": [
+        "S066"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 6000,
+      "orig_height": 6000,
+      "width": 3840,
+      "height": 3840,
+      "bundle_file": "S066_c1.jpg",
+      "bytes": 3160387,
+      "flags": [
+        "ASPECT_1.00: tall/square, full-frame crop loses 44% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA24576/PIA24576~orig.jpg",
+      "title": "A Break in the Milky Way's Sagittarius Arm",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA24576",
+      "date": "2021-08-17",
+      "description": "A contingent of young stars and star-forming gas clouds is sticking out of one of the Milky Way's spiral arms like a splinter protruding from a plank of wood. Stretching some 3,000 light-years, this is the first major structure identified with such a dramatically different orientation relative to th",
+      "id": "S066_c2",
+      "kind": "image",
+      "shots": [
+        "S066"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 4800,
+      "orig_height": 2700,
+      "width": 3840,
+      "height": 2160,
+      "bundle_file": "S066_c2.jpg",
+      "bytes": 1503464,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000214/GSFC_20171208_Archive_e000214~orig.jpg",
+      "title": "Hubble's Best Image of Alpha Centauri A and B",
+      "credit": "NASA (GSFC)",
+      "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000214",
+      "date": "2017-12-08",
+      "description": "The closest star system to the Earth is the famous Alpha Centauri group. Located in the constellation of Centaurus (The Centaur), at a distance of 4.3 light-years, this system is made up of the binary formed by the stars Alpha Centauri A and Alpha Centauri B, plus the faint red dwarf Alpha Centauri ",
+      "id": "S069_c1",
+      "kind": "image",
+      "shots": [
+        "S069"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 1280,
+      "orig_height": 836,
+      "width": 1280,
+      "height": 836,
+      "bundle_file": "S069_c1.jpg",
+      "bytes": 79343,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/sts075-351-022/sts075-351-022~orig.jpg",
+      "title": "View of Southern Cross, Alpha and Beta Centauri",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/sts075-351-022",
+      "date": "1996-03-18",
+      "description": "STS075-351-022 (22 Feb.- 9 March 1996) --- The space shuttle Columbia's vertical stabilizer appears to point to the four stars of the Southern Cross. The scene was captured with a 35mm camera just prior to a sunrise.  The seven member crew was launched aboard the space shuttle Columbia on Feb. 22, 1",
+      "id": "S069_c2",
+      "kind": "image",
+      "shots": [
+        "S069"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 3000,
+      "orig_height": 1943,
+      "width": 3000,
+      "height": 1943,
+      "bundle_file": "S069_c2.jpg",
+      "bytes": 5071105,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA21473/PIA21473~orig.jpg",
+      "title": "Flaring Red Dwarf Star (Illustration)",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA21473",
+      "date": "2017-06-06",
+      "description": "This illustration shows a red dwarf star orbited by a hypothetical exoplanet. Red dwarfs tend to be magnetically active, displaying gigantic arcing prominences and a wealth of dark sunspots. Red dwarfs also erupt with intense flares that could strip a nearby planet's atmosphere over time, or make th",
+      "id": "S072_c1",
+      "kind": "image",
+      "shots": [
+        "S072"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 2200,
+      "orig_height": 1700,
+      "width": 2200,
+      "height": 1700,
+      "bundle_file": "S072_c1.jpg",
+      "bytes": 202781,
+      "flags": [
+        "OK_NO_ZOOM: fine full-frame, little room to zoom"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA13994/PIA13994~orig.jpg",
+      "title": "Planets Under a Red Sun Artist Concept",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA13994",
+      "date": "2011-04-08",
+      "description": "This artist concept illustrates a young, red dwarf star surrounded by three planets. NASA Galaxy Evolution Explorer is helping to identify young, red dwarf stars that are close to us by detecting their ultraviolet light.",
+      "id": "S072_c2",
+      "kind": "image",
+      "shots": [
+        "S072"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 3000,
+      "orig_height": 2000,
+      "width": 3000,
+      "height": 2000,
+      "bundle_file": "S072_c2.jpg",
+      "bytes": 299018,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA14102/PIA14102~orig.jpg",
+      "title": "Star Formation in the Heart of the Swan",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA14102",
+      "date": "2011-06-09",
+      "description": "Best known as a swan winging its way across the night, the constellation Cygnus is easily seen in the northern hemisphere summertime sky. NASA WISE telescope captured this image of a huge complex of star-forming clouds and stellar clusters.",
+      "id": "S073_c1",
+      "kind": "image",
+      "shots": [
+        "S073"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 6450,
+      "orig_height": 5850,
+      "width": 3840,
+      "height": 3483,
+      "bundle_file": "S073_c1.jpg",
+      "bytes": 4642630,
+      "flags": [
+        "ASPECT_1.10: tall/square, full-frame crop loses 38% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA07853/PIA07853~orig.jpg",
+      "title": "Alien Asteroid Belt Compared to our Own  Artist Concept",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA07853",
+      "date": "2005-04-20",
+      "description": "This artist concept shows what the night sky might look like from a hypothetical alien planet in a star system with an asteroid belt 25 times as massive as the one in our own solar system.",
+      "id": "S073_c2",
+      "kind": "image",
+      "shots": [
+        "S073"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 3200,
+      "orig_height": 2400,
+      "width": 3200,
+      "height": 2400,
+      "bundle_file": "S073_c2.jpg",
+      "bytes": 456742,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/iss071e439624/iss071e439624~orig.jpg",
+      "title": "An orbital sunrise colorfully illuminates the Earth's atmosphere",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/iss071e439624",
+      "date": "2024-08-06",
+      "description": "iss071e439624 (Aug. 6, 2024) --- An orbital sunrise colorfully illuminates the Earth's atmosphere and highlights the boundary between night and day, also known as the terminator, in this photograph from the International Space Station as it orbited 267 miles above the Pacific Ocean north of Auckland",
+      "id": "S078_c1",
+      "kind": "image",
+      "shots": [
+        "S078"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 4928,
+      "orig_height": 2768,
+      "width": 3840,
+      "height": 2157,
+      "bundle_file": "S078_c1.jpg",
+      "bytes": 693873,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/iss044e025484/iss044e025484~orig.jpg",
+      "title": " Earth observations taken by Expedition 44 crewmember",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/iss044e025484",
+      "date": "2015-07-30",
+      "description": "ISS044E025484 (07/30/2015) --- NASA astronaut Scott Kelly of Expedition 44 aboard the International Space Station on July 30, 2015  captured this sunrise while in his \"year in space\" .",
+      "id": "S078_c2",
+      "kind": "image",
+      "shots": [
+        "S078"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 4928,
+      "orig_height": 3280,
+      "width": 3840,
+      "height": 2556,
+      "bundle_file": "S078_c2.jpg",
+      "bytes": 1122033,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/PIA00376/PIA00376~orig.jpg",
+      "title": "Rings of Jupiter Star Trail",
+      "credit": "NASA (JPL)",
+      "source_url": "https://images.nasa.gov/details/PIA00376",
+      "date": "1997-01-09",
+      "description": "Rings of Jupiter Star Trail  http://photojournal.jpl.nasa.gov/catalog/PIA00376",
+      "id": "S079_c1",
+      "kind": "image",
+      "shots": [
+        "S079"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 439,
+      "orig_height": 545,
+      "width": 439,
+      "height": 545,
+      "bundle_file": "S079_c1.jpg",
+      "bytes": 22165,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame",
+        "ASPECT_0.81: tall/square, full-frame crop loses 55% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/jsc2012e065057/jsc2012e065057~orig.jpg",
+      "title": "Expedition 31 star trail composite",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/jsc2012e065057",
+      "date": "2012-06-12",
+      "description": "ISS031 star trail created with iss031e066034 thru iss031e066130",
+      "id": "S079_c2",
+      "kind": "image",
+      "shots": [
+        "S079"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 4256,
+      "orig_height": 2832,
+      "width": 3840,
+      "height": 2555,
+      "bundle_file": "S079_c2.jpg",
+      "bytes": 2659062,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/iss063e052528/iss063e052528~orig.jpg",
+      "title": "iss063e052528",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/iss063e052528",
+      "date": "2020-07-21",
+      "description": "iss063e052528 (July 21, 2020) --- The sun beams just above the Earth's horizon as NASA astronaut and Expedition 63 Commander Chris Cassidy (center left) conducts his fourth spacewalk this year at the International Space Station. Cassidy has completed 10 spacewalks throughout his career for a total o",
+      "id": "S081_c1",
+      "kind": "image",
+      "shots": [
+        "S081"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 3712,
+      "orig_height": 5568,
+      "width": 3712,
+      "height": 5568,
+      "bundle_file": "S081_c1.jpg",
+      "bytes": 2534408,
+      "flags": [
+        "ASPECT_0.67: tall/square, full-frame crop loses 62% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/iss063e052534/iss063e052534~orig.jpg",
+      "title": "iss063e052534",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/iss063e052534",
+      "date": "2020-07-21",
+      "description": "iss063e052534 (July 21, 2020) --- The sun beams just below the frame as NASA astronaut and Expedition 63 Commander Chris Cassidy (near center left) conducts his fourth spacewalk this year at the International Space Station. Cassidy has completed 10 spacewalks throughout his career for a total of 54 ",
+      "id": "S081_c2",
+      "kind": "image",
+      "shots": [
+        "S081"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 5568,
+      "orig_height": 3712,
+      "width": 3840,
+      "height": 2560,
+      "bundle_file": "S081_c2.jpg",
+      "bytes": 2926684,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/sts109-345-032/sts109-345-032~orig.jpg",
+      "title": "Sunrise view taken by the STS-109 crew",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/sts109-345-032",
+      "date": "2002-03-10",
+      "description": "STS109-345-032 (1-12 March 2002) --- One of the astronauts aboard the Space Shuttle Columbia photographed this west-looking view featuring the profile of the atmosphere and the setting sun.  The shuttle was located over the Java Sea to the south of Kalimantan (Borneo) in Indonesia when this image wa",
+      "id": "S082_c1",
+      "kind": "image",
+      "shots": [
+        "S082"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 2956,
+      "orig_height": 1960,
+      "width": 2956,
+      "height": 1960,
+      "bundle_file": "S082_c1.jpg",
+      "bytes": 172401,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/brief-outburst_16760026566_o/brief-outburst_16760026566_o~orig.jpg",
+      "title": "Brief Outburst",
+      "credit": "NASA (GSFC)",
+      "source_url": "https://images.nasa.gov/details/brief-outburst_16760026566_o",
+      "date": "2015-03-11",
+      "description": "The Sun blew out a coronal mass ejection along with part of a solar filament over a three-hour period (Feb. 24, 2015). While some of the strands fell back into the Sun, a substantial part raced into space in a bright cloud of particles (as observed by the SOHO spacecraft). The activity was captured ",
+      "id": "S082_c2",
+      "kind": "image",
+      "shots": [
+        "S082"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 1350,
+      "orig_height": 1350,
+      "width": 1350,
+      "height": 1350,
+      "bundle_file": "S082_c2.jpg",
+      "bytes": 593046,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame",
+        "ASPECT_1.00: tall/square, full-frame crop loses 44% of the height"
+      ],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/s36-39-014/s36-39-014~orig.jpg",
+      "title": "STS-36 night Earth observation of New York City, New York",
+      "credit": "NASA (JSC)",
+      "source_url": "https://images.nasa.gov/details/s36-39-014",
+      "date": "1990-03-03",
+      "description": "STS-36 Earth observation shows New York City, New York at night lit up along the Eastern seaboard of the United States and the Atlantic Ocean. The city lights designate the densely populated central city and the major highways surrounding it.",
+      "id": "S085_c1",
+      "kind": "image",
+      "shots": [
+        "S085"
+      ],
+      "candidate": 1,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 4320,
+      "orig_height": 2816,
+      "width": 3840,
+      "height": 2503,
+      "bundle_file": "S085_c1.jpg",
+      "bytes": 5357409,
+      "flags": [],
+      "status": "ok"
+    },
+    {
+      "url": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001586/GSFC_20171208_Archive_e001586~orig.jpg",
+      "title": "City Lights Illuminate the Nile",
+      "credit": "NASA (GSFC)",
+      "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001586",
+      "date": "2017-12-08",
+      "description": "NASA image acquired October 13, 2012  The Nile River Valley and Delta comprise less than 5 percent of Egypt’s land area, but provide a home to roughly 97 percent of the country’s population. Nothing makes the location of human population clearer than the lights illuminating the valley and delta at n",
+      "id": "S085_c2",
+      "kind": "image",
+      "shots": [
+        "S085"
+      ],
+      "candidate": 2,
+      "source_class": "REAL_PHOTO",
+      "from_search": true,
+      "orig_width": 720,
+      "orig_height": 1080,
+      "width": 720,
+      "height": 1080,
+      "bundle_file": "S085_c2.jpg",
+      "bytes": 236712,
+      "flags": [
+        "SMALL: smaller than 1920x1080, will look soft full-frame",
+        "ASPECT_0.67: tall/square, full-frame crop loses 62% of the height"
+      ],
+      "status": "ok"
+    }
+  ]
+}

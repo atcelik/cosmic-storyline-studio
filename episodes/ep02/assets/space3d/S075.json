@@ -1,0 +1,67 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 8,
+ "seed": 3,
+ "view": {
+  "center_km": [
+   0,
+   0
+  ],
+  "width_km": [
+   1000,
+   1000
+  ],
+  "y_km": [
+   0,
+   0
+  ]
+ },
+ "light": [
+  -0.9,
+  0.05
+ ],
+ "bodies": [],
+ "stars": [
+  {
+   "x_frac": 0.2,
+   "y_frac": 0.5,
+   "size": 7,
+   "label": "THE SUN",
+   "sub": "8 min 20 s",
+   "color": [
+    255,
+    225,
+    150
+   ],
+   "at": 0.05
+  },
+  {
+   "x_frac": 0.5,
+   "y_frac": 0.32,
+   "size": 7,
+   "label": "PROXIMA CENTAURI",
+   "sub": "4.24 years",
+   "color": [
+    255,
+    120,
+    90
+   ],
+   "at": 0.3
+  },
+  {
+   "x_frac": 0.8,
+   "y_frac": 0.55,
+   "size": 9,
+   "label": "SIRIUS",
+   "sub": "8.6 years",
+   "color": [
+    200,
+    220,
+    255
+   ],
+   "at": 0.55
+  }
+ ]
+}

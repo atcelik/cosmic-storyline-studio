@@ -1,0 +1,53 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 8,
+ "seed": 3,
+ "view": {
+  "center_km": [
+   -120000,
+   -60000
+  ],
+  "width_km": [
+   760000,
+   700000
+  ],
+  "y_km": [
+   0,
+   0
+  ]
+ },
+ "light": [
+  0.95,
+  0.2
+ ],
+ "bodies": [
+  {
+   "name": "EARTH",
+   "type": "Terrestrial planet",
+   "size": "12,742 km",
+   "diameter_km": 900000,
+   "x_km": -450000,
+   "texture": "../EARTH2.jpg",
+   "tint": [
+    70,
+    120,
+    200
+   ],
+   "spin": [
+    0,
+    4
+   ],
+   "at": 0,
+   "label": false
+  }
+ ],
+ "flares": [
+  {
+   "x_km": 0,
+   "y_km": 90000,
+   "strength": 1.4
+  }
+ ]
+}

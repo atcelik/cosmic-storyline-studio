@@ -211,7 +211,8 @@ def cgi_task(task):
     ph = Phase(f"cgi_{task['id']}")
     spec = ROOT / task["spec"]
     out = CGI_DIR / spec.stem / f"{task['a']}.mp4"
-    ph.run("space3d", [[PY, "scripts/space3d.py", spec, out, "--frames", f"{task['a']}:{task['b']}"]])
+    script = "scripts/scale2d.py" if json.loads(spec.read_text()).get("renderer") == "scale2d" else "scripts/space3d.py"
+    ph.run("space3d", [[PY, script, spec, out, "--frames", f"{task['a']}:{task['b']}"]])
     ph.done()
 
 

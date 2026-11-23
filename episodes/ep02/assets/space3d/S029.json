@@ -1,0 +1,85 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 8,
+ "seed": 3,
+ "view": {
+  "center_km": [
+   600000,
+   640000
+  ],
+  "width_km": [
+   3200000,
+   3100000
+  ],
+  "y_km": [
+   250000,
+   250000
+  ]
+ },
+ "light": [
+  -0.9,
+  0.05
+ ],
+ "bodies": [
+  {
+   "name": "THE SUN",
+   "type": "Star",
+   "size": "1,391,400 km",
+   "diameter_km": 1391400,
+   "x_km": 0,
+   "texture": "../SUN2.jpg",
+   "tint": [
+    255,
+    190,
+    60
+   ],
+   "spin": [
+    0,
+    6
+   ],
+   "emissive": true,
+   "glow": 0.9,
+   "at": 0,
+   "label_xy": [
+    0.2,
+    0.02
+   ]
+  },
+  {
+   "name": "EARTH",
+   "type": "Terrestrial planet",
+   "size": "12,742 km",
+   "diameter_km": 12742,
+   "x_km": 1000000,
+   "texture": "../EARTH2.jpg",
+   "tint": [
+    70,
+    120,
+    200
+   ],
+   "spin": [
+    0,
+    10
+   ],
+   "at": 0,
+   "y_km": 0,
+   "glow": 0.9,
+   "glow_color": [
+    90,
+    150,
+    255
+   ]
+  }
+ ],
+ "arrows": [
+  {
+   "from_km": 304300,
+   "to_km": 1000000,
+   "y_frac": 0.3,
+   "text": "109 Earth diameters",
+   "at": 0.45
+  }
+ ]
+}

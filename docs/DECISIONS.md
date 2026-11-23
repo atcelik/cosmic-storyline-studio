@@ -51,3 +51,9 @@
 ## 2026-11-22 (late): Shorts
 - Owner asked for Shorts cut from EP01 without losing picture quality. Not a crop of the 16:9 master (that would upscale ~1.8x): the Short is rendered natively at 1080x1920 (`episode.format`), 3D flights re-rendered vertically (`spec.size`, vertical field of view kept), photos cropped from the high-resolution originals or framed whole on black.
 - Shorts get burned-in captions (`burn_captions`, 3 words at a time, timed to the real voice-over) and only reuse lines of the approved script. Built by `episodes/ep01/build_short.py`.
+
+## 2026-11-23 — EP02 "Sunlight Takes 8 Minutes to Reach Us" (owner decisions)
+- Owner chose the topic and the size-comparison look (Countless Number reference). Target 8–9 min; goal is views.
+- Sources only for numeric facts (15 claims, all checked against NASA NSSDC fact sheets, NASA SVS, NOAA, Smithsonian, LIGO/Virgo); other lines carry no claim.
+- New renderer `scripts/scale2d.py` (OUR_CGI): bodies enlarged, distances shortened for the screen, big yellow name/type/size labels, measuring arrows, light beam with clock. Owner: no "not to scale" note on screen. True-scale scene kept where the count matters (S015, 30 Earth-widths). Specs: `episodes/ep02/make_scenes.py` -> `assets/space3d/Sxxx.json` with `"renderer": "scale2d"`; `ci/run.py` picks the renderer per spec.
+- Subtitles: `captions.srt` for YouTube first; burned-in version later as a separate test.

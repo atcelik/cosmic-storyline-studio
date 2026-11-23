@@ -1,0 +1,51 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 8,
+ "seed": 3,
+ "view": {
+  "center_km": [
+   0,
+   0
+  ],
+  "width_km": [
+   1000,
+   1000
+  ],
+  "y_km": [
+   0,
+   0
+  ]
+ },
+ "light": [
+  -0.9,
+  0.05
+ ],
+ "bodies": [],
+ "beams": [
+  {
+   "from_km": -480,
+   "to_km": 480,
+   "t": [
+    0.1,
+    0.8
+   ],
+   "y_frac": 0.0
+  }
+ ],
+ "texts": [
+  {
+   "x_frac": 0.5,
+   "y_frac": 0.66,
+   "lines": [
+    [
+     "THE FASTEST THING WE KNOW OF",
+     0.05,
+     "yellow"
+    ]
+   ],
+   "at": 0.3
+  }
+ ]
+}

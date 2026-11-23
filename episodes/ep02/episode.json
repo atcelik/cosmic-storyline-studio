@@ -66,21 +66,16 @@
       "beat": "B1",
       "voiceover": "Right now, the sunlight on your face left the Sun about eight minutes ago.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S001.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Flight from Earth toward the Sun",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -102,21 +97,16 @@
       "beat": "B1",
       "voiceover": "It crossed roughly 150 million kilometres of nearly empty space to reach you.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S002.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Light path Sun to Earth, scale marks",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -140,11 +130,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Earth limb ISS",
-        "credit": "NASA (JSC) / Karen Nyberg",
-        "source_url": "https://images.nasa.gov/details/iss037e017170",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S003_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -166,21 +155,16 @@
       "beat": "B1",
       "voiceover": "It is all a little bit old.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S004.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Sunrise over the limb, slow push",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -197,11 +181,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "orbital sunrise",
-        "credit": "NASA (JSC)",
-        "source_url": "https://images.nasa.gov/details/iss071e000922",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S005_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -223,21 +206,16 @@
       "beat": "B1",
       "voiceover": "But it is there, every second of every day.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S006.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Sun glare over Earth",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -251,21 +229,16 @@
       "beat": "B1",
       "voiceover": "In this episode we will follow that light from the Sun to Earth.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S007.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Light beam from Sun toward Earth",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -279,21 +252,16 @@
       "beat": "B1",
       "voiceover": "We will ask what the delay really means for us.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S008.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Earth in frame, slow pull back",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -310,11 +278,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "DSCOVR moon Earth",
-        "credit": "NASA (GSFC)",
-        "source_url": "https://images.nasa.gov/details/from-a-million-miles-away-nasa-camera-shows-moon-crossing-face-of-earth_20129140980_o",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S009_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -339,11 +306,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Blue Marble",
-        "credit": "NASA (GSFC)",
-        "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001788",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S010_c2.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -365,21 +331,16 @@
       "beat": "B2",
       "voiceover": "Earth is about 12,742 kilometres across, measured through its middle.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S011.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Earth diameter arrow, scale label",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -403,11 +364,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Kennedy Space Center sunrise",
-        "credit": "NASA (KSC) / NASA/Ben Smegelsky",
-        "source_url": "https://images.nasa.gov/details/KSC-20170219-PH_JBS01_0007",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S012_c2.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -432,11 +392,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "full moon",
-        "credit": "NASA (KSC) / NASA/Ben Smegelsky",
-        "source_url": "https://images.nasa.gov/details/KSC-20240819-PH-JBS01_0022",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S013_c2.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -465,21 +424,16 @@
       "beat": "B2",
       "voiceover": "Yet it sits roughly thirty Earth-widths away, close enough to pull on our oceans and make the tides.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S014.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Earth-Moon distance arrow, 30 Earth diameters",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -500,21 +454,16 @@
       "beat": "B2",
       "voiceover": "Picture thirty Earth-widths laid end to end between the two.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S015.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Row of Earth-sized discs between Earth and Moon",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -528,21 +477,16 @@
       "beat": "B2",
       "voiceover": "That is the gap light must cross to reach the Moon.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S016.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Light beam Earth to Moon",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -556,21 +500,16 @@
       "beat": "B2",
       "voiceover": "It is a long way for us, but a short trip for light.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S017.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Pull back, Earth and Moon in frame",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -587,11 +526,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Earth and Moon",
-        "credit": "NASA (JPL)",
-        "source_url": "https://images.nasa.gov/details/PIA13227",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S018_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -613,21 +551,16 @@
       "beat": "B3",
       "voiceover": "Light is the fastest thing we know of; nothing carries information faster.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S019.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Light beam across the frame",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -641,21 +574,16 @@
       "beat": "B3",
       "voiceover": "Even so, light needs time to cross space.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S020.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Light beam with a moving marker",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -669,21 +597,16 @@
       "beat": "B3",
       "voiceover": "To reach the Moon, it takes about one and a quarter seconds.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S021.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Label: LIGHT takes 1.28 s to reach the Moon",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -707,11 +630,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Earthrise",
-        "credit": "NASA (JSC) / NASA",
-        "source_url": "https://images.nasa.gov/details/art002e009280b",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S022_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -733,21 +655,16 @@
       "beat": "B3",
       "voiceover": "But distance turns into time, and time turns into a kind of delay.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S023.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Distance bar converting to a clock",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -761,21 +678,16 @@
       "beat": "B3",
       "voiceover": "A signal sent to the Moon and back takes a few seconds.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S024.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Round-trip signal arc, Earth-Moon",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -789,21 +701,16 @@
       "beat": "B3",
       "voiceover": "That is already enough to make a live conversation feel slightly off.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S025.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Two speech bubbles with a gap",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -820,11 +727,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Curiosity rover selfie",
-        "credit": "NASA (JPL)",
-        "source_url": "https://images.nasa.gov/details/PIA19808",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S026_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -846,21 +752,16 @@
       "beat": "B3",
       "voiceover": "The farther something is, the more out of date its light becomes.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S027.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Light beam stretching outward",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -877,11 +778,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "SDO sun",
-        "credit": "NASA (GSFC)",
-        "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000790",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S028_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -903,21 +803,16 @@
       "beat": "B4",
       "voiceover": "It is about 109 Earth diameters across.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S029.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Earth beside the Sun, scale label",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -938,21 +833,16 @@
       "beat": "B4",
       "voiceover": "Its distance from us is roughly 150 million kilometres.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S030.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Sun-Earth distance arrow",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -973,21 +863,16 @@
       "beat": "B4",
       "voiceover": "Astronomers call that distance one astronomical unit, the standard yardstick of the solar system.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S031.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: 1 AU label on the distance arrow",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1004,11 +889,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "sunspots",
-        "credit": "NASA (JPL)",
-        "source_url": "https://images.nasa.gov/details/PIA21873",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S032_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -1033,11 +917,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "coronal loops",
-        "credit": "NASA (GSFC)",
-        "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000820",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S033_c2.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -1062,11 +945,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Parker Solar Probe",
-        "credit": "NASA (KSC) / NASA/Kim Shiflett",
-        "source_url": "https://images.nasa.gov/details/KSC-20180419-PH_KLS01_0047",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S034_c2.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -1088,21 +970,16 @@
       "beat": "B4",
       "voiceover": "Put the size and the distance together, and you get the central number of this episode.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S035.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Sun and Earth in one frame, scale on",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1116,21 +993,16 @@
       "beat": "B4",
       "voiceover": "Sunlight needs about eight minutes and twenty seconds to cover that gap.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S036.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Label: LIGHT takes 8 min 20 s",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1154,11 +1026,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "solar flare",
-        "credit": "NASA (JPL)",
-        "source_url": "https://images.nasa.gov/details/PIA21958",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S037_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -1183,11 +1054,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Sun layers",
-        "credit": "NASA (JPL)",
-        "source_url": "https://images.nasa.gov/details/PIA21105",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S038_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -1209,21 +1079,16 @@
       "beat": "B4",
       "voiceover": "It takes a very long time to escape as light.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S039.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Energy path inside the Sun, OUR_CGI",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1237,21 +1102,16 @@
       "beat": "B5",
       "voiceover": "Follow that light for a moment.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S040.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Light path from the Sun surface",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1265,21 +1125,16 @@
       "beat": "B5",
       "voiceover": "It leaves the Sun's surface, crosses empty space, and slips into Earth's atmosphere.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S041.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Light path into Earth's atmosphere",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1293,21 +1148,16 @@
       "beat": "B5",
       "voiceover": "It moves at roughly 300,000 kilometres every second.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S042.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Speed label on the light beam",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1328,21 +1178,16 @@
       "beat": "B5",
       "voiceover": "Now imagine the Sun switched off this very second.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S043.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Sun dims in the frame, clock overlay",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1356,21 +1201,16 @@
       "beat": "B5",
       "voiceover": "You would not notice anything for eight minutes.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S044.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Earth in daylight, clock running",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1384,21 +1224,16 @@
       "beat": "B5",
       "voiceover": "The sky would look normal, the warmth on your skin would feel the same.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S045.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Earth in daylight, calm pan",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1412,21 +1247,16 @@
       "beat": "B5",
       "voiceover": "The light would keep arriving as if nothing had happened.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S046.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Light beams still arriving at Earth",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1440,21 +1270,16 @@
       "beat": "B5",
       "voiceover": "Only after those minutes would it stop.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S047.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Light stream ends, Sun dark",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1468,21 +1293,16 @@
       "beat": "B5",
       "voiceover": "Physics also says the Sun's gravity would take about the same time to change.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S048.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Gravity ripple from the Sun, dashed prediction",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1503,21 +1323,16 @@
       "beat": "B5",
       "voiceover": "That is a prediction we cannot test directly.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S049.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Dashed outline, hold",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1531,21 +1346,16 @@
       "beat": "B5",
       "voiceover": "What is certain is this: light always tells you the past, never the present.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S050.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Light beam with a timestamp",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1562,11 +1372,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Hubble Ultra Deep Field",
-        "credit": "NASA (GSFC)",
-        "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001651",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S051_c2.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -1591,11 +1400,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "spiral galaxy Hubble",
-        "credit": "NASA (GSFC)",
-        "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000158",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S052_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -1617,21 +1425,16 @@
       "beat": "B6",
       "voiceover": "Eight minutes of delay is a fact about light.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S053.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Sun-Earth light path, clock",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1648,11 +1451,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Earth from space",
-        "credit": "NASA (JSC)",
-        "source_url": "https://images.nasa.gov/details/sl4-143-4707",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S054_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -1677,11 +1479,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "vegetation Earth satellite",
-        "credit": "NASA (JPL)",
-        "source_url": "https://images.nasa.gov/details/PIA24539",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S055_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -1713,11 +1514,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "phytoplankton bloom",
-        "credit": "NASA (GSFC)",
-        "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001018",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S056_c2.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -1742,11 +1542,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Merritt Island wildlife",
-        "credit": "NASA (KSC) / NASA/Glenn Benson",
-        "source_url": "https://images.nasa.gov/details/KSC-20190925-PH-GEB01_0017",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S057_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -1768,21 +1567,16 @@
       "beat": "B6",
       "voiceover": "Seasons, weather and the water cycle are all driven by the energy that arrives in those eight minutes.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S058.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Earth with seasons and clouds, OUR_CGI",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1799,11 +1593,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "sun glint ocean",
-        "credit": "NASA (JSC)",
-        "source_url": "https://images.nasa.gov/details/iss058e007722",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S059_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -1828,11 +1621,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "ocean currents",
-        "credit": "NASA (JSC)",
-        "source_url": "https://images.nasa.gov/details/s45-152-011",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S060_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -1854,21 +1646,16 @@
       "beat": "B6",
       "voiceover": "Yet there is an exception.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S061.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Slow dive from sunlit ocean into dark",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1882,21 +1669,16 @@
       "beat": "B6",
       "voiceover": "Deep in the ocean, far below the reach of sunlight, there are hydrothermal vents.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S062.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Dive into the dark ocean floor, OUR_CGI",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -1913,11 +1695,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "NOAA black smoker vent, real photo",
-        "credit": "NOAA Office of Ocean Exploration and Research",
-        "source_url": "https://oceanexplorer.noaa.gov/",
-        "credit_verified": true,
-        "credit_short": "",
-        "file": "assets/N008.jpg"
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -1949,11 +1730,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Vent microbial mat, real photo",
-        "credit": "IFE, URI-IAO, UW, Lost City Science Party; NOAA/OAR/OER; The Lost City 2005 Expedition",
-        "source_url": "https://noaa.gov/media/digital-library-photo/pl23expl2224jpg",
-        "credit_verified": true,
-        "credit_short": "",
-        "file": "assets/LOST.jpg"
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -1978,11 +1758,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Tube worms at a vent, real photo",
-        "credit": "OAR/National Undersea Research Program (NURP)",
-        "source_url": "https://noaa.gov/media/digital-library-photo/pl23nur04512jpg",
-        "credit_verified": true,
-        "credit_short": "",
-        "file": "assets/NUR.jpg"
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -2007,11 +1786,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Milky Way",
-        "credit": "NASA (JPL)",
-        "source_url": "https://images.nasa.gov/details/PIA24576",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S066_c2.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -2033,21 +1811,16 @@
       "beat": "B7",
       "voiceover": "The next nearest star is Proxima Centauri.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S067.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Star ladder from the Sun to Proxima Centauri",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -2061,21 +1834,16 @@
       "beat": "B7",
       "voiceover": "Its light takes about four years to reach us.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S068.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Label: 4.24 light-years",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -2099,11 +1867,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Alpha Centauri",
-        "credit": "NASA (JSC)",
-        "source_url": "https://images.nasa.gov/details/sts075-351-022",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S069_c2.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -2125,21 +1892,16 @@
       "beat": "B7",
       "voiceover": "That light set out before anyone on Earth could see it, and it has been travelling ever since.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S070.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Light beam from Proxima toward Earth, timeline",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -2153,21 +1915,16 @@
       "beat": "B7",
       "voiceover": "Compare that with our own Sun, whose light needs eight minutes.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S071.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Sun and Proxima side by side, light-time labels",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -2184,11 +1941,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "red dwarf star",
-        "credit": "NASA (JPL)",
-        "source_url": "https://images.nasa.gov/details/PIA13994",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S072_c2.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -2213,11 +1969,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "night sky stars",
-        "credit": "NASA (JPL)",
-        "source_url": "https://images.nasa.gov/details/PIA14102",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S073_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -2239,21 +1994,16 @@
       "beat": "B7",
       "voiceover": "Yet it follows the same rule.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S074.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Light beam from a distant star",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -2267,21 +2017,16 @@
       "beat": "B7",
       "voiceover": "Every star you see is a message that left it long ago.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S075.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Star field with distance marks",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -2295,21 +2040,16 @@
       "beat": "B7",
       "voiceover": "The farther the star, the older the message.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S076.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Star field, depth fade",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -2323,21 +2063,16 @@
       "beat": "B8",
       "voiceover": "So here is the question.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S077.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Slow pull back to Earth",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -2354,11 +2089,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "sunrise International Space Station",
-        "credit": "NASA (JSC)",
-        "source_url": "https://images.nasa.gov/details/iss071e439624",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S078_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -2390,11 +2124,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "star trails",
-        "credit": "NASA (JSC)",
-        "source_url": "https://images.nasa.gov/details/jsc2012e065057",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S079_c2.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -2416,21 +2149,16 @@
       "beat": "B8",
       "voiceover": "Light lets us see the universe, but it always shows us a little of the past.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S080.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Light path across the frame",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -2447,11 +2175,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "astronaut spacewalk sun",
-        "credit": "NASA (JSC)",
-        "source_url": "https://images.nasa.gov/details/iss063e052534",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S081_c2.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -2476,11 +2203,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "sun over Earth",
-        "credit": "NASA (JSC)",
-        "source_url": "https://images.nasa.gov/details/sts109-345-032",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S082_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",
@@ -2502,21 +2228,16 @@
       "beat": "B8",
       "voiceover": "It left the Sun eight minutes ago.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S083.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Light path from the Sun to Earth, final pass",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -2530,21 +2251,16 @@
       "beat": "B8",
       "voiceover": "It crossed the emptiness between us and arrived in time for you to feel it.",
       "visual": {
-        "type": "still",
+        "type": "video",
+        "file": "assets/S084.mp4",
         "source_class": "OUR_CGI",
-        "search_query": "3D visualization: Light reaching the viewer's frame",
-        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": "Visualization"
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
       },
       "camera": {
-        "move": "push_in",
-        "strength": 0.05,
-        "focus": [
-          0.5,
-          0.5
-        ]
+        "move": "hold"
       },
       "transition_out": {
         "type": "cut"
@@ -2561,11 +2277,10 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "city lights night Earth",
-        "credit": "NASA (JSC)",
-        "source_url": "https://images.nasa.gov/details/s36-39-014",
+        "credit": "",
+        "source_url": "",
         "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S085_c1.jpg"
+        "credit_short": ""
       },
       "camera": {
         "move": "push_in",

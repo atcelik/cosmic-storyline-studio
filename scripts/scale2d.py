@@ -24,7 +24,11 @@ spec = {
  "ripples": {"x_km": 0, "t": [0.2, 0.9], "count": 3, "dashed": true},
  "headline": {"text": "1 ASTRONOMICAL UNIT", "sub": "the yardstick of the solar system", "at": 0.1}
 }
-Every element fades in at its "at" fraction (0.5 s fade) and stays."""
+More keys: "beams": [beam, ...] (several), "flares": [{"x_km","y_km","strength"}], "texts": [{"x_frac","y_frac",
+"lines":[[text,size_frac,"yellow|white|cyan"]],"at"}], "clock": {"x_frac","y_frac","t":[a,b],"seconds":[0,500],"fmt":"ms","label"},
+"stars": [{"x_frac","y_frac","size","label","sub","at","color":[r,g,b]}], "bubbles": [{"x_frac","y_frac","text","at"}],
+"backdrop": {"type":"ocean","depth":[0,0.6]}, "zigzag": {"x_km","y_km","radius_km","t":[a,b],"steps":40,"seed":1},
+body keys: "label": false, "label_xy": [fx, fy], "glow_color": [r,g,b]. Every element fades in at its "at" fraction (0.5 s fade) and stays."""
 import argparse, json, math, subprocess, sys
 from pathlib import Path
 import cv2
@@ -151,7 +155,7 @@ def draw_glow(frame, cx, cy, r, strength, color=(255, 200, 120)):
     if strength <= 0 or r <= 0:
         return
     H, W = frame.shape[:2]
-    R = r * 1.6 + 40
+    R = r * 1.6 + 40 + (160 if r < 3 else 0)
     x0, x1 = int(max(cx - R, 0)), int(min(cx + R, W))
     y0, y1 = int(max(cy - R, 0)), int(min(cy + R, H))
     if x0 >= x1 or y0 >= y1:
@@ -212,6 +216,58 @@ def fmt_clock(v, mode):
     return f"{v:.2f} s"
 
 
+COLORS = {"yellow": YELLOW, "white": WHITE, "cyan": CYAN}
+
+
+def draw_ocean(frame, u, spec_b, seed):
+    H, W = frame.shape[:2]
+    d0, d1 = spec_b.get("depth", [0.0, 0.6])
+    depth = d0 + (d1 - d0) * u                                   # 0 = sunlit surface, 1 = black
+    yy = np.linspace(0, 1, H, dtype=np.float32)[:, None]
+    d = np.clip(depth + yy * 0.5, 0, 1)                          # deeper toward the bottom of the frame
+    top = np.array([40, 130, 200], np.float32); deep = np.array([2, 6, 14], np.float32)
+    col = deep + (top - deep) * (np.clip(1 - d * 1.4, 0, 1) ** 1.6)[..., None]
+    frame[:] = np.repeat(col, W, axis=1)
+    rng = np.random.default_rng(seed)
+    for k in range(7):                                           # light rays that fade with depth
+        x0 = rng.uniform(0.1, 0.9) * W; w = rng.uniform(40, 120); sw = rng.uniform(-0.25, 0.25) * W
+        a = np.clip(1.0 - depth * 1.7, 0, 1) * 0.16
+        if a > 0:
+            pts = np.array([[x0 - w, 0], [x0 + w, 0], [x0 + sw + w * 3, H], [x0 + sw - w * 3, H]], np.int32)
+            ray = np.zeros_like(frame); cv2.fillConvexPoly(ray, pts, (170, 220, 255), cv2.LINE_AA)
+            frame += cv2.GaussianBlur(ray, (0, 0), 18) * a
+    n = 160                                                      # marine snow rising as we sink
+    xs = rng.uniform(0, W, n); ys0 = rng.uniform(0, H, n); sp = rng.uniform(0.5, 1.5, n)
+    for x, y0, v in zip(xs, ys0, sp):
+        y = (y0 - u * H * 1.6 * v) % H
+        cv2.circle(frame, (int(x), int(y)), 1 + int(v > 1.2), (170, 190, 205), -1, cv2.LINE_AA)
+    if spec_b.get("vent_glow") and u > spec_b["vent_glow"]:      # warm glow far below: where the vents are
+        g = float(np.clip((u - spec_b["vent_glow"]) / 0.4, 0, 1))
+        draw_glow(frame, W * 0.5, H * 1.05, 2, 0.9 * g, (255, 120, 40))
+
+
+def draw_zigzag(frame, cx, cy, R, u, zz):
+    t0, t1 = zz.get("t", [0.1, 0.9]); p = float(np.clip((u - t0) / max(t1 - t0, 1e-3), 0, 1))
+    rng = np.random.default_rng(zz.get("seed", 1)); n = int(zz.get("steps", 40))
+    ang = rng.uniform(0, 2 * math.pi, n); r = np.cumsum(rng.uniform(0.2, 1.0, n))
+    pts = [(cx, cy)]; pos = np.zeros(2)
+    for i in range(n):
+        step = rng.uniform(0.15, 0.4) * R * (0.5 + 0.5 * i / n)
+        pos = pos + step * np.array([math.cos(ang[i]), math.sin(ang[i])])
+        pos *= min(1.0, 0.98 * R / max(np.linalg.norm(pos), 1e-6)) if np.linalg.norm(pos) > 0.96 * R else 1.0
+        pts.append((cx + pos[0], cy + pos[1]))
+    pts[-1] = (cx + R * 0.97, cy - R * 0.2)
+    k = max(2, int(len(pts) * p))
+    arr = np.array(pts[:k], np.int32).reshape(-1, 1, 2)
+    glow = np.zeros_like(frame); cv2.polylines(glow, [arr], False, (255, 255, 220), 7, cv2.LINE_AA)
+    frame += cv2.GaussianBlur(glow, (0, 0), 6) * 1.2
+    cv2.polylines(frame, [arr], False, (255, 255, 245), 3, cv2.LINE_AA)
+
+
+def round_box(draw, x, y, w, h, fill, outline):
+    draw.rounded_rectangle([x, y, x + w, y + h], radius=int(h * 0.3), fill=fill, outline=outline, width=3)
+
+
 def render_frame(spec, base, t, dur, W, H, stars):
     u = t / dur if dur > 0 else 0
     view = spec["view"]
@@ -227,6 +283,8 @@ def render_frame(spec, base, t, dur, W, H, stars):
     # stars drift slowly and steadily (never a still frame)
     dx = int((u * 60) % W)
     frame = stars[H // 2:H // 2 + H, W // 2 - dx:W // 2 - dx + W].copy()
+    if spec.get("backdrop", {}).get("type") == "ocean":
+        draw_ocean(frame, u, spec["backdrop"], spec.get("seed", 3))
     light = spec.get("light", [-0.8, -0.25])
 
     labels = []
@@ -239,17 +297,20 @@ def render_frame(spec, base, t, dur, W, H, stars):
         for k in range(int(b.get("repeat", 1))):
             xk = b.get("x_km", 0) + k * b.get("step_km", 0)
             cx, cy = X(xk), Y(b.get("y_km", 0))
-            draw_glow(frame, cx, cy, r, b.get("glow", 0) * a)
+            draw_glow(frame, cx, cy, r, b.get("glow", 0) * a, tuple(b.get("glow_color", (255, 200, 120))))
             draw_sphere(frame, cx, cy, r, tex, lin(b.get("spin", 0), u), light, b.get("emissive", False),
                         a * (0.45 if b.get("ghost") else 1.0))
-        if b.get("name") and b.get("label", True):
+        if b.get("name") and b.get("label", True) is not False:
             la = fade(b.get("label_at", b.get("at", 0)), t, dur) * (a if b.get("dim") else 1)
-            labels.append((X(b.get("x_km", 0)), Y(b.get("y_km", 0)) - r, b, la, r))
+            if b.get("label_xy"):
+                labels.append((b["label_xy"][0] * W, b["label_xy"][1] * H, b, la, -1))
+            else:
+                labels.append((X(b.get("x_km", 0)), Y(b.get("y_km", 0)) - r, b, la, r))
 
-    # beam (light travelling) before text so labels stay on top
-    bm = spec.get("beam")
-    beam_txt = None
-    if bm:
+    # beams (light travelling) before text so labels stay on top
+    beams = list(spec.get("beams", [])) + ([spec["beam"]] if spec.get("beam") else [])
+    beam_txts = []
+    for bm in beams:
         t0, t1 = bm.get("t", [0.1, 0.9])
         p = float(np.clip((u - t0) / max(t1 - t0, 1e-3), 0, 1))
         stop = bm.get("stop_at")
@@ -258,17 +319,29 @@ def render_frame(spec, base, t, dur, W, H, stars):
         yb = H / 2 + bm.get("y_frac", 0.0) * H
         head = xa + (xb - xa) * p
         start = xa + (xb - xa) * tail
-        if u >= t0 and head > start:
+        if u >= t0 and abs(head - start) > 1 and (tail < 1):
             glow = np.zeros_like(frame)
             cv2.line(glow, (int(start), int(yb)), (int(head), int(yb)), (255, 230, 160), 9, cv2.LINE_AA)
             glow = cv2.GaussianBlur(glow, (0, 0), 7)
             frame += glow * 1.4
             cv2.line(frame, (int(start), int(yb)), (int(head), int(yb)), (255, 248, 225), 3, cv2.LINE_AA)
-            cv2.circle(frame, (int(head), int(yb)), 7, (255, 255, 240), -1, cv2.LINE_AA)
+            if tail == 0:
+                cv2.circle(frame, (int(head), int(yb)), 7, (255, 255, 240), -1, cv2.LINE_AA)
         if bm.get("text"):
             clock = bm.get("clock")
             sub = fmt_clock(lin(clock, p), bm.get("clock_fmt", "s")) if clock else None
-            beam_txt = ((xa + xb) / 2, yb + 34, bm["text"], sub, fade(t0, t, dur))
+            beam_txts.append(((xa + xb) / 2, yb + 34, bm["text"], sub, fade(t0, t, dur)))
+    for fl in spec.get("flares", []):
+        draw_glow(frame, X(fl["x_km"]), Y(fl.get("y_km", 0)), 1, fl.get("strength", 1.0) * 1.6, (255, 225, 170))
+    zz = spec.get("zigzag")
+    if zz:
+        draw_zigzag(frame, X(zz.get("x_km", 0)), Y(zz.get("y_km", 0)), zz["radius_km"] * sc, u, zz)
+    for st in spec.get("stars", []):
+        a_ = fade(st.get("at", 0), t, dur)
+        sx, sy = st["x_frac"] * W, st["y_frac"] * H
+        col = tuple(st.get("color", [255, 245, 230]))
+        draw_glow(frame, sx, sy, st.get("size", 5), 1.2 * a_, col)
+        cv2.circle(frame, (int(sx), int(sy)), int(st.get("size", 5)), tuple(float(c * a_) for c in col), -1, cv2.LINE_AA)
 
     for rp in [spec["ripples"]] if spec.get("ripples") else []:
         t0, t1 = rp.get("t", [0.2, 0.9])
@@ -301,16 +374,40 @@ def render_frame(spec, base, t, dur, W, H, stars):
             lines.append((f"({b['type']})", int(big * 0.42), WHITE, False))
         if b.get("size"):
             lines.append((b["size"], int(big * 0.72), YELLOW, True))
-        text_block(d, x, ytop - 22, lines, W, H, align="center", alpha=a, anchor="bottom")
+        if r < 0:
+            text_block(d, x, ytop, lines, W, H, align="center", alpha=a)
+        else:
+            text_block(d, x, ytop - 22, lines, W, H, align="center", alpha=a, anchor="bottom")
     for x, y, ar, a in arrow_txt:
         lines = [(ar["text"], int(H * 0.036), WHITE, True)]
         if ar.get("sub"):
             lines.append((ar["sub"], int(H * 0.026), CYAN, False))
         text_block(d, x, y, lines, W, H, align="center", alpha=a)
-    if beam_txt:
-        x, y, txt, sub, a = beam_txt
+    for x, y, txt, sub, a in beam_txts:
         lines = [(txt, int(H * 0.038), WHITE, True)] + ([(sub, int(H * 0.05), YELLOW, True)] if sub else [])
         text_block(d, x, y, lines, W, H, align="center", alpha=a)
+    for st in spec.get("stars", []):
+        if st.get("label"):
+            lines = [(st["label"], int(H * 0.034), WHITE, True)] + ([(st["sub"], int(H * 0.028), YELLOW, True)] if st.get("sub") else [])
+            text_block(d, st["x_frac"] * W, st["y_frac"] * H + st.get("size", 5) + 18, lines, W, H, align="center", alpha=fade(st.get("at", 0), t, dur))
+    for tx in spec.get("texts", []):
+        lines = [(l[0], int(H * l[1]), COLORS.get(l[2], WHITE), True) for l in tx["lines"]]
+        text_block(d, tx["x_frac"] * W, tx["y_frac"] * H, lines, W, H, align="center", alpha=fade(tx.get("at", 0), t, dur))
+    ck = spec.get("clock")
+    if ck:
+        c0, c1 = ck.get("t", [0.1, 0.9]); p = float(np.clip((u - c0) / max(c1 - c0, 1e-3), 0, 1))
+        lines = ([(ck["label"], int(H * 0.03), WHITE, False)] if ck.get("label") else []) + \
+                [(fmt_clock(lin(ck.get("seconds", [0, 500]), p), ck.get("fmt", "ms")), int(H * 0.085), YELLOW, True)]
+        text_block(d, ck.get("x_frac", 0.5) * W, ck.get("y_frac", 0.1) * H, lines, W, H, align="center", alpha=fade(c0, t, dur))
+    for bb in spec.get("bubbles", []):
+        a_ = fade(bb.get("at", 0.1), t, dur)
+        if a_ <= 0:
+            continue
+        f = font(int(H * 0.045), True)
+        tb = d.textbbox((0, 0), bb["text"], font=f); w_, h_ = tb[2] - tb[0] + 60, tb[3] - tb[1] + 40
+        x_, y_ = bb["x_frac"] * W - w_ / 2, bb["y_frac"] * H - h_ / 2
+        round_box(d, x_, y_, w_, h_, (int(30 * a_), int(40 * a_), int(60 * a_)), tuple(int(v * a_) for v in CYAN))
+        d.text((x_ + 30, y_ + 20 - tb[1]), bb["text"], font=f, fill=tuple(int(v * a_) for v in WHITE))
     hl = spec.get("headline")
     if hl:
         a = fade(hl.get("at", 0.1), t, dur)
@@ -324,6 +421,7 @@ def main():
     ap.add_argument("spec"); ap.add_argument("out")
     ap.add_argument("--draft", action="store_true")
     ap.add_argument("--still", type=float, default=None)
+    ap.add_argument("--frames", default=None, help="a:b = render only frames a..b-1 (parallel CI chunks)")
     a = ap.parse_args()
     cfg = load_config()
     spec_path = Path(a.spec)
@@ -339,15 +437,16 @@ def main():
         Image.fromarray(render_frame(spec, base, a.still * dur, dur, W, H, stars)).save(a.out)
         print("still ->", a.out); return
     n = max(int(round(dur * fps)), 1)
+    f0, f1 = (int(x) for x in a.frames.split(":")) if a.frames else (0, n)
     cmd = ["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(fps),
            "-i", "-", "-c:v", "libx264", "-preset", "veryfast", "-crf", "17", "-pix_fmt", "yuv420p", a.out]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
-    for i in range(n):
+    for i in range(f0, min(f1, n)):
         proc.stdin.write(render_frame(spec, base, i / fps, dur, W, H, stars).tobytes())
     proc.stdin.close()
     if proc.wait():
         sys.exit("ffmpeg failed")
-    print(f"{n} frames -> {a.out}")
+    print(f"{min(f1, n) - f0} frames -> {a.out}")
 
 
 if __name__ == "__main__":

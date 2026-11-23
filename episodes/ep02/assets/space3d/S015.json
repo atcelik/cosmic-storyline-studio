@@ -1,0 +1,94 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 8,
+ "seed": 3,
+ "view": {
+  "center_km": [
+   192200,
+   192200
+  ],
+  "width_km": [
+   440000,
+   430000
+  ],
+  "y_km": [
+   0,
+   0
+  ]
+ },
+ "light": [
+  -0.9,
+  0.05
+ ],
+ "bodies": [
+  {
+   "name": "EARTH",
+   "type": "Terrestrial planet",
+   "size": "12,742 km",
+   "diameter_km": 12742,
+   "x_km": 0,
+   "texture": "../EARTH2.jpg",
+   "tint": [
+    70,
+    120,
+    200
+   ],
+   "spin": [
+    0,
+    10
+   ],
+   "at": 0,
+   "label": false,
+   "glow": 0.0
+  },
+  {
+   "name": "MOON",
+   "type": "Natural satellite",
+   "size": "3,475 km",
+   "diameter_km": 3475,
+   "x_km": 384400,
+   "texture": "../MOON2.jpg",
+   "tint": [
+    170,
+    170,
+    170
+   ],
+   "spin": [
+    0,
+    4
+   ],
+   "at": 0.05,
+   "label": false
+  },
+  {
+   "diameter_km": 12742,
+   "x_km": 12742,
+   "texture": "../EARTH2.jpg",
+   "tint": [
+    70,
+    120,
+    200
+   ],
+   "repeat": 29,
+   "step_km": 12742,
+   "ghost": true,
+   "spin": [
+    0,
+    0
+   ],
+   "at": 0.1
+  }
+ ],
+ "arrows": [
+  {
+   "from_km": 6371,
+   "to_km": 382663,
+   "y_frac": 0.2,
+   "text": "30 Earth-widths",
+   "at": 0.3,
+   "sub": "laid end to end"
+  }
+ ]
+}

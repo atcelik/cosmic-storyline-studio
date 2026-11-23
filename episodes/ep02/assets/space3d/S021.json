@@ -1,0 +1,92 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 8,
+ "seed": 3,
+ "view": {
+  "center_km": [
+   86490.0,
+   86490.0
+  ],
+  "width_km": [
+   280000,
+   270000
+  ],
+  "y_km": [
+   0,
+   0
+  ]
+ },
+ "light": [
+  -0.9,
+  0.05
+ ],
+ "bodies": [
+  {
+   "name": "EARTH",
+   "type": "Terrestrial planet",
+   "size": "12,742 km",
+   "diameter_km": 40774,
+   "x_km": 0,
+   "texture": "../EARTH2.jpg",
+   "tint": [
+    70,
+    120,
+    200
+   ],
+   "spin": [
+    0,
+    10
+   ],
+   "at": 0,
+   "label": true
+  },
+  {
+   "name": "MOON",
+   "type": "Natural satellite",
+   "size": "3,475 km",
+   "diameter_km": 11120,
+   "x_km": 172980,
+   "texture": "../MOON2.jpg",
+   "tint": [
+    170,
+    170,
+    170
+   ],
+   "spin": [
+    0,
+    4
+   ],
+   "at": 0.05,
+   "label": true
+  }
+ ],
+ "beams": [
+  {
+   "from_km": 21610.22,
+   "to_km": 167086.4,
+   "t": [
+    0.1,
+    0.9
+   ],
+   "y_frac": 0.0,
+   "text": "LIGHT takes 1.28 s",
+   "clock": [
+    0,
+    1.28
+   ],
+   "clock_fmt": "s"
+  }
+ ],
+ "arrows": [
+  {
+   "from_km": 21610.22,
+   "to_km": 167086.4,
+   "y_frac": 0.25,
+   "text": "384,400 km",
+   "at": 0.05,
+   "sub": "to the Moon"
+  }
+ ]
+}

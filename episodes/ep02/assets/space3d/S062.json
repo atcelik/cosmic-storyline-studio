@@ -1,0 +1,48 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 8,
+ "seed": 3,
+ "view": {
+  "center_km": [
+   0,
+   0
+  ],
+  "width_km": [
+   1000,
+   1000
+  ],
+  "y_km": [
+   0,
+   0
+  ]
+ },
+ "light": [
+  -0.9,
+  0.05
+ ],
+ "bodies": [],
+ "backdrop": {
+  "type": "ocean",
+  "depth": [
+   0.55,
+   1.0
+  ],
+  "vent_glow": 0.45
+ },
+ "texts": [
+  {
+   "x_frac": 0.5,
+   "y_frac": 0.2,
+   "lines": [
+    [
+     "NO SUNLIGHT HERE",
+     0.06,
+     "cyan"
+    ]
+   ],
+   "at": 0.25
+  }
+ ]
+}
