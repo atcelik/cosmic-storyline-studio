@@ -6,12 +6,12 @@
  "seed": 3,
  "view": {
   "center_km": [
-   -120000,
-   -60000
+   0,
+   0
   ],
   "width_km": [
-   760000,
-   700000
+   1300000,
+   1250000
   ],
   "y_km": [
    0,
@@ -19,16 +19,16 @@
   ]
  },
  "light": [
-  0.95,
-  0.2
+  -0.9,
+  0.1
  ],
  "bodies": [
   {
    "name": "EARTH",
    "type": "Terrestrial planet",
    "size": "12,742 km",
-   "diameter_km": 900000,
-   "x_km": -450000,
+   "diameter_km": 700000,
+   "x_km": 0,
    "texture": "../EARTH2.jpg",
    "tint": [
     70,
@@ -43,11 +43,18 @@
    "label": false
   }
  ],
- "flares": [
-  {
-   "x_km": 0,
-   "y_km": 90000,
-   "strength": 1.4
-  }
- ]
+ "clock": {
+  "x_frac": 0.5,
+  "y_frac": 0.1,
+  "t": [
+   0.1,
+   0.95
+  ],
+  "seconds": [
+   0,
+   500
+  ],
+  "fmt": "ms",
+  "label": "SINCE THE SUN SWITCHED OFF"
+ }
 }

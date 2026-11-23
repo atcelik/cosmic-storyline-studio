@@ -22,32 +22,34 @@
   -0.9,
   0.05
  ],
- "bodies": [],
- "stars": [
+ "bodies": [
   {
-   "x_frac": 0.0375,
-   "y_frac": 0.5,
-   "size": 9,
-   "label": "EARTH",
-   "sub": null,
-   "color": [
-    100,
-    160,
-    255
+   "name": "EARTH",
+   "type": "Terrestrial planet",
+   "size": "12,742 km",
+   "diameter_km": 1700000000.0,
+   "x_km": 0,
+   "texture": "../EARTH2.jpg",
+   "tint": [
+    70,
+    120,
+    200
    ],
-   "at": 0.0
-  },
+   "spin": [
+    0,
+    2
+   ],
+   "at": 0,
+   "label": false
+  }
+ ],
+ "icons": [
   {
-   "x_frac": 0.9625,
+   "kind": "voyager",
+   "x_frac": 0.945,
    "y_frac": 0.5,
-   "size": 6,
+   "size": 0.05,
    "label": "VOYAGER 1",
-   "sub": null,
-   "color": [
-    255,
-    245,
-    230
-   ],
    "at": 0.0
   }
  ],

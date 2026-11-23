@@ -62,12 +62,12 @@
   ],
   "shots": [
     {
-      "id": "S101",
+      "id": "S150",
       "beat": "B1",
-      "voiceover": "What if the Sun suddenly vanished, right now?",
+      "voiceover": "Imagine a race to the Sun. Light is one of the racers.",
       "visual": {
         "type": "video",
-        "file": "assets/S101.mp4",
+        "file": "assets/S150.mp4",
         "source_class": "OUR_CGI",
         "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
         "source_url": "https://www.solarsystemscope.com/textures/",
@@ -86,12 +86,35 @@
       "vo_lead": 2.2
     },
     {
-      "id": "S102",
+      "id": "S151",
       "beat": "B1",
-      "voiceover": "For the next eight minutes, you would not notice a thing.",
+      "voiceover": "Light wins easily. Everything else has barely left the start.",
       "visual": {
         "type": "video",
-        "file": "assets/S102.mp4",
+        "file": "assets/S151.mp4",
+        "source_class": "OUR_CGI",
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
+      },
+      "camera": {
+        "move": "hold"
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 6.5
+    },
+    {
+      "id": "S152",
+      "beat": "B1",
+      "voiceover": "The fastest spacecraft ever built would need about nine days.",
+      "visual": {
+        "type": "video",
+        "file": "assets/S152.mp4",
         "source_class": "OUR_CGI",
         "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
         "source_url": "https://www.solarsystemscope.com/textures/",
@@ -109,19 +132,42 @@
       "min_duration": 6.5,
       "claims": [
         {
-          "text": "Sunlight takes about eight minutes to reach Earth",
-          "source_url": "https://svs.gsfc.nasa.gov/11084",
+          "text": "Fastest spacecraft speed about 692,000 km/h (Parker Solar Probe, Dec 2024)",
+          "source_url": "https://www.jhuapl.edu/news/news-releases/241227-parker-closest-approach",
           "verified": true
         }
       ]
     },
     {
-      "id": "S103",
+      "id": "S153",
       "beat": "B1",
-      "voiceover": "Here is why, and it starts with light.",
+      "voiceover": "A passenger jet would need nineteen years, and a car, one hundred and seventy.",
       "visual": {
         "type": "video",
-        "file": "assets/S103.mp4",
+        "file": "assets/S153.mp4",
+        "source_class": "OUR_CGI",
+        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
+        "source_url": "https://www.solarsystemscope.com/textures/",
+        "credit_verified": true,
+        "credit_short": "Visualization, Solar System Scope maps"
+      },
+      "camera": {
+        "move": "hold"
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 6.5
+    },
+    {
+      "id": "S154",
+      "beat": "B1",
+      "voiceover": "On foot, it would take more than three thousand years.",
+      "visual": {
+        "type": "video",
+        "file": "assets/S154.mp4",
         "source_class": "OUR_CGI",
         "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
         "source_url": "https://www.solarsystemscope.com/textures/",
@@ -169,36 +215,6 @@
       ]
     },
     {
-      "id": "S002",
-      "beat": "B1",
-      "voiceover": "It crossed roughly 150 million kilometres of nearly empty space to reach you.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S002.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5,
-      "claims": [
-        {
-          "text": "Sun-Earth distance about 150 million km (1 AU)",
-          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
-          "verified": true
-        }
-      ]
-    },
-    {
       "id": "S003",
       "beat": "B1",
       "voiceover": "Nothing you see in daylight is happening in this exact moment.",
@@ -211,81 +227,6 @@
         "credit_verified": false,
         "credit_short": "",
         "file": "assets/S003_c1.jpg"
-      },
-      "camera": {
-        "move": "push_in",
-        "strength": 0.06,
-        "focus": [
-          0.5,
-          0.5
-        ]
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": false,
-      "min_duration": 6.0
-    },
-    {
-      "id": "S004",
-      "beat": "B1",
-      "voiceover": "It is all a little bit old.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S004.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
-    },
-    {
-      "id": "S007",
-      "beat": "B1",
-      "voiceover": "In this episode we will follow that light from the Sun to Earth.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S007.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
-    },
-    {
-      "id": "S009",
-      "beat": "B1",
-      "voiceover": "Along the way, we will meet the Moon, the Sun, and the nearest star beyond them.",
-      "visual": {
-        "type": "still",
-        "source_class": "REAL_PHOTO",
-        "search_query": "DSCOVR moon Earth",
-        "credit": "NASA (GSFC)",
-        "source_url": "https://images.nasa.gov/details/from-a-million-miles-away-nasa-camera-shows-moon-crossing-face-of-earth_20129140980_o",
-        "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S009_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -497,29 +438,6 @@
       "min_duration": 6.5
     },
     {
-      "id": "S020",
-      "beat": "B3",
-      "voiceover": "Even so, light needs time to cross space.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S020.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
-    },
-    {
       "id": "S021",
       "beat": "B3",
       "voiceover": "To reach the Moon, it takes about one and a quarter seconds.",
@@ -714,39 +632,9 @@
       ]
     },
     {
-      "id": "S030",
-      "beat": "B4",
-      "voiceover": "Its distance from us is roughly 150 million kilometres.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S030.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5,
-      "claims": [
-        {
-          "text": "Sun-Earth distance about 150 million km (1 AU)",
-          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
-          "verified": true
-        }
-      ]
-    },
-    {
       "id": "S031",
       "beat": "B4",
-      "voiceover": "Astronomers call that distance one astronomical unit, the standard yardstick of the solar system.",
+      "voiceover": "The distance from Earth to the Sun is one astronomical unit, the standard yardstick of the solar system.",
       "visual": {
         "type": "video",
         "file": "assets/S031.mp4",
@@ -823,29 +711,6 @@
       "on_screen_text": "",
       "label": false,
       "min_duration": 6.0
-    },
-    {
-      "id": "S035",
-      "beat": "B4",
-      "voiceover": "Put the size and the distance together, and you get the central number of this episode.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S035.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
     },
     {
       "id": "S036",
@@ -1059,131 +924,9 @@
       ]
     },
     {
-      "id": "S110",
-      "beat": "B5",
-      "voiceover": "Let us race to the Sun. Light needs about eight minutes.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S110.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
-    },
-    {
-      "id": "S111",
-      "beat": "B5",
-      "voiceover": "The fastest spacecraft ever built would still need about nine days.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S111.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5,
-      "claims": [
-        {
-          "text": "Fastest spacecraft speed about 692,000 km/h (Parker Solar Probe, Dec 2024)",
-          "source_url": "https://www.jhuapl.edu/news/news-releases/241227-parker-closest-approach",
-          "verified": true
-        }
-      ]
-    },
-    {
-      "id": "S112",
-      "beat": "B5",
-      "voiceover": "A passenger jet would take about nineteen years.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S112.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
-    },
-    {
-      "id": "S113",
-      "beat": "B5",
-      "voiceover": "A car driving non-stop would need about one hundred and seventy years.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S113.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
-    },
-    {
-      "id": "S114",
-      "beat": "B5",
-      "voiceover": "And walking would take more than three thousand years.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S114.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
-    },
-    {
       "id": "S043",
       "beat": "B5",
-      "voiceover": "Now return to that vanishing Sun.",
+      "voiceover": "Now imagine the Sun switched off this very second.",
       "visual": {
         "type": "video",
         "file": "assets/S043.mp4",
@@ -1204,12 +947,12 @@
       "min_duration": 6.5
     },
     {
-      "id": "S046",
+      "id": "S044",
       "beat": "B5",
-      "voiceover": "The light already on its way would keep arriving.",
+      "voiceover": "You would not notice anything for eight minutes.",
       "visual": {
         "type": "video",
-        "file": "assets/S046.mp4",
+        "file": "assets/S044.mp4",
         "source_class": "OUR_CGI",
         "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
         "source_url": "https://www.solarsystemscope.com/textures/",
@@ -1227,12 +970,12 @@
       "min_duration": 6.5
     },
     {
-      "id": "S047",
+      "id": "S046",
       "beat": "B5",
-      "voiceover": "Only after those minutes would it stop.",
+      "voiceover": "The light already on its way would keep arriving, then stop.",
       "visual": {
         "type": "video",
-        "file": "assets/S047.mp4",
+        "file": "assets/S046.mp4",
         "source_class": "OUR_CGI",
         "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
         "source_url": "https://www.solarsystemscope.com/textures/",
@@ -1305,7 +1048,7 @@
     {
       "id": "S051",
       "beat": "B5",
-      "voiceover": "Astronomers use the same idea to study the past.",
+      "voiceover": "Astronomers use this to study the past: a distant galaxy is seen as it was long ago.",
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
@@ -1315,35 +1058,6 @@
         "credit_verified": false,
         "credit_short": "",
         "file": "assets/S051_c1.jpg"
-      },
-      "camera": {
-        "move": "push_in",
-        "strength": 0.06,
-        "focus": [
-          0.5,
-          0.5
-        ]
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": false,
-      "min_duration": 6.0
-    },
-    {
-      "id": "S052",
-      "beat": "B5",
-      "voiceover": "When you look at a distant galaxy, you are seeing it as it was long ago.",
-      "visual": {
-        "type": "still",
-        "source_class": "REAL_PHOTO",
-        "search_query": "spiral galaxy Hubble",
-        "credit": "NASA (GSFC)",
-        "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000158",
-        "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S052_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -1486,7 +1200,7 @@
     {
       "id": "S058",
       "beat": "B6",
-      "voiceover": "Seasons, weather and the water cycle are all driven by the energy that arrives in those eight minutes.",
+      "voiceover": "Seasons, weather and the water cycle are all driven by that energy.",
       "visual": {
         "type": "video",
         "file": "assets/S058.mp4",
@@ -1505,35 +1219,6 @@
       "on_screen_text": "",
       "label": true,
       "min_duration": 6.5
-    },
-    {
-      "id": "S059",
-      "beat": "B6",
-      "voiceover": "Sunlight also warms the ocean surface.",
-      "visual": {
-        "type": "still",
-        "source_class": "REAL_PHOTO",
-        "search_query": "sun glint ocean",
-        "credit": "NASA (JSC)",
-        "source_url": "https://images.nasa.gov/details/iss058e007722",
-        "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S059_c1.jpg"
-      },
-      "camera": {
-        "move": "push_in",
-        "strength": 0.06,
-        "focus": [
-          0.5,
-          0.5
-        ]
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": false,
-      "min_duration": 6.0
     },
     {
       "id": "S061",
@@ -1810,29 +1495,6 @@
       "min_duration": 6.5
     },
     {
-      "id": "S071",
-      "beat": "B7",
-      "voiceover": "Compare that with our own Sun, whose light needs eight minutes.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S071.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
-    },
-    {
       "id": "S072",
       "beat": "B7",
       "voiceover": "Proxima Centauri is a small, faint red star.",
@@ -1860,29 +1522,6 @@
       "on_screen_text": "",
       "label": false,
       "min_duration": 6.0
-    },
-    {
-      "id": "S074",
-      "beat": "B7",
-      "voiceover": "Yet it follows the same rule.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S074.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
     },
     {
       "id": "S075",
@@ -2007,65 +1646,6 @@
       "min_duration": 6.5
     },
     {
-      "id": "S077",
-      "beat": "B8",
-      "voiceover": "So here is the question.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S077.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
-    },
-    {
-      "id": "S078",
-      "beat": "B8",
-      "voiceover": "Every sunrise you have ever watched was eight minutes old by the time it reached your eyes.",
-      "visual": {
-        "type": "still",
-        "source_class": "REAL_PHOTO",
-        "search_query": "sunrise International Space Station",
-        "credit": "NASA (JSC)",
-        "source_url": "https://images.nasa.gov/details/iss071e439624",
-        "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S078_c1.jpg"
-      },
-      "camera": {
-        "move": "push_in",
-        "strength": 0.06,
-        "focus": [
-          0.5,
-          0.5
-        ]
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": false,
-      "min_duration": 6.0,
-      "claims": [
-        {
-          "text": "Sunrise light is about eight minutes old when it reaches us",
-          "source_url": "https://howthingsfly.si.edu/ask-an-explainer/how-long-does-it-take-light-sun-get-earth",
-          "verified": true
-        }
-      ]
-    },
-    {
       "id": "S080",
       "beat": "B8",
       "voiceover": "Light lets us see the universe, but it always shows us a little of the past.",
@@ -2118,32 +1698,9 @@
       "min_duration": 6.0
     },
     {
-      "id": "S083",
-      "beat": "B8",
-      "voiceover": "It left the Sun eight minutes ago.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S083.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
-    },
-    {
       "id": "S084",
       "beat": "B8",
-      "voiceover": "It crossed the emptiness between us and arrived in time for you to feel it.",
+      "voiceover": "That light crossed the emptiness between us, and arrived just in time for you to feel it.",
       "visual": {
         "type": "video",
         "file": "assets/S084.mp4",

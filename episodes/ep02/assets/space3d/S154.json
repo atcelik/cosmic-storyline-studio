@@ -31,82 +31,109 @@
   "lanes": [
    {
     "name": "LIGHT",
-    "time": "8 min 20 s",
+    "icon": "light",
+    "icon_size": 0.06,
     "frac": 1.0,
     "color": [
      255,
      240,
      180
     ],
-    "y_frac": 0.2,
+    "y_frac": 0.24,
     "t": [
-     0.12,
-     0.42
+     0.05,
+     0.35
     ],
-    "at": 0.0
+    "at": 0.0,
+    "alpha": 0.28
    },
    {
     "name": "FASTEST SPACECRAFT EVER BUILT",
-    "time": "9 days",
+    "icon": "spacecraft",
+    "icon_size": 0.05,
     "frac": 0.0006430041152263374,
     "color": [
      120,
      200,
      255
     ],
-    "y_frac": 0.36,
+    "y_frac": 0.39,
     "t": [
-     0.12,
-     0.42
+     0.1,
+     0.8
     ],
-    "at": 0.0
+    "at": 0.0,
+    "alpha": 0.28
    },
    {
     "name": "PASSENGER JET",
-    "time": "19 years",
+    "icon": "jet",
+    "icon_size": 0.05,
     "frac": 8.355614973262032e-07,
     "color": [
      255,
      170,
      120
     ],
-    "y_frac": 0.52,
+    "y_frac": 0.54,
     "t": [
-     0.12,
-     0.42
+     0.1,
+     0.8
     ],
-    "at": 0.0
+    "at": 0.0,
+    "alpha": 0.28
    },
    {
-    "name": "CAR, DRIVING NON-STOP",
-    "time": "170 years",
+    "name": "CAR",
+    "icon": "car",
+    "icon_size": 0.045,
     "frac": 9.27643784786642e-08,
     "color": [
      170,
      255,
      170
     ],
-    "y_frac": 0.6799999999999999,
+    "y_frac": 0.69,
     "t": [
-     0.12,
-     0.42
+     0.1,
+     0.8
     ],
-    "at": 0.0
+    "at": 0.0,
+    "alpha": 0.28
+   },
+   {
+    "name": "ON FOOT",
+    "icon": "walker",
+    "icon_size": 0.05,
+    "frac": 4.6296296296296295e-09,
+    "color": [
+     255,
+     150,
+     200
+    ],
+    "y_frac": 0.84,
+    "t": [
+     0.1,
+     0.8
+    ],
+    "at": 0.0,
+    "alpha": 1.0
    }
-  ]
+  ],
+  "zoom": 0.001
  },
  "texts": [
   {
    "x_frac": 0.5,
-   "y_frac": 0.06,
+   "y_frac": 0.07,
    "lines": [
     [
-     "RACE TO THE SUN: 150 MILLION KM",
+     "ZOOMED IN ON THE START LINE",
      0.04,
      "white"
     ]
    ],
-   "at": 0.0
+   "at": 0.1
   }
  ]
 }

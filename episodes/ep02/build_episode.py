@@ -25,10 +25,26 @@ BEATS = [
 # kind: "3d" = OUR_CGI flight or scale graphic, "photo" = real archive image
 # Owner feedback 2026-11-23: narration repeated "light shows the past / eight minutes" too often.
 # These lines are cut; ids stay as they were so photo assets, scene specs and credits keep matching.
-DROP = {"S005", "S006", "S008", "S012", "S017", "S018", "S022", "S023", "S027", "S034", "S037", "S050",
-        "S053", "S060", "S073", "S076", "S079", "S082", "S044", "S045"}
+DROP = {"S005", "S006", "S008", "S012", "S017", "S018", "S022", "S023", "S027", "S034", "S037", "S045", "S050",
+        "S053", "S060", "S073", "S076", "S079", "S082",
+        # second trim, owner feedback "still too repetitive":
+        "S002", "S004", "S007", "S009", "S020", "S030", "S035", "S047", "S052", "S059", "S071", "S074", "S077",
+        "S078", "S083",
+        # superseded by the race opening
+        "S101", "S102", "S103", "S110", "S111", "S112", "S113", "S114"}
 
 SHOTS = [
+    # 0 · Opening race (owner 2026-11-23): no numbers on screen, everything moves at once, pictures not dots
+    ("B1", "3d", "Imagine a race to the Sun. Light is one of the racers.",
+     "Five racers leave together, light arrives, the rest barely move", None, "S150"),
+    ("B1", "3d", "Light wins easily. Everything else has barely left the start.",
+     "Zoomed in on the start line", None, "S151"),
+    ("B1", "3d", "The fastest spacecraft ever built would need about nine days.",
+     "Zoom, spacecraft highlighted", "parker", "S152"),
+    ("B1", "3d", "A passenger jet would need nineteen years, and a car, one hundred and seventy.",
+     "Zoom, jet and car highlighted", None, "S153"),
+    ("B1", "3d", "On foot, it would take more than three thousand years.",
+     "Zoom, walker highlighted", None, "S154"),
     # 0 · Hook (owner idea 2026-11-23: open with the question, pay it off in chapter 5)
     ("B1", "3d", "What if the Sun suddenly vanished, right now?",
      "Sun fades while its light keeps flowing", None, "S101"),
@@ -102,7 +118,7 @@ SHOTS = [
      "Sun filled with Earth-sized dots", "volume", "S130"),
     ("B4", "3d", "Its distance from us is roughly 150 million kilometres.",
      "Sun-Earth distance arrow", "150 million km"),
-    ("B4", "3d", "Astronomers call that distance one astronomical unit, the standard yardstick of the solar system.",
+    ("B4", "3d", "The distance from Earth to the Sun is one astronomical unit, the standard yardstick of the solar system.",
      "1 AU label on the distance arrow", None),
     ("B4", "photo", "Real images of the Sun show its surface in fine detail.",
      "NASA SDO close-up, real image", None),
@@ -141,13 +157,13 @@ SHOTS = [
      "Race lanes: car", None, "S113"),
     ("B5", "3d", "And walking would take more than three thousand years.",
      "Race lanes: walking", None, "S114"),
-    ("B5", "3d", "Now return to that vanishing Sun.",
+    ("B5", "3d", "Now imagine the Sun switched off this very second.",
      "Sun dims in the frame, clock overlay", None),
     ("B5", "3d", "You would not notice anything for eight minutes.",
      "Earth in daylight, clock running", None),
     ("B5", "3d", "The sky would look normal, the warmth on your skin would feel the same.",
      "Earth in daylight, calm pan", None),
-    ("B5", "3d", "The light already on its way would keep arriving.",
+    ("B5", "3d", "The light already on its way would keep arriving, then stop.",
      "Light beams still arriving at Earth", None),
     ("B5", "3d", "Only after those minutes would it stop.",
      "Light stream ends, Sun dark", None),
@@ -157,7 +173,7 @@ SHOTS = [
      "Dashed outline, hold", None),
     ("B5", "3d", "What is certain is this: light always tells you the past, never the present.",
      "Light beam with a timestamp", None),
-    ("B5", "photo", "Astronomers use the same idea to study the past.",
+    ("B5", "photo", "Astronomers use this to study the past: a distant galaxy is seen as it was long ago.",
      "NASA Hubble deep field, real image", None),
     ("B5", "photo", "When you look at a distant galaxy, you are seeing it as it was long ago.",
      "Real galaxy photo, slow push", None),
@@ -172,7 +188,7 @@ SHOTS = [
      "Phytoplankton bloom, real image", None),
     ("B6", "photo", "Animals eat them, and other animals eat those animals.",
      "Food web scene, real photo", None),
-    ("B6", "3d", "Seasons, weather and the water cycle are all driven by the energy that arrives in those eight minutes.",
+    ("B6", "3d", "Seasons, weather and the water cycle are all driven by that energy.",
      "Earth with seasons and clouds, OUR_CGI", None),
     ("B6", "photo", "Sunlight also warms the ocean surface.",
      "Real ocean surface photo from orbit", None),
@@ -234,7 +250,7 @@ SHOTS = [
      "Sun over Earth from orbit, real image", None),
     ("B8", "3d", "It left the Sun eight minutes ago.",
      "Light path from the Sun to Earth, final pass", None),
-    ("B8", "3d", "It crossed the emptiness between us and arrived in time for you to feel it.",
+    ("B8", "3d", "That light crossed the emptiness between us, and arrived just in time for you to feel it.",
      "Light reaching the viewer's frame", None),
     ("B8", "photo", "So what else in your sky is already old?",
      "Earth from orbit at night, real image", None),

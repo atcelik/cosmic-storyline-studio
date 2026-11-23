@@ -220,27 +220,32 @@ S["S120"] = spec(view(0, 0, 1700000, 1650000), [sun(0, 1391400, label=False, glo
 S["S121"] = se(beams=[beam(SE_A, SE_B, "...then only 8 min 20 s to reach you", None, t=(0.15, 0.9))],
                texts=[{"x_frac": 0.5, "y_frac": 0.12, "lines": [["OLDER THAN 8 MINUTES", 0.07, "yellow"]], "at": 0.1}])
 
-# race to the Sun: when light arrives, the others have barely left
-LANES = [("LIGHT", "8 min 20 s", 1.0, [255, 240, 180]),
-         ("FASTEST SPACECRAFT EVER BUILT", "9 days", 500 / 777600, [120, 200, 255]),
-         ("PASSENGER JET", "19 years", 500 / 598400000, [255, 170, 120]),
-         ("CAR, DRIVING NON-STOP", "170 years", 500 / 5.39e9, [170, 255, 170]),
-         ("WALKING", "3,400 years", 500 / 1.08e11, [255, 150, 200])]
-def race(n):
-    lanes = [{"name": nm, "time": tm, "frac": fr, "color": col, "y_frac": 0.2 + 0.16 * i, "t": [0.12, 0.42], "at": 0.0}
-             for i, (nm, tm, fr, col) in enumerate(LANES[:n])]
-    return spec(view(500, 500, 1000, 1000), race={"x_km": [90, 910], "lanes": lanes},
-                texts=[{"x_frac": 0.5, "y_frac": 0.06, "lines": [["RACE TO THE SUN: 150 MILLION KM", 0.04, "white"]], "at": 0.0}])
-for n, k in enumerate(["S110", "S111", "S112", "S113", "S114"], 1):
-    S[k] = race(n)
+# race to the Sun (opening): no numbers; all racers leave together; icons instead of dots
+LANES = [("LIGHT", "light", 1.0, [255, 240, 180], 0.06),
+         ("FASTEST SPACECRAFT EVER BUILT", "spacecraft", 500 / 777600, [120, 200, 255], 0.05),
+         ("PASSENGER JET", "jet", 500 / 598400000, [255, 170, 120], 0.05),
+         ("CAR", "car", 500 / 5.39e9, [170, 255, 170], 0.045),
+         ("ON FOOT", "walker", 500 / 1.08e11, [255, 150, 200], 0.05)]
+def race(zoom=1.0, on=(0, 1, 2, 3, 4), full=False, note=None):
+    lanes = []
+    for i, (nm, ic, fr, col, isz) in enumerate(LANES):
+        lanes.append({"name": nm, "icon": ic, "icon_size": isz, "frac": fr, "color": col, "y_frac": 0.24 + 0.15 * i,
+                      "t": [0.1, 0.8] if full else [0.05, 0.35] if i == 0 else [0.1, 0.8], "at": 0.0,
+                      "alpha": 1.0 if i in on else 0.28})
+    txt = [{"x_frac": 0.5, "y_frac": 0.07, "lines": [[note, 0.04, "white"]], "at": 0.1}] if note else []
+    return spec(view(500, 500, 1000, 1000), race={"x_km": [90, 910], "lanes": lanes, "zoom": zoom}, texts=txt)
+S["S150"] = race(1.0, full=True, note="A RACE TO THE SUN")
+S["S151"] = race(0.001, note="ZOOMED IN ON THE START LINE")
+S["S152"] = race(0.001, on=(1,), note="ZOOMED IN ON THE START LINE")
+S["S153"] = race(0.001, on=(2, 3), note="ZOOMED IN ON THE START LINE")
+S["S154"] = race(0.001, on=(4,), note="ZOOMED IN ON THE START LINE")
 
 # Voyager 1: one light-day (25.9 billion km)
 VX = 25.9e9
-def voy(stars_only=False, **extra):
+def voy(**extra):
     v = view(VX / 2, VX / 2, 28e9, 26e9)
-    sts = [{"x_frac": 0.0375, "y_frac": 0.5, "size": 9, "label": "EARTH", "sub": None, "color": [100, 160, 255], "at": 0.0},
-           {"x_frac": 0.9625, "y_frac": 0.5, "size": 6, "label": "VOYAGER 1", "sub": None, "color": [255, 245, 230], "at": 0.0}]
-    return spec(v, stars=sts, **extra)
+    ics = [{"kind": "voyager", "x_frac": 0.945, "y_frac": 0.5, "size": 0.05, "label": "VOYAGER 1", "at": 0.0}]
+    return spec(v, [earth(0, 1.7e9, label=False, spin=[0, 2])], icons=ics, **extra)
 S["S140"] = voy(texts=[{"x_frac": 0.5, "y_frac": 0.2, "lines": [["THE MOST DISTANT HUMAN-MADE OBJECT", 0.05, "yellow"]], "at": 0.2}])
 S["S141"] = voy(arrows=[arrow(1e9, VX - 1e9, "25.9 billion km", "= 1 LIGHT-DAY", 0.18, 0.15)])
 S["S142"] = voy(beams=[beam(1e9, VX - 1e9, "A RADIO SIGNAL TAKES", (0, 24), "hours", (0.1, 0.9))])

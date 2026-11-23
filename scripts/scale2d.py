@@ -167,6 +167,51 @@ def draw_glow(frame, cx, cy, r, strength, color=(255, 200, 120)):
     frame[y0:y1, x0:x1] += g[..., None] * np.array(color, np.float32) * strength
 
 
+
+def draw_icon(frame, kind, cx, cy, sz, a=1.0, t=0.0):
+    """Small vector pictures (right-facing) so compared things are recognisable. sz = about half the icon width in px."""
+    cx, cy, sz = float(cx), float(cy), float(sz)
+    ov = frame.copy()
+    def P(pts): return np.array([[cx + x * sz, cy + y * sz] for x, y in pts], np.int32)
+    def poly(pts, col): cv2.fillPoly(ov, [P(pts)], col, cv2.LINE_AA)
+    def ell(x, y, rx, ry, col): cv2.ellipse(ov, (int(cx + x * sz), int(cy + y * sz)), (max(int(rx * sz), 1), max(int(ry * sz), 1)), 0, 0, 360, col, -1, cv2.LINE_AA)
+    def ln(x0, y0, x1, y1, col, th): cv2.line(ov, (int(cx + x0 * sz), int(cy + y0 * sz)), (int(cx + x1 * sz), int(cy + y1 * sz)), col, max(int(th), 1), cv2.LINE_AA)
+    if kind == "light":
+        draw_glow(frame, cx, cy, sz * 0.5, 1.4 * a, (255, 235, 170)); ov = frame.copy()
+        ell(0, 0, 0.45, 0.45, (255, 252, 235))
+        for ang in range(0, 360, 45):
+            r = math.radians(ang); ln(0.6 * math.cos(r), 0.6 * math.sin(r), 0.95 * math.cos(r), 0.95 * math.sin(r), (255, 240, 190), sz * 0.08)
+    elif kind == "spacecraft":                               # heat shield in front, body, two solar wings
+        poly([(0.55, -0.55), (0.75, -0.55), (0.75, 0.55), (0.55, 0.55)], (235, 235, 225))
+        poly([(-0.45, -0.28), (0.55, -0.34), (0.55, 0.34), (-0.45, 0.28)], (200, 170, 70))
+        poly([(-0.15, -0.3), (0.2, -0.3), (0.35, -0.95), (-0.35, -0.95)], (60, 90, 190))
+        poly([(-0.15, 0.3), (0.2, 0.3), (0.35, 0.95), (-0.35, 0.95)], (60, 90, 190))
+        ell(-0.55, 0, 0.12, 0.2, (210, 210, 210))
+    elif kind == "jet":
+        ell(0, 0, 1.0, 0.17, (235, 238, 245))
+        poly([(0.15, 0.05), (-0.45, 0.85), (-0.7, 0.85), (-0.3, 0.05)], (190, 200, 215))
+        poly([(0.15, -0.05), (-0.45, -0.85), (-0.7, -0.85), (-0.3, -0.05)], (190, 200, 215))
+        poly([(-0.85, -0.05), (-1.05, -0.55), (-0.75, -0.55), (-0.6, -0.05)], (210, 80, 80))
+        ell(0.7, -0.03, 0.12, 0.06, (90, 130, 190))
+    elif kind == "car":
+        poly([(-1.0, 0.25), (-0.95, -0.15), (-0.45, -0.25), (-0.25, -0.65), (0.4, -0.65), (0.65, -0.25), (1.0, -0.15), (1.0, 0.25)], (225, 70, 70))
+        poly([(-0.18, -0.55), (0.35, -0.55), (0.52, -0.25), (-0.32, -0.25)], (170, 210, 240))
+        ell(-0.55, 0.3, 0.22, 0.22, (30, 30, 30)); ell(0.55, 0.3, 0.22, 0.22, (30, 30, 30))
+        ell(-0.55, 0.3, 0.09, 0.09, (190, 190, 190)); ell(0.55, 0.3, 0.09, 0.09, (190, 190, 190))
+    elif kind == "walker":
+        sw = math.sin(t * 6.0) * 0.35
+        ell(0.05, -0.85, 0.17, 0.17, (240, 205, 170))
+        ln(0.0, -0.65, -0.05, 0.05, (90, 150, 230), sz * 0.14)
+        ln(-0.05, 0.05, -0.05 + sw, 0.85, (70, 80, 120), sz * 0.12); ln(-0.05, 0.05, -0.05 - sw, 0.85, (70, 80, 120), sz * 0.12)
+        ln(0.0, -0.5, sw * 0.9, 0.05, (90, 150, 230), sz * 0.09); ln(0.0, -0.5, -sw * 0.9, 0.05, (90, 150, 230), sz * 0.09)
+    elif kind == "voyager":                                  # dish antenna, boom, small bus
+        poly([(-0.2, -0.75), (0.15, -0.35), (0.15, 0.35), (-0.2, 0.75), (-0.05, 0.0)], (235, 235, 235))
+        ell(-0.1, 0, 0.12, 0.75, (215, 215, 215))
+        poly([(0.15, -0.2), (0.6, -0.2), (0.6, 0.2), (0.15, 0.2)], (200, 170, 70))
+        ln(0.6, 0, 1.1, 0.5, (190, 190, 190), sz * 0.06); ln(0.6, 0, 1.1, -0.45, (190, 190, 190), sz * 0.06)
+        ell(1.1, 0.5, 0.1, 0.1, (190, 190, 190))
+    cv2.addWeighted(ov, a, frame, 1 - a, 0, frame)
+
 def text_block(draw, x, y, lines, W, H, align="left", alpha=1.0, anchor="top"):
     """lines = [(text, size, colour, bold)]; keeps the block inside the frame. anchor="bottom": y is the block's bottom edge."""
     if alpha <= 0:
@@ -385,26 +430,39 @@ def render_frame(spec, base, t, dur, W, H, stars):
 
     race_txt = []
     rc = spec.get("race")
-    if rc:                                       # lanes: every racer has a track; dot = how far it got when light arrived
+    if rc:                                       # lanes move together; dot/icon = how far each got. zoom = share of the track shown
         xa, xb = X(rc["x_km"][0]), X(rc["x_km"][1])
+        zoom = float(rc.get("zoom", 1.0))
         for ln in rc["lanes"]:
-            a_ = fade(ln.get("at", 0), t, dur)
+            a_ = fade(ln.get("at", 0), t, dur) * float(ln.get("alpha", 1.0))
             if a_ <= 0:
                 continue
             yl = H * ln["y_frac"]
             col = tuple(float(c) for c in ln.get("color", [255, 240, 180]))
-            cv2.line(frame, (int(xa), int(yl)), (int(xb), int(yl)), tuple(c * 0.25 * a_ for c in col), 2, cv2.LINE_AA)
+            cv2.line(frame, (int(xa), int(yl)), (int(xb), int(yl)), tuple(c * 0.28 * a_ for c in col), 2, cv2.LINE_AA)
             t0, t1 = ln.get("t", [0.0, 0.0]); p = 1.0 if t1 <= t0 else float(np.clip((u - t0) / (t1 - t0), 0, 1))
-            hx = xa + (xb - xa) * ln.get("frac", 1.0) * p
-            draw_glow(frame, hx, yl, 8, 1.1 * a_, tuple(int(c) for c in col))
-            cv2.circle(frame, (int(hx), int(yl)), 8, tuple(c * a_ for c in col), -1, cv2.LINE_AA)
+            hx = xa + (xb - xa) * min(1.0, ln.get("frac", 1.0) / zoom) * p
+            if ln.get("trail", True) and hx - xa > 2:
+                cv2.line(frame, (int(xa), int(yl)), (int(hx), int(yl)), tuple(c * 0.8 * a_ for c in col), 4, cv2.LINE_AA)
+            if ln.get("icon"):
+                draw_icon(frame, ln["icon"], hx, yl - H * 0.035, H * float(ln.get("icon_size", 0.05)), a_, t)
+            else:
+                draw_glow(frame, hx, yl, 8, 1.1 * a_, tuple(int(c) for c in col))
+                cv2.circle(frame, (int(hx), int(yl)), 8, tuple(c * a_ for c in col), -1, cv2.LINE_AA)
             race_txt.append((xa, yl, ln, a_, p, xb))
+    for ic in spec.get("icons", []):
+        a_ = fade(ic.get("at", 0), t, dur)
+        if a_ > 0:
+            draw_icon(frame, ic["kind"], ic["x_frac"] * W, ic["y_frac"] * H, H * ic.get("size", 0.06), a_, t)
 
     img = Image.fromarray(np.clip(frame, 0, 255).astype(np.uint8))
     d = ImageDraw.Draw(img)
     big = int(H * 0.058)
+    for ic in spec.get("icons", []):
+        if ic.get("label"):
+            text_block(d, ic["x_frac"] * W, ic["y_frac"] * H + H * ic.get("size", 0.06) * 1.25, [(ic["label"], int(H * 0.034), WHITE, True)], W, H, align="center", alpha=fade(ic.get("at", 0), t, dur))
     for xa_, yl, ln, a_, p, xb_ in race_txt:
-        text_block(d, xa_, yl - int(H * 0.085), [(ln["name"], int(H * 0.04), COLORS.get(ln.get("tcolor", "white"), WHITE), True)], W, H, align="left", alpha=a_)
+        text_block(d, xa_ + int(H * 0.075), yl - int(H * 0.085), [(ln["name"], int(H * 0.04), COLORS.get(ln.get("tcolor", "white"), WHITE), True)], W, H, align="left", alpha=a_)
         if p >= 1.0 and ln.get("time"):
             text_block(d, xb_, yl - int(H * 0.085), [(ln["time"], int(H * 0.056), YELLOW, True)], W, H, align="right", alpha=a_)
     for x, ytop, b, a, r in labels:              # big name, type, size (the reference layout)
