@@ -165,7 +165,7 @@ PX = 1000000                                    # Proxima drawn at 1,000,000 (di
 def sun_vs_proxima(**extra):
     return spec(view(PX / 2, PX / 2, 1500000, 1450000),
                 [sun(0, 420000, label=True, glow=0.7), {"name": "PROXIMA CENTAURI", "type": "Red dwarf star", "size": None,
-                 "diameter_km": 65000, "x_km": PX, "texture": "../SUN2.jpg", "tint": [255, 60, 30], "emissive": True,
+                 "diameter_km": 65000, "x_km": PX, "texture": "../SUN2.jpg", "tint": [255, 60, 30], "recolor": True, "emissive": True,
                  "glow": 1.0, "glow_color": [255, 80, 40], "spin": [0, 4], "at": 0.0}], **extra)
 S["S067"] = sun_vs_proxima(arrows=[arrow(210000 * 1.06, PX - 32500 * 1.06, "4.24 light-years", None, 0.3, 0.2)])
 S["S068"] = sun_vs_proxima(beams=[beam(PX - 32500 * 1.06, 210000 * 1.06, "LIGHT takes", (0, 4.24), "years", (0.15, 0.92))])
@@ -173,7 +173,7 @@ S["S070"] = sun_vs_proxima(beams=[beam(PX - 32500 * 1.06, 210000 * 1.06, "set ou
 S["S071"] = spec(view(PX / 2, PX / 2, 1500000, 1450000),
                  [sun(0, 420000, label=True, glow=0.7, size="8 min 20 s away"),
                   {"name": "PROXIMA CENTAURI", "type": "Red dwarf star", "size": "4.24 years away", "diameter_km": 65000, "x_km": PX,
-                   "texture": "../SUN2.jpg", "tint": [255, 60, 30], "emissive": True, "glow": 1.0, "glow_color": [255, 80, 40],
+                   "texture": "../SUN2.jpg", "tint": [255, 60, 30], "recolor": True, "emissive": True, "glow": 1.0, "glow_color": [255, 80, 40],
                    "spin": [0, 4], "at": 0.0}])
 S["S074"] = spec(view(0), stars=[{"x_frac": 0.1, "y_frac": 0.5, "size": 9, "color": [255, 220, 200], "at": 0.0}],
                  beams=[{"from_km": -450, "to_km": 520, "t": [0.1, 0.9], "y_frac": 0.0}],
@@ -196,7 +196,11 @@ S["S084"] = spec(view(0, 0, 1000, 1000), [], beams=[beam(-520, 520, t=(0.05, 0.8
                  flares=[{"x_km": 470, "y_km": 0, "strength": 1.6}],
                  texts=[{"x_frac": 0.5, "y_frac": 0.7, "lines": [["...and arrived in time for you to feel it", 0.045, "white"]], "at": 0.5}])
 
+sys.path.insert(0, str(Path(__file__).parent))
+from build_episode import DROP
 OUT.mkdir(parents=True, exist_ok=True)
+for k in DROP:
+    S.pop(k, None); (OUT / f"{k}.json").unlink(missing_ok=True)
 for k, v in S.items():
     (OUT / f"{k}.json").write_text(json.dumps(v, indent=1))
 print(len(S), "specs ->", OUT)

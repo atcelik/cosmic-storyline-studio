@@ -56,6 +56,7 @@
     60,
     30
    ],
+   "recolor": true,
    "emissive": true,
    "glow": 1.0,
    "glow_color": [

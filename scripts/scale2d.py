@@ -75,8 +75,8 @@ def fade(at, t_sec, dur):
     return float(np.clip((t_sec - at * dur) / 0.5, 0, 1))
 
 
-def load_texture(base, path, tint, seed):
-    key = (str(path), tuple(tint or ()), seed)
+def load_texture(base, path, tint, seed, recolor=False):
+    key = (str(path), tuple(tint or ()), seed, recolor)
     if key in _tex_cache:
         return _tex_cache[key]
     tex = None
@@ -95,7 +95,7 @@ def load_texture(base, path, tint, seed):
         n = (n - n.min()) / max(np.ptp(n), 1e-6)
         col = np.array(tint or (160, 160, 160), np.float32)
         tex = np.clip(col * (0.6 + 0.6 * n[..., None]), 0, 255).astype(np.uint8)
-    elif tint and len(tint) == 3:        # optional recolour (e.g. a red dwarf from the Sun map)
+    elif recolor and tint and len(tint) == 3:   # recolour only when asked (e.g. a red dwarf from the Sun map) (e.g. a red dwarf from the Sun map)
         g = tex.astype(np.float32).mean(axis=2, keepdims=True) / 255.0
         tex = np.clip(g * np.array(tint, np.float32) * 1.6, 0, 255).astype(np.uint8)
     _tex_cache[key] = tex
@@ -292,7 +292,7 @@ def render_frame(spec, base, t, dur, W, H, stars):
         a = fade(b.get("at", 0), t, dur)
         for wnd in b.get("dim", []):               # dim = fade to dark (the Sun switching off)
             a *= 1 - float(np.clip((u - wnd[0]) / max(wnd[1] - wnd[0], 1e-3), 0, 1))
-        tex = load_texture(base, b.get("texture"), b.get("tint"), spec.get("seed", 3))
+        tex = load_texture(base, b.get("texture"), b.get("tint"), spec.get("seed", 3), b.get("recolor", False))
         r = b["diameter_km"] / 2 * sc
         for k in range(int(b.get("repeat", 1))):
             xk = b.get("x_km", 0) + k * b.get("step_km", 0)

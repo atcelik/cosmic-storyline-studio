@@ -23,6 +23,11 @@ BEATS = [
 
 # (beat, kind, narration, visual note, claim key or None)
 # kind: "3d" = OUR_CGI flight or scale graphic, "photo" = real archive image
+# Owner feedback 2026-11-23: narration repeated "light shows the past / eight minutes" too often.
+# These lines are cut; ids stay as they were so photo assets, scene specs and credits keep matching.
+DROP = {"S005", "S006", "S008", "S012", "S017", "S018", "S022", "S023", "S027", "S034", "S037", "S050",
+        "S053", "S060", "S073", "S076", "S079", "S082"}
+
 SHOTS = [
     # 1 · The light on your face
     ("B1", "3d", "Right now, the sunlight on your face left the Sun about eight minutes ago.",
@@ -273,6 +278,8 @@ def build_shots():
     shots = []
     for i, (beat, kind, vo, note, claim_key) in enumerate(SHOTS, 1):
         sid = f"S{i:03d}"
+        if sid in DROP:
+            continue
         if kind == "3d":
             visual = {"type": "video", "file": f"assets/{sid}.mp4", "source_class": "OUR_CGI",
                       "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",

@@ -175,87 +175,12 @@
       "min_duration": 6.5
     },
     {
-      "id": "S005",
-      "beat": "B1",
-      "voiceover": "Most of us never notice this, because light moves so fast that the delay is invisible.",
-      "visual": {
-        "type": "still",
-        "source_class": "REAL_PHOTO",
-        "search_query": "orbital sunrise",
-        "credit": "NASA (JSC)",
-        "source_url": "https://images.nasa.gov/details/iss071e000922",
-        "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S005_c1.jpg"
-      },
-      "camera": {
-        "move": "push_in",
-        "strength": 0.06,
-        "focus": [
-          0.5,
-          0.5
-        ]
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": false,
-      "min_duration": 6.0
-    },
-    {
-      "id": "S006",
-      "beat": "B1",
-      "voiceover": "But it is there, every second of every day.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S006.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
-    },
-    {
       "id": "S007",
       "beat": "B1",
       "voiceover": "In this episode we will follow that light from the Sun to Earth.",
       "visual": {
         "type": "video",
         "file": "assets/S007.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
-    },
-    {
-      "id": "S008",
-      "beat": "B1",
-      "voiceover": "We will ask what the delay really means for us.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S008.mp4",
         "source_class": "OUR_CGI",
         "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
         "source_url": "https://www.solarsystemscope.com/textures/",
@@ -359,35 +284,6 @@
           "verified": true
         }
       ]
-    },
-    {
-      "id": "S012",
-      "beat": "B2",
-      "voiceover": "That is a number we can picture, because we have all stood on its surface.",
-      "visual": {
-        "type": "still",
-        "source_class": "REAL_PHOTO",
-        "search_query": "Kennedy Space Center sunrise",
-        "credit": "NASA (KSC) / NASA/Kim Shiflett",
-        "source_url": "https://images.nasa.gov/details/KSC-20180621-PH_KLS01_0091",
-        "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S012_c1.jpg"
-      },
-      "camera": {
-        "move": "push_in",
-        "strength": 0.06,
-        "focus": [
-          0.5,
-          0.5
-        ]
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": false,
-      "min_duration": 6.0
     },
     {
       "id": "S013",
@@ -502,58 +398,6 @@
       "min_duration": 6.5
     },
     {
-      "id": "S017",
-      "beat": "B2",
-      "voiceover": "It is a long way for us, but a short trip for light.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S017.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
-    },
-    {
-      "id": "S018",
-      "beat": "B2",
-      "voiceover": "Hold that picture in mind, because every distance in this episode is measured against it.",
-      "visual": {
-        "type": "still",
-        "source_class": "REAL_PHOTO",
-        "search_query": "Earth and Moon",
-        "credit": "NASA (JPL)",
-        "source_url": "https://images.nasa.gov/details/PIA13227",
-        "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S018_c1.jpg"
-      },
-      "camera": {
-        "move": "push_in",
-        "strength": 0.06,
-        "focus": [
-          0.5,
-          0.5
-        ]
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": false,
-      "min_duration": 6.0
-    },
-    {
       "id": "S019",
       "beat": "B3",
       "voiceover": "Light is the fastest thing we know of; nothing carries information faster.",
@@ -630,58 +474,6 @@
       ]
     },
     {
-      "id": "S022",
-      "beat": "B3",
-      "voiceover": "That sounds quick, and it is.",
-      "visual": {
-        "type": "still",
-        "source_class": "REAL_PHOTO",
-        "search_query": "Earthrise",
-        "credit": "NASA (JSC) / NASA",
-        "source_url": "https://images.nasa.gov/details/art002e009280b",
-        "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S022_c1.jpg"
-      },
-      "camera": {
-        "move": "push_in",
-        "strength": 0.06,
-        "focus": [
-          0.5,
-          0.5
-        ]
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": false,
-      "min_duration": 6.0
-    },
-    {
-      "id": "S023",
-      "beat": "B3",
-      "voiceover": "But distance turns into time, and time turns into a kind of delay.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S023.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
-    },
-    {
       "id": "S024",
       "beat": "B3",
       "voiceover": "A signal sent to the Moon and back takes a few seconds.",
@@ -755,29 +547,6 @@
       "on_screen_text": "",
       "label": false,
       "min_duration": 6.0
-    },
-    {
-      "id": "S027",
-      "beat": "B3",
-      "voiceover": "The farther something is, the more out of date its light becomes.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S027.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
     },
     {
       "id": "S028",
@@ -950,35 +719,6 @@
       "min_duration": 6.0
     },
     {
-      "id": "S034",
-      "beat": "B4",
-      "voiceover": "They come from spacecraft that watch the Sun all the time.",
-      "visual": {
-        "type": "still",
-        "source_class": "REAL_PHOTO",
-        "search_query": "Parker Solar Probe",
-        "credit": "NASA (KSC) / NASA/Kim Shiflett",
-        "source_url": "https://images.nasa.gov/details/KSC-20180419-PH_KLS01_0054",
-        "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S034_c1.jpg"
-      },
-      "camera": {
-        "move": "push_in",
-        "strength": 0.06,
-        "focus": [
-          0.5,
-          0.5
-        ]
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": false,
-      "min_duration": 6.0
-    },
-    {
       "id": "S035",
       "beat": "B4",
       "voiceover": "Put the size and the distance together, and you get the central number of this episode.",
@@ -1030,35 +770,6 @@
           "verified": true
         }
       ]
-    },
-    {
-      "id": "S037",
-      "beat": "B4",
-      "voiceover": "Every image of the Sun you have ever seen is a snapshot of a few minutes ago.",
-      "visual": {
-        "type": "still",
-        "source_class": "REAL_PHOTO",
-        "search_query": "solar flare",
-        "credit": "NASA (JPL)",
-        "source_url": "https://images.nasa.gov/details/PIA21958",
-        "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S037_c1.jpg"
-      },
-      "camera": {
-        "move": "push_in",
-        "strength": 0.06,
-        "focus": [
-          0.5,
-          0.5
-        ]
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": false,
-      "min_duration": 6.0
     },
     {
       "id": "S038",
@@ -1357,29 +1068,6 @@
       "min_duration": 6.5
     },
     {
-      "id": "S050",
-      "beat": "B5",
-      "voiceover": "What is certain is this: light always tells you the past, never the present.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S050.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
-    },
-    {
       "id": "S051",
       "beat": "B5",
       "voiceover": "Astronomers use the same idea to study the past.",
@@ -1436,29 +1124,6 @@
       "on_screen_text": "",
       "label": false,
       "min_duration": 6.0
-    },
-    {
-      "id": "S053",
-      "beat": "B6",
-      "voiceover": "Eight minutes of delay is a fact about light.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S053.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
     },
     {
       "id": "S054",
@@ -1619,35 +1284,6 @@
         "credit_verified": false,
         "credit_short": "",
         "file": "assets/S059_c1.jpg"
-      },
-      "camera": {
-        "move": "push_in",
-        "strength": 0.06,
-        "focus": [
-          0.5,
-          0.5
-        ]
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": false,
-      "min_duration": 6.0
-    },
-    {
-      "id": "S060",
-      "beat": "B6",
-      "voiceover": "That warmth drives currents that move heat around the planet.",
-      "visual": {
-        "type": "still",
-        "source_class": "REAL_PHOTO",
-        "search_query": "ocean currents",
-        "credit": "NASA (JSC)",
-        "source_url": "https://images.nasa.gov/details/s45-152-011",
-        "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S060_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -1991,35 +1627,6 @@
       "min_duration": 6.0
     },
     {
-      "id": "S073",
-      "beat": "B7",
-      "voiceover": "It is too dim to see with the naked eye from most places.",
-      "visual": {
-        "type": "still",
-        "source_class": "REAL_PHOTO",
-        "search_query": "night sky stars",
-        "credit": "NASA (JPL)",
-        "source_url": "https://images.nasa.gov/details/PIA14102",
-        "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S073_c1.jpg"
-      },
-      "camera": {
-        "move": "push_in",
-        "strength": 0.06,
-        "focus": [
-          0.5,
-          0.5
-        ]
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": false,
-      "min_duration": 6.0
-    },
-    {
       "id": "S074",
       "beat": "B7",
       "voiceover": "Yet it follows the same rule.",
@@ -2049,29 +1656,6 @@
       "visual": {
         "type": "video",
         "file": "assets/S075.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
-        "source_url": "https://www.solarsystemscope.com/textures/",
-        "credit_verified": true,
-        "credit_short": "Visualization, Solar System Scope maps"
-      },
-      "camera": {
-        "move": "hold"
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": true,
-      "min_duration": 6.5
-    },
-    {
-      "id": "S076",
-      "beat": "B7",
-      "voiceover": "The farther the star, the older the message.",
-      "visual": {
-        "type": "video",
-        "file": "assets/S076.mp4",
         "source_class": "OUR_CGI",
         "credit": "Our visualization: Earth, Moon and Sun maps from Solar System Scope (CC BY 4.0, based on NASA data)",
         "source_url": "https://www.solarsystemscope.com/textures/",
@@ -2148,35 +1732,6 @@
       ]
     },
     {
-      "id": "S079",
-      "beat": "B8",
-      "voiceover": "Every star you have ever seen is older than your sense of time.",
-      "visual": {
-        "type": "still",
-        "source_class": "REAL_PHOTO",
-        "search_query": "star trails",
-        "credit": "NASA (JPL)",
-        "source_url": "https://images.nasa.gov/details/PIA00376",
-        "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S079_c1.jpg"
-      },
-      "camera": {
-        "move": "push_in",
-        "strength": 0.06,
-        "focus": [
-          0.5,
-          0.5
-        ]
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": false,
-      "min_duration": 6.0
-    },
-    {
       "id": "S080",
       "beat": "B8",
       "voiceover": "Light lets us see the universe, but it always shows us a little of the past.",
@@ -2212,35 +1767,6 @@
         "credit_verified": false,
         "credit_short": "",
         "file": "assets/S081_c1.jpg"
-      },
-      "camera": {
-        "move": "push_in",
-        "strength": 0.06,
-        "focus": [
-          0.5,
-          0.5
-        ]
-      },
-      "transition_out": {
-        "type": "cut"
-      },
-      "on_screen_text": "",
-      "label": false,
-      "min_duration": 6.0
-    },
-    {
-      "id": "S082",
-      "beat": "B8",
-      "voiceover": "Remember where it came from.",
-      "visual": {
-        "type": "still",
-        "source_class": "REAL_PHOTO",
-        "search_query": "sun over Earth",
-        "credit": "NASA (JSC)",
-        "source_url": "https://images.nasa.gov/details/sts109-345-032",
-        "credit_verified": false,
-        "credit_short": "",
-        "file": "assets/S082_c1.jpg"
       },
       "camera": {
         "move": "push_in",
