@@ -1,0 +1,12 @@
+{"episode": "ep02", "items": [
+ {"id": "N008", "url": "https://oceanexplorer.noaa.gov/wp-content/uploads/2025/08/1605vent-hires.jpg", "kind": "image",
+  "title": "Black smoker, Mariana back-arc", "source_class": "REAL_PHOTO", "credit": "NOAA Office of Ocean Exploration and Research",
+  "source_url": "https://oceanexplorer.noaa.gov/", "credit_checked": true, "note": "reused from EP01 (credit read 2026-11-22)", "shots": ["S063"]},
+ {"id": "LOST", "url": "https://s3.amazonaws.com/s3-east-testmedia-noaa.woc.noaa.gov/dam/Photos/legacy/pl23_expl2224.jpg", "kind": "image",
+  "title": "A white carbonate spire in the Lost City vent field", "source_class": "REAL_PHOTO",
+  "credit": "IFE, URI-IAO, UW, Lost City Science Party; NOAA/OAR/OER; The Lost City 2005 Expedition",
+  "source_url": "https://noaa.gov/media/digital-library-photo/pl23expl2224jpg", "credit_checked": true, "note": "reused from EP01", "shots": ["S064"]},
+ {"id": "NUR", "url": "https://s3.amazonaws.com/s3-east-testmedia-noaa.woc.noaa.gov/dam/Photos/legacy/pl23_nur04512.jpg", "kind": "image",
+  "title": "Tube worms at the base of a black smoker", "source_class": "REAL_PHOTO", "credit": "OAR/National Undersea Research Program (NURP)",
+  "source_url": "https://noaa.gov/media/digital-library-photo/pl23nur04512jpg", "credit_checked": true, "note": "reused from EP01", "shots": ["S065"]}
+]}

@@ -236,6 +236,19 @@ CLAIMS = {
                     "derived from the sunlight travel time"),
 }
 
+# Short keyword queries for the NASA image search (the long notes above returned 0 results, 2026-11-23).
+QUERY = {
+    "S003": "Earth limb ISS", "S005": "orbital sunrise", "S009": "DSCOVR moon Earth", "S010": "Blue Marble",
+    "S012": "Kennedy Space Center sunrise", "S013": "full moon", "S018": "Earth and Moon", "S022": "Earthrise",
+    "S026": "Curiosity rover selfie", "S028": "SDO sun", "S032": "sunspots", "S033": "coronal loops",
+    "S034": "Parker Solar Probe", "S037": "solar flare", "S038": "Sun layers", "S051": "Hubble Ultra Deep Field",
+    "S052": "spiral galaxy Hubble", "S054": "Earth from space", "S055": "vegetation Earth satellite",
+    "S056": "phytoplankton bloom", "S057": "Merritt Island wildlife", "S059": "sun glint ocean",
+    "S060": "ocean currents", "S066": "Milky Way", "S069": "Alpha Centauri", "S072": "red dwarf star",
+    "S073": "night sky stars", "S078": "sunrise International Space Station", "S079": "star trails",
+    "S081": "astronaut spacewalk sun", "S082": "sun over Earth", "S085": "city lights night Earth",
+}
+
 
 def build_shots():
     shots = []
@@ -248,7 +261,7 @@ def build_shots():
                       "source_url": "", "credit_verified": False, "credit_short": "Visualization"}
             camera = {"move": "push_in", "strength": 0.05, "focus": [0.5, 0.5]}
         else:
-            visual = {"type": "still", "source_class": "REAL_PHOTO", "search_query": note,
+            visual = {"type": "still", "source_class": "REAL_PHOTO", "search_query": QUERY.get(sid, note),
                       "credit": "", "source_url": "", "credit_verified": False, "credit_short": ""}
             camera = {"move": "push_in", "strength": 0.06, "focus": [0.5, 0.5]}
         shot = {

@@ -141,7 +141,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "NASA Earth from orbit, sunlit limb",
+        "search_query": "Earth limb ISS",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -197,7 +197,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Real sunrise photo from orbit",
+        "search_query": "orbital sunrise",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -309,7 +309,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "NASA Earth-Moon real image",
+        "search_query": "DSCOVR moon Earth",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -337,7 +337,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "NASA Blue Marble or Earth from orbit",
+        "search_query": "Blue Marble",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -401,7 +401,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Real surface photo, ground level",
+        "search_query": "Kennedy Space Center sunrise",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -429,7 +429,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "NASA Moon full-disc photo",
+        "search_query": "full moon",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -585,7 +585,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "NASA Earth and Moon in one frame, real image",
+        "search_query": "Earth and Moon",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -705,7 +705,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Earth-Moon real image, short hold",
+        "search_query": "Earthrise",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -817,7 +817,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Real Mars rover or orbiter photo",
+        "search_query": "Curiosity rover selfie",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -873,7 +873,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "NASA SDO full-disc Sun image",
+        "search_query": "SDO sun",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -1001,7 +1001,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "NASA SDO close-up, real image",
+        "search_query": "sunspots",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -1029,7 +1029,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "NASA SDO flare or loop, real image",
+        "search_query": "coronal loops",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -1057,7 +1057,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Spacecraft over the Sun, real image",
+        "search_query": "Parker Solar Probe",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -1149,7 +1149,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Sun image held, slow push",
+        "search_query": "solar flare",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -1177,7 +1177,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "NASA solar interior diagram, real image",
+        "search_query": "Sun layers",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -1557,7 +1557,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "NASA Hubble deep field, real image",
+        "search_query": "Hubble Ultra Deep Field",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -1585,7 +1585,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Real galaxy photo, slow push",
+        "search_query": "spiral galaxy Hubble",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -1641,7 +1641,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "NASA Earth from orbit, real image",
+        "search_query": "Earth from space",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -1669,7 +1669,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Plants and vegetation from orbit, real image",
+        "search_query": "vegetation Earth satellite",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -1705,7 +1705,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Phytoplankton bloom, real image",
+        "search_query": "phytoplankton bloom",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -1733,7 +1733,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Food web scene, real photo",
+        "search_query": "Merritt Island wildlife",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -1789,7 +1789,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Real ocean surface photo from orbit",
+        "search_query": "sun glint ocean",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -1817,7 +1817,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Ocean current satellite image, real",
+        "search_query": "ocean currents",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -1993,7 +1993,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Milky Way star field, real image",
+        "search_query": "Milky Way",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -2085,7 +2085,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Alpha Centauri real image, star field",
+        "search_query": "Alpha Centauri",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -2169,7 +2169,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Real red dwarf or star field photo",
+        "search_query": "red dwarf star",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -2197,7 +2197,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Night sky real photo, slow pull",
+        "search_query": "night sky stars",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -2337,7 +2337,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Sunrise from the ISS, real photo",
+        "search_query": "sunrise International Space Station",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -2373,7 +2373,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Night sky star field, real photo",
+        "search_query": "star trails",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -2429,7 +2429,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Sunlight on a person's shoulder, real photo",
+        "search_query": "astronaut spacewalk sun",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -2457,7 +2457,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Sun over Earth from orbit, real image",
+        "search_query": "sun over Earth",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
@@ -2541,7 +2541,7 @@
       "visual": {
         "type": "still",
         "source_class": "REAL_PHOTO",
-        "search_query": "Earth from orbit at night, real image",
+        "search_query": "city lights night Earth",
         "credit": "",
         "source_url": "",
         "credit_verified": false,
