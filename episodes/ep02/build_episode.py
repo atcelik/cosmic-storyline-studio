@@ -250,6 +250,25 @@ QUERY = {
 }
 
 
+# Checked 2026-11-23 (numbers read on these pages)
+SOURCES = {
+ "Sunlight takes about eight minutes to reach Earth": "https://svs.gsfc.nasa.gov/11084",
+ "Sun-Earth distance about 150 million km (1 AU)": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+ "Earth diameter about 12,742 km": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+ "Moon about a quarter of Earth's diameter": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+ "Moon about 30 Earth diameters away (384,400 km / 12,742 km, derived)": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+ "Light takes about 1.28 s to reach the Moon (384,400 km / c, derived)": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+ "Sun about 109 Earth diameters across": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+ "Sunlight takes about 8 min 20 s to reach Earth": "https://howthingsfly.si.edu/ask-an-explainer/how-long-does-it-take-light-sun-get-earth",
+ "Light travels about 300,000 km per second": "https://skyatnightmagazine.com/space-science/how-take-light-from-sun-reach-earth",
+ "Sun's gravity change would take about the same time as its light; theoretical prediction": "https://arxiv.org/abs/1710.05834",
+ "Proxima Centauri light takes about 4.24 years to reach Earth": "https://science.nasa.gov/exoplanets/other-stars-other-worlds/our-nearest-celestial-neighbor-an-exotic-3-star-system",
+ "Hydrothermal vents release hot, chemical-rich water": "https://oceanexplorer.noaa.gov/edu/materials/LifeBeyondLight-poster.pdf",
+ "Almost every food chain starts with sunlight": "https://oceanexplorer.noaa.gov/facts/photochemo.html",
+ "Sunrise light is about eight minutes old when it reaches us": "https://howthingsfly.si.edu/ask-an-explainer/how-long-does-it-take-light-sun-get-earth"
+}
+
+
 def build_shots():
     shots = []
     for i, (beat, kind, vo, note, claim_key) in enumerate(SHOTS, 1):
@@ -273,7 +292,7 @@ def build_shots():
         }
         if claim_key:
             text, hint = CLAIMS[claim_key]
-            shot["claims"] = [{"text": text, "source_url": "", "verified": False, "source_hint": hint}]
+            shot["claims"] = [{"text": text, "source_url": SOURCES.get(text, ""), "verified": text in SOURCES}]
         shots.append(shot)
     return shots
 

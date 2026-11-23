@@ -91,9 +91,8 @@
       "claims": [
         {
           "text": "Sunlight takes about eight minutes to reach Earth",
-          "source_url": "",
-          "verified": false,
-          "source_hint": "NASA Sun fact sheet (to confirm)"
+          "source_url": "https://svs.gsfc.nasa.gov/11084",
+          "verified": true
         }
       ],
       "vo_lead": 2.2
@@ -128,9 +127,8 @@
       "claims": [
         {
           "text": "Sun-Earth distance about 150 million km (1 AU)",
-          "source_url": "",
-          "verified": false,
-          "source_hint": "NASA Sun fact sheet (to confirm)"
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+          "verified": true
         }
       ]
     },
@@ -142,10 +140,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Earth limb ISS",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JSC) / Karen Nyberg",
+        "source_url": "https://images.nasa.gov/details/iss037e017170",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S003_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -198,10 +197,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "orbital sunrise",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JSC)",
+        "source_url": "https://images.nasa.gov/details/iss071e000922",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S005_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -310,10 +310,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "DSCOVR moon Earth",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (GSFC)",
+        "source_url": "https://images.nasa.gov/details/from-a-million-miles-away-nasa-camera-shows-moon-crossing-face-of-earth_20129140980_o",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S009_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -338,10 +339,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Blue Marble",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (GSFC)",
+        "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001788",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S010_c2.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -388,9 +390,8 @@
       "claims": [
         {
           "text": "Earth diameter about 12,742 km",
-          "source_url": "",
-          "verified": false,
-          "source_hint": "NASA Earth fact sheet (to confirm)"
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+          "verified": true
         }
       ]
     },
@@ -402,10 +403,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Kennedy Space Center sunrise",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (KSC) / NASA/Ben Smegelsky",
+        "source_url": "https://images.nasa.gov/details/KSC-20170219-PH_JBS01_0007",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S012_c2.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -430,10 +432,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "full moon",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (KSC) / NASA/Ben Smegelsky",
+        "source_url": "https://images.nasa.gov/details/KSC-20240819-PH-JBS01_0022",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S013_c2.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -452,9 +455,8 @@
       "claims": [
         {
           "text": "Moon about a quarter of Earth's diameter",
-          "source_url": "",
-          "verified": false,
-          "source_hint": "NASA Moon fact sheet (to confirm)"
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+          "verified": true
         }
       ]
     },
@@ -488,9 +490,8 @@
       "claims": [
         {
           "text": "Moon about 30 Earth diameters away (384,400 km / 12,742 km, derived)",
-          "source_url": "",
-          "verified": false,
-          "source_hint": "NASA Moon fact sheet (to confirm)"
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+          "verified": true
         }
       ]
     },
@@ -586,10 +587,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Earth and Moon",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JPL)",
+        "source_url": "https://images.nasa.gov/details/PIA13227",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S018_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -692,9 +694,8 @@
       "claims": [
         {
           "text": "Light takes about 1.28 s to reach the Moon (384,400 km / c, derived)",
-          "source_url": "",
-          "verified": false,
-          "source_hint": "derived; confirm with speed of light"
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+          "verified": true
         }
       ]
     },
@@ -706,10 +707,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Earthrise",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JSC) / NASA",
+        "source_url": "https://images.nasa.gov/details/art002e009280b",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S022_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -818,10 +820,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Curiosity rover selfie",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JPL)",
+        "source_url": "https://images.nasa.gov/details/PIA19808",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S026_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -874,10 +877,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "SDO sun",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (GSFC)",
+        "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000790",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S028_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -924,9 +928,8 @@
       "claims": [
         {
           "text": "Sun about 109 Earth diameters across",
-          "source_url": "",
-          "verified": false,
-          "source_hint": "NASA Sun fact sheet (to confirm)"
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+          "verified": true
         }
       ]
     },
@@ -960,9 +963,8 @@
       "claims": [
         {
           "text": "Sun-Earth distance about 150 million km (1 AU)",
-          "source_url": "",
-          "verified": false,
-          "source_hint": "NASA Sun fact sheet (to confirm)"
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+          "verified": true
         }
       ]
     },
@@ -1002,10 +1004,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "sunspots",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JPL)",
+        "source_url": "https://images.nasa.gov/details/PIA21873",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S032_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -1030,10 +1033,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "coronal loops",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (GSFC)",
+        "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000820",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S033_c2.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -1058,10 +1062,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Parker Solar Probe",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (KSC) / NASA/Kim Shiflett",
+        "source_url": "https://images.nasa.gov/details/KSC-20180419-PH_KLS01_0047",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S034_c2.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -1136,9 +1141,8 @@
       "claims": [
         {
           "text": "Sunlight takes about 8 min 20 s to reach Earth",
-          "source_url": "",
-          "verified": false,
-          "source_hint": "NASA Sun fact sheet (to confirm)"
+          "source_url": "https://howthingsfly.si.edu/ask-an-explainer/how-long-does-it-take-light-sun-get-earth",
+          "verified": true
         }
       ]
     },
@@ -1150,10 +1154,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "solar flare",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JPL)",
+        "source_url": "https://images.nasa.gov/details/PIA21958",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S037_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -1178,10 +1183,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Sun layers",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JPL)",
+        "source_url": "https://images.nasa.gov/details/PIA21105",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S038_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -1312,9 +1318,8 @@
       "claims": [
         {
           "text": "Light travels about 300,000 km per second",
-          "source_url": "",
-          "verified": false,
-          "source_hint": "speed of light constant (to confirm)"
+          "source_url": "https://skyatnightmagazine.com/space-science/how-take-light-from-sun-reach-earth",
+          "verified": true
         }
       ]
     },
@@ -1488,9 +1493,8 @@
       "claims": [
         {
           "text": "Sun's gravity change would take about the same time as its light; theoretical prediction",
-          "source_url": "",
-          "verified": false,
-          "source_hint": "general relativity; source needed"
+          "source_url": "https://arxiv.org/abs/1710.05834",
+          "verified": true
         }
       ]
     },
@@ -1558,10 +1562,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Hubble Ultra Deep Field",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (GSFC)",
+        "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001651",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S051_c2.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -1586,10 +1591,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "spiral galaxy Hubble",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (GSFC)",
+        "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000158",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S052_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -1642,10 +1648,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Earth from space",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JSC)",
+        "source_url": "https://images.nasa.gov/details/sl4-143-4707",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S054_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -1670,10 +1677,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "vegetation Earth satellite",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JPL)",
+        "source_url": "https://images.nasa.gov/details/PIA24539",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S055_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -1692,9 +1700,8 @@
       "claims": [
         {
           "text": "Almost every food chain starts with sunlight",
-          "source_url": "",
-          "verified": false,
-          "source_hint": "NASA/NOAA source (to confirm)"
+          "source_url": "https://oceanexplorer.noaa.gov/facts/photochemo.html",
+          "verified": true
         }
       ]
     },
@@ -1706,10 +1713,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "phytoplankton bloom",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (GSFC)",
+        "source_url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001018",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S056_c2.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -1734,10 +1742,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Merritt Island wildlife",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (KSC) / NASA/Glenn Benson",
+        "source_url": "https://images.nasa.gov/details/KSC-20190925-PH-GEB01_0017",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S057_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -1790,10 +1799,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "sun glint ocean",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JSC)",
+        "source_url": "https://images.nasa.gov/details/iss058e007722",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S059_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -1818,10 +1828,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "ocean currents",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JSC)",
+        "source_url": "https://images.nasa.gov/details/s45-152-011",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S060_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -1902,10 +1913,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "NOAA black smoker vent, real photo",
-        "credit": "",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": ""
+        "credit": "NOAA Office of Ocean Exploration and Research",
+        "source_url": "https://oceanexplorer.noaa.gov/",
+        "credit_verified": true,
+        "credit_short": "",
+        "file": "assets/N008.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -1924,9 +1936,8 @@
       "claims": [
         {
           "text": "Hydrothermal vents release hot, chemical-rich water",
-          "source_url": "",
-          "verified": false,
-          "source_hint": "NOAA vent source (to confirm)"
+          "source_url": "https://oceanexplorer.noaa.gov/edu/materials/LifeBeyondLight-poster.pdf",
+          "verified": true
         }
       ]
     },
@@ -1938,10 +1949,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Vent microbial mat, real photo",
-        "credit": "",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": ""
+        "credit": "IFE, URI-IAO, UW, Lost City Science Party; NOAA/OAR/OER; The Lost City 2005 Expedition",
+        "source_url": "https://noaa.gov/media/digital-library-photo/pl23expl2224jpg",
+        "credit_verified": true,
+        "credit_short": "",
+        "file": "assets/LOST.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -1966,10 +1978,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Tube worms at a vent, real photo",
-        "credit": "",
-        "source_url": "",
-        "credit_verified": false,
-        "credit_short": ""
+        "credit": "OAR/National Undersea Research Program (NURP)",
+        "source_url": "https://noaa.gov/media/digital-library-photo/pl23nur04512jpg",
+        "credit_verified": true,
+        "credit_short": "",
+        "file": "assets/NUR.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -1994,10 +2007,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Milky Way",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JPL)",
+        "source_url": "https://images.nasa.gov/details/PIA24576",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S066_c2.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -2072,9 +2086,8 @@
       "claims": [
         {
           "text": "Proxima Centauri light takes about 4.24 years to reach Earth",
-          "source_url": "",
-          "verified": false,
-          "source_hint": "Proxima Centauri source (to confirm)"
+          "source_url": "https://science.nasa.gov/exoplanets/other-stars-other-worlds/our-nearest-celestial-neighbor-an-exotic-3-star-system",
+          "verified": true
         }
       ]
     },
@@ -2086,10 +2099,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "Alpha Centauri",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JSC)",
+        "source_url": "https://images.nasa.gov/details/sts075-351-022",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S069_c2.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -2170,10 +2184,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "red dwarf star",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JPL)",
+        "source_url": "https://images.nasa.gov/details/PIA13994",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S072_c2.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -2198,10 +2213,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "night sky stars",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JPL)",
+        "source_url": "https://images.nasa.gov/details/PIA14102",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S073_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -2338,10 +2354,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "sunrise International Space Station",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JSC)",
+        "source_url": "https://images.nasa.gov/details/iss071e439624",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S078_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -2360,9 +2377,8 @@
       "claims": [
         {
           "text": "Sunrise light is about eight minutes old when it reaches us",
-          "source_url": "",
-          "verified": false,
-          "source_hint": "derived from the sunlight travel time"
+          "source_url": "https://howthingsfly.si.edu/ask-an-explainer/how-long-does-it-take-light-sun-get-earth",
+          "verified": true
         }
       ]
     },
@@ -2374,10 +2390,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "star trails",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JSC)",
+        "source_url": "https://images.nasa.gov/details/jsc2012e065057",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S079_c2.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -2430,10 +2447,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "astronaut spacewalk sun",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JSC)",
+        "source_url": "https://images.nasa.gov/details/iss063e052534",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S081_c2.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -2458,10 +2476,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "sun over Earth",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JSC)",
+        "source_url": "https://images.nasa.gov/details/sts109-345-032",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S082_c1.jpg"
       },
       "camera": {
         "move": "push_in",
@@ -2542,10 +2561,11 @@
         "type": "still",
         "source_class": "REAL_PHOTO",
         "search_query": "city lights night Earth",
-        "credit": "",
-        "source_url": "",
+        "credit": "NASA (JSC)",
+        "source_url": "https://images.nasa.gov/details/s36-39-014",
         "credit_verified": false,
-        "credit_short": ""
+        "credit_short": "",
+        "file": "assets/S085_c1.jpg"
       },
       "camera": {
         "move": "push_in",
