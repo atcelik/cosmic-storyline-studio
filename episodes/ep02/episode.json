@@ -1,0 +1,2046 @@
+{
+  "schema_version": 2,
+  "episode": {
+    "id": "ep02",
+    "title": "Sunlight Takes 8 Minutes to Reach Us",
+    "language": "en",
+    "central_question": "What does the eight-minute delay of sunlight tell us about the universe and about life on Earth?"
+  },
+  "voice": {
+    "engine": "kokoro",
+    "voice": "am_michael",
+    "speed": 1.0
+  },
+  "beats": [
+    {
+      "id": "B1",
+      "name": "The light on your face",
+      "chapter": "The light on your face"
+    },
+    {
+      "id": "B2",
+      "name": "Earth at scale",
+      "because": "Start with the size of home.",
+      "chapter": "Earth at scale"
+    },
+    {
+      "id": "B3",
+      "name": "The travel time",
+      "because": "Distance is easy to draw. Time is harder to feel.",
+      "chapter": "The travel time"
+    },
+    {
+      "id": "B4",
+      "name": "The Sun",
+      "because": "Now scale up: the Sun is far larger and far farther.",
+      "chapter": "The Sun"
+    },
+    {
+      "id": "B5",
+      "name": "The eight-minute gap",
+      "because": "Light is a clock. It shows us what happened in the past.",
+      "chapter": "The eight-minute gap"
+    },
+    {
+      "id": "B6",
+      "name": "Life on Earth",
+      "because": "Eight minutes is a fact about light. The bigger story is what sunlight does.",
+      "chapter": "Life on Earth"
+    },
+    {
+      "id": "B7",
+      "name": "The nearest other star",
+      "because": "Our Sun is not alone. The next star is much farther.",
+      "chapter": "The nearest other star"
+    },
+    {
+      "id": "B8",
+      "name": "The closing question",
+      "because": "Light always shows us a little of the past.",
+      "chapter": "The closing question"
+    }
+  ],
+  "shots": [
+    {
+      "id": "S001",
+      "beat": "B1",
+      "voiceover": "Right now, the sunlight on your face left the Sun about eight minutes ago.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Flight from Earth toward the Sun",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 7.0,
+      "claims": [
+        {
+          "text": "about eight minutes",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "NASA Sun fact sheet (to confirm)"
+        }
+      ],
+      "vo_lead": 2.2
+    },
+    {
+      "id": "S002",
+      "beat": "B1",
+      "voiceover": "It crossed roughly 150 million kilometres of nearly empty space to reach you.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Light path Sun to Earth, scale marks",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0,
+      "claims": [
+        {
+          "text": "150 million km",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "NASA Sun fact sheet, 1 AU (to confirm)"
+        }
+      ]
+    },
+    {
+      "id": "S003",
+      "beat": "B1",
+      "voiceover": "Nothing you see in daylight is happening in this exact moment.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Earth sunlit limb, slow push",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S004",
+      "beat": "B1",
+      "voiceover": "It is all a little bit old.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Sunrise over the limb, slow push",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S005",
+      "beat": "B1",
+      "voiceover": "Most of us never notice this, because light moves so fast that the delay is invisible.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Earth-Sun space, slow pull",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S006",
+      "beat": "B1",
+      "voiceover": "But it is there, every second of every day.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Sun glare over Earth",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S007",
+      "beat": "B1",
+      "voiceover": "In this episode we will follow that light from the Sun to Earth, and ask what the delay really means.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Light beam from Sun toward Earth",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S008",
+      "beat": "B1",
+      "voiceover": "We will start small, with the size of home, and climb outward toward the Sun.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "NASA Earth from orbit, real image",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5
+    },
+    {
+      "id": "S009",
+      "beat": "B2",
+      "voiceover": "Start with home.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "NASA Blue Marble or Earth from orbit",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5
+    },
+    {
+      "id": "S010",
+      "beat": "B2",
+      "voiceover": "Earth is about 12,742 kilometres across, measured through its middle.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Earth diameter arrow, scale label",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0,
+      "claims": [
+        {
+          "text": "Earth diameter 12,742 km",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "NASA Earth fact sheet (to confirm)"
+        }
+      ]
+    },
+    {
+      "id": "S011",
+      "beat": "B2",
+      "voiceover": "That is a number we can picture, because we have all stood on its surface.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "Real surface photo, ground level",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5
+    },
+    {
+      "id": "S012",
+      "beat": "B2",
+      "voiceover": "The Moon is much smaller, about a quarter of Earth's width.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "NASA Moon full-disc photo",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5,
+      "claims": [
+        {
+          "text": "Moon about a quarter of Earth's width",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "NASA Moon fact sheet (to confirm)"
+        }
+      ]
+    },
+    {
+      "id": "S013",
+      "beat": "B2",
+      "voiceover": "Yet it sits roughly thirty Earth-widths away, close enough to pull on our oceans and make the tides.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Earth-Moon distance arrow, 30 Earth diameters",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0,
+      "claims": [
+        {
+          "text": "Moon about 30 Earth diameters away",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "384,400 km / 12,742 km, derived (to confirm)"
+        }
+      ]
+    },
+    {
+      "id": "S014",
+      "beat": "B2",
+      "voiceover": "Picture thirty Earth-widths laid end to end between the two.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Row of Earth-sized discs between Earth and Moon",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S015",
+      "beat": "B2",
+      "voiceover": "That is the gap light must cross to reach the Moon.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Light beam Earth to Moon",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S016",
+      "beat": "B2",
+      "voiceover": "It is a long way for us, but a short trip for light.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Pull back, Earth and Moon in frame",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S017",
+      "beat": "B3",
+      "voiceover": "Light is the fastest thing we know of.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Light beam across the frame",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0,
+      "claims": [
+        {
+          "text": "speed of light is the fastest known",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "source needed"
+        }
+      ]
+    },
+    {
+      "id": "S018",
+      "beat": "B3",
+      "voiceover": "Nothing carries information faster.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Signal arc, Earth to Moon",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S019",
+      "beat": "B3",
+      "voiceover": "Even so, light needs time to cross space.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Light beam with a moving marker",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S020",
+      "beat": "B3",
+      "voiceover": "To reach the Moon, it takes about one and a quarter seconds.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Label: LIGHT takes 1.28 s to reach the Moon",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0,
+      "claims": [
+        {
+          "text": "light to the Moon about 1.28 s",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "derived from 384,400 km / c (to confirm)"
+        }
+      ]
+    },
+    {
+      "id": "S021",
+      "beat": "B3",
+      "voiceover": "That sounds quick, and it is.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Earth-Moon, short hold",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S022",
+      "beat": "B3",
+      "voiceover": "But distance turns into time, and time turns into a kind of delay.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Distance bar converting to a clock",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S023",
+      "beat": "B3",
+      "voiceover": "A signal sent to the Moon and back takes a few seconds, which is already enough to make a live conversation feel slightly off.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Round-trip signal arc, Earth-Moon",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0,
+      "claims": [
+        {
+          "text": "round trip a few seconds",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "derived from distance / c (to confirm)"
+        }
+      ]
+    },
+    {
+      "id": "S024",
+      "beat": "B3",
+      "voiceover": "The farther something is, the more out of date its light becomes.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Light beam stretching outward",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S025",
+      "beat": "B4",
+      "voiceover": "Now the Sun.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "NASA SDO full-disc Sun image",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5
+    },
+    {
+      "id": "S026",
+      "beat": "B4",
+      "voiceover": "It is about 109 Earth diameters across.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Earth beside the Sun, scale label",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0,
+      "claims": [
+        {
+          "text": "Sun about 109 Earth diameters",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "NASA Sun fact sheet (to confirm)"
+        }
+      ]
+    },
+    {
+      "id": "S027",
+      "beat": "B4",
+      "voiceover": "Its distance from us is roughly 150 million kilometres, which astronomers call one astronomical unit, the standard yardstick of the solar system.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Sun-Earth distance arrow, 1 AU label",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0,
+      "claims": [
+        {
+          "text": "1 AU about 150 million km",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "NASA Sun fact sheet (to confirm)"
+        }
+      ]
+    },
+    {
+      "id": "S028",
+      "beat": "B4",
+      "voiceover": "Real images of the Sun show its surface in fine detail: dark sunspots, bright flares, and loops of glowing gas.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "NASA SDO close-up, real image",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5
+    },
+    {
+      "id": "S029",
+      "beat": "B4",
+      "voiceover": "They come from spacecraft that watch the Sun all the time.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "Spacecraft over the Sun, real image",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5
+    },
+    {
+      "id": "S030",
+      "beat": "B4",
+      "voiceover": "Put the size and the distance together, and you get the central number of this episode.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Sun and Earth in one frame, scale on",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S031",
+      "beat": "B4",
+      "voiceover": "Sunlight needs about eight minutes and twenty seconds to cover that gap.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Label: LIGHT takes 8 min 20 s",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0,
+      "claims": [
+        {
+          "text": "sunlight 8 min 20 s to Earth",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "NASA Sun fact sheet (to confirm)"
+        }
+      ]
+    },
+    {
+      "id": "S032",
+      "beat": "B4",
+      "voiceover": "Every image of the Sun you have ever seen is a snapshot of a few minutes ago.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "Sun image held, slow push",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5
+    },
+    {
+      "id": "S033",
+      "beat": "B5",
+      "voiceover": "Follow that light for a moment.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Light path from the Sun surface",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S034",
+      "beat": "B5",
+      "voiceover": "It leaves the Sun's surface, crosses empty space, and slips into Earth's atmosphere, moving at roughly 300,000 kilometres every second.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Light path into Earth's atmosphere, speed label",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0,
+      "claims": [
+        {
+          "text": "light about 300,000 km/s",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "speed of light (to confirm)"
+        }
+      ]
+    },
+    {
+      "id": "S035",
+      "beat": "B5",
+      "voiceover": "Now imagine the Sun switched off this very second.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Sun dims in the frame, clock overlay",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S036",
+      "beat": "B5",
+      "voiceover": "You would not notice anything for eight minutes.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Earth in daylight, clock running",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S037",
+      "beat": "B5",
+      "voiceover": "The sky would look normal, the warmth on your skin would feel the same, and the light would keep arriving as if nothing had happened.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Light beams still arriving at Earth",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S038",
+      "beat": "B5",
+      "voiceover": "Only after those minutes would it stop.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Light stream ends, Sun dark",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S039",
+      "beat": "B5",
+      "voiceover": "Physics also says the Sun's gravity would take about the same time to change, though that is a theoretical prediction we cannot test.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Gravity ripple from the Sun, dashed prediction",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0,
+      "claims": [
+        {
+          "text": "gravity change time, theoretical",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "theoretical prediction; source needed"
+        }
+      ]
+    },
+    {
+      "id": "S040",
+      "beat": "B5",
+      "voiceover": "What is certain is this: light always tells you the past, never the present.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Light beam with a timestamp",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S041",
+      "beat": "B6",
+      "voiceover": "Eight minutes of delay is a fact about light.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Sun-Earth light path, clock",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S042",
+      "beat": "B6",
+      "voiceover": "The bigger story is what sunlight does once it arrives.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "NASA Earth from orbit, real image",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5
+    },
+    {
+      "id": "S043",
+      "beat": "B6",
+      "voiceover": "Almost every food chain on our planet starts with it.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "Plants and vegetation from orbit, real image",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5,
+      "claims": [
+        {
+          "text": "almost every food chain starts with sunlight",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "source needed"
+        }
+      ]
+    },
+    {
+      "id": "S044",
+      "beat": "B6",
+      "voiceover": "Plants, algae and some bacteria capture that energy and turn it into food.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "Phytoplankton bloom, real image",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5
+    },
+    {
+      "id": "S045",
+      "beat": "B6",
+      "voiceover": "Animals eat them, and other animals eat those animals.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "Food web scene, real photo",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5
+    },
+    {
+      "id": "S046",
+      "beat": "B6",
+      "voiceover": "Seasons, weather and the water cycle are all driven by the energy that arrives in those eight minutes.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Earth with seasons and clouds, OUR_CGI",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S047",
+      "beat": "B6",
+      "voiceover": "Yet there is an exception.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Slow dive from sunlit ocean into dark",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S048",
+      "beat": "B6",
+      "voiceover": "Deep in the ocean, far below the reach of sunlight, hydrothermal vents release hot, chemical-rich water from Earth's interior.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "NOAA black smoker vent, real photo",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5,
+      "claims": [
+        {
+          "text": "vents release hot chemical-rich water",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "NOAA vent source (to confirm)"
+        }
+      ]
+    },
+    {
+      "id": "S049",
+      "beat": "B6",
+      "voiceover": "Microbes there turn those chemicals into energy.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "Vent microbial mat, real photo",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5
+    },
+    {
+      "id": "S050",
+      "beat": "B6",
+      "voiceover": "Life does not strictly need the Sun, even though most life on Earth depends on it.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "Tube worms at a vent, real photo",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5,
+      "claims": [
+        {
+          "text": "most life depends on the Sun",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "NASA/NOAA source (to confirm)"
+        }
+      ]
+    },
+    {
+      "id": "S051",
+      "beat": "B7",
+      "voiceover": "Our Sun is the nearest star to Earth, but it is not alone.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "Milky Way star field, real image",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5
+    },
+    {
+      "id": "S052",
+      "beat": "B7",
+      "voiceover": "The next nearest star is Proxima Centauri.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Star ladder from the Sun to Proxima Centauri",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0,
+      "claims": [
+        {
+          "text": "Proxima Centauri is the next nearest star",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "Proxima fact check (to confirm)"
+        }
+      ]
+    },
+    {
+      "id": "S053",
+      "beat": "B7",
+      "voiceover": "Its light takes about four years to reach us.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Label: 4.24 light-years",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0,
+      "claims": [
+        {
+          "text": "Proxima about 4.24 light-years",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "Proxima Centauri source (to confirm)"
+        }
+      ]
+    },
+    {
+      "id": "S054",
+      "beat": "B7",
+      "voiceover": "That light set out before anyone on Earth could see it, and it has been travelling ever since.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Light beam from Proxima toward Earth, timeline",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S055",
+      "beat": "B7",
+      "voiceover": "Compare that with our own Sun, whose light needs eight minutes.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Sun and Proxima side by side, light-time labels",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S056",
+      "beat": "B7",
+      "voiceover": "Proxima Centauri is a small, faint red star, too dim to see with the naked eye from most places.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "Real image of a red dwarf or star field",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5,
+      "claims": [
+        {
+          "text": "Proxima too dim to see by eye from most places",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "Proxima source (to confirm)"
+        }
+      ]
+    },
+    {
+      "id": "S057",
+      "beat": "B7",
+      "voiceover": "Yet it follows the same rule.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Light beam from a distant star",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S058",
+      "beat": "B7",
+      "voiceover": "Every star you see is a message that left it long ago, and the farther the star, the older the message.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Star field with distance marks",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S059",
+      "beat": "B8",
+      "voiceover": "So here is the question.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Slow pull back to Earth",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S060",
+      "beat": "B8",
+      "voiceover": "Every sunrise you have ever watched was eight minutes old by the time it reached your eyes.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "Sunrise from the ISS, real photo",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5,
+      "claims": [
+        {
+          "text": "sunrise light about eight minutes old",
+          "source_url": "",
+          "verified": false,
+          "source_hint": "derived from sunlight travel time"
+        }
+      ]
+    },
+    {
+      "id": "S061",
+      "beat": "B8",
+      "voiceover": "Every star you have ever seen is older than your sense of time.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "Night sky star field, real photo",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5
+    },
+    {
+      "id": "S062",
+      "beat": "B8",
+      "voiceover": "Light lets us see the universe, but it always shows us a little of the past.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Light path across the frame",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S063",
+      "beat": "B8",
+      "voiceover": "The next time you stand in sunlight, notice the warmth on your skin and remember where it came from.",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "Sunlight on a person's shoulder, real photo",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5
+    },
+    {
+      "id": "S064",
+      "beat": "B8",
+      "voiceover": "It left the Sun eight minutes ago, crossed the emptiness between us, and arrived in time for you to feel it.",
+      "visual": {
+        "type": "still",
+        "source_class": "OUR_CGI",
+        "search_query": "3D visualization: Light path from the Sun to Earth, final pass",
+        "credit": "Our visualization, Solar System Scope textures where used (CC BY 4.0)",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": "Visualization"
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": true,
+      "min_duration": 8.0
+    },
+    {
+      "id": "S065",
+      "beat": "B8",
+      "voiceover": "What else in your sky is already old?",
+      "visual": {
+        "type": "still",
+        "source_class": "REAL_PHOTO",
+        "search_query": "Earth from orbit at night, real image",
+        "credit": "",
+        "source_url": "",
+        "credit_verified": false,
+        "credit_short": ""
+      },
+      "camera": {
+        "move": "push_in",
+        "strength": 0.06,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "transition_out": {
+        "type": "cut"
+      },
+      "on_screen_text": "",
+      "label": false,
+      "min_duration": 6.5
+    }
+  ]
+}
