@@ -220,25 +220,34 @@ S["S120"] = spec(view(0, 0, 1700000, 1650000), [sun(0, 1391400, label=False, glo
 S["S121"] = se(beams=[beam(SE_A, SE_B, "...then only 8 min 20 s to reach you", None, t=(0.15, 0.9))],
                texts=[{"x_frac": 0.5, "y_frac": 0.12, "lines": [["OLDER THAN 8 MINUTES", 0.07, "yellow"]], "at": 0.1}])
 
-# race to the Sun (opening): no numbers; all racers leave together; icons instead of dots
-LANES = [("LIGHT", "light", 1.0, [255, 240, 180], 0.06),
-         ("FASTEST SPACECRAFT EVER BUILT", "spacecraft", 500 / 777600, [120, 200, 255], 0.05),
-         ("PASSENGER JET", "jet", 500 / 598400000, [255, 170, 120], 0.05),
-         ("CAR", "car", 500 / 5.39e9, [170, 255, 170], 0.045),
-         ("ON FOOT", "walker", 500 / 1.08e11, [255, 150, 200], 0.05)]
-def race(zoom=1.0, on=(0, 1, 2, 3, 4), full=False, note=None):
-    lanes = []
-    for i, (nm, ic, fr, col, isz) in enumerate(LANES):
-        lanes.append({"name": nm, "icon": ic, "icon_size": isz, "frac": fr, "color": col, "y_frac": 0.24 + 0.15 * i,
-                      "t": [0.1, 0.8] if full else [0.05, 0.35] if i == 0 else [0.1, 0.8], "at": 0.0,
-                      "alpha": 1.0 if i in on else 0.28})
+# race to the Sun (opening): no numbers at first; all racers leave together; pictures, not dots.
+# Later shots are time-lapses: while one slow racer crosses the whole track, light shuttles back and forth (counter).
+SP = "img:../../sprites/"
+NAMES = ["LIGHT", "FASTEST SPACECRAFT EVER BUILT", "PASSENGER JET", "CAR", "ON FOOT"]
+ICONS = [("light", 0.06), (SP + "parker.png", 0.04), (SP + "jet.png", 0.05), (SP + "car.png", 0.04), (SP + "walker.png", 0.02)]
+COLS = [[255, 240, 180], [120, 200, 255], [255, 170, 120], [170, 255, 170], [255, 150, 200]]
+FR = [1.0, 500 / 777600, 500 / 598400000, 500 / 5.39e9, 500 / 1.08e11]
+def lane(i, **k):
+    d = {"name": NAMES[i], "icon": ICONS[i][0], "icon_size": ICONS[i][1], "frac": FR[i], "color": COLS[i],
+         "y_frac": 0.24 + 0.15 * i, "t": [0.1, 0.8], "at": 0.0, "alpha": 1.0}
+    d.update(k); return d
+def race(lanes, zoom=1.0, note=None):
     txt = [{"x_frac": 0.5, "y_frac": 0.07, "lines": [[note, 0.04, "white"]], "at": 0.1}] if note else []
     return spec(view(500, 500, 1000, 1000), race={"x_km": [90, 910], "lanes": lanes, "zoom": zoom}, texts=txt)
-S["S150"] = race(1.0, full=True, note="A RACE TO THE SUN")
-S["S151"] = race(0.001, note="ZOOMED IN ON THE START LINE")
-S["S152"] = race(0.001, on=(1,), note="ZOOMED IN ON THE START LINE")
-S["S153"] = race(0.001, on=(2, 3), note="ZOOMED IN ON THE START LINE")
-S["S154"] = race(0.001, on=(4,), note="ZOOMED IN ON THE START LINE")
+DIM = 0.28
+S["S150"] = race([lane(0, t=[0.05, 0.35])] + [lane(i) for i in range(1, 5)], note="A RACE TO THE SUN")
+S["S151"] = race([lane(0, t=[0.05, 0.2])] + [lane(i) for i in range(1, 5)], zoom=0.001, note="ZOOMED IN ON THE START LINE")
+def lapse(focus, trips, others, note):
+    ls = [lane(0, shuttle={"follow": focus, "trips": trips, "label": "LIGHT TRIPS", "speed": 9.0}, t=[0, 0])]
+    for i in range(1, 5):
+        ls.append(lane(i, alpha=1.0 if i in focus_set(focus, others) else DIM, t=[0.1, 0.85] if i in focus_set(focus, others) else [0, 0],
+                       frac=others.get(i, (FR[i], None))[0] if i in others else (1.0 if i == focus else FR[i]),
+                       time=others[i][1] if i in others else None, time_at=0.86))
+    return race(ls, note=note)
+def focus_set(focus, others): return {focus, *others}
+S["S152"] = lapse(1, 1555, {1: (1.0, "9 days")}, "TIME-LAPSE: LIGHT KEEPS SHUTTLING")
+S["S153"] = lapse(2, 1200000, {2: (1.0, "19 years"), 3: (19 / 170, "170 years")}, "TIME-LAPSE: LIGHT KEEPS SHUTTLING")
+S["S154"] = lapse(4, 216000000, {4: (1.0, "3,400 years")}, "TIME-LAPSE: LIGHT KEEPS SHUTTLING")
 
 # Voyager 1: one light-day (25.9 billion km)
 VX = 25.9e9

@@ -168,7 +168,44 @@ def draw_glow(frame, cx, cy, r, strength, color=(255, 200, 120)):
 
 
 
-def draw_icon(frame, kind, cx, cy, sz, a=1.0, t=0.0):
+_sprite_cache = {}
+def load_sprite(base, rel):
+    if rel in _sprite_cache:
+        return _sprite_cache[rel]
+    p = (base / rel).resolve(); im = None
+    if p.exists():
+        im = cv2.imread(str(p), cv2.IMREAD_COLOR)
+        if im is not None:
+            g = im.max(axis=2); ys, xs = np.where(g > 28)
+            if len(xs):
+                im = im[max(ys.min() - 4, 0):ys.max() + 5, max(xs.min() - 4, 0):xs.max() + 5]
+            im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
+    else:
+        print(f"WARN sprite missing: {p} (vector icon used)", file=sys.stderr)
+    _sprite_cache[rel] = im
+    return im
+
+
+def draw_sprite(frame, im, cx, cy, sz, a=1.0):
+    """Screen-blend a picture shot on black onto the frame; sz = half the picture width in px."""
+    h, w = im.shape[:2]; nw = max(int(sz * 2), 4); nh = max(int(nw * h / w), 2)
+    sp = cv2.resize(im, (nw, nh), interpolation=cv2.INTER_AREA).astype(np.float32)
+    x0, y0 = int(cx - nw / 2), int(cy - nh / 2)
+    X0, Y0, X1, Y1 = max(x0, 0), max(y0, 0), min(x0 + nw, frame.shape[1]), min(y0 + nh, frame.shape[0])
+    if X1 <= X0 or Y1 <= Y0:
+        return
+    sub = sp[Y0 - y0:Y1 - y0, X0 - x0:X1 - x0] * a
+    reg = frame[Y0:Y1, X0:X1]
+    frame[Y0:Y1, X0:X1] = 255 - (255 - reg) * (255 - np.clip(sub, 0, 255)) / 255.0
+
+
+def draw_icon(frame, kind, cx, cy, sz, a=1.0, t=0.0, base=None):
+    if kind.startswith("img:") and base is not None:
+        im = load_sprite(base, kind[4:])
+        if im is not None:
+            draw_sprite(frame, im, cx, cy, sz * 1.9, a); return
+        kind = kind.split("/")[-1].split(".")[0].split("_")[-1].lower().replace("img:", "")
+        kind = {"jet": "jet", "car": "car", "walker": "walker", "parker": "spacecraft", "spacecraft": "spacecraft", "voyager": "voyager"}.get(kind, "light")
     """Small vector pictures (right-facing) so compared things are recognisable. sz = about half the icon width in px."""
     cx, cy, sz = float(cx), float(cy), float(sz)
     ov = frame.copy()
@@ -430,30 +467,41 @@ def render_frame(spec, base, t, dur, W, H, stars):
 
     race_txt = []
     rc = spec.get("race")
-    if rc:                                       # lanes move together; dot/icon = how far each got. zoom = share of the track shown
+    if rc:                                       # lanes move together; icon = how far each got. zoom = share of the track shown
         xa, xb = X(rc["x_km"][0]), X(rc["x_km"][1])
-        zoom = float(rc.get("zoom", 1.0))
-        for ln in rc["lanes"]:
+        zoom = float(rc.get("zoom", 1.0)); lanes = rc["lanes"]
+        def lane_p(ln):
+            t0, t1 = ln.get("t", [0.0, 0.0]); return 1.0 if t1 <= t0 else float(np.clip((u - t0) / (t1 - t0), 0, 1))
+        for ln in lanes:
             a_ = fade(ln.get("at", 0), t, dur) * float(ln.get("alpha", 1.0))
             if a_ <= 0:
                 continue
             yl = H * ln["y_frac"]
             col = tuple(float(c) for c in ln.get("color", [255, 240, 180]))
             cv2.line(frame, (int(xa), int(yl)), (int(xb), int(yl)), tuple(c * 0.28 * a_ for c in col), 2, cv2.LINE_AA)
-            t0, t1 = ln.get("t", [0.0, 0.0]); p = 1.0 if t1 <= t0 else float(np.clip((u - t0) / (t1 - t0), 0, 1))
-            hx = xa + (xb - xa) * min(1.0, ln.get("frac", 1.0) / zoom) * p
-            if ln.get("trail", True) and hx - xa > 2:
-                cv2.line(frame, (int(xa), int(yl)), (int(hx), int(yl)), tuple(c * 0.8 * a_ for c in col), 4, cv2.LINE_AA)
+            p = lane_p(ln); extra = None
+            sh = ln.get("shuttle")
+            if sh:                               # light going back and forth; counter follows another lane's progress
+                pf = lane_p(lanes[sh["follow"]]); n_now = sh["trips"] * pf
+                ph = (u * sh.get("speed", 9.0)) % 2.0; pos = ph if ph <= 1 else 2 - ph
+                hx = xa + (xb - xa) * pos
+                cv2.line(frame, (int(xa), int(yl)), (int(xb), int(yl)), tuple(c * 0.55 * a_ for c in col), 3, cv2.LINE_AA)
+                extra = f"{int(n_now):,} {sh.get('label', 'TRIPS')}"
+            else:
+                hx = xa + (xb - xa) * min(1.0, ln.get("frac", 1.0) / zoom) * p
+                if ln.get("trail", True) and hx - xa > 2:
+                    cv2.line(frame, (int(xa), int(yl)), (int(hx), int(yl)), tuple(c * 0.8 * a_ for c in col), 4, cv2.LINE_AA)
             if ln.get("icon"):
-                draw_icon(frame, ln["icon"], hx, yl - H * 0.035, H * float(ln.get("icon_size", 0.05)), a_, t)
+                draw_icon(frame, ln["icon"], hx, yl - H * 0.035, H * float(ln.get("icon_size", 0.05)), a_, t, base)
             else:
                 draw_glow(frame, hx, yl, 8, 1.1 * a_, tuple(int(c) for c in col))
                 cv2.circle(frame, (int(hx), int(yl)), 8, tuple(c * a_ for c in col), -1, cv2.LINE_AA)
-            race_txt.append((xa, yl, ln, a_, p, xb))
+            race_txt.append((xa, yl, ln, a_, p, xb, extra, u >= ln.get("time_at", 9)))
+
     for ic in spec.get("icons", []):
         a_ = fade(ic.get("at", 0), t, dur)
         if a_ > 0:
-            draw_icon(frame, ic["kind"], ic["x_frac"] * W, ic["y_frac"] * H, H * ic.get("size", 0.06), a_, t)
+            draw_icon(frame, ic["kind"], ic["x_frac"] * W, ic["y_frac"] * H, H * ic.get("size", 0.06), a_, t, base)
 
     img = Image.fromarray(np.clip(frame, 0, 255).astype(np.uint8))
     d = ImageDraw.Draw(img)
@@ -461,10 +509,12 @@ def render_frame(spec, base, t, dur, W, H, stars):
     for ic in spec.get("icons", []):
         if ic.get("label"):
             text_block(d, ic["x_frac"] * W, ic["y_frac"] * H + H * ic.get("size", 0.06) * 1.25, [(ic["label"], int(H * 0.034), WHITE, True)], W, H, align="center", alpha=fade(ic.get("at", 0), t, dur))
-    for xa_, yl, ln, a_, p, xb_ in race_txt:
+    for xa_, yl, ln, a_, p, xb_, extra, show in race_txt:
         text_block(d, xa_ + int(H * 0.075), yl - int(H * 0.085), [(ln["name"], int(H * 0.04), COLORS.get(ln.get("tcolor", "white"), WHITE), True)], W, H, align="left", alpha=a_)
-        if p >= 1.0 and ln.get("time"):
-            text_block(d, xb_, yl - int(H * 0.085), [(ln["time"], int(H * 0.056), YELLOW, True)], W, H, align="right", alpha=a_)
+        if show and ln.get("time"):
+            text_block(d, xb_, yl - int(H * 0.115), [(ln["time"], int(H * 0.056), YELLOW, True)], W, H, align="right", alpha=a_)
+        if extra:
+            text_block(d, xb_, yl - int(H * 0.095), [(extra, int(H * 0.05), CYAN, True)], W, H, align="right", alpha=a_)
     for x, ytop, b, a, r in labels:              # big name, type, size (the reference layout)
         lines = [(b["name"], big, YELLOW, True)]
         if b.get("type"):

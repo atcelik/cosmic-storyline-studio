@@ -41,16 +41,16 @@
     ],
     "y_frac": 0.24,
     "t": [
-     0.1,
-     0.8
+     0.05,
+     0.35
     ],
     "at": 0.0,
     "alpha": 1.0
    },
    {
     "name": "FASTEST SPACECRAFT EVER BUILT",
-    "icon": "spacecraft",
-    "icon_size": 0.05,
+    "icon": "img:../../sprites/parker.png",
+    "icon_size": 0.04,
     "frac": 0.0006430041152263374,
     "color": [
      120,
@@ -67,7 +67,7 @@
    },
    {
     "name": "PASSENGER JET",
-    "icon": "jet",
+    "icon": "img:../../sprites/jet.png",
     "icon_size": 0.05,
     "frac": 8.355614973262032e-07,
     "color": [
@@ -85,8 +85,8 @@
    },
    {
     "name": "CAR",
-    "icon": "car",
-    "icon_size": 0.045,
+    "icon": "img:../../sprites/car.png",
+    "icon_size": 0.04,
     "frac": 9.27643784786642e-08,
     "color": [
      170,
@@ -103,8 +103,8 @@
    },
    {
     "name": "ON FOOT",
-    "icon": "walker",
-    "icon_size": 0.05,
+    "icon": "img:../../sprites/walker.png",
+    "icon_size": 0.02,
     "frac": 4.6296296296296295e-09,
     "color": [
      255,
