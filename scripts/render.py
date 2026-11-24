@@ -298,6 +298,9 @@ def text_overlay(text, W, H, fpath):
     return to_overlay(c)
 
 
+CAPTION_Y = 0.66     # vertical share of the frame where Shorts captions start (episode.format.caption_y)
+
+
 def caption_overlay(text, W, H, fpath):
     """Shorts caption: a few words, big, centred in the lower-middle (above the Shorts UI)."""
     f = font(fpath, round(min(W, H) * 0.072))
@@ -312,7 +315,7 @@ def caption_overlay(text, W, H, fpath):
             cur = t
     lines.append(cur)
     lh = round(f.size * 1.2)
-    y = round(H * (0.66 if H > W else 0.80))
+    y = round(H * (CAPTION_Y if H > W else 0.80))
     for ln in lines:
         tw = d.textlength(ln, font=f)
         d.text(((W - tw) / 2, y), ln, font=f, fill=(255, 255, 255, 255), stroke_width=max(3, round(f.size * 0.09)),
@@ -382,6 +385,8 @@ def main():
     base, build = ep_dirs(a.episode)
     ep = load_json(a.episode)
     fmt = ep.get("format") or {}
+    global CAPTION_Y
+    CAPTION_Y = float(fmt.get("caption_y", CAPTION_Y))
     cfg["width"], cfg["height"] = int(fmt.get("width", cfg["width"])), int(fmt.get("height", cfg["height"]))
     tl = load_json(build / "timeline.json")
     sc = cfg["draft"]["scale"] if a.draft else 1.0

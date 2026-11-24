@@ -8,7 +8,8 @@
   },
   "format": {
     "width": 1080,
-    "height": 1920
+    "height": 1920,
+    "caption_y": 0.76
   },
   "burn_captions": true,
   "caption_words": 3,
