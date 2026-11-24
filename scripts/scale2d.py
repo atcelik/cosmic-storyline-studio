@@ -171,6 +171,35 @@ def draw_glow(frame, cx, cy, r, strength, color=(255, 200, 120)):
 
 
 _sprite_cache = {}
+_sun_cache = {}
+
+
+def proc_sun_layer(W, H, cx, cy, R, seed=7):
+    """A big glowing Sun disc (granulation, limb darkening, corona) drawn by us, no texture needed. Float RGB, add to the frame."""
+    key = (W, H, int(cx), int(cy), int(R))
+    if key in _sun_cache:
+        return _sun_cache[key]
+    rng = np.random.default_rng(seed)
+    def fbm(w, h, octs=6):
+        out = np.zeros((h, w), np.float32)
+        for o in range(octs):
+            n = 2 ** (o + 4)
+            g = rng.random((n, int(n * w / h) + 2)).astype(np.float32)
+            out += cv2.resize(g, (w, h), interpolation=cv2.INTER_CUBIC) / (1.7 ** o)
+        return out / out.max()
+    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+    dist = np.hypot(xx - cx, yy - cy)
+    r = np.clip(dist / R, 0, 1); mu = np.sqrt(1 - r ** 2)
+    gran = fbm(W, H, 6); gran = (gran - gran.mean()) / (gran.std() + 1e-6)
+    b = np.clip((0.35 + 0.65 * mu ** 0.6) * (1.02 + 0.04 * gran), 0, 1.2); b = np.clip(b, 0, 1)
+    disc = np.stack([255 * np.clip(0.8 + 0.3 * b, 0, 1), 40 + 190 * b ** 2.4, 5 + 130 * b ** 5], -1)
+    out_ = np.clip(dist - R, 0, None)
+    glow = (np.exp(-out_ / 90.0) * 0.8 + np.exp(-out_ / 300.0) * 0.4)[..., None] * np.array([255, 140, 40], np.float32)
+    layer = np.where((dist <= R)[..., None], disc, np.clip(glow, 0, 255)).astype(np.float32)
+    _sun_cache[key] = layer
+    return layer
+
+
 def load_sprite(base, rel):
     if rel in _sprite_cache:
         return _sprite_cache[rel]
@@ -472,6 +501,11 @@ def render_frame(spec, base, t, dur, W, H, stars):
     if rc:                                       # lanes move together; icon = how far each got. zoom = share of the track shown
         xa, xb = X(rc["x_km"][0]), X(rc["x_km"][1])
         zoom = float(rc.get("zoom", 1.0)); lanes = rc["lanes"]
+        se = rc.get("sun_edge")
+        if se:                                   # the finish line is the surface of a huge Sun on the right
+            R_ = H * float(se.get("r_frac", 0.78)); sl = proc_sun_layer(W, H, xb + 10 + R_, H * float(se.get("y_frac", 0.4)), R_)
+            pulse = 0.93 + 0.07 * math.sin(t * 2.4)
+            frame[:] = 255 - (255 - frame) * (255 - np.clip(sl * pulse * fade(se.get("at", 0), t, dur), 0, 255)) / 255.0
         def lane_p(ln):
             t0, t1 = ln.get("t", [0.0, 0.0]); return 1.0 if t1 <= t0 else float(np.clip((u - t0) / (t1 - t0), 0, 1))
         for ln in lanes:
@@ -481,6 +515,8 @@ def render_frame(spec, base, t, dur, W, H, stars):
             yl = H * ln["y_frac"]
             col = tuple(float(c) for c in ln.get("color", [255, 240, 180]))
             cv2.line(frame, (int(xa), int(yl)), (int(xb), int(yl)), tuple(c * 0.28 * a_ for c in col), 2, cv2.LINE_AA)
+            if rc.get("start_line", False):
+                cv2.line(frame, (int(xa), int(yl - H * 0.045)), (int(xa), int(yl + H * 0.012)), (230 * a_,) * 3, 3, cv2.LINE_AA)
             p = lane_p(ln); extra = None
             sh = ln.get("shuttle")
             if sh:                               # light going back and forth; counter follows another lane's progress
@@ -493,8 +529,17 @@ def render_frame(spec, base, t, dur, W, H, stars):
                 hx = xa + (xb - xa) * min(1.0, ln.get("frac", 1.0) / zoom) * p
                 if ln.get("trail", True) and hx - xa > 2:
                     cv2.line(frame, (int(xa), int(yl)), (int(hx), int(yl)), tuple(c * 0.8 * a_ for c in col), 4, cv2.LINE_AA)
+            if rc.get("streaks") and not sh and 0.002 < p < 0.999 and ln.get("frac", 1.0) / zoom > 0.03:
+                for k in range(5):               # speed lines behind a racer that is really moving
+                    ys_ = yl - H * 0.035 + (k - 2) * H * 0.012; l_ = (hx - xa) * (0.18 + 0.1 * ((k * 7 + int(t * 9)) % 5) / 5)
+                    cv2.line(frame, (int(hx - H * 0.09 - l_), int(ys_)), (int(hx - H * 0.09), int(ys_)), tuple(c * 0.45 * a_ for c in col), 2, cv2.LINE_AA)
             if ln.get("icon"):
                 draw_icon(frame, ln["icon"], hx, yl - H * 0.035, H * float(ln.get("icon_size", 0.05)), a_, t, base)
+            t1_ = ln.get("t", [0, 0])[1]
+            if rc.get("sun_edge") and not sh and t1_ > 0 and ln.get("frac", 1.0) / zoom >= 0.999 and u >= t1_:
+                k_ = float(np.clip(1 - (u - t1_) * dur / 0.9, 0, 1))       # a flash where the racer touches the Sun
+                if k_ > 0:
+                    draw_glow(frame, xb, yl, H * 0.035 * (1.6 - 0.6 * k_), 0.8 * k_, (255, 230, 170))
             else:
                 draw_glow(frame, hx, yl, 8, 1.1 * a_, tuple(int(c) for c in col))
                 cv2.circle(frame, (int(hx), int(yl)), 8, tuple(c * a_ for c in col), -1, cv2.LINE_AA)

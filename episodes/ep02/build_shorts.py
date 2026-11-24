@@ -35,12 +35,15 @@ def vertical(spec, sid):
     spec["size"] = [W, H]
     if spec.get("race"):
         r = spec["race"]
-        r["x_km"] = [230, 870]                    # keep the icons inside the narrow frame
+        r["x_km"] = [190, 790]                    # keep the icons inside the narrow frame, the Sun fills the right edge
+        r["sun_edge"] = {"r_frac": 0.8, "y_frac": 0.38}
+        r["streaks"] = True
+        r["start_line"] = True
         for ln in r["lanes"]:
             if ln.get("shuttle"):
                 ln["name"] = ""                   # the "LIGHT TRIPS" counter says it already
             ln["name"] = ln["name"].replace("FASTEST SPACECRAFT EVER BUILT", "FASTEST SPACECRAFT")
-            ln["y_frac"] = round(0.19 + (ln["y_frac"] - 0.24) * 0.72, 3)     # keep the bottom third free for captions
+            ln["y_frac"] = round(0.2 + (ln["y_frac"] - 0.24) * 0.78, 3)     # keep the bottom third free for captions
             ln["icon_size"] = 0.04 if ln.get("icon") == "light" else round(ln.get("icon_size", 0.04) * 1.25, 3)
     for b in spec.get("bodies", []):              # bigger bodies: the horizontal Sun-Earth line is narrow on a phone
         if b.get("name") == "EARTH":
