@@ -62,3 +62,9 @@
 - Two vertical Shorts built by `episodes/ep02/build_shorts.py` from approved EP02 lines and scenes: `ep02_short1` (race to the Sun, with the light-trip time-lapse) and `ep02_short2` (what if the Sun switched off). 1080x1920, burned-in captions, same music bed.
 - scale2d got `spec["size"]` (vertical frame) and a text-size scale for narrow frames. The Sun-Earth scenes stay on a horizontal line, so bodies are enlarged in the vertical variants.
 - EP02 final: title "How Long Does Sunlight Really Take to Reach You?"; thumbnail A/B test: "LIGHT IS LATE" vs the race cover.
+
+## 2026-11-24: Image policy (hybrid, replaces "no generative-AI imagery")
+- Real imagery first: NASA, ESA, NOAA and other public-agency photos and footage.
+- Labelled scientific visualizations (maps, data, scale models) where nothing can be photographed.
+- Generative-AI imagery only where neither of the above exists (abstract or conceptual shots such as light travelling through space). Each use is listed in the video description and declared in YouTube's altered/synthetic-content setting.
+- Never shown as a real object, person or event (no AI picture of a real spacecraft, person or event presented as real). Where a real photo exists, it is used instead.
