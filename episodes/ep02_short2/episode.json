@@ -13,9 +13,30 @@
   "burn_captions": true,
   "caption_words": 3,
   "voice": {
-    "engine": "kokoro",
-    "voice": "am_michael",
-    "speed": 1.0
+    "engine": "file",
+    "file": "voice/voice.wav",
+    "cuts": [
+      [
+        0.0,
+        6.42
+      ],
+      [
+        6.42,
+        10.97
+      ],
+      [
+        10.97,
+        14.43
+      ],
+      [
+        14.43,
+        19.75
+      ],
+      [
+        19.75,
+        26.65
+      ]
+    ]
   },
   "music": {
     "file": "assets/music/drone.wav",
@@ -58,11 +79,7 @@
           "verified": true
         }
       ],
-      "vo_lead": 0.3,
-      "card": {
-        "title": "The Sun",
-        "sub": "Eight minutes late"
-      }
+      "vo_lead": 0.3
     },
     {
       "id": "S043",
@@ -149,9 +166,8 @@
       "transition_out": {
         "type": "cut"
       },
-      "on_screen_text": "Full video on the channel",
-      "min_duration": 5.0,
-      "text_start": 1.6
+      "on_screen_text": "",
+      "min_duration": 5.0
     }
   ]
 }

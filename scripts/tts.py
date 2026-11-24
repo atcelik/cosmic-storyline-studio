@@ -45,6 +45,30 @@ class Kokoro:
         return np.concatenate(chunks)
 
 
+def slice_voice_file(ep, base, build, vcfg):
+    """engine "file": one recorded narration for the whole episode, cut per shot at the given [start, end] seconds.
+    voice = {"engine": "file", "file": "voice/voice.wav", "cuts": [[a, b], ...]} (one pair per shot that has a voice-over).
+    Each slice is trimmed to its speech (a short margin of silence is kept)."""
+    import subprocess
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(base / vcfg["file"]), "-ac", "1", "-ar", str(SR),
+                          "-f", "s16le", "-"], check=True, capture_output=True).stdout
+    x = np.frombuffer(raw, dtype=np.int16).astype(np.float32) / 32768.0
+    shots = [s for s in ep["shots"] if (s.get("voiceover") or "").strip()]
+    cuts = vcfg["cuts"]
+    if len(cuts) != len(shots):
+        sys.exit(f"voice.cuts has {len(cuts)} pairs but {len(shots)} shots have a voice-over")
+    durs, keep = {}, int(0.12 * SR)
+    for s, (a, b) in zip(shots, cuts):
+        seg = x[int(a * SR):int(b * SR)]
+        loud = np.where(np.abs(seg) > 0.01)[0]
+        if len(loud):
+            seg = seg[max(loud[0] - keep, 0):loud[-1] + keep]
+        write_wav(build / "audio" / f"{s['id']}.wav", seg)
+        durs[s["id"]] = len(seg) / SR
+        print(f"  {s['id']}: {durs[s['id']]:.2f}s (from file)")
+    return durs
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("episode")
@@ -62,6 +86,12 @@ def main():
     cache = load_json(cache_f) if cache_f.exists() else {}
     synth = None
     durs = {}
+    if engine == "file":
+        durs = slice_voice_file(ep, base, build, ep["voice"])
+        tl = build_timeline(ep, cfg, durs)
+        save_json(build / "timeline.json", tl)
+        print(f"Timeline: {tl['total'] / 60:.2f} min, {len(tl['shots'])} shots -> build/timeline.json")
+        return
     for s in ep["shots"]:
         text = (s.get("voiceover") or "").strip()
         if not text:

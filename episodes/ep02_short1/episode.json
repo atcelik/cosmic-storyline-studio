@@ -13,9 +13,30 @@
   "burn_captions": true,
   "caption_words": 3,
   "voice": {
-    "engine": "kokoro",
-    "voice": "am_michael",
-    "speed": 1.0
+    "engine": "file",
+    "file": "voice/voice.wav",
+    "cuts": [
+      [
+        0.0,
+        7.28
+      ],
+      [
+        7.28,
+        12.45
+      ],
+      [
+        12.45,
+        18.77
+      ],
+      [
+        18.77,
+        28.26
+      ],
+      [
+        28.26,
+        33.28
+      ]
+    ]
   },
   "music": {
     "file": "assets/music/drone.wav",
@@ -51,11 +72,7 @@
       },
       "on_screen_text": "",
       "min_duration": 3.5,
-      "vo_lead": 0.3,
-      "card": {
-        "title": "Race to the Sun",
-        "sub": "Light vs everything"
-      }
+      "vo_lead": 0.3
     },
     {
       "id": "S151",
@@ -149,9 +166,8 @@
       "transition_out": {
         "type": "cut"
       },
-      "on_screen_text": "Full video on the channel",
-      "min_duration": 5.0,
-      "text_start": 1.6
+      "on_screen_text": "",
+      "min_duration": 5.0
     }
   ]
 }
