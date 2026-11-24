@@ -1,0 +1,143 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 8,
+ "seed": 3,
+ "view": {
+  "center_km": [
+   500,
+   500
+  ],
+  "width_km": [
+   1000,
+   1000
+  ],
+  "y_km": [
+   0,
+   0
+  ]
+ },
+ "light": [
+  -0.9,
+  0.05
+ ],
+ "bodies": [],
+ "race": {
+  "x_km": [
+   230,
+   870
+  ],
+  "lanes": [
+   {
+    "name": "LIGHT",
+    "icon": "light",
+    "icon_size": 0.075,
+    "frac": 1.0,
+    "color": [
+     255,
+     240,
+     180
+    ],
+    "y_frac": 0.25,
+    "t": [
+     0.05,
+     0.35
+    ],
+    "at": 0.0,
+    "alpha": 1.0
+   },
+   {
+    "name": "FASTEST SPACECRAFT",
+    "icon": "img:../../sprites/parker.png",
+    "icon_size": 0.05,
+    "frac": 0.0006430041152263374,
+    "color": [
+     120,
+     200,
+     255
+    ],
+    "y_frac": 0.412,
+    "t": [
+     0.1,
+     0.8
+    ],
+    "at": 0.0,
+    "alpha": 1.0
+   },
+   {
+    "name": "PASSENGER JET",
+    "icon": "img:../../sprites/jet.png",
+    "icon_size": 0.062,
+    "frac": 8.355614973262032e-07,
+    "color": [
+     255,
+     170,
+     120
+    ],
+    "y_frac": 0.574,
+    "t": [
+     0.1,
+     0.8
+    ],
+    "at": 0.0,
+    "alpha": 1.0
+   },
+   {
+    "name": "CAR",
+    "icon": "img:../../sprites/car.png",
+    "icon_size": 0.05,
+    "frac": 9.27643784786642e-08,
+    "color": [
+     170,
+     255,
+     170
+    ],
+    "y_frac": 0.736,
+    "t": [
+     0.1,
+     0.8
+    ],
+    "at": 0.0,
+    "alpha": 1.0
+   },
+   {
+    "name": "ON FOOT",
+    "icon": "img:../../sprites/walker.png",
+    "icon_size": 0.025,
+    "frac": 4.6296296296296295e-09,
+    "color": [
+     255,
+     150,
+     200
+    ],
+    "y_frac": 0.898,
+    "t": [
+     0.1,
+     0.8
+    ],
+    "at": 0.0,
+    "alpha": 1.0
+   }
+  ],
+  "zoom": 1.0
+ },
+ "texts": [
+  {
+   "x_frac": 0.5,
+   "y_frac": 0.07,
+   "lines": [
+    [
+     "A RACE TO THE SUN",
+     0.04,
+     "white"
+    ]
+   ],
+   "at": 0.1
+  }
+ ],
+ "size": [
+  1080,
+  1920
+ ]
+}

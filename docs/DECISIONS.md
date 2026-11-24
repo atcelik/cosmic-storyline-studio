@@ -57,3 +57,8 @@
 - Sources only for numeric facts (15 claims, all checked against NASA NSSDC fact sheets, NASA SVS, NOAA, Smithsonian, LIGO/Virgo); other lines carry no claim.
 - New renderer `scripts/scale2d.py` (OUR_CGI): bodies enlarged, distances shortened for the screen, big yellow name/type/size labels, measuring arrows, light beam with clock. Owner: no "not to scale" note on screen. True-scale scene kept where the count matters (S015, 30 Earth-widths). Specs: `episodes/ep02/make_scenes.py` -> `assets/space3d/Sxxx.json` with `"renderer": "scale2d"`; `ci/run.py` picks the renderer per spec.
 - Subtitles: `captions.srt` for YouTube first; burned-in version later as a separate test.
+
+## 2026-11-24: EP02 Shorts
+- Two vertical Shorts built by `episodes/ep02/build_shorts.py` from approved EP02 lines and scenes: `ep02_short1` (race to the Sun, with the light-trip time-lapse) and `ep02_short2` (what if the Sun switched off). 1080x1920, burned-in captions, same music bed.
+- scale2d got `spec["size"]` (vertical frame) and a text-size scale for narrow frames. The Sun-Earth scenes stay on a horizontal line, so bodies are enlarged in the vertical variants.
+- EP02 final: title "How Long Does Sunlight Really Take to Reach You?"; thumbnail A/B test: "LIGHT IS LATE" vs the race cover.

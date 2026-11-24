@@ -44,9 +44,11 @@ YELLOW = (255, 214, 64)
 WHITE = (236, 240, 248)
 CYAN = (150, 225, 255)
 _tex_cache, _font_cache = {}, {}
+FONT_SCALE = 1.0     # vertical Shorts: text sizes are given as fractions of H, so shrink them to fit a narrow frame
 
 
 def font(size, bold=True):
+    size = max(int(round(size * FONT_SCALE)), 8)
     key = (size, bold)
     if key not in _font_cache:
         cfg = load_config()
@@ -575,6 +577,10 @@ def main():
     spec = json.loads(spec_path.read_text())
     base = spec_path.parent
     W, H = (cfg.get("width", 1920), cfg.get("height", 1080))
+    global FONT_SCALE
+    if spec.get("size"):          # vertical Shorts: spec["size"] = [1080, 1920]
+        W, H = spec["size"]
+        FONT_SCALE = min(1.0, W / H)
     if a.draft:
         W, H = W // 2, H // 2
     fps = cfg.get("fps", 30)

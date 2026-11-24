@@ -1,0 +1,64 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 8,
+ "seed": 3,
+ "view": {
+  "center_km": [
+   0,
+   0
+  ],
+  "width_km": [
+   1300000,
+   1250000
+  ],
+  "y_km": [
+   0,
+   0
+  ]
+ },
+ "light": [
+  -0.9,
+  0.1
+ ],
+ "bodies": [
+  {
+   "name": "EARTH",
+   "type": "Terrestrial planet",
+   "size": "12,742 km",
+   "diameter_km": 2100000,
+   "x_km": 0,
+   "texture": "../EARTH2.jpg",
+   "tint": [
+    70,
+    120,
+    200
+   ],
+   "spin": [
+    0,
+    4
+   ],
+   "at": 0,
+   "label": false
+  }
+ ],
+ "clock": {
+  "x_frac": 0.5,
+  "y_frac": 0.1,
+  "t": [
+   0.1,
+   0.95
+  ],
+  "seconds": [
+   0,
+   500
+  ],
+  "fmt": "ms",
+  "label": "SINCE THE SUN SWITCHED OFF"
+ },
+ "size": [
+  1080,
+  1920
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 8,
+ "seed": 3,
+ "view": {
+  "center_km": [
+   0,
+   0
+  ],
+  "width_km": [
+   1000,
+   1000
+  ],
+  "y_km": [
+   0,
+   0
+  ]
+ },
+ "light": [
+  -0.9,
+  0.05
+ ],
+ "bodies": [],
+ "beams": [
+  {
+   "from_km": -520,
+   "to_km": 520,
+   "t": [
+    0.05,
+    0.85
+   ],
+   "y_frac": 0.0
+  }
+ ],
+ "flares": [
+  {
+   "x_km": 470,
+   "y_km": 0,
+   "strength": 1.6
+  }
+ ],
+ "texts": [
+  {
+   "x_frac": 0.5,
+   "y_frac": 0.7,
+   "lines": [
+    [
+     "...and arrived in time for you to feel it",
+     0.045,
+     "white"
+    ]
+   ],
+   "at": 0.5
+  }
+ ],
+ "size": [
+  1080,
+  1920
+ ]
+}
