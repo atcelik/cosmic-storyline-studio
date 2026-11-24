@@ -1,0 +1,40 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 6,
+ "seed": 3,
+ "size": [
+  1080,
+  1920
+ ],
+ "view": {
+  "center_km": [
+   0,
+   0
+  ],
+  "width_km": [
+   1000,
+   1000
+  ]
+ },
+ "galaxy": {
+  "r_frac": 0.48,
+  "y_frac": 0.43,
+  "tilt": 0.9,
+  "rot": [
+   35,
+   40
+  ],
+  "marker": {
+   "r": 0.55,
+   "ang": 229,
+   "at": 0,
+   "label": "YOU ARE HERE",
+   "radius_arrow": {
+    "text": "26,000 LIGHT-YEARS",
+    "at": 0.1
+   }
+  }
+ }
+}

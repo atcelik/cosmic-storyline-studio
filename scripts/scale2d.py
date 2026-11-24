@@ -200,6 +200,137 @@ def proc_sun_layer(W, H, cx, cy, R, seed=7):
     return layer
 
 
+_gal_cache = {}
+
+
+def galaxy_points(seed=11, n=90000):
+    """A barred spiral as a point cloud in galaxy units (radius ~1): (x, y, brightness, rgb)."""
+    if seed in _gal_cache:
+        return _gal_cache[seed]
+    rng = np.random.default_rng(seed)
+    pts = []
+    nb = int(n * 0.22)                                       # bulge + bar
+    r = np.abs(rng.normal(0, 0.09, nb)); a = rng.uniform(0, 2 * np.pi, nb)
+    bx, by = r * np.cos(a) * 1.0, r * np.sin(a) * 0.75
+    bar = rng.uniform(-1, 1, nb // 3) * 0.26
+    bx = np.concatenate([bx, bar]); by = np.concatenate([by, rng.normal(0, 0.035, nb // 3)])
+    pts.append((bx, by, rng.uniform(0.6, 1.0, len(bx)), np.array([255, 214, 160])))
+    for k, (w, nfrac) in enumerate([(1.0, 0.27), (1.0, 0.27), (0.55, 0.08), (0.55, 0.08)]):
+        m = int(n * nfrac); off = k * np.pi / 2 if k >= 2 else k * np.pi
+        t = rng.uniform(0, 1, m) ** 0.8
+        rr = 0.18 + 0.85 * t
+        th = off + np.log(rr / 0.18) / 0.28 + rng.normal(0, 0.16 + 0.1 * t, m)
+        rr = rr + rng.normal(0, 0.025, m)
+        pts.append((rr * np.cos(th), rr * np.sin(th), rng.uniform(0.35, 1.0, m) * w, np.array([190, 215, 255])))
+    m = int(n * 0.1); rr = np.sqrt(rng.uniform(0.02, 1.1, m)); th = rng.uniform(0, 2 * np.pi, m)    # disc haze
+    pts.append((rr * np.cos(th), rr * np.sin(th), rng.uniform(0.15, 0.45, m), np.array([200, 205, 230])))
+    xs = np.concatenate([p[0] for p in pts]); ys = np.concatenate([p[1] for p in pts])
+    br = np.concatenate([p[2] for p in pts]).astype(np.float32)
+    col = np.concatenate([np.tile(p[3], (len(p[0]), 1)) for p in pts]).astype(np.float32) / 255.0
+    _gal_cache[seed] = (xs.astype(np.float32), ys.astype(np.float32), br, col)
+    return _gal_cache[seed]
+
+
+def splat_galaxy(frame, gx, gy, cx, cy, R, rot_deg, tilt, alpha, seed=11, gain=1.0):
+    """Draw the galaxy cloud centred at screen (cx, cy) with radius R px, rotated and tilted (minor/major ratio)."""
+    xs, ys, br, col = galaxy_points(seed)
+    H, W = frame.shape[:2]
+    c, s_ = math.cos(math.radians(rot_deg)), math.sin(math.radians(rot_deg))
+    X = (xs - gx) * c - (ys - gy) * s_; Y = ((xs - gx) * s_ + (ys - gy) * c) * tilt
+    k = 2                                                     # accumulate at half resolution, then upscale
+    px = ((cx + X * R) / k).astype(np.int32); py = ((cy + Y * R) / k).astype(np.int32)
+    h2, w2 = H // k + 1, W // k + 1
+    ok = (px >= 0) & (px < w2) & (py >= 0) & (py < h2)
+    if not ok.any():
+        return
+    acc = np.zeros((h2, w2, 3), np.float32)
+    wgt = float(np.clip(40.0 * (R / 500.0) ** 2, 0.02, 260.0))   # same overall brightness at any size; single stars when zoomed in
+    np.add.at(acc, (py[ok], px[ok]), col[ok] * br[ok, None] * wgt)
+    sharp = cv2.GaussianBlur(acc, (0, 0), 0.8); soft = cv2.GaussianBlur(acc, (0, 0), 6); haze = cv2.GaussianBlur(acc, (0, 0), 22)
+    img = np.clip(sharp * 1.0 + soft * 1.6 + haze * 2.2, 0, 255) * gain * alpha
+    img = cv2.resize(img, (w2 * k, h2 * k), interpolation=cv2.INTER_LINEAR)[:H, :W]
+    frame[:] = 255 - (255 - frame) * (255 - np.clip(img, 0, 255)) / 255.0
+
+
+def galaxy_screen(g, u, W, H):
+    """Centre, radius, rotation and tilt of the main galaxy at time u. Zoom keeps g["anchor"] (galaxy units) fixed on screen."""
+    r0, r1 = (g["r_frac"] if isinstance(g["r_frac"], list) else [g["r_frac"]] * 2)
+    R = W * r0 * (r1 / r0) ** u
+    rot = lin(g.get("rot", 0), u); tilt = lin(g.get("tilt", 1.0), u)
+    ax, ay = g.get("anchor", [0, 0])
+    fx, fy = ax * (1 - W * r1 / R), ay * (1 - W * r1 / R)    # focus slides to the centre as the zoom ends
+    return W * g.get("x_frac", 0.5), H * g.get("y_frac", 0.45), R, rot, tilt, fx, fy
+
+
+def draw_galaxy_scene(frame, g, t, dur, u, W, H, base, txt):
+    cx, cy, R, rot, tilt, fx, fy = galaxy_screen(g, u, W, H)
+    a = fade(g.get("at", 0), t, dur) * lin(g.get("alpha", 1.0), u)
+    many = g.get("many")
+    if many:                                                  # other galaxies around ours
+        rng = np.random.default_rng(5); am = fade(many.get("at", 0.3), t, dur)
+        for i in range(int(many.get("n", 40))):
+            gx_, gy_ = rng.uniform(0.05, 0.95) * W, rng.uniform(0.05, 0.95) * H
+            if abs(gx_ - cx) < R * 1.3 and abs(gy_ - cy) < R * 1.3:
+                continue
+            rr = W * rng.uniform(0.02, 0.07); tl = rng.uniform(0.25, 1.0)
+            splat_galaxy(frame, 0, 0, gx_, gy_, rr, rng.uniform(0, 360) + t * 2, tl, am * rng.uniform(0.5, 1.0), seed=11, gain=0.7)
+    def to_screen(x_, y_):
+        c, s_ = math.cos(math.radians(rot)), math.sin(math.radians(rot))
+        X_ = (x_ - fx) * c - (y_ - fy) * s_; Y_ = ((x_ - fx) * s_ + (y_ - fy) * c) * tilt
+        return cx + X_ * R, cy + Y_ * R
+    splat_galaxy(frame, fx, fy, cx, cy, R, rot, tilt, a, seed=g.get("seed", 11), gain=g.get("gain", 1.0))
+    bm = g.get("beam")
+    if bm:                                                    # light crossing the diameter
+        b0, b1 = bm.get("t", [0.1, 0.9]); p = float(np.clip((u - b0) / max(b1 - b0, 1e-3), 0, 1))
+        p0, p1 = (cx - R, cy), (cx + R, cy)
+        hx, hy = p0[0] + (p1[0] - p0[0]) * p, p0[1] + (p1[1] - p0[1]) * p
+        ab = fade(bm.get("at", b0), t, dur)
+        if p > 0:
+            cv2.line(frame, (int(p0[0]), int(p0[1])), (int(hx), int(hy)), (255 * ab, 245 * ab, 200 * ab), 4, cv2.LINE_AA)
+            draw_glow(frame, hx, hy, 14, 1.4 * ab, (255, 245, 210))
+    pr = g.get("probe")
+    if pr:                                                    # a probe that barely moves across the galaxy
+        p0, p1 = (cx - R, cy), (cx + R, cy); fr = float(pr.get("frac", 0.0005)) * min(u / 0.9, 1)
+        hx, hy = p0[0] + (p1[0] - p0[0]) * fr, p0[1] + (p1[1] - p0[1]) * fr
+        draw_icon(frame, pr.get("icon", "voyager"), hx + 30, hy - 40, H * 0.03, fade(pr.get("at", 0), t, dur), t, base)
+        cv2.line(frame, (int(p0[0]), int(p0[1])), (int(p1[0]), int(p1[1])), (90, 110, 140), 2, cv2.LINE_AA)
+    mk = g.get("marker")
+    if mk:                                                    # the Sun's place; can orbit the centre
+        ang = math.radians(lin(mk.get("orbit", mk.get("ang", 0)), u)); rr = mk.get("r", 0.52)
+        mx, my = to_screen(rr * math.cos(ang), rr * math.sin(ang)); am = fade(mk.get("at", 0), t, dur)
+        if mk.get("trail"):
+            a0 = lin(mk["orbit"], 0)
+            for q in np.linspace(0, 1, 60):
+                aa = math.radians(a0 + (math.degrees(ang) - a0) * q); qx, qy = to_screen(rr * math.cos(aa), rr * math.sin(aa))
+                cv2.circle(frame, (int(qx), int(qy)), 3, (255 * am * q, 210 * am * q, 90 * am * q), -1, cv2.LINE_AA)
+        if mk.get("radius_arrow"):
+            ra = mk["radius_arrow"]; ar_a = fade(ra.get("at", 0), t, dur); c0 = to_screen(0, 0)
+            arrow(frame, c0, (mx, my), (255, 214, 90), 4, ar_a)
+            txt.append(("lines", W / 2, cy + R * tilt + H * 0.04, [(ra["text"], int(H * 0.034), YELLOW, True)], ar_a))
+        pulse = 0.75 + 0.25 * math.sin(t * 5)
+        draw_glow(frame, mx, my, 16, 1.6 * am * pulse, (255, 220, 120))
+        cv2.circle(frame, (int(mx), int(my)), int(H * 0.03), (255 * am, 230 * am, 120 * am), 3, cv2.LINE_AA)
+        if mk.get("label"):
+            txt.append(("lines", mx, my + H * 0.04, [(mk["label"], int(H * 0.03), YELLOW, True)], am))
+    da = g.get("diam_arrow")
+    if da:
+        ad = fade(da.get("at", 0), t, dur); p0, p1 = (cx - R, cy), (cx + R, cy)
+        yoff = H * da.get("y_off", 0.17)
+        arrow(frame, (p0[0], p0[1] + yoff), (p1[0], p1[1] + yoff), (255, 255, 255), 4, ad)
+        lines = [(da["text"], int(H * 0.04), YELLOW, True)] + ([(da["sub"], int(H * 0.026), WHITE, False)] if da.get("sub") else [])
+        txt.append(("lines", (p0[0] + p1[0]) / 2, p0[1] + yoff + H * 0.02, lines, ad))
+    cn = g.get("coin")
+    if cn:                                                    # the whole solar system as a coin
+        ac = fade(cn.get("at", 0), t, dur); qx, qy = W * cn.get("x_frac", 0.5), H * cn.get("y_frac", 0.78)
+        rc = int(H * cn.get("r_frac", 0.045))
+        cv2.circle(frame, (int(qx), int(qy)), rc, (215 * ac, 170 * ac, 70 * ac), -1, cv2.LINE_AA)
+        cv2.circle(frame, (int(qx), int(qy)), int(rc * 0.82), (250 * ac, 210 * ac, 110 * ac), 3, cv2.LINE_AA)
+        for orb in (0.18, 0.32, 0.5, 0.68):
+            cv2.circle(frame, (int(qx), int(qy)), int(rc * orb), (150 * ac, 110 * ac, 40 * ac), 1, cv2.LINE_AA)
+        if cn.get("label"):
+            txt.append(("lines", qx, qy + rc + H * 0.015, [(cn["label"], int(H * 0.03), WHITE, True)], ac))
+
+
 def load_sprite(base, rel):
     if rel in _sprite_cache:
         return _sprite_cache[rel]
@@ -327,6 +458,10 @@ def fmt_clock(v, mode):
         return f"{int(m)} min {int(s):02d} s"
     if mode == "years":
         return f"{v:,.0f} years" if v >= 100 else f"{v:.1f} years"
+    if mode == "byears":
+        return f"{v / 1e9:.2f} billion years"
+    if mode == "myears":
+        return f"{v:,.0f} million years"
     if mode == "hours":
         return f"{v:.0f} hours"
     return f"{v:.2f} s"
@@ -401,6 +536,9 @@ def render_frame(spec, base, t, dur, W, H, stars):
     frame = stars[H // 2:H // 2 + H, W // 2 - dx:W // 2 - dx + W].copy()
     if spec.get("backdrop", {}).get("type") == "ocean":
         draw_ocean(frame, u, spec["backdrop"], spec.get("seed", 3))
+    gal_txt = []
+    if spec.get("galaxy"):
+        draw_galaxy_scene(frame, spec["galaxy"], t, dur, u, W, H, base, gal_txt)
     light = spec.get("light", [-0.8, -0.25])
 
     labels = []
@@ -552,6 +690,8 @@ def render_frame(spec, base, t, dur, W, H, stars):
 
     img = Image.fromarray(np.clip(frame, 0, 255).astype(np.uint8))
     d = ImageDraw.Draw(img)
+    for _, x_, y_, lines_, a_ in gal_txt:
+        text_block(d, x_, y_, lines_, W, H, align="center", alpha=a_)
     big = int(H * 0.058)
     for ic in spec.get("icons", []):
         if ic.get("label"):

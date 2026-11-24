@@ -1,0 +1,53 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 6,
+ "seed": 3,
+ "size": [
+  1080,
+  1920
+ ],
+ "view": {
+  "center_km": [
+   0,
+   0
+  ],
+  "width_km": [
+   1000,
+   1000
+  ]
+ },
+ "galaxy": {
+  "r_frac": 0.48,
+  "y_frac": 0.43,
+  "tilt": 0.9,
+  "rot": [
+   15,
+   20
+  ],
+  "alpha": [
+   1.0,
+   0.75
+  ],
+  "coin": {
+   "at": 0.15,
+   "y_frac": 0.84,
+   "label": "THE WHOLE SOLAR SYSTEM"
+  }
+ },
+ "texts": [
+  {
+   "x_frac": 0.5,
+   "y_frac": 0.1,
+   "at": 0.05,
+   "lines": [
+    [
+     "SHRINK IT TO A COIN",
+     0.06,
+     "yellow"
+    ]
+   ]
+  }
+ ]
+}

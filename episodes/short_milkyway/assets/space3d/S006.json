@@ -1,0 +1,49 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 6,
+ "seed": 3,
+ "size": [
+  1080,
+  1920
+ ],
+ "view": {
+  "center_km": [
+   0,
+   0
+  ],
+  "width_km": [
+   1000,
+   1000
+  ]
+ },
+ "galaxy": {
+  "r_frac": 0.48,
+  "y_frac": 0.43,
+  "tilt": 0.9,
+  "rot": [
+   25,
+   30
+  ],
+  "probe": {
+   "at": 0,
+   "icon": "voyager",
+   "frac": 0.0006
+  }
+ },
+ "clock": {
+  "x_frac": 0.5,
+  "y_frac": 0.08,
+  "t": [
+   0.05,
+   0.9
+  ],
+  "seconds": [
+   0,
+   1760000000.0
+  ],
+  "fmt": "byears",
+  "label": "VOYAGER 1 ACROSS THE GALAXY"
+ }
+}

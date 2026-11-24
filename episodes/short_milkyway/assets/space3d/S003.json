@@ -1,0 +1,55 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 6,
+ "seed": 3,
+ "size": [
+  1080,
+  1920
+ ],
+ "view": {
+  "center_km": [
+   0,
+   0
+  ],
+  "width_km": [
+   1000,
+   1000
+  ]
+ },
+ "galaxy": {
+  "r_frac": [
+   0.44,
+   0.48
+  ],
+  "y_frac": 0.43,
+  "tilt": [
+   0.62,
+   0.9
+  ],
+  "rot": [
+   10,
+   15
+  ]
+ },
+ "texts": [
+  {
+   "x_frac": 0.5,
+   "y_frac": 0.1,
+   "at": 0.05,
+   "lines": [
+    [
+     "THE MILKY WAY",
+     0.08,
+     "yellow"
+    ],
+    [
+     "100-400 BILLION STARS",
+     0.045,
+     "white"
+    ]
+   ]
+  }
+ ]
+}

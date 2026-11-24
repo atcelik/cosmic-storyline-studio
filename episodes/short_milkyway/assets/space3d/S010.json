@@ -1,0 +1,55 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 6,
+ "seed": 3,
+ "size": [
+  1080,
+  1920
+ ],
+ "view": {
+  "center_km": [
+   0,
+   0
+  ],
+  "width_km": [
+   1000,
+   1000
+  ]
+ },
+ "galaxy": {
+  "r_frac": 0.48,
+  "y_frac": 0.43,
+  "tilt": 0.9,
+  "rot": [
+   45,
+   50
+  ],
+  "marker": {
+   "r": 0.55,
+   "ang": 229,
+   "at": 0,
+   "label": "SUN",
+   "orbit": [
+    299,
+    589
+   ],
+   "trail": true
+  }
+ },
+ "clock": {
+  "x_frac": 0.5,
+  "y_frac": 0.08,
+  "t": [
+   0.05,
+   0.92
+  ],
+  "seconds": [
+   0,
+   230
+  ],
+  "fmt": "myears",
+  "label": "ONE LAP AROUND THE GALAXY"
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "renderer": "scale2d",
+ "duration": 8,
+ "fit": true,
+ "fallback": 6,
+ "seed": 3,
+ "size": [
+  1080,
+  1920
+ ],
+ "view": {
+  "center_km": [
+   0,
+   0
+  ],
+  "width_km": [
+   1000,
+   1000
+  ]
+ },
+ "galaxy": {
+  "r_frac": 0.44,
+  "y_frac": 0.43,
+  "tilt": 0.62,
+  "rot": [
+   0,
+   5
+  ],
+  "marker": {
+   "r": 0.55,
+   "ang": 229,
+   "at": 0,
+   "label": "SUN"
+  }
+ },
+ "texts": [
+  {
+   "x_frac": 0.5,
+   "y_frac": 0.1,
+   "at": 0.05,
+   "lines": [
+    [
+     "SUN TO EARTH",
+     0.05,
+     "white"
+    ],
+    [
+     "8 MINUTES",
+     0.09,
+     "yellow"
+    ]
+   ]
+  }
+ ]
+}
