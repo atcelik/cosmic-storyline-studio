@@ -57,7 +57,7 @@ SHOTS = [
       "clock": {"x_frac": 0.5, "y_frac": 0.08, "t": [0.05, 0.9], "seconds": [0, 1.76e9], "fmt": "byears", "label": "VOYAGER 1 ACROSS THE GALAXY"}},
      [("Voyager 1 moves at about 17 km/s; 100,000 light-years takes about 1.8 billion years", "https://science.nasa.gov/mission/voyager/voyager-1/")]),
     ("And we are not even near the middle.",
-     {"galaxy": gal(6, tilt=0.9, r_frac=0.48, marker=mark("YOU ARE HERE")), "texts": [T(("NOT IN THE MIDDLE", 0.06, "yellow"))]}, []),
+     {"galaxy": gal(6, tilt=0.9, r_frac=0.48, image="../galaxy_top.jpg", marker=mark("YOU ARE HERE")), "texts": [T(("NOT IN THE MIDDLE", 0.06, "yellow"))]}, []),
     ("We sit about twenty-six thousand light-years out.",
      {"galaxy": gal(7, tilt=0.9, r_frac=0.48, marker=mark("YOU ARE HERE", radius_arrow={"text": "26,000 LIGHT-YEARS", "at": 0.1}))},
      [("Sun about 26,000 light-years from the centre", SPACE)]),

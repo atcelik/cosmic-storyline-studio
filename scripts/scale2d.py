@@ -278,7 +278,11 @@ def draw_galaxy_scene(frame, g, t, dur, u, W, H, base, txt):
         c, s_ = math.cos(math.radians(rot)), math.sin(math.radians(rot))
         X_ = (x_ - fx) * c - (y_ - fy) * s_; Y_ = ((x_ - fx) * s_ + (y_ - fy) * c) * tilt
         return cx + X_ * R, cy + Y_ * R
-    splat_galaxy(frame, fx, fy, cx, cy, R, rot, tilt, a, seed=g.get("seed", 11), gain=g.get("gain", 1.0))
+    photo = load_photo(base, g["image"]) if g.get("image") else None
+    if photo is not None:
+        draw_sprite(frame, photo, cx, cy, R, a)
+    else:
+        splat_galaxy(frame, fx, fy, cx, cy, R, rot, tilt, a, seed=g.get("seed", 11), gain=g.get("gain", 1.0))
     bm = g.get("beam")
     if bm:                                                    # light crossing the diameter
         b0, b1 = bm.get("t", [0.1, 0.9]); p = float(np.clip((u - b0) / max(b1 - b0, 1e-3), 0, 1))
@@ -298,6 +302,8 @@ def draw_galaxy_scene(frame, g, t, dur, u, W, H, base, txt):
     if mk:                                                    # the Sun's place; can orbit the centre
         ang = math.radians(lin(mk.get("orbit", mk.get("ang", 0)), u)); rr = mk.get("r", 0.52)
         mx, my = to_screen(rr * math.cos(ang), rr * math.sin(ang)); am = fade(mk.get("at", 0), t, dur)
+        if g.get("image") and not mk.get("orbit"):
+            mx, my = cx, cy + 0.38 * R      # görseldeki Güneş konumu (yaklaşık x 0.50, y 0.69)
         if mk.get("trail"):
             a0 = lin(mk["orbit"], 0)
             for q in np.linspace(0, 1, 60):
@@ -345,6 +351,20 @@ def load_sprite(base, rel):
     else:
         print(f"WARN sprite missing: {p} (vector icon used)", file=sys.stderr)
     _sprite_cache[rel] = im
+    return im
+
+
+def load_photo(base, rel):
+    key = ("photo", rel)
+    if key in _sprite_cache:
+        return _sprite_cache[key]
+    p = (base / rel).resolve()
+    im = None
+    if p.exists():
+        im = cv2.cvtColor(cv2.imread(str(p), cv2.IMREAD_COLOR), cv2.COLOR_BGR2RGB)
+    else:
+        print(f"WARN photo missing: {p}", file=sys.stderr)
+    _sprite_cache[key] = im
     return im
 
 
