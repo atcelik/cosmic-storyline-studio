@@ -185,11 +185,11 @@
       "visual": {
         "type": "video",
         "file": "assets/S007.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization (procedural galaxy, not a photograph)",
-        "source_url": "https://imagine.gsfc.nasa.gov/science/objects/milkyway1.html",
+        "source_class": "ARTIST_CONCEPT",
+        "credit": "NASA/JPL-Caltech (PIA10748, artist's concept; markers and text added by us)",
+        "source_url": "https://photojournal.jpl.nasa.gov/catalog/PIA10748",
         "credit_verified": true,
-        "credit_short": "Illustration"
+        "credit_short": "NASA/JPL-Caltech"
       },
       "camera": {
         "move": "hold"
@@ -206,11 +206,11 @@
       "visual": {
         "type": "video",
         "file": "assets/S008.mp4",
-        "source_class": "OUR_CGI",
-        "credit": "Our visualization (procedural galaxy, not a photograph)",
-        "source_url": "https://imagine.gsfc.nasa.gov/science/objects/milkyway1.html",
+        "source_class": "ARTIST_CONCEPT",
+        "credit": "NASA/JPL-Caltech (PIA10748, artist's concept; markers and text added by us)",
+        "source_url": "https://photojournal.jpl.nasa.gov/catalog/PIA10748",
         "credit_verified": true,
-        "credit_short": "Illustration"
+        "credit_short": "NASA/JPL-Caltech"
       },
       "camera": {
         "move": "hold"

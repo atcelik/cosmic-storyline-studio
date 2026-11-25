@@ -19,13 +19,17 @@
   ]
  },
  "galaxy": {
-  "r_frac": 0.48,
+  "r_frac": [
+   0.455,
+   0.48
+  ],
   "y_frac": 0.43,
   "tilt": 0.9,
   "rot": [
    35,
    40
   ],
+  "image": "../galaxy_top.jpg",
   "marker": {
    "r": 0.55,
    "ang": 229,

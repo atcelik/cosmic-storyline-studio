@@ -68,3 +68,10 @@
 - Labelled scientific visualizations (maps, data, scale models) where nothing can be photographed.
 - Generative-AI imagery only where neither of the above exists (abstract or conceptual shots such as light travelling through space). Each use is listed in the video description and declared in YouTube's altered/synthetic-content setting.
 - Never shown as a real object, person or event (no AI picture of a real spacecraft, person or event presented as real). Where a real photo exists, it is used instead.
+
+## 2026-11-25: Milky Way Short, NASA galaxy picture
+- Scenes 7-8 (`short_milkyway`) use NASA's artist's concept PIA10748 instead of the procedural galaxy. Reason: owner asked for it; it shows where the Sun really is.
+- It is an illustration, not a photograph: `ARTIST_CONCEPT`, credit NASA/JPL-Caltech (read on the item's page, https://photojournal.jpl.nasa.gov/catalog/PIA10748).
+- Sun marker at (0.50, 0.69) of the picture; NASA's annotated version of the same picture puts it at about (0.500, 0.691).
+- Both scenes zoom in slowly (rule 6); scenes 9-12 are turned so that the Sun starts below the centre as in scene 8. The Sun marker is now a filled disc in every scene.
+- `build_milkyway.py` now only clears its generated specs; it used to delete the whole folder, including pictures and renders.

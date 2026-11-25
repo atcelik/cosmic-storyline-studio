@@ -280,7 +280,7 @@ def draw_galaxy_scene(frame, g, t, dur, u, W, H, base, txt):
         return cx + X_ * R, cy + Y_ * R
     photo = load_photo(base, g["image"]) if g.get("image") else None
     if photo is not None:
-        draw_sprite(frame, photo, cx, cy, R, a)
+        draw_photo(frame, photo, cx, cy, R, a)
     else:
         splat_galaxy(frame, fx, fy, cx, cy, R, rot, tilt, a, seed=g.get("seed", 11), gain=g.get("gain", 1.0))
     bm = g.get("beam")
@@ -314,7 +314,8 @@ def draw_galaxy_scene(frame, g, t, dur, u, W, H, base, txt):
             arrow(frame, c0, (mx, my), (255, 214, 90), 4, ar_a)
             txt.append(("lines", W / 2, cy + R * tilt + H * 0.04, [(ra["text"], int(H * 0.034), YELLOW, True)], ar_a))
         pulse = 0.75 + 0.25 * math.sin(t * 5)
-        draw_glow(frame, mx, my, 16, 1.6 * am * pulse, (255, 220, 120))
+        draw_glow(frame, mx, my, 16, (0.7 if g.get("image") else 1.6) * am * pulse, (255, 220, 120))
+        draw_disc(frame, mx, my, 17, am, (255, 238, 180))     # draw_glow leaves its middle empty: fill the Sun itself
         cv2.circle(frame, (int(mx), int(my)), int(H * 0.03), (255 * am, 230 * am, 120 * am), 3, cv2.LINE_AA)
         if mk.get("label"):
             txt.append(("lines", mx, my + H * 0.04, [(mk["label"], int(H * 0.03), YELLOW, True)], am))
@@ -366,6 +367,29 @@ def load_photo(base, rel):
         print(f"WARN photo missing: {p}", file=sys.stderr)
     _sprite_cache[key] = im
     return im
+
+
+def draw_photo(frame, im, cx, cy, sz, a=1.0):
+    """Screen-blend a square picture on black, placed with sub-pixel accuracy so a slow zoom does not jitter; sz = half width."""
+    H, W = frame.shape[:2]; n = int(math.ceil(sz * 2 / 64.0)) * 64       # area-reduce once per size step (no aliasing)
+    key = ("photo_small", id(im), n)
+    if key not in _sprite_cache:
+        _sprite_cache[key] = cv2.resize(im, (n, n), interpolation=cv2.INTER_AREA) if n < im.shape[0] else im
+    sp = _sprite_cache[key]; k = sz * 2 / sp.shape[0]; off = (sp.shape[0] - 1) / 2
+    M = np.float32([[k, 0, cx - k * off], [0, k, cy - k * off]])
+    w = cv2.warpAffine(sp.astype(np.float32), M, (W, H), flags=cv2.INTER_LINEAR, borderValue=(0, 0, 0))
+    frame[:] = 255 - (255 - frame) * (255 - np.clip(w * a, 0, 255)) / 255.0
+
+
+def draw_disc(frame, cx, cy, r, a, color):
+    """Soft-edged filled disc, alpha-blended."""
+    H, W = frame.shape[:2]
+    x0, x1, y0, y1 = int(max(cx - r - 2, 0)), int(min(cx + r + 3, W)), int(max(cy - r - 2, 0)), int(min(cy + r + 3, H))
+    if a <= 0 or x0 >= x1 or y0 >= y1:
+        return
+    yy, xx = np.mgrid[y0:y1, x0:x1].astype(np.float32)
+    m = (np.clip(r - np.sqrt((xx - cx) ** 2 + (yy - cy) ** 2), 0, 1) * a)[..., None]
+    frame[y0:y1, x0:x1] = frame[y0:y1, x0:x1] * (1 - m) + np.array(color, np.float32) * m
 
 
 def draw_sprite(frame, im, cx, cy, sz, a=1.0):

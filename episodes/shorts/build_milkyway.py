@@ -1,5 +1,5 @@
-"""Vertical Short: how big is the Milky Way (about 50 s). Everything is drawn by scale2d (procedural galaxy), so it needs
-no textures or photos: run on the server with Kokoro (am_michael).
+"""Vertical Short: how big is the Milky Way (about 50 s). Drawn by scale2d (procedural galaxy), except scenes 7-8, which use
+NASA's artist's concept assets/galaxy_top.jpg (PIA10748): run on the server with Kokoro (am_michael).
 Run: python episodes/shorts/build_milkyway.py  ->  episodes/short_milkyway/"""
 import json, shutil
 from pathlib import Path
@@ -8,6 +8,9 @@ HERE = Path(__file__).parent
 OUT = HERE.parent / "short_milkyway"
 W, H = 1080, 1920
 SUN = (0.55, 229)                       # radius (galaxy units) and angle of the Sun's place, on a spiral arm
+PIA = "https://photojournal.jpl.nasa.gov/catalog/PIA10748"
+NASA_ART = {"source_class": "ARTIST_CONCEPT", "credit": "NASA/JPL-Caltech (PIA10748, artist's concept; markers and text added by us)",
+            "source_url": PIA, "credit_short": "NASA/JPL-Caltech"}
 CREDIT = "Our visualization (procedural galaxy, not a photograph)"
 NASA = "https://imagine.gsfc.nasa.gov/science/objects/milkyway1.html"
 RMG = "https://www.rmg.co.uk/stories/space-astronomy/guide-milky-way-our-home-galaxy"
@@ -16,7 +19,8 @@ STARWALK = "https://starwalk.space/news/the-milky-way-galaxy"
 
 
 def gal(i, **kw):
-    g = {"r_frac": 0.44, "y_frac": 0.43, "tilt": 0.62, "rot": [i * 5, i * 5 + 5]}
+    r0 = i * 5 - (179 if i >= 8 else 0)     # from scene 9 on: the Sun starts below the centre, as in the NASA picture before it
+    g = {"r_frac": 0.44, "y_frac": 0.43, "tilt": 0.62, "rot": [r0, r0 + 5]}
     g.update(kw)
     return g
 
@@ -57,9 +61,9 @@ SHOTS = [
       "clock": {"x_frac": 0.5, "y_frac": 0.08, "t": [0.05, 0.9], "seconds": [0, 1.76e9], "fmt": "byears", "label": "VOYAGER 1 ACROSS THE GALAXY"}},
      [("Voyager 1 moves at about 17 km/s; 100,000 light-years takes about 1.8 billion years", "https://science.nasa.gov/mission/voyager/voyager-1/")]),
     ("And we are not even near the middle.",
-     {"galaxy": gal(6, tilt=0.9, r_frac=0.48, image="../galaxy_top.jpg", marker=mark("YOU ARE HERE")), "texts": [T(("NOT IN THE MIDDLE", 0.06, "yellow"))]}, []),
+     {"galaxy": gal(6, tilt=0.9, r_frac=[0.43, 0.455], image="../galaxy_top.jpg", marker=mark("YOU ARE HERE")), "texts": [T(("NOT IN THE MIDDLE", 0.06, "yellow"))]}, []),
     ("We sit about twenty-six thousand light-years out.",
-     {"galaxy": gal(7, tilt=0.9, r_frac=0.48, marker=mark("YOU ARE HERE", radius_arrow={"text": "26,000 LIGHT-YEARS", "at": 0.1}))},
+     {"galaxy": gal(7, tilt=0.9, r_frac=[0.455, 0.48], image="../galaxy_top.jpg", marker=mark("YOU ARE HERE", radius_arrow={"text": "26,000 LIGHT-YEARS", "at": 0.1}))},
      [("Sun about 26,000 light-years from the centre", SPACE)]),
     ("Even so, the Sun is carrying us around the centre.",
      {"galaxy": gal(8, tilt=0.9, r_frac=0.48, marker=mark("SUN", orbit=[SUN[1], SUN[1] + 70], trail=True)),
@@ -79,10 +83,9 @@ SHOTS = [
 
 
 def main():
-    if OUT.exists():
-        shutil.rmtree(OUT)
+    shutil.rmtree(OUT / "assets" / "space3d", ignore_errors=True)      # only the generated specs: keep galaxy_top.jpg, renders, build/
     (OUT / "assets" / "space3d").mkdir(parents=True)
-    (OUT / "assets" / "music").mkdir()
+    (OUT / "assets" / "music").mkdir(exist_ok=True)
     shutil.copy(HERE.parent / "ep02" / "music" / "drone.wav", OUT / "assets" / "music" / "drone.wav")
     shots = []
     for i, (vo, scene, claims) in enumerate(SHOTS):
@@ -95,6 +98,8 @@ def main():
              "visual": {"type": "video", "file": f"assets/{sid}.mp4", "source_class": "OUR_CGI", "credit": CREDIT,
                         "source_url": NASA, "credit_verified": True, "credit_short": "Illustration"},
              "camera": {"move": "hold"}, "transition_out": {"type": "cut"}, "min_duration": 3.0}
+        if scene["galaxy"].get("image"):
+            s["visual"].update(NASA_ART)
         if claims:
             s["claims"] = [{"text": c, "source_url": u, "verified": True} for c, u in claims]
         shots.append(s)
