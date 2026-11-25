@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Venus Storyboard Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* VOICE: an editor's monitor at 2 a.m. — the cut is the star, everything else is the edit bay.
+   IDEA: a broadcast preview monitor + timeline strip, like an NLE program monitor.
+   PICTURE: the 16:9 program monitor itself, playing the cut with live Web Audio.
+   COLOUR and TYPE: deep space navy, Venus amber as dominant accent, scanner cyan for telemetry, red only for the 0 dB vacuum. Anton for memes, Inter for UI.
+   LAYOUT: monitor on top, transport bar, live meters, then packaging and the beat table. */
+:root{color-scheme:dark;--bg:#070912;--panel:#0f1322;--line:#232a40;--ink:#eef1f8;--mute:#9aa3bb;--amber:#ffb347;--cyan:#00f0d0;--red:#ff3b3b}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;overflow-x:clip}
+.band{padding:clamp(16px,3vw,40px) max(4vw,14px)}
+.wrap{max-width:1240px;margin:0 auto}
+h1{font-size:clamp(26px,3.4vw,40px);line-height:1.05;margin:0 0 6px;text-wrap:balance}
+h2{font-size:22px;margin:0 0 12px}
+.sub{color:var(--mute);margin:0}
+#mon{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:10px;overflow:hidden;box-shadow:0 20px 60px #000a,0 0 0 1px var(--line)}
+#stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;background:#000}
+#cam{position:absolute;inset:0;will-change:transform}
+#scene{position:absolute;inset:0;width:1920px;height:1080px}
+.ov{position:absolute;pointer-events:none}
+#dim{inset:0;background:#000;opacity:0}
+#flash{inset:0;opacity:0}
+#wm{right:28px;top:16px;font:700 30px Inter,sans-serif;color:#fff9;letter-spacing:.02em}
+#meme{font:400 78px/1 Anton,Impact,sans-serif;color:#000;padding:26px 40px 30px;border:6px solid #000;border-radius:28px;box-shadow:8px 8px 0 #000c;white-space:nowrap;transform-origin:center;opacity:0}
+#tel{top:590px;padding:16px 34px 20px 28px;border:5px solid var(--cyan);border-radius:14px;background:#001419dd;box-shadow:0 0 26px #00f0d088,inset 0 0 18px #00f0d033;font:700 52px 'JetBrains Mono',ui-monospace,monospace;color:#e6fffa;opacity:0;white-space:nowrap;
+ background-image:repeating-linear-gradient(0deg,#0000 0 4px,#0004 4px 6px)}
+#tel small{display:block;font:500 22px 'JetBrains Mono',monospace;color:var(--cyan);margin-bottom:4px}
+#cap{left:160px;right:160px;bottom:40px;text-align:center;font:800 62px/1.25 Inter,sans-serif;color:#e1e1e1;-webkit-text-stroke:12px #000;paint-order:stroke fill;text-wrap:balance}
+#cap .on{color:#ffe100}#cap .done{color:#fff}
+#cut{inset:0;background:#000;display:none;align-items:center;justify-content:center;font:800 48px Inter;color:#fff3}
+#tap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#0006;border:0;color:#fff;font:800 22px Inter;cursor:pointer}
+#tap span{background:var(--amber);color:#1a0d00;padding:16px 28px;border-radius:999px}
+.transport{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:14px}
+button,select{font:700 16px Inter,sans-serif;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:10px;min-height:44px;padding:0 16px;cursor:pointer}
+button:focus-visible,input:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+#play{background:var(--amber);color:#1a0d00;border-color:var(--amber);min-width:110px}
+#tc{font:700 22px 'JetBrains Mono',monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+#scrub{flex:1 1 260px;accent-color:var(--amber);height:44px}
+label.chk{display:flex;gap:8px;align-items:center;color:var(--mute);min-height:44px}
+label.chk input{width:22px;height:22px;accent-color:var(--amber)}
+#vol{width:110px;accent-color:var(--amber)}
+#strip{position:relative;height:38px;margin-top:10px;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;cursor:pointer}
+#strip i{position:absolute;top:0;bottom:0;border-right:1px solid #0008}
+#strip i.up{background:#3a2a10}#strip i.tense{background:#2a1530}
+#strip b{position:absolute;top:0;bottom:0;background:var(--red)}
+#strip u{position:absolute;top:6px;width:2px;height:26px;background:var(--cyan)}
+#head{position:absolute;top:0;bottom:0;width:2px;background:#fff;box-shadow:0 0 8px #fff}
+.meters{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:12px}
+.m{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+.m .k{font-size:13px;color:var(--mute)}.m .v{font:700 20px 'JetBrains Mono',monospace;white-space:nowrap}
+.bar{height:8px;background:#1d2336;border-radius:4px;margin-top:6px;overflow:hidden}.bar span{display:block;height:100%;background:var(--amber)}
+#vacm.live{background:#3a0707;border-color:var(--red)}#vacm.live .v{color:var(--red)}
+.legend{display:flex;flex-wrap:wrap;gap:16px;color:var(--mute);font-size:14px;margin-top:8px}
+.legend em{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+.pack{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:24px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.card ol{margin:0;padding-left:22px}.card li{margin:6px 0}
+.n{color:var(--amber);font-family:'JetBrains Mono',monospace;font-size:14px;white-space:nowrap}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;color:var(--mute);font-weight:700;border-bottom:1px solid var(--line);padding:8px}
+td{border-bottom:1px solid var(--line);padding:8px;vertical-align:top}
+tbody tr{cursor:pointer}tbody tr:hover{background:#151a2c}
+tr.now{background:#2a1d08 !important;box-shadow:inset 3px 0 var(--amber)}
+td.t{font-family:'JetBrains Mono',monospace;white-space:nowrap;font-size:13px}
+.vac{color:var(--red);font-weight:700}
+code{color:var(--cyan);overflow-wrap:anywhere}
+.note{font-size:13px;color:var(--mute)}
+@media(max-width:600px){table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;white-space:normal;color:var(--mute)}.stack td:empty{display:none}}
+@media(prefers-reduced-motion:reduce){#head{box-shadow:none}}
+</style>
+<script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
+</head>
+<body>
+<section class="band"><div class="wrap">
+  <h1>Venus is a literal nightmare — live timing test</h1>
+  <p class="sub">Cosmic Storyline · <span id="dur"></span> · 2.5 s micro-zoom resets, 0.6 s comedy vacuums and 1.3 s telemetry popups, all synthesized live in your browser.</p>
+</div></section>
+
+<section class="band" style="padding-top:0"><div class="wrap">
+  <div id="mon">
+    <div id="stage">
+      <div id="cam"><canvas id="scene" width="1920" height="1080"></canvas></div>
+      <div id="dim" class="ov"></div>
+      <div id="wm" class="ov">COSMIC STORYLINE</div>
+      <div id="meme" class="ov"></div>
+      <div id="tel" class="ov"><small>● NASA/JPL TELEMETRY · LIVE SCAN</small><span></span></div>
+      <div id="cap" class="ov"></div>
+      <div id="flash" class="ov"></div>
+      <div id="cut" class="ov">HARD CUT</div>
+    </div>
+    <button id="tap" aria-label="Start preview with sound"><span>▶ Tap to play with sound</span></button>
+  </div>
+
+  <div class="transport">
+    <button id="play" aria-label="Play or pause">▶ Play</button>
+    <button id="prev" aria-label="Previous beat">⏮ Beat</button>
+    <button id="next" aria-label="Next beat">Beat ⏭</button>
+    <span id="tc">0:00.00</span>
+    <input id="scrub" type="range" min="0" step="0.01" value="0" aria-label="Timeline scrubber">
+    <label class="chk"><input type="checkbox" id="vo" checked> Browser voiceover</label>
+    <label class="chk">Volume <input type="range" id="vol" min="0" max="1" step="0.01" value="0.8" aria-label="Volume"></label>
+  </div>
+  <div id="strip" aria-label="Beat timeline"><div id="head"></div></div>
+  <div class="legend"><span><em style="background:#3a2a10"></em>Upbeat music</span><span><em style="background:#2a1530"></em>Tense bed</span><span><em style="background:var(--red)"></em>0.6 s vacuum (0 dB)</span><span><em style="background:var(--cyan)"></em>Telemetry popup</span><span>Keys: Space play · ←/→ 1 s · ,/. beat</span></div>
+
+  <div class="meters">
+    <div class="m"><div class="k">Beat</div><div class="v" id="mBeat">B01</div></div>
+    <div class="m"><div class="k">Next sensory reset</div><div class="v" id="mReset">2.50 s</div><div class="bar"><span id="mResetBar"></span></div></div>
+    <div class="m" id="vacm"><div class="k">Audio state</div><div class="v" id="mVac">MUSIC</div></div>
+    <div class="m"><div class="k">Zoom</div><div class="v" id="mZoom">100%</div></div>
+  </div>
+  <p class="note">Voiceover here uses your device's built-in speech voice, so line timing is approximate; the MP4 script uses edge-tts and fits each line to its slot. Clicking a vacuum beat in the table starts 2 s early so you hear riser → silence → impact.</p>
+</div></section>
+
+<section class="band"><div class="wrap pack">
+  <div class="card"><h2>Titles</h2><ol id="titles"></ol></div>
+  <div class="card"><h2>Thumbnails</h2>
+    <ol>
+      <li><b>“127 MINUTES”</b> — real Venera 13 surface panorama, pushed orange-red, lander edge in the foreground. Huge yellow text, a red circle on the lander and a cracked-glass overlay: the moment just before it dies.</li>
+      <li><b>“465°C. NOPE.”</b> — NASA/JPL Magellan radar globe of Venus, full frame, with a thermometer bursting at the top edge and a tiny Earth for scale. Glowing cyan telemetry chip: <code>SURFACE: +465°C</code>.</li>
+    </ol>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <h2>Production table</h2>
+  <div class="scroll"><table class="stack" id="tbl"><thead><tr><th>Timecode</th><th>Voiceover Line</th><th>Meme / Telemetry</th><th>Visual &amp; Zoom</th><th>Music &amp; SFX</th></tr></thead><tbody></tbody></table></div>
+</div></section>
+
+<script>
+{
+const D = {"topic": "Why Venus Is a Literal Nightmare", "total": 162.17, "vacuum": 0.6, "tel_dur": 1.3, "tel_at": 0.6, "meme_at": 0.15, "reset": 2.5, "zoom": 0.08, "titles": ["Venus Is 465°C and It Only Gets Worse", "This Robot Survived 127 Min on Venus", "Venus: 92x Pressure, 243-Day Spin"], "beats": [{"i": 0, "id": "B01", "start": 0.0, "end": 2.93, "vo_start": 0.1, "vo_max": 2.78, "vac": null, "impact": null, "vac_window": null, "tel": null, "meme": "awww (wholesome)", "scene": "earthvenus", "music": "up", "sfx": [[0.0, "ping"]], "vo": "Venus looks like Earth's cute little twin sister.", "vis": "Earth + Venus side by side, slow push 100→108%", "aud": "Upbeat synth loop starts, soft ping"}, {"i": 1, "id": "B02", "start": 2.93, "end": 6.78, "vo_start": 3.03, "vo_max": 3.1, "vac": null, "impact": null, "vac_window": null, "tel": "DIAMETER: 95% OF EARTH", "meme": "EARTH 2.0??", "scene": "earthvenus", "music": "up", "sfx": [[1.6, "pop"]], "vo": "Same size. Same rocky body. Basically Earth... but beige.", "vis": "Snap-zoom on Venus at 2.5 s reset, tilt 2°", "aud": "Loop continues, pop on 'beige', riser into vacuum"}, {"i": 2, "id": "B03", "start": 6.78, "end": 11.25, "vo_start": 7.13, "vo_max": 4.07, "vac": true, "impact": "boom", "vac_window": [6.18, 6.78], "tel": null, "meme": "PICK YOUR FIGHTER", "scene": "globe_hot", "music": "tense", "sfx": [], "vo": "Venus would crush you, cook you, and corrode you. Pick your fighter.", "vis": "0.6 s frozen frame → white flash, screen shake, punch-in 115%", "aud": "0 dB SILENCE 0.6 s → Vine-boom impact, tense drone"}, {"i": 3, "id": "B04", "start": 11.25, "end": 16.12, "vo_start": 11.35, "vo_max": 4.72, "vac": null, "impact": null, "vac_window": null, "tel": "MERCURY MAX: 430°C", "meme": "MATH ISN'T MATHING", "scene": "compare", "music": "up", "sfx": [[0.0, "scratch"]], "vo": "But wait. Mercury is way closer to the Sun. So why is Venus hotter?", "vis": "Mercury vs Venus split, micro-zoom alternates L/R", "aud": "Record scratch, loop back in  ⟶ OPEN LOOP #1"}, {"i": 4, "id": "B05", "start": 16.12, "end": 20.66, "vo_start": 16.22, "vo_max": 4.39, "vac": null, "impact": null, "vac_window": null, "tel": null, "meme": "POV: you landed", "scene": "clouds", "music": "up", "sfx": [[0.2, "whoosh"], [1.8, "whoosh"]], "vo": "Hold that thought. First, let's land. You step out of your ship and...", "vis": "Fast descent through cloud deck, zoom 100→108% twice", "aud": "Whooshes on each reset"}, {"i": 5, "id": "B06", "start": 20.66, "end": 24.56, "vo_start": 20.76, "vo_max": 3.75, "vac": null, "impact": null, "vac_window": null, "tel": "PRESSURE: 92 BAR", "meme": "SUBMARINE MODE", "scene": "surface", "music": "tense", "sfx": [[0.6, "beep"]], "vo": "The air is so thick, it's like standing 900 meters underwater.", "vis": "Surface reveal, heavy vignette", "aud": "Music drops to tense bed, telemetry beep"}, {"i": 6, "id": "B07", "start": 24.56, "end": 29.43, "vo_start": 24.66, "vo_max": 4.72, "vac": null, "impact": null, "vac_window": null, "tel": "GRAVITY: 0.9 G", "meme": "vibes: normal (for 1s)", "scene": "surface", "music": "tense", "sfx": [[0.6, "beep"]], "vo": "Gravity is 90% of Earth's, so you'd feel almost normal. For about one second.", "vis": "Push toward the horizon, anchor shifts at reset", "aud": "Beep, low heartbeat kick"}, {"i": 7, "id": "B08", "start": 29.43, "end": 32.96, "vo_start": 29.53, "vo_max": 2.78, "vac": null, "impact": null, "vac_window": null, "tel": null, "meme": "lawn_chair.exe", "scene": "surface", "music": "tense", "sfx": [[0.9, "crunch"]], "vo": "Then your lungs fold like a lawn chair.", "vis": "Micro shake on 'fold'", "aud": "Crunch SFX, riser into vacuum"}, {"i": 8, "id": "B09", "start": 32.96, "end": 35.5, "vo_start": 33.31, "vo_max": 2.14, "vac": true, "impact": "drop", "vac_window": [32.36, 32.96], "tel": "SURFACE: +465°C", "meme": "NOT A TYPO", "scene": "surface_hot", "music": "tense", "sfx": [[0.5, "sizzle"]], "vo": "And the ground? 465 degrees Celsius.", "vis": "Freeze → red flash, shake, punch-in", "aud": "0 dB SILENCE 0.6 s → bass drop + sizzle"}, {"i": 9, "id": "B10", "start": 35.5, "end": 39.72, "vo_start": 35.6, "vo_max": 4.07, "vac": null, "impact": null, "vac_window": null, "tel": "LEAD MELTS: 327°C", "meme": "pizza oven: weak", "scene": "surface_hot", "music": "up", "sfx": [[0.6, "beep"]], "vo": "Hotter than a pizza oven. Lead would literally melt into a puddle.", "vis": "Red-hot ground, zoom anchors right", "aud": "Upbeat loop returns (ironic), beep"}, {"i": 10, "id": "B11", "start": 39.72, "end": 44.59, "vo_start": 39.82, "vo_max": 4.72, "vac": null, "impact": null, "vac_window": null, "tel": null, "meme": "NO SHADE (literally)", "scene": "globe_hot", "music": "up", "sfx": [[2.6, "pop"]], "vo": "Day, night, pole, equator. Same temperature. There is no shade. There is no escape.", "vis": "Globe rotates, 2 resets, 4-corner anchor cycle", "aud": "Pop on 'no escape'"}, {"i": 11, "id": "B12", "start": 44.59, "end": 47.84, "vo_start": 44.69, "vo_max": 3.1, "vac": null, "impact": null, "vac_window": null, "tel": null, "meme": "fluffy?? (NO)", "scene": "clouds", "music": "up", "sfx": [[1.8, "record"]], "vo": "Okay, look up. Clouds! Nice, fluffy... sulfuric acid clouds.", "vis": "Tilt up to cloud deck", "aud": "Music stutter on 'sulfuric'"}, {"i": 12, "id": "B13", "start": 47.84, "end": 53.03, "vo_start": 47.94, "vo_max": 5.04, "vac": null, "impact": null, "vac_window": null, "tel": null, "meme": "rain: nah I'm good", "scene": "clouds", "music": "up", "sfx": [[0.3, "sizzle"]], "vo": "It rains acid up there. But it's so hot the rain evaporates before it lands.", "vis": "Cloud deck, anchor jumps each 2.5 s reset", "aud": "Sizzle, loop continues"}, {"i": 13, "id": "B14", "start": 53.03, "end": 56.28, "vo_start": 53.13, "vo_max": 3.1, "vac": null, "impact": null, "vac_window": null, "tel": "CO₂: 96.5%", "meme": "breathable? NO", "scene": "clouds", "music": "up", "sfx": [[0.6, "beep"]], "vo": "And the air you're not breathing? 96.5% carbon dioxide.", "vis": "Telemetry badge flickers in (scanner style)", "aud": "Telemetry beep"}, {"i": 14, "id": "B15", "start": 56.28, "end": 61.79, "vo_start": 56.38, "vo_max": 5.36, "vac": null, "impact": null, "vac_window": null, "tel": "MERCURY NIGHT: −180°C", "meme": "mercury: shivering", "scene": "compare", "music": "up", "sfx": [[0.6, "beep"]], "vo": "Which brings us back to Mercury. Almost no air, so its heat just leaks into space.", "vis": "Back to split screen, zoom on Mercury", "aud": "Beep  ⟶ starts CLOSING LOOP #1"}, {"i": 15, "id": "B16", "start": 61.79, "end": 66.29, "vo_start": 61.89, "vo_max": 3.75, "vac": null, "impact": null, "vac_window": null, "tel": null, "meme": "THE BLANKET IS THE PROBLEM", "scene": "globe_hot", "music": "tense", "sfx": [], "vo": "Venus? That thick CO2 blanket traps everything. A runaway greenhouse effect.", "vis": "Venus glows hotter each reset", "aud": "Tension riser into vacuum"}, {"i": 16, "id": "B17", "start": 66.29, "end": 70.44, "vo_start": 66.64, "vo_max": 3.75, "vac": true, "impact": "boom", "vac_window": [65.69, 66.29], "tel": null, "meme": "ZERO CHILL", "scene": "globe_hot", "music": "up", "sfx": [], "vo": "Venus didn't turn the heat up. It ripped the knob off.", "vis": "Freeze → flash, shake, punch-in", "aud": "0 dB SILENCE → Vine boom  ⟶ LOOP #1 CLOSED"}, {"i": 17, "id": "B18", "start": 70.44, "end": 75.63, "vo_start": 70.54, "vo_max": 5.04, "vac": null, "impact": null, "vac_window": null, "tel": null, "meme": "BET.", "scene": "lander", "music": "up", "sfx": [[2.9, "ping"]], "vo": "So would anyone be brave enough to land a robot here? The Soviet Union: bet.", "vis": "Lander reveal, push in", "aud": "Ping on 'bet'  ⟶ OPEN LOOP #2"}, {"i": 18, "id": "B19", "start": 75.63, "end": 79.21, "vo_start": 75.73, "vo_max": 3.43, "vac": null, "impact": null, "vac_window": null, "tel": "VENERA 7: 1ST LANDING 1970", "meme": "built different", "scene": "lander", "music": "up", "sfx": [[0.6, "beep"]], "vo": "Their Venera landers were basically armored pressure cookers with cameras.", "vis": "Push on lander, 2.5 s reset", "aud": "Beep"}, {"i": 19, "id": "B20", "start": 79.21, "end": 83.75, "vo_start": 79.31, "vo_max": 4.39, "vac": null, "impact": null, "vac_window": null, "tel": "VENERA 13: MAR 1982", "meme": "first pics from hell", "scene": "lander", "music": "up", "sfx": [[0.6, "beep"]], "vo": "In 1982, Venera 13 sent back the first color photos from the surface.", "vis": "Real Venera 13 panorama (assets/venera13.jpg)", "aud": "Camera shutter-ish pop"}, {"i": 20, "id": "B21", "start": 83.75, "end": 87.28, "vo_start": 83.85, "vo_max": 2.78, "vac": null, "impact": null, "vac_window": null, "tel": "DESIGN LIFE: 32 MIN", "meme": "goal: 32 min", "scene": "lander", "music": "tense", "sfx": [[0.6, "beep"]], "vo": "Engineers hoped it would survive about 32 minutes.", "vis": "Slow push, countdown feel", "aud": "Tense bed, riser into vacuum"}, {"i": 21, "id": "B22", "start": 87.28, "end": 89.68, "vo_start": 87.63, "vo_max": 2.0, "vac": true, "impact": "boom", "vac_window": [86.68, 87.28], "tel": "SURVIVED: 127 MIN", "meme": "ABSOLUTE UNIT", "scene": "lander", "music": "up", "sfx": [], "vo": "It lasted 127.", "vis": "Freeze → flash, punch-in 115%", "aud": "0 dB SILENCE → boom  ⟶ LOOP #2 CLOSED"}, {"i": 22, "id": "B23", "start": 89.68, "end": 93.26, "vo_start": 89.78, "vo_max": 3.43, "vac": null, "impact": null, "vac_window": null, "tel": null, "meme": "o7", "scene": "lander", "music": "up", "sfx": [[1.8, "crunch"]], "vo": "Then it got cooked and crushed. Rest in pieces, king.", "vis": "Lander tint red, slow zoom out", "aud": "Crunch on 'crushed'"}, {"i": 23, "id": "B24", "start": 93.26, "end": 96.84, "vo_start": 93.36, "vo_max": 3.43, "vac": null, "impact": null, "vac_window": null, "tel": null, "meme": "wait what", "scene": "orbit", "music": "up", "sfx": [[0.0, "scratch"]], "vo": "But the part that really breaks my brain? The clock.", "vis": "Orbit diagram, scratch-cut", "aud": "Record scratch  ⟶ OPEN LOOP #3"}, {"i": 24, "id": "B25", "start": 96.84, "end": 100.74, "vo_start": 96.94, "vo_max": 3.75, "vac": null, "impact": null, "vac_window": null, "tel": "1 SPIN = 243 EARTH DAYS", "meme": "slowest spinner", "scene": "orbit", "music": "up", "sfx": [[0.6, "beep"]], "vo": "Venus spins so slowly, one full turn takes 243 Earth days.", "vis": "Zoom onto spin arrow", "aud": "Beep"}, {"i": 25, "id": "B26", "start": 100.74, "end": 104.59, "vo_start": 100.84, "vo_max": 3.1, "vac": null, "impact": null, "vac_window": null, "tel": "1 ORBIT = 225 EARTH DAYS", "meme": "hmm...", "scene": "orbit", "music": "tense", "sfx": [[0.6, "beep"]], "vo": "But one lap around the Sun takes just 225.", "vis": "Zoom onto orbit arrow", "aud": "Beep, riser into vacuum"}, {"i": 26, "id": "B27", "start": 104.59, "end": 107.45, "vo_start": 104.94, "vo_max": 2.46, "vac": true, "impact": "boom", "vac_window": [103.99, 104.59], "tel": null, "meme": "BIRTHDAY BEFORE BEDTIME", "scene": "orbit", "music": "up", "sfx": [], "vo": "Its day is longer than its year.", "vis": "Freeze → flash, shake", "aud": "0 dB SILENCE → boom  ⟶ LOOP #3 CLOSED"}, {"i": 27, "id": "B28", "start": 107.45, "end": 111.35, "vo_start": 107.55, "vo_max": 3.75, "vac": null, "impact": null, "vac_window": null, "tel": "ROTATION: RETROGRADE", "meme": "Venus: built different", "scene": "orbit", "music": "up", "sfx": [[0.3, "scratch"]], "vo": "Oh, and it spins backwards. The Sun rises in the west.", "vis": "Image flips horizontally on reset", "aud": "Reverse-scratch"}, {"i": 28, "id": "B29", "start": 111.35, "end": 115.25, "vo_start": 111.45, "vo_max": 3.75, "vac": null, "impact": null, "vac_window": null, "tel": "CLOUD WINDS: 360 KM/H", "meme": "speedrun any%", "scene": "clouds", "music": "up", "sfx": [[0.2, "whoosh"], [0.6, "beep"]], "vo": "Meanwhile the cloud tops race around at 360 kilometers per hour.", "vis": "Cloud layer, fast pan + zoom", "aud": "Whoosh + beep"}, {"i": 29, "id": "B30", "start": 115.25, "end": 120.76, "vo_start": 115.35, "vo_max": 5.36, "vac": null, "impact": null, "vac_window": null, "tel": null, "meme": "clouds: 4 days / planet: 243", "scene": "globe", "music": "up", "sfx": [[2.8, "pop"]], "vo": "They lap the whole planet in about four days. The planet itself? Still on day one.", "vis": "Globe with fast cloud bands", "aud": "Pop on 'day one'"}, {"i": 30, "id": "B31", "start": 120.76, "end": 125.95, "vo_start": 120.86, "vo_max": 5.04, "vac": null, "impact": null, "vac_window": null, "tel": "BRIGHTEST PLANET IN SKY", "meme": "far from pretty", "scene": "globe", "music": "up", "sfx": [[0.6, "beep"]], "vo": "From Earth, it's the brightest planet in our sky. Pretty from far, far from pretty.", "vis": "Pull back to starfield", "aud": "Beep"}, {"i": 31, "id": "B32", "start": 125.95, "end": 130.77, "vo_start": 126.05, "vo_max": 4.07, "vac": null, "impact": null, "vac_window": null, "tel": null, "meme": "frost?? on VENUS??", "scene": "mountains", "music": "tense", "sfx": [], "vo": "Now the weirdest part. On its highest mountains, scientists think there's frost.", "vis": "Mountain silhouettes, slow push", "aud": "Tense bed, riser into vacuum  ⟶ OPEN LOOP #4"}, {"i": 32, "id": "B33", "start": 130.77, "end": 133.17, "vo_start": 131.12, "vo_max": 2.0, "vac": true, "impact": "drop", "vac_window": [130.17, 130.77], "tel": null, "meme": "METAL.", "scene": "mountains", "music": "up", "sfx": [], "vo": "Not ice. Metal.", "vis": "Freeze → flash, shake, punch-in", "aud": "0 dB SILENCE → bass drop"}, {"i": 33, "id": "B34", "start": 133.17, "end": 137.71, "vo_start": 133.27, "vo_max": 4.39, "vac": null, "impact": null, "vac_window": null, "tel": "MAGELLAN RADAR: 1990–94", "meme": "chemistry jumpscare", "scene": "mountains", "music": "up", "sfx": [[0.6, "beep"]], "vo": "NASA's Magellan radar saw weirdly shiny mountaintops. Best guess? Lead and bismuth compounds.", "vis": "Zoom onto the silver peaks", "aud": "Beep"}, {"i": 34, "id": "B35", "start": 137.71, "end": 142.25, "vo_start": 137.81, "vo_max": 4.39, "vac": null, "impact": null, "vac_window": null, "tel": null, "meme": "HEAVY METAL SNOW", "scene": "mountains", "music": "up", "sfx": [[0.0, "ping"]], "vo": "Heavy metal snow. Venus has the most metal weather in the solar system.", "vis": "Shake on 'metal', 2 resets", "aud": "Ping  ⟶ LOOP #4 CLOSED"}, {"i": 35, "id": "B36", "start": 142.25, "end": 146.79, "vo_start": 142.35, "vo_max": 4.39, "vac": null, "impact": null, "vac_window": null, "tel": "SURFACE: +465°C", "meme": "RECAP SPEEDRUN", "scene": "globe_hot", "music": "up", "sfx": [[0.6, "beep"]], "vo": "Quick recap of Earth's twin: 465 degrees, 92 times the pressure, acid clouds...", "vis": "Hot globe, punchy resets", "aud": "Beep"}, {"i": 36, "id": "B37", "start": 146.79, "end": 150.69, "vo_start": 146.89, "vo_max": 3.75, "vac": null, "impact": null, "vac_window": null, "tel": "1 DAY > 1 YEAR", "meme": "RECAP: ALL BAD", "scene": "orbit", "music": "up", "sfx": [[0.6, "beep"]], "vo": "...a day longer than its year, spinning backwards, with metal snow.", "vis": "Orbit flash-back", "aud": "Beep"}, {"i": 37, "id": "B38", "start": 150.69, "end": 154.27, "vo_start": 150.79, "vo_max": 3.43, "vac": null, "impact": null, "vac_window": null, "tel": "STATUS: HYPOTHESIS", "meme": "oceans?? (maybe)", "scene": "earthvenus_blue", "music": "tense", "sfx": [[0.6, "beep"]], "vo": "And some scientists think it might once have had oceans.", "vis": "Back to the twin shot, Venus tinted ocean-blue", "aud": "Tense, soft"}, {"i": 38, "id": "B39", "start": 154.27, "end": 157.48, "vo_start": 154.37, "vo_max": 2.46, "vac": null, "impact": null, "vac_window": null, "tel": null, "meme": "FULL SEND", "scene": "globe_hot", "music": "tense", "sfx": [], "vo": "Then the greenhouse effect went full send.", "vis": "Hard cut to Venus glowing red-hot", "aud": "Big riser into final vacuum"}, {"i": 39, "id": "B40", "start": 157.48, "end": 162.17, "vo_start": 157.83, "vo_max": 4.29, "vac": true, "impact": "boom", "vac_window": [156.88, 157.48], "tel": null, "meme": "EVIL TWIN UNLOCKED", "scene": "earthvenus", "music": "up", "sfx": [], "vo": "Earth's twin? More like Earth's evil twin who got way too into saunas.", "vis": "Freeze → flash, shake, punch-in → HARD CUT TO BLACK", "aud": "0 dB SILENCE → boom → PEAK CUT (no outro)"}]};
+const B = D.beats, TOTAL = D.total, VAC = D.vacuum, TEL_AT = D.tel_at, TEL_DUR = D.tel_dur, MEME_AT = D.meme_at, RESET = D.reset, ZMAX = D.zoom;
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt = s => { s = Math.max(0, s); const m = Math.floor(s / 60); return m + ':' + (s - m * 60).toFixed(2).padStart(5, '0'); };
+const words = s => s.replace(/\.\.\./g, ' ').split(/\s+/).filter(w => w.replace(/[.,?!]/g, ''));
+const WINS = B.filter(b => b.vac_window).map(b => b.vac_window);
+const inVac = t => WINS.some(([a, z]) => t >= a && t < z);
+const beatIdx = t => { let i = 0; while (i + 1 < B.length && B[i + 1].start <= t) i++; return i; };
+const ease = p => 0.5 - 0.5 * Math.cos(Math.PI * Math.min(1, Math.max(0, p)));
+const ANCH = [[.5, .5], [.25, .35], [.75, .4], [.4, .7], [.65, .3]];
+const MEMECOL = ['#ffe600', '#ffffff', '#00f0ff', '#ff5aa0'], MEMEANG = [-6, 5, -3, 7];
+const MEMEPOS = [[1880, 120], [100, 140], [1860, 360], [110, 380]];
+
+/* ---------- scene painting (mirrors build_video.py) ---------- */
+function rng(seed) { let a = seed >>> 0; return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+const PAL = { venus: ['#ecc882', '#c4843e', '#ff963c'], venus_hot: ['#ffaa50', '#be3214', '#ff4614'], venus_blue: ['#78bee6', '#285aa0', '#50a0ff'], earth: ['#468ce6', '#289650', '#5aa0ff'], mercury: ['#aaa5a0', '#5f5a58', '#a0a0aa'], sun: ['#fff5c8', '#ffbe3c', '#ffb428'] };
+function space(c, seed) {
+  const r = rng(seed), g = c.createLinearGradient(0, 0, 0, 1080); g.addColorStop(0, '#060712'); g.addColorStop(1, '#100d28');
+  c.fillStyle = g; c.fillRect(0, 0, 1920, 1080);
+  for (let i = 0; i < 6; i++) { const x = r() * 1920, y = r() * 1080, rad = 300 + r() * 500, col = ['#3c145066', '#14285a66', '#5a281466'][i % 3];
+    const n = c.createRadialGradient(x, y, 0, x, y, rad); n.addColorStop(0, col); n.addColorStop(1, '#0000'); c.fillStyle = n; c.fillRect(0, 0, 1920, 1080); }
+  for (let i = 0; i < 1300; i++) { const b = 80 + r() * 175 | 0; c.fillStyle = `rgb(${b},${b},${Math.min(255, b + 20)})`; c.fillRect(r() * 1920, r() * 1080, 1.6, 1.6); }
+  c.save(); c.shadowColor = '#fff'; c.shadowBlur = 8; c.fillStyle = '#fff';
+  for (let i = 0; i < 50; i++) { c.beginPath(); c.arc(r() * 1920, r() * 1080, 2 + r() * 1.5, 0, 7); c.fill(); } c.restore();
+}
+function planet(c, x, y, rad, pal, seed, bands = 14, glow = .55) {
+  const [c1, c2, gc] = PAL[pal], r = rng(seed);
+  if (glow) { const g = c.createRadialGradient(x, y, rad * .8, x, y, rad * 1.45); g.addColorStop(0, gc + 'cc'); g.addColorStop(1, gc + '00'); c.globalAlpha = glow; c.fillStyle = g; c.fillRect(x - rad * 1.6, y - rad * 1.6, rad * 3.2, rad * 3.2); c.globalAlpha = 1; }
+  c.save(); c.beginPath(); c.arc(x, y, rad, 0, 7); c.clip();
+  c.fillStyle = c2; c.fillRect(x - rad, y - rad, rad * 2, rad * 2);
+  c.fillStyle = c1; c.globalAlpha = .75;
+  const n = Math.round(bands * 0.7);
+  for (let k = 0; k < n; k++) { const yy = y - rad + (k + .5) * 2 * rad / n, ph = r() * 6, amp = rad * .06 + r() * rad * .05, th = rad / n * (.6 + r() * .5);
+    c.beginPath(); for (let xx = x - rad; xx <= x + rad; xx += 8) c.lineTo(xx, yy + Math.sin(xx / rad * 3 + ph) * amp); for (let xx = x + rad; xx >= x - rad; xx -= 8) c.lineTo(xx, yy + th + Math.sin(xx / rad * 3 + ph + .6) * amp); c.fill(); }
+  c.globalAlpha = 1;
+  const s = c.createRadialGradient(x - rad * .45, y - rad * .4, rad * .1, x, y, rad * 1.02); s.addColorStop(0, '#ffffff30'); s.addColorStop(.55, '#0000'); s.addColorStop(1, '#000000d0');
+  c.fillStyle = s; c.fillRect(x - rad, y - rad, rad * 2, rad * 2); c.restore();
+}
+function label(c, x, y, t, size = 44, fill = '#fff') { c.font = `800 ${size}px Inter,sans-serif`; c.textAlign = 'center'; c.textBaseline = 'middle'; c.lineWidth = size / 6; c.strokeStyle = '#000'; c.lineJoin = 'round'; c.strokeText(t, x, y); c.fillStyle = fill; c.fillText(t, x, y); }
+function surface(c, hot, seed) {
+  const r = rng(seed), hz = 475, g = c.createLinearGradient(0, 0, 0, hz);
+  g.addColorStop(0, hot ? '#ff783c' : '#ffbe6e'); g.addColorStop(1, hot ? '#aa1e0a' : '#c86e28'); c.fillStyle = g; c.fillRect(0, 0, 1920, hz);
+  const gg = c.createLinearGradient(0, hz, 0, 1080); gg.addColorStop(0, hot ? '#78280f' : '#6e4623'); gg.addColorStop(1, hot ? '#280804' : '#2d190c'); c.fillStyle = gg; c.fillRect(0, hz, 1920, 1080 - hz);
+  for (let i = 0; i < 140; i++) { const yc = hz + 10 + r() * (1080 - hz), p = (yc - hz) / (1080 - hz), w = 40 + 420 * p * (.5 + r() * .9), h = 6 + 70 * p * (.4 + r() * .6), xc = -100 + r() * 2120, sh = (r() - .5) * 80;
+    c.fillStyle = r() < .5 ? '#1e0f0878' : (hot ? '#ff501e46' : '#c8824646'); c.beginPath(); c.moveTo(xc - w / 2, yc); c.lineTo(xc - w / 2 + sh, yc - h); c.lineTo(xc + w / 2 + sh, yc - h * .8); c.lineTo(xc + w / 2, yc); c.fill(); }
+  const hzg = c.createLinearGradient(0, hz - 90, 0, hz + 70); hzg.addColorStop(0, '#0000'); hzg.addColorStop(.5, hot ? '#ff3c0a66' : '#ffa05066'); hzg.addColorStop(1, '#0000'); c.fillStyle = hzg; c.fillRect(0, hz - 90, 1920, 160);
+}
+function clouds(c) {
+  const r = rng(5), g = c.createLinearGradient(0, 0, 0, 1080); g.addColorStop(0, '#e6be78'); g.addColorStop(1, '#aa783c'); c.fillStyle = g; c.fillRect(0, 0, 1920, 1080);
+  c.filter = 'blur(18px)';
+  for (let i = 0; i < 200; i++) { const x = -200 + r() * 2320, y = r() * 1080, rx = 150 + r() * 370, ry = 30 + r() * 80; c.fillStyle = ['#ffebb4', '#c89650', '#f0d28c', '#aa6e32'][i % 4]; c.globalAlpha = .15 + r() * .3; c.beginPath(); c.ellipse(x, y, rx, ry, 0, 0, 7); c.fill(); }
+  c.filter = 'none'; c.globalAlpha = 1;
+}
+function lander(c) {
+  const x = 1180, y = 650; c.lineWidth = 6; c.strokeStyle = '#1e1e1e';
+  const sh = (f, fn) => { c.fillStyle = f; c.beginPath(); fn(); c.fill(); c.stroke(); };
+  sh('#46464b', () => c.ellipse(x, y + 105, 260, 45, 0, 0, 7));
+  sh('#aaaaaf', () => c.rect(x - 120, y - 120, 240, 220));
+  sh('#c8c8cd', () => c.ellipse(x, y - 150, 150, 90, 0, 0, 7));
+  sh('#8c8c91', () => c.rect(x - 25, y - 360, 50, 130));
+  sh('#96969b', () => c.ellipse(x, y - 370, 70, 30, 0, 0, 7));
+  for (const k of [-1, 1]) sh('#78787d', () => c.rect(x + k * 200 - 30, y - 40, 60, 110));
+  c.font = '800 40px Inter'; c.fillStyle = '#141414'; c.textAlign = 'center'; c.fillText('ВЕНЕРА-13', x, y + 22);
+}
+const SC = {
+  globe: c => { space(c, 11); planet(c, 1210, 560, 400, 'venus', 2); },
+  globe_hot: c => { space(c, 11); planet(c, 1210, 560, 400, 'venus_hot', 2); c.fillStyle = '#78000030'; c.fillRect(0, 0, 1920, 1080); },
+  earthvenus: c => { space(c, 4); planet(c, 610, 540, 300, 'earth', 9, 6); planet(c, 1320, 540, 286, 'venus', 2); label(c, 610, 190, 'EARTH', 54); label(c, 1320, 200, 'VENUS', 54, '#ffd282'); },
+  earthvenus_blue: c => { space(c, 4); planet(c, 610, 540, 300, 'earth', 9, 6); planet(c, 1320, 540, 286, 'venus_blue', 2); label(c, 610, 190, 'EARTH', 54); label(c, 1320, 200, 'VENUS', 54, '#ffd282'); },
+  compare: c => { space(c, 6); const g = c.createRadialGradient(-100, 540, 100, -100, 540, 700); g.addColorStop(0, '#ffd250'); g.addColorStop(.5, '#ffb43c66'); g.addColorStop(1, '#0000'); c.fillStyle = g; c.fillRect(0, 0, 1920, 1080);
+    planet(c, 700, 520, 95, 'mercury', 4, 3, .2); planet(c, 1380, 520, 230, 'venus', 2); label(c, 700, 380, 'MERCURY · 58M km', 42); label(c, 1380, 250, 'VENUS · 108M km', 42, '#ffd282'); },
+  surface: c => surface(c, false, 3), surface_hot: c => surface(c, true, 3), clouds,
+  lander: c => { surface(c, false, 3); lander(c); },
+  mountains: c => { surface(c, false, 8); for (const [x, w, h] of [[250, 700, 420], [900, 900, 560], [1550, 700, 380]]) { c.fillStyle = '#46281a'; c.beginPath(); c.moveTo(x - w / 2, 480); c.lineTo(x, 480 - h); c.lineTo(x + w / 2, 480); c.fill();
+    c.fillStyle = '#e1e6f0'; c.beginPath(); c.moveTo(x - w * .12, 480 - h * .76); c.lineTo(x, 480 - h); c.lineTo(x + w * .12, 480 - h * .76); c.lineTo(x + w * .04, 480 - h * .7); c.lineTo(x - w * .05, 480 - h * .72); c.fill(); } },
+  orbit: c => { space(c, 8); planet(c, 560, 540, 80, 'sun', 1, 2, .9); c.strokeStyle = '#ffdc96'; c.lineWidth = 4; c.beginPath(); c.ellipse(560, 540, 720, 300, 0, 0, 7); c.stroke();
+    planet(c, 1240, 330, 95, 'venus', 3, 14, .3); c.strokeStyle = '#78dcff'; c.lineWidth = 6; c.beginPath(); c.arc(1240, 330, 150, 3.5, 9.1); c.stroke();
+    label(c, 1240, 520, 'SPIN ↺ 243 d (backwards)', 40, '#8ce6ff'); label(c, 560, 170, 'ORBIT ↻ 225 d', 44, '#ffdc96'); }
+};
+const cache = {};
+function sceneCanvas(k) { if (!cache[k]) { const cv = document.createElement('canvas'); cv.width = 1920; cv.height = 1080; (SC[k] || SC.globe)(cv.getContext('2d')); cache[k] = cv; } return cache[k]; }
+
+/* ---------- audio engine (Web Audio, sample-accurate scheduling) ---------- */
+let AC = null, master, gate, mus, sfx, noiseBuf, shaper, live = [];
+function initAudio() {
+  if (AC) return;
+  AC = new (window.AudioContext || window.webkitAudioContext)();
+  master = AC.createGain(); master.gain.value = +$('vol').value;
+  gate = AC.createGain(); mus = AC.createGain(); mus.gain.value = .5; sfx = AC.createGain();
+  mus.connect(gate); sfx.connect(gate); gate.connect(master); master.connect(AC.destination);
+  noiseBuf = AC.createBuffer(1, AC.sampleRate * 2, AC.sampleRate); const d = noiseBuf.getChannelData(0); for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+  shaper = AC.createWaveShaper(); const cv = new Float32Array(1024); for (let i = 0; i < 1024; i++) cv[i] = Math.tanh(3.2 * (i / 512 - 1)); shaper.curve = cv; shaper.connect(sfx);
+}
+function env(g, w, peak, atk, dec, dur) { g.gain.setValueAtTime(0.0001, w); g.gain.linearRampToValueAtTime(peak, w + atk); g.gain.exponentialRampToValueAtTime(0.0001, w + Math.max(atk + .01, dur || dec * 5)); }
+function osc(type, f0, w, dur, peak, dest, f1, dec) {
+  const o = AC.createOscillator(), g = AC.createGain(); o.type = type; o.frequency.setValueAtTime(f0, w);
+  if (f1) o.frequency.exponentialRampToValueAtTime(f1, w + dur * .9);
+  env(g, w, peak, .003, dec || dur / 4, dur); o.connect(g); g.connect(dest); o.start(w); o.stop(w + dur + .05); live.push(o); return o;
+}
+function noise(w, dur, peak, type, f0, f1, dest, dec, atk = .003) {
+  const s = AC.createBufferSource(), f = AC.createBiquadFilter(), g = AC.createGain(); s.buffer = noiseBuf; f.type = type; f.frequency.setValueAtTime(f0, w);
+  if (f1) f.frequency.exponentialRampToValueAtTime(f1, w + dur);
+  env(g, w, peak, atk, dec || dur / 4, dur); s.connect(f); f.connect(g); g.connect(dest); s.start(w, Math.random()); s.stop(w + dur + .05); live.push(s);
+}
+const FX = {
+  ping: w => { osc('sine', 1318.5, w, .6, .35, sfx, 0, .16); osc('sine', 1975.5, w, .6, .17, sfx, 0, .16); },
+  pop: w => osc('sine', 380, w, .12, .5, sfx, 950, .04),
+  boom: w => { osc('sine', 120, w, 1.1, .9, shaper, 36, .33); noise(w, .02, .6, 'lowpass', 3000, 0, sfx, .005); },
+  drop: w => { osc('sine', 170, w, 1.6, .8, shaper, 30, .6); osc('sine', 85, w, 1.6, .45, shaper, 28, .8); },
+  crunch: w => { for (let k = 0; k < 4; k++) noise(w + k * .045, .08, .55, 'highpass', 1500, 0, sfx, .02); },
+  beep: (w, g = 1) => { osc('square', 2093, w, .06, .1 * g, sfx, 0, .2); osc('square', 2093, w + .1, .06, .1 * g, sfx, 0, .2); },
+  whoosh: (w, g = 1) => { const s = AC.createBufferSource(), f = AC.createBiquadFilter(), gg = AC.createGain(); s.buffer = noiseBuf; f.type = 'bandpass'; f.Q.value = 1.2;
+    f.frequency.setValueAtTime(300, w); f.frequency.exponentialRampToValueAtTime(3000, w + .22); f.frequency.exponentialRampToValueAtTime(300, w + .45);
+    gg.gain.setValueAtTime(0.0001, w); gg.gain.linearRampToValueAtTime(.4 * g, w + .22); gg.gain.linearRampToValueAtTime(0.0001, w + .45); s.connect(f); f.connect(gg); gg.connect(sfx); s.start(w); s.stop(w + .5); live.push(s); },
+  riser: (w, g = 1) => { const s = AC.createBufferSource(), f = AC.createBiquadFilter(), gg = AC.createGain(); s.buffer = noiseBuf; s.loop = true; f.type = 'bandpass'; f.Q.value = 2;
+    f.frequency.setValueAtTime(200, w); f.frequency.exponentialRampToValueAtTime(4000, w + 1.5); gg.gain.setValueAtTime(0.0001, w); gg.gain.exponentialRampToValueAtTime(.45 * g, w + 1.5);
+    s.connect(f); f.connect(gg); gg.connect(sfx); s.start(w); s.stop(w + 1.5); live.push(s);
+    const o = AC.createOscillator(), og = AC.createGain(); o.type = 'sawtooth'; o.frequency.setValueAtTime(180, w); o.frequency.exponentialRampToValueAtTime(1900, w + 1.5);
+    og.gain.setValueAtTime(0.0001, w); og.gain.exponentialRampToValueAtTime(.06 * g, w + 1.5); o.connect(og); og.connect(sfx); o.start(w); o.stop(w + 1.5); live.push(o); },
+  sizzle: w => noise(w, .9, .18, 'highpass', 4000, 0, sfx, .35, .02),
+  scratch: w => { const o = AC.createOscillator(), l = AC.createOscillator(), lg = AC.createGain(), f = AC.createBiquadFilter(), g = AC.createGain();
+    o.type = 'sawtooth'; o.frequency.value = 520; l.frequency.value = 7; lg.gain.value = 380; l.connect(lg); lg.connect(o.frequency); f.type = 'lowpass'; f.frequency.value = 2500;
+    env(g, w, .3, .004, .18, .38); o.connect(f); f.connect(g); g.connect(sfx); o.start(w); l.start(w); o.stop(w + .4); l.stop(w + .4); live.push(o, l); }
+};
+FX.record = FX.scratch;
+const PROG = [[261.63, 329.63, 392], [196, 246.94, 293.66], [220, 261.63, 329.63], [174.61, 220, 261.63]], BASS = [65.41, 49, 55, 43.65];
+function music(e, w) {
+  const s16 = e.step % 16, bar = Math.floor(e.t / 2) % 4;
+  if (e.mode === 'up') {
+    if (s16 % 4 === 2) PROG[bar].forEach(f => osc('square', f * 2, w, .11, .033, mus, 0, .05));
+    if (s16 % 4 === 0) { osc('triangle', BASS[bar], w, .22, .22, mus, 0, .12); if (s16 === 0 || s16 === 8) osc('sine', 140, w, .18, .35, mus, 45, .06); }
+    if (s16 % 2 === 0) noise(w, .04, .06, 'highpass', 7000, 0, mus, .012);
+    if (s16 === 4 || s16 === 12) noise(w, .12, .12, 'bandpass', 1500, 0, mus, .03);
+    if ([3, 7, 11, 14].includes(s16)) osc('sine', PROG[bar][s16 % 3] * 4, w, .09, .04, mus, 0, .03);
+  } else if (s16 % 8 === 0) {
+    osc('sine', 90, w, .16, .4, mus, 40, .05); osc('sine', 90, w + .28, .16, .24, mus, 40, .05);
+    for (const f of [55, 82.4]) { const o = AC.createOscillator(), fl = AC.createBiquadFilter(), g = AC.createGain(); o.type = 'sawtooth'; o.frequency.value = f; fl.type = 'lowpass'; fl.frequency.value = 380;
+      g.gain.setValueAtTime(0.0001, w); g.gain.linearRampToValueAtTime(.07, w + .1); g.gain.setValueAtTime(.07, w + .95); g.gain.linearRampToValueAtTime(0.0001, w + 1.05);
+      o.connect(fl); fl.connect(g); g.connect(mus); o.start(w); o.stop(w + 1.1); live.push(o); }
+  }
+}
+/* event list */
+const EV = [];
+B.forEach(b => {
+  b.sfx.forEach(([o, n]) => EV.push({ t: b.start + o, k: 'fx', n }));
+  if (b.tel) EV.push({ t: b.start + TEL_AT, k: 'fx', n: 'beep', g: .6 });
+  if (b.vac) { EV.push({ t: b.start - VAC - 1.5, k: 'fx', n: 'riser', g: .9 }, { t: b.start - VAC, k: 'gate', v: 0 }, { t: b.start, k: 'gate', v: 1 }, { t: b.start, k: 'fx', n: b.impact || 'boom' }); }
+  for (let k = 1; b.start + k * RESET < b.end - .3; k++) EV.push({ t: b.start + k * RESET - .15, k: 'fx', n: 'whoosh', g: .35 });
+});
+for (let k = 0; k * .125 < TOTAL; k++) { const t = k * .125; if (!inVac(t)) EV.push({ t, k: 'mus', step: k, mode: B[beatIdx(t)].music }); }
+EV.sort((a, b) => a.t - b.t);
+
+/* ---------- transport ---------- */
+let playing = false, pos = 0, t0 = 0, schedT = 0, evI = 0, lastT = 0, scrubbing = false, wasPlaying = false;
+const now = () => playing ? AC.currentTime - t0 : pos;
+function stopAll() { live.forEach(n => { try { n.stop(0); } catch (e) {} }); live = []; if (gate) { gate.gain.cancelScheduledValues(0); gate.gain.setValueAtTime(1, AC.currentTime); } }
+function play() {
+  initAudio(); if (AC.state !== 'running') AC.resume().catch(() => {});
+  if (pos >= TOTAL - .01) pos = 0;
+  t0 = AC.currentTime + .05 - pos; schedT = pos; evI = EV.findIndex(e => e.t >= pos); if (evI < 0) evI = EV.length;
+  gate.gain.cancelScheduledValues(0); gate.gain.setValueAtTime(inVac(pos) ? 0 : 1, AC.currentTime);
+  lastT = pos; playing = true; $('play').textContent = '❚❚ Pause'; $('tap').style.display = 'none';
+  if ($('vo').checked && window.speechSynthesis) { try { speechSynthesis.cancel(); speechSynthesis.speak(new SpeechSynthesisUtterance(' ')); } catch (e) {} }
+}
+function pause() { if (!playing) return; pos = Math.min(TOTAL, now()); playing = false; stopAll(); try { speechSynthesis.cancel(); } catch (e) {} $('play').textContent = '▶ Play'; }
+function seek(t) { const p = playing; pause(); pos = Math.max(0, Math.min(TOTAL, t)); if (p) play(); }
+let voice = null;
+function pickVoice() { try { const v = speechSynthesis.getVoices().filter(v => /^en(-|_)US/i.test(v.lang)); voice = v.find(x => /Andrew|Christopher|Guy|Aaron|Google US English|Alex|Daniel/i.test(x.name)) || v[0] || null; } catch (e) {} }
+if (window.speechSynthesis) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+function speak(b) {
+  if (!$('vo').checked || !window.speechSynthesis) return;
+  const u = new SpeechSynthesisUtterance(b.vo.replace(/^\.\.\./, '')); u.rate = 1.12; if (voice) u.voice = voice;
+  u.onstart = () => mus && mus.gain.setTargetAtTime(.22, AC.currentTime, .05); u.onend = () => mus && mus.gain.setTargetAtTime(.5, AC.currentTime, .15);
+  speechSynthesis.speak(u);
+}
+setInterval(() => {
+  if (!playing) return;
+  const t = now();
+  if (t >= TOTAL) { pause(); pos = TOTAL; return; }
+  const hz = t + .2;
+  while (evI < EV.length && EV[evI].t < hz) {
+    const e = EV[evI++], w = t0 + e.t; if (w < AC.currentTime - .03) continue; const ww = Math.max(w, AC.currentTime);
+    if (e.k === 'fx') FX[e.n] && FX[e.n](ww, e.g); else if (e.k === 'mus') music(e, ww); else gate.gain.setValueAtTime(e.v, w < AC.currentTime ? AC.currentTime : w);
+  }
+  for (const b of B) if (b.vo_start > lastT && b.vo_start <= t) { try { speechSynthesis.cancel(); } catch (e) {} speak(b); }
+  lastT = t;
+  if (live.length > 600) live = live.slice(-300);
+}, 25);
+
+/* ---------- picture ---------- */
+const stage = $('stage'), cam = $('cam'), sc = $('scene').getContext('2d'), meme = $('meme'), tel = $('tel'), cap = $('cap');
+let curBeat = -1, curScene = '', capWords = [];
+function fit() { stage.style.transform = `scale(${$('mon').clientWidth / 1920})`; }
+const ro = new ResizeObserver(fit); ro.observe($('mon'));
+function render(t) {
+  const end = t >= TOTAL - .001; $('cut').style.display = end && pos >= TOTAL - .01 && !playing ? 'flex' : 'none';
+  const i = beatIdx(Math.min(t, TOTAL - .001)), b = B[i], local = t - b.start, nx = B[i + 1];
+  const vacNow = !!(nx && nx.vac && t >= nx.start - VAC);
+  const tz = Math.max(0, vacNow ? nx.start - VAC - b.start : local);
+  if (b.scene !== curScene) { sc.drawImage(sceneCanvas(b.scene), 0, 0); curScene = b.scene; }
+  if (i !== curBeat) {
+    curBeat = i; meme.textContent = b.meme; meme.style.background = MEMECOL[i % 4];
+    const [px, py] = MEMEPOS[i % 4]; meme.style.top = py + 'px';
+    if (px > 960) { meme.style.right = (1920 - px) + 'px'; meme.style.left = 'auto'; } else { meme.style.left = px + 'px'; meme.style.right = 'auto'; }
+    tel.querySelector('span').textContent = b.tel ? '▲ ' + b.tel : '';
+    if (i % 2) { tel.style.right = '60px'; tel.style.left = 'auto'; } else { tel.style.left = '60px'; tel.style.right = 'auto'; }
+    capWords = b.vo.split(/\s+/); cap.innerHTML = capWords.map(w => `<span>${esc(w)}</span> `).join('');
+    document.querySelectorAll('#tbl tbody tr').forEach((r, k) => r.classList.toggle('now', k === i));
+    $('mBeat').textContent = b.id + (b.vac ? ' · vacuum hit' : '');
+  }
+  const seg = Math.floor(tz / RESET), p = (tz % RESET) / RESET;
+  let z = 1 + ZMAX * ease(p), dx = 0, dy = 0; const [ax, ay] = ANCH[(i + seg) % ANCH.length];
+  if (b.vac && local < .55 && local >= 0) { const k = 1 - local / .55; z *= 1 + .15 * k * k; dx = (Math.random() * 2 - 1) * 34 * k; dy = (Math.random() * 2 - 1) * 34 * k; }
+  const flip = b.id === 'B28' && seg % 2 === 1 ? ' scaleX(-1)' : '';
+  cam.style.transformOrigin = `${ax * 100}% ${ay * 100}%`; cam.style.transform = `translate(${dx}px,${dy}px) scale(${z})${flip}`;
+  $('dim').style.opacity = vacNow ? .3 : 0;
+  const lm = local - MEME_AT;
+  if (lm >= 0 && !vacNow) { const q = Math.min(1, lm / .35), s = lm >= .35 ? 1 : (q < .6 ? q * 1.25 : 1.25 - (q - .6) * .625); meme.style.opacity = 1; meme.style.transform = `rotate(${MEMEANG[i % 4]}deg) scale(${Math.max(.05, s)})`; }
+  else meme.style.opacity = 0;
+  const lt = local - TEL_AT, telOn = b.tel && lt >= 0 && lt < TEL_DUR && !vacNow;
+  tel.style.opacity = telOn ? (lt < .15 ? (Math.floor(lt * 30) % 2 ? 0 : 1) : 1) : 0;
+  if (!vacNow && t >= b.vo_start) {
+    const w = words(b.vo).length, dur = Math.min(b.vo_max, w / 3.1), lens = []; let acc = 0; capWords.forEach(x => lens.push(acc += x.length + 1));
+    const hi = lens.findIndex(l => l / acc * dur >= t - b.vo_start); const h = hi < 0 ? capWords.length : hi;
+    cap.style.opacity = 1; [...cap.children].forEach((s, k) => s.className = k === h ? 'on' : k < h ? 'done' : '');
+  } else cap.style.opacity = 0;
+  const fl = $('flash'); if (b.vac && local >= 0 && local < .09) { fl.style.opacity = 1; fl.style.background = b.impact === 'drop' ? '#ff3c1e99' : '#ffffffaa'; } else fl.style.opacity = 0;
+  const left = RESET - (tz % RESET); $('mReset').textContent = left.toFixed(2) + ' s'; $('mResetBar').style.width = (100 * (1 - left / RESET)) + '%';
+  $('mZoom').textContent = Math.round(z * 100) + '%';
+  const vm = $('vacm'), iv = inVac(t), imp = B.some(x => x.vac && t >= x.start && t < x.start + .4);
+  vm.classList.toggle('live', iv); $('mVac').textContent = iv ? '0 dB VACUUM' : imp ? 'IMPACT!' : (b.music === 'up' ? 'UPBEAT LOOP' : 'TENSE BED');
+  $('tc').textContent = fmt(t) + ' / ' + fmt(TOTAL);
+  if (!scrubbing) $('scrub').value = t;
+  $('head').style.left = (100 * t / TOTAL) + '%';
+}
+(function loop() { render(Math.max(0, Math.min(now(), TOTAL))); requestAnimationFrame(loop); })();
+
+/* ---------- UI ---------- */
+$('dur').textContent = fmt(TOTAL) + ' runtime, ' + B.length + ' beats';
+$('scrub').max = TOTAL;
+$('titles').innerHTML = D.titles.map(t => `<li>${esc(t)} <span class="n">${[...t].length} chars</span></li>`).join('');
+$('tbl').tBodies[0].innerHTML = B.map(b => `<tr data-i="${b.i}"><td class="t">${fmt(b.start)}–${fmt(b.end)}${b.vac ? '<br><span class="vac">0 dB cut</span>' : ''}</td><td>${esc(b.vo)}</td><td><b>${esc(b.meme)}</b>${b.tel ? `<br><code>${esc(b.tel)}</code>` : ''}</td><td>${esc(b.vis)}</td><td>${esc(b.aud)}</td></tr>`).join('');
+$('strip').insertAdjacentHTML('afterbegin', B.map(b => `<i class="${b.music}" style="left:${100 * b.start / TOTAL}%;width:${100 * (b.end - b.start) / TOTAL}%"></i>`).join('')
+  + WINS.map(([a, z]) => `<b style="left:${100 * a / TOTAL}%;width:${Math.max(.25, 100 * (z - a) / TOTAL)}%"></b>`).join('')
+  + B.filter(b => b.tel).map(b => `<u style="left:${100 * (b.start + TEL_AT) / TOTAL}%"></u>`).join(''));
+const jump = b => seek(b.vac ? Math.max(0, b.start - 2) : b.start);
+$('tbl').addEventListener('click', e => { const r = e.target.closest('tr[data-i]'); if (r) { jump(B[+r.dataset.i]); if (!playing) play(); } });
+$('play').addEventListener('click', () => playing ? pause() : play());
+$('tap').addEventListener('click', play);
+$('prev').addEventListener('click', () => { const i = beatIdx(now()); seek(B[Math.max(0, now() - B[i].start > .5 ? i : i - 1)].start); });
+$('next').addEventListener('click', () => { const i = beatIdx(now()); if (i + 1 < B.length) seek(B[i + 1].start); });
+$('scrub').addEventListener('input', e => { if (!scrubbing) { scrubbing = true; wasPlaying = playing; pause(); } pos = +e.target.value; });
+$('scrub').addEventListener('change', () => { scrubbing = false; if (wasPlaying) play(); });
+$('strip').addEventListener('click', e => { const r = $('strip').getBoundingClientRect(); seek(TOTAL * (e.clientX - r.left) / r.width); });
+$('vol').addEventListener('input', e => { if (master) master.gain.value = +e.target.value; });
+$('vo').addEventListener('change', e => { if (!e.target.checked) try { speechSynthesis.cancel(); } catch (x) {} });
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT' && e.target.type !== 'range') return;
+  if (e.code === 'Space') { e.preventDefault(); playing ? pause() : play(); }
+  else if (e.key === 'ArrowRight') seek(now() + 1); else if (e.key === 'ArrowLeft') seek(now() - 1);
+  else if (e.key === '.') $('next').click(); else if (e.key === ',') $('prev').click();
+});
+if (document.fonts) document.fonts.ready.then(() => { for (const k in cache) delete cache[k]; curScene = ''; });
+fit();
+}
+</script>
+</body>
+</html>
